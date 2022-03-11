@@ -38,6 +38,7 @@ img {
 
 .nav__ul a:hover {
     color: #037e8c;
+    transition: 0.4s;
 }
 
 .number__call {
@@ -66,6 +67,10 @@ img {
     color: #ffffff;
     border: none;
 }
+.number__button:hover{
+    background-color: #037e8c;
+    transition: 0.4s;
+    }
 
 .excursions__h1 {
     margin: 100px 0px 37px 70px;
@@ -96,9 +101,15 @@ img {
     border: none;
     color: #ffffff;
 }
-.img__button {
-    padding-left: 32px;
+.excursions__button:hover{
+    background: #10919ca4;
+    transition: 0.4s;
 }
+.img__button {
+    background: transparent ;
+}
+
+
 
 /***********our advantages**********/
 
@@ -528,6 +539,12 @@ img {
     margin-left: 20px;
     margin-top: 14px;
 }
+.spec__offer__but:hover{
+    background-color: #037e8c;
+    color: #ffffff;
+    border: 1.5px solid #ffffff;
+    transition: 0.4s;
+}
 /******GIFT*****/
 
 .section__gift {
@@ -576,6 +593,12 @@ img {
     background-color: none;
     width: 277px;
     height: 45px;
+}
+.gift__button:hover{
+    background-color: #037e8c;
+    color: #ffffff;
+    border: 1.5px solid #ffffff;
+    transition: 0.4s;
 }
 
 /*****Questions*****/
@@ -674,6 +697,12 @@ img {
     line-height: 18px;
     font-family: "Montserrat", sans-serif;
     border: none;
+}
+.dialog__button:hover{
+    background-color: #ffffff;
+    color: #037e8c;
+    border: 1.5px solid #037e8c;
+    transition: 0.4s;
 }
 .dialog__butt__block {
     text-align: center;
@@ -824,6 +853,10 @@ img {
     line-height: 15px;
     color: #121214;
     margin-right: 50px;
+}
+.footer__menu li a:hover{
+    color: #037e8c;
+    transition: 0.4s;
 }
 .footer__logo {
     width: 100%;
@@ -1481,5 +1514,163 @@ img {
     .questions__right {
         position: relative;
         margin-left: 418px;
+    }
+    .footer__menu ul {
+        display: block;
+    }
+    .footer__menu ul li {
+        margin-top: 0;
+    }
+    .section__contacts {
+        margin-left: 0;
+    }
+    .contacts__top {
+        margin-left: 30px;
+    }
+    .contacts__bottom {
+        margin-left: 30px;
+    }
+    .contact__social {
+        display: flex;
+        margin-bottom: 10px;
+    }
+}
+@media (min-width: 1100px) and (max-width: 1200px) {
+    .nav__ul {
+        margin-left: 30;
+    }
+}
+@media (min-width: 992px) and (max-width: 1199px) {
+    .nav__ul {
+        margin-left: 0;
+    }
+    .nav__ul a {
+        padding-left: 20px;
+    }
+    .route {
+        width: 100%;
+        margin-left: 20px;
+    }
+    .our__route__img img {
+        width: 49%;
+    }
+    .base__routes__h4 p {
+        width: 100%;
+    }
+    .base__button__moreInf {
+        width: 43%;
+    }
+    .base__button__book {
+        width: 43%;
+    }
+    .SecondRout__img img {
+        width: 43%;
+    }
+    .base__routes__buttonSecond {
+        width: 58%;
+    }
+    .photo__img img {
+        margin-left: 0;
+    }
+    .team {
+        width: 105%;
+    }
+    .services__text {
+        width: auto;
+    }
+    .services__block {
+        width: 104%;
+    }
+    .special__text {
+        width: 110%;
+    }
+    .img__offer {
+        height: 100%;
+        width: 100%;
+    }
+    .spec__but {
+        margin-bottom: 40px;
+    }
+    .special__offer__all {
+        background-position: bottom -20px right -67px;
+    }
+    .special__text h3 {
+        font-size: 28px;
+    }
+    .special__text h3 span {
+        font-size: 21px;
+    }
+    .special__text {
+        width: 71%;
+    }
+    .gift__text h5 {
+        width: 104%;
+    }
+    .questions__block {
+        height: 9%;
+    }
+    .questions__right {
+        bottom: 30px;
+        position: relative;
+        left: 30px;
+    }
+    .questions__img {
+        position: relative;
+        left: 390px;
+        bottom: 9px;
+        margin: 0;
+    }
+    .additional__services {
+        width: 102%;
+    }
+    .additional__text {
+        text-align: center;
+        padding-left: 0;
+    }
+    .contacts__number {
+        margin-left: 77px;
+    }
+    .section__contacts {
+        margin-left: 0;
+    }
+    .contacts__text {
+        font-size: 15px;
+    }
+    .contacts__timeWork {
+        margin-left: 5px;
+    }
+    .footer__menu li a {
+        margin-right: 7px;
+    }
+    .footer__menu ul {
+        margin-left: 0;
+    }
+    .video__bord {
+        width: 95%;
+    }
+}
+@media (min-width: 1200px) and (max-width: 1440px) {
+    .nav__ul {
+        margin-left: 10px;
+    }
+    .route{
+        width: auto;
+    }
+    .photo__img img {
+        margin-left: 30px;
+    }
+    .special__offer__all {
+        height: 90%;
+    }
+    .img__offer__first{
+        height: 100%;
+    }
+}
+@media (min-width: 1441px) and (max-width: 2560px){
+    .special__offer__all {
+        height: 90%;
+    }
+    .img__offer__first{
+        height: 100%;
     }
 }
