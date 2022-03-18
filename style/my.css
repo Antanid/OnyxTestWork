@@ -1392,7 +1392,7 @@ img {
         left: 625px;
         bottom: 82px;
         left: 575px;
-        bottom: 74px;
+        bottom: 60px;
     }
     .nav__ul a {
         padding-left: 26px;
@@ -1405,11 +1405,53 @@ img {
         font-size: 12px;
     }
 }
-@media (min-width: 828px) and (max-width: 891px) {
+@media (min-width: 828px) and (max-width: 870px) {
     .number__call {
         position: relative;
         margin-left: 0px;
-        left: 620px;
+        left: 665px;
+        bottom: 58px;
+    }
+    .number__p{
+        font-size: 13px;
+    }
+    .number__button {
+        width: 135px;
+        font-size: 12px;
+    }
+
+}
+@media (min-width: 871px) and (max-width: 920px){
+    .number__call {
+        position: relative;
+        margin-left: 0px;
+        left: 700px;
+        bottom: 58px;
+    }
+    .number__p{
+        font-size: 13px;
+    }
+    .number__button {
+        width: 135px;
+        font-size: 12px;
+    }
+} 
+@media (min-width: 921px) and (max-width: 991px){
+    .number__call {
+        position: relative;
+        margin-left: 0px;
+        left: 725px;
+        bottom: 58px;
+    }
+    .number__p{
+        font-size: 13px;
+    }
+    .number__button {
+        width: 135px;
+        font-size: 12px;
+    }
+    .nav__ul a{
+        padding-left: 50px;
     }
 }
 @media (min-width: 768px) and (max-width: 991.98px) {
@@ -1542,11 +1584,26 @@ img {
     }
 }
 @media (min-width: 992px) and (max-width: 1199px) {
+
+    .number__call {
+        position: relative;
+        margin-left: 0px;
+        left: 665px;
+        bottom: 58px;
+    }
+    .number__p{
+        font-size: 15px;
+    }
+    .number__button {
+        width: 135px;
+        font-size: 12px;
+    }
+
     .nav__ul {
         margin-left: 0;
     }
     .nav__ul a {
-        padding-left: 20px;
+        padding-left: 36px;
     }
     .route {
         width: 100%;
@@ -1650,7 +1707,7 @@ img {
         width: 95%;
     }
 }
-@media (min-width: 1200px) and (max-width: 1440px) {
+@media (min-width: 1200px) and (max-width: 1300px) {
     .nav__ul {
         margin-left: 10px;
     }
@@ -1666,17 +1723,54 @@ img {
     .img__offer__first{
         height: 100%;
     }
+    .number__call {
+        position: relative;
+        left: 625px;
+        bottom: 82px;
+        left: 740px;
+        bottom: 60px;
+    }
+    .nav__ul a{
+        padding-left: 65px;
+    }
+   
 }
-@media (min-width: 1441px) and (max-width: 2560px){
+@media (min-width: 1301px) and (max-width: 1635px){
+    .number__call {
+        position: relative;
+        left: 625px;
+        bottom: 82px;
+        left: 820px;
+        bottom: 60px;
+    }
+    .nav__ul{
+        margin-left: 10px;
+    }
+}
+
+@media (min-width: 1635px) and (max-width: 2560px){
     .special__offer__all {
         height: 90%;
     }
     .img__offer__first{
         height: 100%;
     }
+    .number__call {
+        position: relative;
+        left: 625px;
+        bottom: 82px;
+        left: 1100px;
+        bottom: 60px;
+    }
+   
+    
 }
 
-
+@media (min-width: 768px){
+.menu__icon{
+    display: none;
+}
+}
 
 @media (max-width: 767px) {
      .menu__icon {
