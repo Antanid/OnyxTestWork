@@ -1303,6 +1303,18 @@ border: 1px solid #037E8C;
         position: relative;
         bottom: -95px;
     }
+    .popup{
+        width: 100%;
+    }
+    .popup_text {
+        transform: translate(15%, 0%);
+    }
+    .popup label{
+        transform: translate(-16%, 0%);
+    }
+    .popup label input {
+        width: 85%;
+    }
    
 }
 @media (min-width: 470px) and (max-width: 575px) {
@@ -1319,6 +1331,18 @@ border: 1px solid #037E8C;
     .footer__logo {
         position: relative;
         bottom: -95px;
+    }
+    .popup{
+        width: 100%;
+    }
+    .popup_text {
+        transform: translate(15%, 0%);
+    }
+    .popup label{
+        transform: translate(-16%, 0%);
+    }
+    .popup label input {
+        width: 85%;
     }
 }
 
@@ -1488,6 +1512,11 @@ border: 1px solid #037E8C;
     .photo__img img {
         margin-left: 0;
     }
+
+    .popup{
+        width: 100%;
+    }
+    
 }
 @media (min-width: 768px) and (max-width: 827px) {
     .number__call {
@@ -1507,6 +1536,9 @@ border: 1px solid #037E8C;
     .number__p {
         font-size: 12px;
     }
+    .popup{
+        width: 100%;
+    }
 }
 @media (min-width: 828px) and (max-width: 870px) {
     .number__call {
@@ -1521,6 +1553,9 @@ border: 1px solid #037E8C;
     .number__button {
         width: 135px;
         font-size: 12px;
+    }
+    .popup{
+        width: 100%;
     }
 
 }
@@ -1537,6 +1572,9 @@ border: 1px solid #037E8C;
     .number__button {
         width: 135px;
         font-size: 12px;
+    }
+    .popup{
+        width: 100%;
     }
 } 
 @media (min-width: 921px) and (max-width: 991px){
@@ -1555,6 +1593,9 @@ border: 1px solid #037E8C;
     }
     .nav__ul a{
         padding-left: 50px;
+    }
+    .popup{
+        width: 100%;
     }
 }
 @media (min-width: 768px) and (max-width: 991.98px) {
