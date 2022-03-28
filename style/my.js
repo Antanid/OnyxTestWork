@@ -32,3 +32,25 @@ document.addEventListener('click', (e) => {
         popupBg.classList.remove('active');
     }
 })
+
+
+const accordionItemHeader = document.querySelectorAll('.accordion-item-header');
+
+accordionItemHeader.forEach(accordionItemHeader => {
+    accordionItemHeader.addEventListener('click', (e) => {
+        accordionItemHeader.classList.toggle('active');
+        const accordionItemBody = accordionItemHeader.nextElementSibling;
+        if (accordionItemHeader.classList.contains('active')){
+            accordionItemBody.style.maxHeight = accordionItemBody.scrollHeight + 'px';
+        } else{
+            accordionItemBody.style.maxHeight = 0;
+        }
+    })
+})
+
+const accordionItem = document.querySelectorAll('.accordion-item');
+accordionItem.forEach(accordionItem => {
+    accordionItem. addEventListener('click', (e) => {
+        accordionItem.classList.toggle('active');
+    })
+})

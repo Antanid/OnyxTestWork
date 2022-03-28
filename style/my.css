@@ -6,6 +6,9 @@ img {
     max-width: 100%;
     height: auto;
 }
+*{
+    box-sizing: border-box;
+}
 /********************************************************/
 .header {
     background-image: url(../img/фото.png);
@@ -603,17 +606,59 @@ img {
 
 /*****Questions*****/
 
-.section__questions {
-    background-image: url(../img/QustionBack.svg);
-    background-repeat: no-repeat;
-    background-position-y: 200px;
+ .accordion{
+    margin-top: 50px;
 }
 
-/*  .block__qest{
-     background-image: url(../img/QustionBack.svg);
-     background-repeat: no-repeat;
+ .accordion-item {
+    max-width: 539px;
+}
 
- } */
+.accordion-item.active{
+    border: 0.5px solid rgba(3, 126, 140, 1);
+}
+
+.accordion-item-header {
+    font-size: 16px;
+    font-weight: 600;
+    color: #121214;
+    line-height: 20px;
+    padding-top: 17px;
+    padding-left: 23px;
+    padding-bottom: 24px;
+    padding-right: 10px;
+    cursor: pointer;
+    display: flex;
+    align-items: center;
+    position: relative;
+}
+.accordion-item-header::after{
+    content: url(../img/Vector.svg  );
+    position: absolute;
+    right: 16px;
+    transition: all 0.3s;
+}
+.accordion-item-header.active::after{
+    transition: all 0.3s;
+    transform: rotate(-90deg);
+}
+.accordion-item-body-content {
+    font-weight: 400;
+    font-size: 14px;
+    line-height: 21px;
+    color: #121214;
+    font-size: 14px;
+    padding-left: 23px;
+    padding-right: 31px;
+    padding-bottom: 16px;
+}
+
+.accordion-item-body{
+    max-height: 0;
+    overflow: hidden;
+    transition: 0.4s;
+} 
+
 .questions__head h2 {
     text-align: center;
     margin-top: 70px;
