@@ -54,3 +54,27 @@ accordionItem.forEach(accordionItem => {
         accordionItem.classList.toggle('active');
     })
 })
+
+const popupBgExc = document.querySelector('.popup__bg__exc');
+const popupExc = document.querySelector('.popup__exc');
+const openPopupExc = document.querySelectorAll('.open-popup-exc');
+const closePopupExc = document.querySelector('.close-popup_exc');
+
+openPopupExc.forEach((button) => {
+    button.addEventListener('click', (e) =>{
+        popupBgExc.classList.add('active');
+        popupExc.classList.add('active');
+    })
+})
+
+closePopupExc.addEventListener('click', (e) =>{
+    popupBgExc.classList.remove('active');
+    popupExc.classList.remove('active');
+})
+
+document.addEventListener('click', (e) => {
+    if(e.target === popupBgExc) {
+        popupBgExc.classList.remove('active');
+        popupExc.classList.remove('active');
+    }
+})
