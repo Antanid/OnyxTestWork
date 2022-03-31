@@ -2181,6 +2181,9 @@ img {
     }
 }
 @media (min-width: 992px) and (max-width: 1199px) {
+    .excursions video{
+        min-height: 920px;
+    }
     .number__call {
         position: relative;
         margin-left: 0px;
