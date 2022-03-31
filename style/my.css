@@ -2179,6 +2179,9 @@ img {
     .nav__ul {
         margin-left: 30;
     }
+    .excursions video{
+        min-height: 920px;
+    }
 }
 @media (min-width: 992px) and (max-width: 1199px) {
     .excursions video{
@@ -2353,8 +2356,14 @@ img {
     .nav__ul a {
         padding-left: 65px;
     }
+    .excursions video{
+       min-height: 920px;
+    }
 }
 @media (min-width: 1301px) and (max-width: 1635px) {
+    .excursions video{
+        min-height: 920px;
+     }
     .number__call {
         position: relative;
         left: 625px;
