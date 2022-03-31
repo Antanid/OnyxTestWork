@@ -1233,7 +1233,7 @@ img {
     top: 0;
     left: 0;
     width: 100%;
-    min-height: 920px; 
+    height: 100%; 
     object-fit: cover;
 }
 
@@ -1278,6 +1278,9 @@ img {
 /***********ADAPTIVE************/
 
 @media (max-width: 575.98px) {
+    .excursions video{
+        min-height: 920px;
+    }
     .nav__logo {
         width: 50px;
         margin-left: 20px;
@@ -1662,6 +1665,9 @@ img {
 }
 
 @media (min-width: 576px) and (max-width: 767.98px) {
+    .excursions video{
+        min-height: 920px;
+    }
     .nav__logo {
         margin-left: 1px;
         margin-top: 12px;
