@@ -1862,8 +1862,11 @@ img {
     }
 }
 @media (min-width: 768px) and (max-width: 827px) {
+    .excursions video{
+        min-height: 920px;
+    }
     .slider-navigation{
-        transform: translate(0%, 75px);
+        transform: translate(0%, 65px);
     }
     .number__call {
         position: relative;
@@ -1911,6 +1914,9 @@ img {
     }
 }
 @media (min-width: 828px) and (max-width: 870px) {
+    .excursions video{
+        min-height: 920px;
+    }
     .slider-navigation{
         transform: translate(0%, 75px);
     }
@@ -1953,6 +1959,9 @@ img {
     }
 }
 @media (min-width: 871px) and (max-width: 920px) {
+    .excursions video{
+        min-height: 920px;
+    }
     .slider-navigation{
         transform: translate(0%, 75px);
     }
@@ -1995,6 +2004,9 @@ img {
     }
 }
 @media (min-width: 921px) and (max-width: 991px) {
+    .excursions video{
+        min-height: 920px;
+    }
     .slider-navigation{
         transform: translate(0%, 75px);
     }
