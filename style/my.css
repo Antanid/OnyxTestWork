@@ -6,12 +6,10 @@ img {
     max-width: 100%;
     height: auto;
 }
-* {
-    box-sizing: border-box;
-}
+
 /********************************************************/
 .header {
-    background-image: url(../img/фото.png);
+ 
     min-height: 920px;
     background-repeat: no-repeat;
     background-size: cover;
@@ -1227,6 +1225,55 @@ img {
     right: 10px;
     cursor: pointer;
 }
+/*********************/
+
+.excursions video{
+    z-index: -1;
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    min-height: 920px; 
+    object-fit: cover;
+}
+
+.slider-navigation {
+    z-index: 888;
+    position: relative;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    transform: translate(35%, 50px);
+    margin-bottom: 12px;
+}
+.slider-navigation .nav-btn{
+    width: 12px;
+    height: 12px;
+    background: #ffffff ;
+    border-radius: 50%;
+    cursor: pointer;
+    box-shadow: 0 0 2px rgba(255, 255, 255, 0.5);
+    transition: 0.3s ease;
+}
+.slider-navigation .nav-btn:not(:last-child){
+    margin-right: 20px;
+}
+.slider-navigation .nav-btn:hover{
+    transform: scale(1.2);
+}
+.slider-navigation .nav-btn.active{
+    background-color: #037E8C;
+}
+.video-slide{
+    position: absolute;
+    width: 100%;
+    clip-path: circle(0% at 0 50%);
+}
+.video-slide.active{
+    clip-path: circle(150% at 0 50%);
+    transition: 2s ease;
+    transition-property: clip-path;
+}
 
 /***********ADAPTIVE************/
 
@@ -1538,6 +1585,9 @@ img {
     .popup_button{
         margin-bottom: 10px;
     }
+    .slider-navigation{
+        transform: translate(0%, 100px);
+    }
 }
 @media (min-width: 470px) and (max-width: 575px) {
     .excursions_text {
@@ -1801,8 +1851,14 @@ img {
         margin-top: 12px;
         left: 0;
     }
+    .slider-navigation{
+        transform: translate(0%, 100px);
+    }
 }
 @media (min-width: 768px) and (max-width: 827px) {
+    .slider-navigation{
+        transform: translate(0%, 75px);
+    }
     .number__call {
         position: relative;
         left: 625px;
@@ -1849,6 +1905,9 @@ img {
     }
 }
 @media (min-width: 828px) and (max-width: 870px) {
+    .slider-navigation{
+        transform: translate(0%, 75px);
+    }
     .number__call {
         position: relative;
         margin-left: 0px;
@@ -1888,6 +1947,9 @@ img {
     }
 }
 @media (min-width: 871px) and (max-width: 920px) {
+    .slider-navigation{
+        transform: translate(0%, 75px);
+    }
     .number__call {
         position: relative;
         margin-left: 0px;
@@ -1927,6 +1989,9 @@ img {
     }
 }
 @media (min-width: 921px) and (max-width: 991px) {
+    .slider-navigation{
+        transform: translate(0%, 75px);
+    }
     .number__call {
         position: relative;
         margin-left: 0px;
@@ -2373,9 +2438,7 @@ img {
         bottom: 50%;
         transform: rotate(45deg) translate(0px, 50%);
     }
-    .header {
-        min-height: 100%;
-    }
+    
     .excursions__route {
         margin-bottom: 30px;
     }
