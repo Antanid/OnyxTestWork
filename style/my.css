@@ -9,7 +9,6 @@ img {
 
 /********************************************************/
 .header {
- 
     min-height: 920px;
     background-repeat: no-repeat;
     background-size: cover;
@@ -262,15 +261,164 @@ img {
     border: 1.5px solid #037e8c;
     transition: 0.4s;
 }
-.our__route__img {
+
+/******/
+#slider [type="radio"] {
+    display: none;
+}
+
+.carousel-slider {
+    height: 250px;
+    width: 100%;
+    margin: 100px 0;
+}
+
+#slider {
+    height: 514px;
+    position: relative;
+    perspective: 1600px;
+    transform-style: preserve-3d;
+}
+
+#slider label {
+    width: 343px;
+    border-radius: 15px;
+    position: absolute;
+    left: 0;
+    right: 0;
+    cursor: pointer;
+    transition: transform 0.4s ease;
+    overflow: hidden;
+}
+
+#slider label img {
+    width: 343px;
+    height: 400px;
+    display: block;
+}
+
+#s1:checked ~ #slide3,
+#s2:checked ~ #slide1,
+#s3:checked ~ #slide2 {
+    box-shadow: 0 6px 10px 0 rgba(0, 0, 0, 0.3), 0 2px 2px 0 rgba(0, 0, 0, 0.2);
+    transform: translate3d(160%, 0, -200px);
+}
+
+#s1:checked ~ #slide2,
+#s2:checked ~ #slide3,
+#s3:checked ~ #slide1 {
+    box-shadow: 0 6px 10px 0 rgba(0, 0, 0, 0.3), 0 2px 2px 0 rgba(0, 0, 0, 0.2);
+    transform: translate3d(70%, 0, -200px);
+}
+
+/******/
+
+#slider-2 [type="radio"] {
+    display: none;
+}
+
+.carousel-slider-2 {
+    height: 250px;
+    width: 100%;
+}
+
+#slider-2 {
+    height: 514px;
+    position: relative;
+    perspective: 1600px;
+    transform-style: preserve-3d;
+}
+
+#slider-2 label {
+    width: 343px;
+    border-radius: 15px;
+    position: absolute;
+    left: 0;
+    right: 0;
+    cursor: pointer;
+    transition: transform 0.4s ease;
+    overflow: hidden;
+}
+
+#slider-2 label img {
+    width: 343px;
+    height: 400px;
+    display: block;
+}
+
+#s1-2:checked ~ #slide3-2,
+#s2-2:checked ~ #slide1-2,
+#s3-2:checked ~ #slide2-2 {
+    box-shadow: 0 6px 10px 0 rgba(0, 0, 0, 0.3), 0 2px 2px 0 rgba(0, 0, 0, 0.2);
+    transform: translate3d(160%, 0, -200px);
+}
+
+#s1-2:checked ~ #slide2-2,
+#s2-2:checked ~ #slide3-2,
+#s3-2:checked ~ #slide1-2 {
+    box-shadow: 0 6px 10px 0 rgba(0, 0, 0, 0.3), 0 2px 2px 0 rgba(0, 0, 0, 0.2);
+    transform: translate3d(70%, 0, -200px);
+}
+
+/******/
+
+#slider-3 [type="radio"] {
+    display: none;
+}
+
+.carousel-slider-3 {
+    height: 250px;
+    width: 100%;
+    margin: 100px 0;
+}
+
+#slider-3 {
+    height: 514px;
+    position: relative;
+    perspective: 1600px;
+    transform-style: preserve-3d;
+}
+
+#slider-3 label {
+    width: 343px;
+    border-radius: 15px;
+    position: absolute;
+    left: 0;
+    right: 0;
+    cursor: pointer;
+    transition: transform 0.4s ease;
+    overflow: hidden;
+}
+
+#slider-3 label img {
+    width: 343px;
+    height: 400px;
+    display: block;
+}
+
+#s1-3:checked ~ #slide3-3,
+#s2-3:checked ~ #slide1-3,
+#s3-3:checked ~ #slide2-3 {
+    box-shadow: 0 6px 10px 0 rgba(0, 0, 0, 0.3), 0 2px 2px 0 rgba(0, 0, 0, 0.2);
+    transform: translate3d(160%, 0, -200px);
+}
+
+#s1-3:checked ~ #slide2-3,
+#s2-3:checked ~ #slide3-3,
+#s3-3:checked ~ #slide1-3 {
+    box-shadow: 0 6px 10px 0 rgba(0, 0, 0, 0.3), 0 2px 2px 0 rgba(0, 0, 0, 0.2);
+    transform: translate3d(70%, 0, -200px);
+}
+
+/* .our__route__img {
     margin-top: 67px;
     margin-bottom: 140px;
 }
 .our__route__img img {
     border-radius: 10px;
-}
+} */
 
-.SecondRoute__base {
+/* .SecondRoute__base {
     width: 700px;
     margin-top: 60px;
     margin-bottom: 140px;
@@ -288,7 +436,7 @@ img {
 
 .SecondRout__img {
     margin-left: 60px;
-}
+} */
 
 /*****TEST*********/
 
@@ -1180,20 +1328,20 @@ img {
     position: relative;
     left: 110px;
 }
-.popup_form_button button:hover{
+.popup_form_button button:hover {
     background: #ffffff;
     color: #037e8c;
     border: 1px solid #037e8c;
     transition: all 0.6s;
 }
-.popup_form_h3{
+.popup_form_h3 {
     position: relative;
     left: 110px;
     margin-top: 65px;
 }
 
 /*******************/
-.popup__bg__exc{
+.popup__bg__exc {
     position: fixed;
     top: 0;
     left: 0;
@@ -1205,12 +1353,12 @@ img {
     transition: all 0.5s;
     overflow-y: auto;
 }
-.popup__bg__exc.active{
+.popup__bg__exc.active {
     opacity: 1;
     pointer-events: all;
     transition: all 0.5s;
 }
-.popup__exc{
+.popup__exc {
     position: absolute;
     top: 50%;
     left: 50%;
@@ -1219,7 +1367,7 @@ img {
     transition: all 0.5s;
     background: white;
 }
-.close-popup_exc{
+.close-popup_exc {
     position: absolute;
     top: 10px;
     right: 10px;
@@ -1227,13 +1375,13 @@ img {
 }
 /*********************/
 
-.excursions video{
+.excursions video {
     z-index: -1;
     position: absolute;
     top: 0;
     left: 0;
     width: 100%;
-    height: 100%; 
+    height: 100%;
     object-fit: cover;
 }
 
@@ -1246,30 +1394,30 @@ img {
     transform: translate(35%, 50px);
     margin-bottom: 12px;
 }
-.slider-navigation .nav-btn{
+.slider-navigation .nav-btn {
     width: 12px;
     height: 12px;
-    background: #ffffff ;
+    background: #ffffff;
     border-radius: 50%;
     cursor: pointer;
     box-shadow: 0 0 2px rgba(255, 255, 255, 0.5);
     transition: 0.3s ease;
 }
-.slider-navigation .nav-btn:not(:last-child){
+.slider-navigation .nav-btn:not(:last-child) {
     margin-right: 20px;
 }
-.slider-navigation .nav-btn:hover{
+.slider-navigation .nav-btn:hover {
     transform: scale(1.2);
 }
-.slider-navigation .nav-btn.active{
-    background-color: #037E8C;
+.slider-navigation .nav-btn.active {
+    background-color: #037e8c;
 }
-.video-slide{
+.video-slide {
     position: absolute;
     width: 100%;
     clip-path: circle(0% at 0 50%);
 }
-.video-slide.active{
+.video-slide.active {
     clip-path: circle(150% at 0 50%);
     transition: 2s ease;
     transition-property: clip-path;
@@ -1278,9 +1426,42 @@ img {
 /***********ADAPTIVE************/
 
 @media (max-width: 575.98px) {
+
     .excursions video{
         min-height: 920px;
     }
+
+    #slider-2 label{
+        height: 64%;
+        width: 75%;
+    }
+    #slider-3 label{
+        height: 64%;
+        width: 75%;
+    }
+    .base__line2 {
+        position: relative;
+        left: 225px;
+        top: 345px;
+    }
+    .our__route__img2 {
+        position: relative;
+        top: 280px;
+    }
+    .our__route {
+        height: 3000px;
+    }
+    .route__base2 {
+        position: relative;
+        top: 300px;
+    }
+    #slider label {
+        height: 64%;
+        width: 75%;
+    }
+
+
+
     .nav__logo {
         width: 50px;
         margin-left: 20px;
@@ -1368,16 +1549,17 @@ img {
     }
     .our__route__img img {
         width: 49%;
+        /*   position: relative;
+        top: 180px; */
     }
     .SecondRout__img img {
         width: 49%;
         position: relative;
-        top: 623px;
     }
     .SecondBase__line {
         position: relative;
         left: 254px;
-        bottom: 363px;
+        bottom: 180px;
         margin: 0;
     }
     .section_test {
@@ -1416,7 +1598,7 @@ img {
     .SecondRoute__base {
         width: auto;
         position: relative;
-        bottom: 445px;
+        bottom: 230px;
     }
     .services {
         height: 1200px;
@@ -1473,6 +1655,8 @@ img {
     }
     .SecondRout__img {
         margin-left: 0;
+        position: relative;
+        top: 530px;
     }
     .special__offer__h2 h2 {
         font-size: 24px;
@@ -1561,35 +1745,38 @@ img {
         bottom: 37px;
         left: 35px;
     }
-    .popup__exc{
+    .popup__exc {
         transform: translate(-50%, -9%);
         width: 90%;
     }
-    .popup_form_h3{
-        left: 10px;   
+    .popup_form_h3 {
+        left: 10px;
     }
     .popup_form {
         left: 10px;
     }
-    .popup_form input{
+    .popup_form input {
         width: 250px;
     }
-    .popup_form_button button{
+    .popup_form_button button {
         left: 10px;
         margin-top: 16px;
         margin-bottom: 10px;
     }
-    .popup__bike_last{
+    .popup__bike_last {
         margin: 0 auto;
     }
-    .popup__bike{
+    .popup__bike {
         margin: 0 auto;
     }
-    .popup_button{
+    .popup_button {
         margin-bottom: 10px;
     }
-    .slider-navigation{
+    .slider-navigation {
         transform: translate(0%, 100px);
+    }
+    .excursions video {
+        min-height: 920px;
     }
 }
 @media (min-width: 470px) and (max-width: 575px) {
@@ -1665,7 +1852,75 @@ img {
 }
 
 @media (min-width: 576px) and (max-width: 767.98px) {
+
     .excursions video{
+        min-height: 920px;
+    }
+
+    .our__route__img2 {
+        position: relative;
+        top: 150px;
+    }
+  
+    .route__base2{
+        top: 230px;
+    }
+    .SecondRout__img {
+        display: flex;
+        margin-left: 0;
+        width: 100%;
+        position: relative;
+        top: 510px;
+    }
+    .SecondBase__line {
+        bottom: 270px;
+    }
+    .SecondRoute__base {
+        bottom: 290px;
+    }
+    #slider label img{
+        width: 100%;
+    }
+    #slider-2 label img{
+        width: 100%;
+    }
+    #slider-3 label img{
+        width: 100%;
+    }
+    .carousel-slider{
+        position: relative;
+        bottom: 115px;
+    }
+    .our_routes{
+        margin-bottom: 30px;
+    }
+    #slider-2 label{
+        height: 64%;
+        width: 75%;
+    }
+    #slider-3 label{
+        height: 64%;
+        width: 75%;
+    }
+    .base__line2 {
+        position: relative;
+        left: 0px;
+        top: 290px;
+    }
+    .our__route {
+        height: 3000px;
+    }
+    .route__base2 {
+        position: relative;
+        top: 300px;
+    }
+    #slider label {
+        height: 64%;
+        width: 75%;
+    }
+
+
+    .excursions video {
         min-height: 920px;
     }
     .nav__logo {
@@ -1705,7 +1960,7 @@ img {
         margin-left: 411px;
         margin-bottom: 155px;
     }
-    .our__route__img {
+    /*   .our__route__img {
         display: flex;
         margin-top: -77px;
         margin-bottom: 136px;
@@ -1713,25 +1968,17 @@ img {
     }
     .our__route__img img {
         padding-right: 6px;
-    }
-    .SecondRout__img {
-        display: flex;
-        width: 80%;
-        margin-left: 0;
-        width: 53%;
-        position: relative;
-        top: 530px;
-    }
+    } */
+    
     .SecondRout__img img {
         padding-left: 10px;
     }
     .SecondRoute__base {
         position: relative;
-        bottom: 750px;
     }
     .SecondBase__line {
         left: 437px;
-        bottom: 520px;
+
         position: relative;
     }
     .route__base2 {
@@ -1742,9 +1989,7 @@ img {
         position: relative;
         bottom: 325px;
     }
-    .our__route__img2 {
-        margin-top: -350px;
-    }
+
     .video__bord {
         width: 550px;
     }
@@ -1837,7 +2082,7 @@ img {
     .popup {
         width: 100%;
     }
-    .popup__exc{
+    .popup__exc {
         transform: translate(-50%, -9%);
         width: 71%;
     }
@@ -1847,26 +2092,27 @@ img {
     .popup_form input {
         width: 315px;
     }
-    .popup_form{
+    .popup_form {
         left: 0;
     }
-    .popup_form_h3{
+    .popup_form_h3 {
         left: 0;
     }
-    .popup_form_button button{
+    .popup_form_button button {
         margin-top: 12px;
         left: 0;
     }
-    .slider-navigation{
+    .slider-navigation {
         transform: translate(0%, 100px);
     }
 }
 @media (min-width: 768px) and (max-width: 827px) {
+
     .excursions video{
         min-height: 920px;
     }
-    .slider-navigation{
-        transform: translate(0%, 65px);
+    .slider-navigation {
+        transform: translate(0%, 75px);
     }
     .number__call {
         position: relative;
@@ -1891,7 +2137,7 @@ img {
     .popup {
         width: 100%;
     }
-    .popup__exc{
+    .popup__exc {
         transform: translate(-50%, -13%);
         width: 71%;
     }
@@ -1901,23 +2147,24 @@ img {
     .popup_form input {
         width: 360px;
     }
-    .popup_form{
+    .popup_form {
         left: 80px;
     }
-    .popup_form_h3{
+    .popup_form_h3 {
         left: 80px;
     }
-    .popup_form_button button{
+    .popup_form_button button {
         left: 80px;
         margin-top: 12px;
         margin-bottom: 20px;
     }
 }
 @media (min-width: 828px) and (max-width: 870px) {
+
     .excursions video{
         min-height: 920px;
     }
-    .slider-navigation{
+    .slider-navigation {
         transform: translate(0%, 75px);
     }
     .number__call {
@@ -1936,7 +2183,7 @@ img {
     .popup {
         width: 100%;
     }
-    .popup__exc{
+    .popup__exc {
         transform: translate(-50%, -13%);
         width: 71%;
     }
@@ -1946,13 +2193,13 @@ img {
     .popup_form input {
         width: 360px;
     }
-    .popup_form{
+    .popup_form {
         left: 80px;
     }
-    .popup_form_h3{
+    .popup_form_h3 {
         left: 80px;
     }
-    .popup_form_button button{
+    .popup_form_button button {
         left: 80px;
         margin-top: 12px;
         margin-bottom: 20px;
@@ -1962,7 +2209,7 @@ img {
     .excursions video{
         min-height: 920px;
     }
-    .slider-navigation{
+    .slider-navigation {
         transform: translate(0%, 75px);
     }
     .number__call {
@@ -1981,7 +2228,7 @@ img {
     .popup {
         width: 100%;
     }
-    .popup__exc{
+    .popup__exc {
         transform: translate(-50%, -14%);
         width: 71%;
     }
@@ -1991,23 +2238,24 @@ img {
     .popup_form input {
         width: 360px;
     }
-    .popup_form{
+    .popup_form {
         left: 80px;
     }
-    .popup_form_h3{
+    .popup_form_h3 {
         left: 80px;
     }
-    .popup_form_button button{
+    .popup_form_button button {
         left: 80px;
         margin-top: 12px;
         margin-bottom: 20px;
     }
 }
 @media (min-width: 921px) and (max-width: 991px) {
+
     .excursions video{
         min-height: 920px;
     }
-    .slider-navigation{
+    .slider-navigation {
         transform: translate(0%, 75px);
     }
     .number__call {
@@ -2029,7 +2277,7 @@ img {
     .popup {
         width: 100%;
     }
-    .popup__exc{
+    .popup__exc {
         transform: translate(-50%, -14%);
         width: 71%;
     }
@@ -2039,19 +2287,83 @@ img {
     .popup_form input {
         width: 360px;
     }
-    .popup_form{
+    .popup_form {
         left: 80px;
     }
-    .popup_form_h3{
+    .popup_form_h3 {
         left: 80px;
     }
-    .popup_form_button button{
+    .popup_form_button button {
         left: 80px;
         margin-top: 12px;
         margin-bottom: 20px;
     }
 }
 @media (min-width: 768px) and (max-width: 991.98px) {
+
+    .our__route__img2 {
+        position: relative;
+        top: 150px;
+    }
+  
+    .route__base2{
+        top: 230px;
+    }
+    .SecondRout__img {
+        display: flex;
+        margin-left: 0;
+        width: 100%;
+        position: relative;
+        top: 510px;
+    }
+    .SecondBase__line {
+        bottom: 270px;
+    }
+    .SecondRoute__base {
+        bottom: 290px;
+    }
+    #slider label img{
+        width: 100%;
+    }
+    #slider-2 label img{
+        width: 100%;
+    }
+    #slider-3 label img{
+        width: 100%;
+    }
+    .carousel-slider{
+        position: relative;
+        bottom: 115px;
+    }
+    .our_routes{
+        margin-bottom: 30px;
+    }
+    #slider-2 label{
+        height: 64%;
+        width: 75%;
+    }
+    #slider-3 label{
+        height: 64%;
+        width: 75%;
+    }
+    .base__line2 {
+       margin-bottom: -255px; 
+    }
+    .our__route {
+        height: 3130px;
+    }
+    .route__base2 {
+        position: relative;
+        top: 300px;
+    }
+    #slider label {
+        height: 64%;
+        width: 75%;
+    }
+
+
+
+
     .nav__ul a {
         padding-left: 30px;
         margin-top: 40px;
@@ -2084,33 +2396,27 @@ img {
     }
     .SecondRoute__base {
         position: relative;
-        bottom: 815px;
+
         margin-left: 70px;
     }
     .SecondBase__line {
         left: 575px;
-        bottom: 591px;
+
         position: relative;
     }
     .SecondRout__img {
         position: relative;
-        top: 575px;
     }
     .route__base2 {
         position: relative;
         bottom: 325px;
     }
-    .base__line2 {
-        position: relative;
-        top: -275px;
-    }
+    
     .our__route__img2 {
         position: relative;
     }
     .our__route__img2 {
         position: relative;
-        bottom: 400px;
-        margin-bottom: -310px;
     }
     .photo__img img {
         margin-left: 0;
@@ -2179,9 +2485,6 @@ img {
     .nav__ul {
         margin-left: 30;
     }
-    .excursions video{
-        min-height: 920px;
-    }
 }
 @media (min-width: 992px) and (max-width: 1199px) {
     .excursions video{
@@ -2226,9 +2529,7 @@ img {
     .SecondRout__img img {
         width: 43%;
     }
-    .base__routes__buttonSecond {
-        width: 58%;
-    }
+    
     .photo__img img {
         margin-left: 0;
     }
@@ -2308,7 +2609,7 @@ img {
     .video__bord {
         width: 95%;
     }
-    .popup__exc{
+    .popup__exc {
         transform: translate(-50%, -19%);
         width: 71%;
     }
@@ -2318,19 +2619,23 @@ img {
     .popup_form input {
         width: 280px;
     }
-    .popup_form{
+    .popup_form {
         left: 80px;
     }
-    .popup_form_h3{
+    .popup_form_h3 {
         left: 80px;
     }
-    .popup_form_button button{
+    .popup_form_button button {
         left: 80px;
         margin-top: 12px;
         margin-bottom: 20px;
     }
 }
 @media (min-width: 1200px) and (max-width: 1300px) {
+    
+    .excursions video{
+        min-height: 920px;
+    }
     .nav__ul {
         margin-left: 10px;
     }
@@ -2356,14 +2661,12 @@ img {
     .nav__ul a {
         padding-left: 65px;
     }
-    .excursions video{
-       min-height: 920px;
-    }
 }
 @media (min-width: 1301px) and (max-width: 1635px) {
+
     .excursions video{
         min-height: 920px;
-     }
+    }
     .number__call {
         position: relative;
         left: 625px;
@@ -2468,7 +2771,7 @@ img {
         bottom: 50%;
         transform: rotate(45deg) translate(0px, 50%);
     }
-    
+
     .excursions__route {
         margin-bottom: 30px;
     }
