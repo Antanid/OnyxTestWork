@@ -8,6 +8,14 @@ img {
 }
 
 /********************************************************/
+.ProjectDescription {
+    color: #ffffff;
+    font-family: "Gotham Pro", "Montserrat Subrayada", sans-serif;
+}
+.ProjectName {
+    color: #ffffff;
+    font-family: "Gotham Pro", "Montserrat Subrayada", sans-serif;
+}
 .header {
     min-height: 920px;
     background-repeat: no-repeat;
@@ -545,7 +553,6 @@ img {
     color: #121214;
     text-align: center;
     margin-top: 80px;
-  
 }
 
 /********VIDEO*********/
@@ -1402,6 +1409,7 @@ img {
     transition: all 0.5s;
 }
 .popup__exc {
+    z-index: 1200;
     position: absolute;
     top: 50%;
     left: 50%;
@@ -1424,12 +1432,12 @@ img {
     top: 0;
     left: 0;
     width: 100%;
-    height: 100%;
+    height: 110%;
     object-fit: cover;
 }
 
 .slider-navigation {
-    z-index: 888;
+    z-index: 3;
     position: relative;
     display: flex;
     justify-content: center;
@@ -1469,8 +1477,15 @@ img {
 /***********ADAPTIVE************/
 
 @media (max-width: 575.98px) {
+    .footer__logo{
+        position: relative;
+        bottom: -95px;
+    }
+    .Additional h4{
+        font-size: 32px;
+    }
     .excursions video {
-        min-height: 920px;
+        min-height: 1020px;
     }
 
     #slider-2 label {
@@ -1815,9 +1830,6 @@ img {
     .slider-navigation {
         transform: translate(0%, 100px);
     }
-    .excursions video {
-        min-height: 920px;
-    }
 }
 @media (min-width: 470px) and (max-width: 575px) {
     .excursions_text {
@@ -1893,7 +1905,7 @@ img {
 
 @media (min-width: 576px) and (max-width: 767.98px) {
     .excursions video {
-        min-height: 920px;
+        min-height: 1020px;
     }
 
     .our__route__img2 {
@@ -1958,9 +1970,6 @@ img {
         width: 75%;
     }
 
-    .excursions video {
-        min-height: 920px;
-    }
     .nav__logo {
         margin-left: 1px;
         margin-top: 12px;
@@ -2146,7 +2155,7 @@ img {
 }
 @media (min-width: 768px) and (max-width: 827px) {
     .excursions video {
-        min-height: 920px;
+        min-height: 1080px;
     }
     .slider-navigation {
         transform: translate(0%, 75px);
@@ -2198,7 +2207,7 @@ img {
 }
 @media (min-width: 828px) and (max-width: 870px) {
     .excursions video {
-        min-height: 920px;
+        min-height: 1075px;
     }
     .slider-navigation {
         transform: translate(0%, 75px);
@@ -2243,7 +2252,7 @@ img {
 }
 @media (min-width: 871px) and (max-width: 920px) {
     .excursions video {
-        min-height: 920px;
+        min-height: 1075px;
     }
     .slider-navigation {
         transform: translate(0%, 75px);
@@ -2288,7 +2297,7 @@ img {
 }
 @media (min-width: 921px) and (max-width: 991px) {
     .excursions video {
-        min-height: 920px;
+        min-height: 1075px;
     }
     .slider-navigation {
         transform: translate(0%, 75px);
@@ -2518,8 +2527,24 @@ img {
     }
 }
 @media (min-width: 992px) and (max-width: 1199px) {
+
+    #s1-2:checked ~ #slide3-2,
+#s2-2:checked ~ #slide1-2,
+#s3-2:checked ~ #slide2-2 {
+    box-shadow: 0 6px 10px 0 rgba(0, 0, 0, 0.3), 0 2px 2px 0 rgba(0, 0, 0, 0.2);
+    transform: translate3d(70%, 0, -200px);
+}
+
+#s1-2:checked ~ #slide2-2,
+#s2-2:checked ~ #slide3-2,
+#s3-2:checked ~ #slide1-2 {
+    box-shadow: 0 6px 10px 0 rgba(0, 0, 0, 0.3), 0 2px 2px 0 rgba(0, 0, 0, 0.2);
+    transform: translate3d(-70%, 0, -200px);
+}
+
+
     .excursions video {
-        min-height: 920px;
+        min-height: 1075px;
     }
     .number__call {
         position: relative;
@@ -2662,13 +2687,30 @@ img {
         margin-bottom: 20px;
     }
 }
+@media (min-width: 1200px) and (max-width: 1440px){
+
+    #s1-2:checked ~ #slide3-2,
+#s2-2:checked ~ #slide1-2,
+#s3-2:checked ~ #slide2-2 {
+    box-shadow: 0 6px 10px 0 rgba(0, 0, 0, 0.3), 0 2px 2px 0 rgba(0, 0, 0, 0.2);
+    transform: translate3d(70%, 0, -200px);
+}
+
+#s1-2:checked ~ #slide2-2,
+#s2-2:checked ~ #slide3-2,
+#s3-2:checked ~ #slide1-2 {
+    box-shadow: 0 6px 10px 0 rgba(0, 0, 0, 0.3), 0 2px 2px 0 rgba(0, 0, 0, 0.2);
+    transform: translate3d(-70%, 0, -200px);
+}
+
+}
 @media (min-width: 1200px) and (max-width: 1300px) {
-    #slider-photo label{
+    #slider-photo label {
         width: 27%;
-    height: 127%;
+        height: 127%;
     }
     .excursions video {
-        min-height: 920px;
+        min-height: 1075px;
     }
     .nav__ul {
         margin-left: 10px;
@@ -2697,12 +2739,12 @@ img {
     }
 }
 @media (min-width: 1301px) and (max-width: 1635px) {
-    #slider-photo label{
+    #slider-photo label {
         width: 26%;
-    height: 133%;
+        height: 133%;
     }
     .excursions video {
-        min-height: 920px;
+        min-height: 1075px;
     }
     .number__call {
         position: relative;
@@ -2715,43 +2757,58 @@ img {
         margin-left: 10px;
     }
 }
-@media (min-width: 1636px) and (max-width: 1800px){
-    .carousel{
+@media (min-width: 1636px) and (max-width: 1800px) {
+    .excursions video {
+        min-height: 1075px;
+    }
+    .carousel {
         margin-bottom: 200px;
     }
-    #slider-photo label{
+    #slider-photo label {
         width: 23%;
-    height: 137%;
+        height: 137%;
     }
 }
-@media (min-width: 1801px) and (max-width: 2000px){
-    .carousel{
+@media (min-width: 1801px) and (max-width: 2000px) {
+    .excursions video {
+        min-height: 1075px;
+    }
+    .carousel {
         margin-bottom: 200px;
     }
-    #slider-photo label{
+    #slider-photo label {
         width: 20%;
-    height: 142%;
+        height: 142%;
     }
 }
-@media (min-width: 2001px) and (max-width: 2200px){
-    .carousel{
+@media (min-width: 2001px) and (max-width: 2200px) {
+    .excursions video {
+        min-height: 1050px;
+    }
+    .carousel {
         margin-bottom: 400px;
     }
-    #slider-photo label{
+    #slider-photo label {
         width: 30%;
-    height: 237%;
+        height: 237%;
     }
 }
-@media (min-width: 2201px) and (max-width: 2500px){
-    .carousel{
+@media (min-width: 2201px) and (max-width: 2500px) {
+    .excursions video {
+        min-height: 1050px;
+    }
+    .carousel {
         margin-bottom: 600px;
     }
-    #slider-photo label{
+    #slider-photo label {
         width: 30%;
-    height: 260%;
+        height: 260%;
     }
 }
 @media (min-width: 1636px) and (max-width: 2560px) {
+    .excursions video {
+        min-height: 1050px;
+    }
     .special__offer__all {
         height: 90%;
     }
@@ -2848,7 +2905,20 @@ img {
         margin-bottom: 30px;
     }
 }
-
+@media (min-width: 320px) and (max-width: 389px) {
+    .popup{
+        width: 100%;
+    }
+    .popup_text {
+        transform: translate(0%, 0%);
+    }
+    .form__all{
+        transform: translate(0%, 0%);
+    }
+    .popup label input{
+        width: 100%;
+    }
+}
 @media (min-width: 320px) and (max-width: 350px) {
     #slider-photo label {
         width: 80%;
@@ -2879,62 +2949,61 @@ img {
         left: 325px;
     }
 }
-@media (min-width: 451px) and (max-width: 500px){
+@media (min-width: 451px) and (max-width: 500px) {
     #slider-photo label {
         width: 53%;
         height: 90%;
     }
 }
-@media (min-width: 501px) and (max-width: 550px){
-    #slider-photo label{
+@media (min-width: 501px) and (max-width: 550px) {
+    #slider-photo label {
         width: 51%;
-    height: 98%;
+        height: 98%;
     }
 }
-@media (min-width: 551px) and (max-width: 570px){
-    #slider-photo label{
+@media (min-width: 551px) and (max-width: 570px) {
+    #slider-photo label {
         width: 48%;
-    height: 100%;
+        height: 100%;
     }
 }
-@media (min-width: 571px) and (max-width: 630px){
-    #slider-photo label{
+@media (min-width: 571px) and (max-width: 630px) {
+    #slider-photo label {
         width: 46%;
-    height: 100%;
+        height: 100%;
     }
 }
-@media (min-width: 631px) and (max-width: 700px){
-    #slider-photo label{
+@media (min-width: 631px) and (max-width: 700px) {
+    #slider-photo label {
         width: 42%;
-    height: 100%;
+        height: 100%;
     }
 }
-@media (min-width: 701px) and (max-width: 800px){
-    #slider-photo label{
+@media (min-width: 701px) and (max-width: 800px) {
+    #slider-photo label {
         width: 37%;
-    height: 100%;
+        height: 100%;
     }
 }
-@media (min-width: 801px) and (max-width: 900px){
-    #slider-photo label{
+@media (min-width: 801px) and (max-width: 900px) {
+    #slider-photo label {
         width: 32%;
-    height: 100%;
+        height: 100%;
     }
 }
-@media (min-width: 901px) and (max-width: 1000px){
-    #slider-photo label{
+@media (min-width: 901px) and (max-width: 1000px) {
+    #slider-photo label {
         width: 33%;
-    height: 115%;
+        height: 115%;
     }
 }
-@media (min-width: 1001px) and (max-width: 1199px){
-    #slider-photo label{
+@media (min-width: 1001px) and (max-width: 1199px) {
+    #slider-photo label {
         width: 32%;
-    height: 125%;
+        height: 125%;
     }
 }
 @media (min-width: 451px) and (max-width: 540px) {
-   
     .menu__icon {
         bottom: 70px;
         left: 365px;
