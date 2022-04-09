@@ -1,4 +1,6 @@
-const iconMenu = document.querySelector('.menu__icon');
+
+
+/* const iconMenu = document.querySelector('.menu__icon');
 if (iconMenu) {
     const menuBody = document.querySelector('.menu__body');
     iconMenu.addEventListener('click', function (e) {
@@ -6,7 +8,26 @@ if (iconMenu) {
         iconMenu.classList.toggle('_active');
         menuBody.classList.toggle('_active')
     })
+} */
+
+const iconMenu = document.querySelector('.menu__icon');
+const menuBody = document.querySelector('.menu__body');
+
+function menuToggle() {
+  document.body.classList.toggle('_lock');
+  iconMenu.classList.toggle('_active');
+  menuBody.classList.toggle('_active');
+  if (menuBody.classList.contains('_active')) {
+    menuBody.addEventListener ('click', function(e) {
+    if (e.target.tagName == 'A') {
+      menuToggle()
+    }
+  }, { once: true })
+  }
 }
+
+iconMenu.addEventListener('click', menuToggle)
+
 
 let popupBg = document.querySelector('.popup__bg');
 let popup = document.querySelector('.popup');
