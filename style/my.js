@@ -34,6 +34,7 @@ let popup = document.querySelector('.popup');
 let openPopupButtons = document.querySelectorAll('.popup_open');
 let closePopupButtons = document.querySelector('.close-popup');
 
+
 openPopupButtons.forEach((button) => {
     button.addEventListener('click', (e) => {
         e.preventDefault();
