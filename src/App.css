@@ -3331,8 +3331,8 @@ img {
 
 @media (min-width: 320px) and (max-width: 350px) {
   #slider-photo label {
-    width: 80%;
-    height: 94%;
+    width: 73%;
+    height: 87%;
   }
 
   .menu__icon {
@@ -3343,8 +3343,8 @@ img {
 
 @media (min-width: 351px) and (max-width: 400px) {
   #slider-photo label {
-    width: 72%;
-    height: 85%;
+    width: 70%;
+    height: 93%;
   }
 
   .menu__icon {
@@ -3413,11 +3413,16 @@ img {
     height: 100%;
   }
 }
-
-@media (min-width: 901px) and (max-width: 1000px) {
+@media (min-width: 901px) and (max-width: 950px) {
   #slider-photo label {
     width: 33%;
-    height: 115%;
+    height: 117%;
+  }
+}
+@media (min-width: 951px) and (max-width: 1000px) {
+  #slider-photo label {
+    width: 30%;
+    height: 100%;
   }
 }
 
