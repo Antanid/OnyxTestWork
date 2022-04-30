@@ -121,8 +121,9 @@ img {
   transition: 0.4s;
 }
 
-.img__button {
-  background: transparent;
+.img__button{
+ margin-left: 20px;
+ background: transparent;
 }
 
 /***********our advantages**********/

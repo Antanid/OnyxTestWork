@@ -4,6 +4,7 @@ import bgVideo from '../assets/video/video-1.mp4';
 import phone from "../assets/img/phone.png";
 import logo from '../assets/img/logo.png';
 import PopUpHead from './PopUp/PopUpHead';
+import arrow from "../assets/img/стрелка.png";
 
 function Head() {
     const [active, setActive] = useState(false);
@@ -39,7 +40,7 @@ function Head() {
                                     <li><a href="#photo__h2">Галерея</a></li>
                                     <li><a href="#questions__head">Питання-відповідь </a></li>
                                     <li><a href="#contacts__h3">Контакти</a></li>
-                                    <li onClick={() => setActive(true)} ><a onClick={handleClick} href="" className="popup_open">Забронювати</a></li>
+                                    <li onClick={() => setActive(true)} ><a onClick={handleClick} href="/" className="popup_open">Забронювати</a></li>
                                 </ul>
 
                                 <div className="nav__number">
@@ -73,7 +74,7 @@ function Head() {
                             <div className="excursions__route">
                                 <button className="excursions__button">
                                     Підібрати маршрут
-                                    <img className="img__button" src="./assets/img/стрелка.png" alt="" />
+                                    <img className="img__button" src={arrow} alt="" />
                                 </button>
                             </div>
 

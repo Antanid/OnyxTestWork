@@ -1,5 +1,7 @@
 import React from "react";
 
+import servicePhoto from "../assets/img/ServicICON.svg";
+
 
 class Service extends React.Component {
     render() {
@@ -20,7 +22,7 @@ class Service extends React.Component {
                         <div className="col-lg-4">
                             <div className="services__block">
                                 <div className="services__icon">
-                                    <img src="./assets/img/ServicICON.svg" alt="" />
+                                    <img src={servicePhoto} alt="" />
                                 </div>
                                 <div className="services__text">
                                     <p>
@@ -34,7 +36,7 @@ class Service extends React.Component {
                         <div className="col-lg-4">
                             <div className="services__block">
                                 <div className="services__icon">
-                                    <img src="./assets/img/ServicICON.svg" alt="" />
+                                    <img src={servicePhoto} alt="" />
                                 </div>
                                 <div className="services__text">
                                     <p>
@@ -49,7 +51,7 @@ class Service extends React.Component {
                         <div className="col-lg-4">
                             <div className="services__block">
                                 <div className="services__icon">
-                                    <img src="./assets/img/ServicICON.svg" alt="" />
+                                    <img src={servicePhoto} alt="" />
                                 </div>
                                 <div className="services__text">
                                     <p>
@@ -66,7 +68,7 @@ class Service extends React.Component {
                         <div className="col-lg-4">
                             <div className="services__block">
                                 <div className="services__icon">
-                                    <img src="./assets/img/ServicICON.svg" alt="" />
+                                    <img src={servicePhoto} alt="" />
                                 </div>
                                 <div className="services__text">
                                     <p>
@@ -82,7 +84,7 @@ class Service extends React.Component {
                         <div className="col-lg-4">
                             <div className="services__block">
                                 <div className="services__icon">
-                                    <img src="./assets/img/ServicICON.svg" alt="" />
+                                    <img src={servicePhoto} alt="" />
                                 </div>
                                 <div className="services__text">
                                     <p>
@@ -97,7 +99,7 @@ class Service extends React.Component {
                         <div className="col-lg-4">
                             <div className="services__block services__block__end">
                                 <div className="services__icon">
-                                    <img src="./assets/img/ServicICON.svg" alt="" />
+                                    <img src={servicePhoto} alt="" />
                                 </div>
                                 <div className="services__text">
                                     <p>
