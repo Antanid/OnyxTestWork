@@ -1,31 +1,59 @@
 import React, { useState } from "react";
 
-import Rubl from "../assets/img/rubl.png";
-import Line from "../assets/img/Line 1.png";
-import Time from "../assets/img/Time.png";
-import Location from '../assets/img/Location.png';
-import Complexity from "../assets/img/complexity.png";
-import Route from "../assets/img/Route.png";
+import Rubl from "../../assets/img/rubl.png";
+import Line from "../../assets/img/Line 1.png";
+import Time from "../../assets/img/Time.png";
+import Location from '../../assets/img/Location.png';
+import Complexity from "../../assets/img/complexity.png";
+import Route from "../../assets/img/Route.png";
 
-import Qadro from "../assets/img/baseQadro.svg";
-import QadroSecend from "../assets/img/baseFistOther.svg";
-import QadroThird from "../assets/img/Second2.svg";
+import Qadro from "../../assets/img/baseQadro.svg";
+import QadroSecend from "../../assets/img/baseFistOther.svg";
+import QadroThird from "../../assets/img/Second2.svg";
 
-import SecendQadroFirst from "../assets/img/baseFistOther.svg";
-import SecendQadroSecend from "../assets/img/Second2.svg";
-import SecendQadroThird from "../assets/img/Second.svg";
+import SecendQadroFirst from "../../assets/img/baseFistOther.svg";
+import SecendQadroSecend from "../../assets/img/Second2.svg";
+import SecendQadroThird from "../../assets/img/Second.svg";
 
-import ThirdQadroFirst from "../assets/img/ThirdRout.svg";
-import ThirdQadroSecend from "../assets/img/baseFistOther.svg";
-import ThirdQadroThird from "../assets/img/ThirdRout2.svg";
-import PopUpExc from "./PopUp/PopUpExc";
+import ThirdQadroFirst from "../../assets/img/ThirdRout.svg";
+import ThirdQadroSecend from "../../assets/img/baseFistOther.svg";
+import ThirdQadroThird from "../../assets/img/ThirdRout2.svg";
+import PopUpExc from "../PopUp/PopUpExc";
+import Buttons from "./Buttons";
+
 
 
 
 
 const OurRoute = () => {
 
-const [active, setActive] = useState(false);
+    const [active, setActive] = useState(false);
+    const [info] = useState({
+        firstPage:
+        {
+            price: 'від 4000',
+            time: '1,5 - 2 години',
+            distance: '20 - 25 км',
+            complexity: '5***',
+            route: "Смотрова - Джерело - Камінь Джигіта - Адербіївка - Гора Нексис - -Грозові Ворота - Шашлики - Цигельський водоспад (чаша кохання) - Форсаж"
+        },
+        secendPage:
+        {
+            price: 'від 7000 ',
+            time: '6 - 8 години',
+            distance: '60 - 70 км',
+            complexity: '5***',
+            route: "Оглядова - Джерело - Камінь Джигіта - Адербіївка - Гора Нексис - -Грозові Ворота - Шашлики - Цигельський водоспад (чаша кохання) - Форсаж"
+        },
+        thirdPage:
+        {
+            price: 'від 16000 ',
+            time: '4 години',
+            distance: '40 - 50 км',
+            complexity: '5***',
+            route: "Форсаж - Синя бухта – Занедбана Тур База – Суховантаж Ріо  - Форсаж"
+        },
+    })
 
     return (
         <article className="our__route">
@@ -45,35 +73,30 @@ const [active, setActive] = useState(false);
 
 
                     <div className="col-lg-5">
-                        <div className="route__base">
 
+                        <div className="route__base">
                             <div className="base__h2">
-                                <h2> БАЗОВИЙ <br /> <span>від 4000 </span>
+                                <h2> БАЗОВИЙ <br /> <span>{info.firstPage.price} </span>
                                     <img className="base__money" src={Rubl} alt="money" />
                                 </h2>
                             </div>
 
                             <div className="base__h3">
-                                <h3> <img className="base__ico" src={Time} alt="time" /> ЧАС У ДОРОЗІ: <span> 1,5 - 2
-                                    години</span></h3>
-                                <h3> <img className="base__ico" src={Location} alt="location" /> ВІДСТАНЬ: <span> 20
-                                    -
-                                    25 км</span></h3>
+                                <h3> <img className="base__ico" src={Time} alt="time" /> ЧАС У ДОРОЗІ: <span>{info.firstPage.time}</span></h3>
+                                <h3> <img className="base__ico" src={Location} alt="location" /> ВІДСТАНЬ: <span>{info.firstPage.distance}</span></h3>
                                 <h3><img className="base__ico" src={Complexity} alt="complexity" />СКЛАДНІСТЬ: <span>
-                                    5***</span></h3>
+                                    {info.firstPage.complexity}</span></h3>
                             </div>
 
                             <div className="base__routes__h4">
                                 <h4>МАРШРУТ <img className="base__icon__route" src={Route} alt="route" /></h4>
                                 <p>
-                                    Смотрова - Джерело - Камінь Джигіта - Адербіївка - Гора Нексис - -Грозові Ворота -
-                                    Шашлики - Цигельський водоспад (чаша кохання) - -Форсаж</p>
+                                    {info.firstPage.route}</p>
                             </div>
 
                             <div className="base__routes__button">
-                                <button onClick={() => setActive(true)} className="base__button__moreInf open-popup-exc">Докладніше</button>
-                                <button onClick={() => setActive(true)} className="base__button__book open-popup-exc">Забронювати
-                                </button>
+                                <Buttons Click={() => setActive(true)} text={'Докладніше'} />
+                                <Buttons Click={() => setActive(true)} text={'Забронювати'} />
                             </div>
 
                         </div>
@@ -151,32 +174,26 @@ const [active, setActive] = useState(false);
                         <div className="SecondRoute__base">
 
                             <div className="base__h2">
-                                <h2> РОЗШИРЕНИЙ <br /> <span>от 16000 </span>
+                                <h2> РОЗШИРЕНИЙ <br /> <span>{info.secendPage.price}</span>
                                     <img className="base__money" src={Rubl} alt="money" />
                                 </h2>
                             </div>
 
                             <div className="base__h3">
                                 <h3> <img className="base__ico" src={Time} alt="time" /> ЧАС У ДОРОЗІ
-                                    : <span> 6 - 8
-                                        часов</span></h3>
-                                <h3> <img className="base__ico" src={Location} alt="location" /> ВІДСТАНЬ: <span> 60
-                                    -
-                                    70 км</span></h3>
-                                <h3><img className="base__ico" src={Complexity} alt="complexity" />СКЛАДНІСТЬ: <span>
-                                    5***</span></h3>
+                                    : <span>{info.secendPage.time}</span></h3>
+                                <h3> <img className="base__ico" src={Location} alt="location" /> ВІДСТАНЬ: <span>{info.secendPage.distance}</span></h3>
+                                <h3><img className="base__ico" src={Complexity} alt="complexity" />СКЛАДНІСТЬ: <span>{info.secendPage.complexity}</span></h3>
                             </div>
 
                             <div className="base__routes__h4">
                                 <h4>МАРШРУТ <img className="base__icon__route" src={Route} alt="route" /></h4>
-                                <p>Оглядова - Джерело - Камінь Джигіта - Адербіївка - Гора Нексис -
-                                    -Грозові Ворота - Шашлики - Цигельський водоспад (чаша кохання) -
-                                    -Форсаж</p>
+                                <p>{info.secendPage.route}</p>
                             </div>
 
                             <div className="base__routes__button base__routes__buttonSecond">
-                                <button onClick={() => setActive(true)} className="base__button__moreInf open-popup-exc">Докладніше</button>
-                                <button onClick={() => setActive(true)} className="base__button__book open-popup-exc">Забронювати</button>
+                                <Buttons Click={() => setActive(true)} text={'Докладніше'} />
+                                <Buttons Click={() => setActive(true)} text={'Забронювати'} />
                             </div>
 
                         </div>
@@ -191,31 +208,26 @@ const [active, setActive] = useState(false);
                         <div className="route__base route__base2">
 
                             <div className="base__h2">
-                                <h2> EXPERIENCE <br /> <span>от 7000 </span>
+                                <h2> EXPERIENCE <br /> <span>{info.thirdPage.price}</span>
                                     <img className="base__money" src={Rubl} alt="money" />
                                 </h2>
                             </div>
 
                             <div className="base__h3">
                                 <h3> <img className="base__ico" src={Time} alt="time" /> ЧАС У ДОРОЗІ
-                                    : <span> 4
-                                        часа</span></h3>
-                                <h3> <img className="base__ico" src={Location} alt="location" /> ВІДСТАНЬ: <span> 40
-                                    -
-                                    50 км</span></h3>
-                                <h3><img className="base__ico" src={Complexity} alt="complexity" />СКЛАДНІСТЬ: <span>
-                                    5***</span></h3>
+                                    : <span>{info.thirdPage.time}</span></h3>
+                                <h3> <img className="base__ico" src={Location} alt="location" /> ВІДСТАНЬ: <span>{info.thirdPage.distance}</span></h3>
+                                <h3><img className="base__ico" src={Complexity} alt="complexity" />СКЛАДНІСТЬ: <span>{info.thirdPage.complexity}</span></h3>
                             </div>
 
                             <div className="base__routes__h4">
                                 <h4>МАРШРУТ <img className="base__icon__route" src={Route} alt="route" /></h4>
-                                <p>
-                                    Форсаж - Синя бухта – Занедбана Тур База – Суховантаж Ріо - <br />- Форсаж</p>
+                                <p>{info.thirdPage.route}</p>
                             </div>
 
                             <div className="base__routes__button">
-                                <button onClick={() => setActive(true)} className="base__button__moreInf open-popup-exc">Подробнее</button>
-                                <button onClick={() => setActive(true)} className="base__button__book open-popup-exc">Забронировать</button>
+                                <Buttons Click={() => setActive(true)} text={'Докладніше'} />
+                                <Buttons Click={() => setActive(true)} text={'Забронювати'} />
                             </div>
 
                         </div>

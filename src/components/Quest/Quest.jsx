@@ -1,4 +1,5 @@
 import React, { useState } from "react";
+
 const Question = ({ items }) => {
  
     const [clicked, setClicked] = useState(null);
@@ -13,7 +14,7 @@ const Question = ({ items }) => {
 
         <div className="accordion">
             {
-                items.map((item, index) => (
+                items.questionsText.map((item, index) => (
                     <div 
                     key={index}
                     className="item">

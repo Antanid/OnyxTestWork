@@ -4,26 +4,31 @@ import Quest from "../../assets/img/QuestDialog.svg";
 import Question from "./Quest";
 
 const Questions = () => {
+    
 
-    const [accordion, setAccordion] = useState(false);
-    const items = [
-        {
-            actualTask: 'Актуальне питання?',
-            answer: "Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s, when anunknown printer took a galley of type and scrambled it to make a type specimen book."
-        },
-        {
-            actualTask: 'Актуальне питання?',
-            answer: "Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s, when anunknown printer took a galley of type and scrambled it to make a type specimen book."
-        },
-        {
-            actualTask: 'Актуальне питання?',
-            answer: "Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s, when anunknown printer took a galley of type and scrambled it to make a type specimen book."
-        },
-        {
-            actualTask: 'Актуальне питання?',
-            answer: "Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s, when anunknown printer took a galley of type and scrambled it to make a type specimen book."
-        },
-    ]
+    
+    const [quest] = useState({
+        questionsText : [
+            {
+                actualTask: 'Актуальне питання? ',
+                answer: "Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s, when anunknown printer took a galley of type and scrambled it to make a type specimen book."
+            },
+            {
+                actualTask: 'Актуальне питання?',
+                answer: "Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s, when anunknown printer took a galley of type and scrambled it to make a type specimen book."
+            },
+            {
+                actualTask: 'Актуальне питання?',
+                answer: "Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s, when anunknown printer took a galley of type and scrambled it to make a type specimen book."
+            },
+            {
+                actualTask: 'Актуальне питання?',
+                answer: "Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s, when anunknown printer took a galley of type and scrambled it to make a type specimen book."
+            },
+        ]
+    });
+
+
 
     return (
         <section className="section__questions">
@@ -41,7 +46,7 @@ const Questions = () => {
                     <div className="col-lg-6">
                         <div className="accordion">
 
-                           <Question items={items}/>
+                           <Question items={quest}/>
                         </div>
 
 

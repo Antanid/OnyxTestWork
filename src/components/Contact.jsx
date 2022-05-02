@@ -9,6 +9,16 @@ import WhatsUp from "../assets/img/Whatsup.png";
 import Inst from "../assets/img/Instagram.png";
 
 class Contacts extends React.Component {
+    constructor(props){
+        super(props);
+    this.state = {
+        city : ' Місто Карпати',
+        number: " +7 928 428-00-62",
+        email: ' experience@groupgrand.ru',
+        workTime: 'Пн - Пт: 9:00 - 18:00 Сб: 9:00 - 17:00 Вс - вихідний',
+        
+    }
+    }
     render() {
         return (
             <section className="section__contacts">
@@ -22,12 +32,12 @@ class Contacts extends React.Component {
 
                             <div className="contacts__top">
                                 <div className="contacts__city">
-                                    <p className="contacts__text"> <img src={City} alt="City" /> Місто Карпати</p>
+                                    <p className="contacts__text"> <img src={City} alt="City" /> {this.state.city}</p>
                                 </div>
                                 <div className="contacts__number">
                                     <img className="number__phone" src={Phone} alt="Phone" />
                                     <img className="number__elips" src={Ellipse} alt="Ellipse" />
-                                    <span className="contacts__text">+7 928 428-00-62</span>
+                                    <span className="contacts__text">{this.state.number}</span>
                                 </div>
                             </div>
 
@@ -35,7 +45,7 @@ class Contacts extends React.Component {
                                 <div className="contacts__email">
                                     <img className="number__email" src={Email} alt="Email" />
                                     <img className="number__elips" src={Ellipse} alt="Ellipse" />
-                                    <span className="contacts__text">experience@groupgrand.ru</span>
+                                    <span className="contacts__text">{this.state.email}</span>
                                 </div>
 
                                 <div className="contacts__timeWork">
@@ -43,8 +53,7 @@ class Contacts extends React.Component {
                                     <img className="number__elips" src={Ellipse} alt="Ellipse" />
                                 </div>
                                 <div className="timeWork">
-                                    <p className="contacts__text_time">Пн - Пт: 9:00 - 18:00 <br /> Сб: 9:00 - 17:00 <br /> Вс -
-                                        вихідний
+                                    <p className="contacts__text_time">{this.state.workTime}
                                     </p>
                                 </div>
                             </div>
@@ -65,6 +74,7 @@ class Contacts extends React.Component {
                         <div className="col-lg-6">
                             <div className="map-responsive">
                                 <iframe
+                                title="map"
                                     src="https://www.google.com/maps/embed?pb=!1m10!1m8!1m3!1d338303.67742516036!2d32.288683!3d48.514113!3m2!1i1024!2i768!4f13.1!5e0!3m2!1sen!2sua!4v1645960848365!5m2!1sen!2sua"
                                     style={{ border: 0 }} allowFullScreen="" loading="lazy"></iframe>
                             </div>

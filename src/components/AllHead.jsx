@@ -4,21 +4,18 @@ import Contacts from './Contact';
 import Footer from './Footer';
 
 import OurAdvantages from './OurAdvantages';
-import OurRoute from './OurRoute';
+import OurRoute from './OurRoute/OurRoute';
 import Photo from './Photo';
 import PreEnd from './PreEnd';
 import Questions from './Quest/Questions';
 import Gift from './SectionGift';
 import Service from './Service';
 import SpecialOffer from './SpecialOffer';
-import Team from './Team';
+import Team from './Team/Team';
 import Test from './Test';
 import Video from './Video';
 
 function AllHead() {
-
-
-
     return (
         <div>
             <OurAdvantages />

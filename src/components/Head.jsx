@@ -14,6 +14,10 @@ function Head() {
         e.preventDefault();
     }
 
+    const [ menu ] = useState({
+        number: '+7 928 333 26 45',
+    })
+
     return (
         <header id="header" className="header">
             <video className='videoBG' autoPlay loop muted>
@@ -45,7 +49,7 @@ function Head() {
 
                                 <div className="nav__number">
                                     <div className="number__call">
-                                        <p className="number__p"><img src={phone} alt="phone" />+7 928 333 26 45</p>
+                                        <p className="number__p"><img src={phone} alt="phone" />{menu.number}</p>
                                         <button className="number__button">Передзвоніть мені
                                         </button>
                                     </div>

@@ -31,17 +31,17 @@ class Photo extends React.Component {
 
                                     <label htmlFor="s1-photo" id="slide1">
                                         <div className="slider-image">
-                                            <img src={FirstPhoto} alt="photo" />
+                                            <img src={FirstPhoto} alt="qadro" />
                                         </div>
                                     </label>
                                     <label htmlFor="s2-photo" id="slide2">
                                         <div className="slider-image">
-                                            <img src={SecendPhoto} alt="photo" />
+                                            <img src={SecendPhoto} alt="qadro" />
                                         </div>
                                     </label>
                                     <label htmlFor="s3-photo" id="slide3">
                                         <div className="slider-image">
-                                            <img src={ThirdPhoto} alt="photo" />
+                                            <img src={ThirdPhoto} alt="qadro" />
                                         </div>
                                     </label>
 

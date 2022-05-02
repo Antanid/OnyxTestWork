@@ -1104,6 +1104,7 @@ img {
 
 .timeWork p {
   margin-left: 16px;
+  width: 135px;
 }
 
 .contacts__inst {
@@ -1935,7 +1936,9 @@ img {
     position: relative;
     bottom: 37px;
     left: 35px;
+ 
   }
+
 
   .popup__exc {
     transform: translate(-50%, -9%);

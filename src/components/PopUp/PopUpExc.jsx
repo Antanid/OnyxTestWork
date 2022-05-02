@@ -1,5 +1,3 @@
-import react from "react";
-
 import Close from "../../assets/img/icons8-close.svg";
 import Line from "../../assets/img//Line 1.png";
 import Time from "../../assets/img/Time.png";
