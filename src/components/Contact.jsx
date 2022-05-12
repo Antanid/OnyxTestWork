@@ -13,7 +13,7 @@ class Contacts extends React.Component {
         super(props);
     this.state = {
         city : ' Місто Карпати',
-        number: " +7 928 428-00-62",
+        number: " +7 928 428-00-62" ,
         email: ' experience@groupgrand.ru',
         workTime: 'Пн - Пт: 9:00 - 18:00 Сб: 9:00 - 17:00 Вс - вихідний',
         

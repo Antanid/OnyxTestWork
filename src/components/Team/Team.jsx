@@ -1,5 +1,10 @@
 import React from "react";
 
+import Julia from '../../assets/img/team/Julia.svg';
+import Maksim from '../../assets/img/team/Maksim.svg';
+import Kristina from '../../assets/img/team/Kristina.svg';
+import Juriy from '../../assets/img/team/Juriy.svg';
+
 import OurTeam from "./OurTeam";
 
 class Team extends React.Component {
@@ -7,19 +12,18 @@ class Team extends React.Component {
         super(props)
         this.state = {
             team: [
-                { name: "Юліана", profession: "керівник", img: "../img/Julia.svg" },
-                { name: "Максим", profession: "старший інструктор", img: "../img/Maksim.svg" },
-                { name: "Христина", profession: "адміністратор", img: "../img/Kristina.svg" },
-                { name: "Юрій", profession: "Старший механік", img: "../img/Juriy.svg" },
+                { name: "Юліана", profession: "керівник", img: Julia },
+                { name: "Максим", profession: "старший інструктор", img: Maksim },
+                { name: "Христина", profession: "адміністратор", img: Kristina },
+                { name: "Юрій", profession: "Старший механік", img: Juriy },
             ]
         }
     }
     render() {
-
         return (
             <section className="section__team">
                 <div className="container">
-                    <OurTeam state={this.state.team} />
+                    <OurTeam team={this.state.team} />
                 </div>
 
 

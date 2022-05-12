@@ -1,7 +1,9 @@
 import React, { useState } from "react";
+import PropTypes from 'prop-types';
+
 
 const Question = ({ items }) => {
- 
+
     const [clicked, setClicked] = useState(null);
     const toggle = (index) => {
         if (clicked === index) {
@@ -9,16 +11,14 @@ const Question = ({ items }) => {
         }
         setClicked(index)
     }
-
     return (
 
         <div className="accordion">
             {
-                items.questionsText.map((item, index) => (
+                items.map((item, index) => (
                     <div 
                     key={index}
                     className="item">
-
                         <div
                             onClick={() => toggle(index)}
                             className="accordion-item">
@@ -38,6 +38,17 @@ const Question = ({ items }) => {
             }
         </div>
     );
+}
+
+Question.propTypes = {
+ items: PropTypes.any.isRequired,
+}
+
+Question.propTypes = {
+    items: PropTypes.arrayOf(PropTypes.shape({
+        actualTask: PropTypes.string.isRequired,
+        answer: PropTypes.string.isRequired,
+    }))
 }
 
 export default Question;

@@ -1,9 +1,9 @@
 import React from 'react';
-import Additional from './Additional';
+import Additional from './Additional/Additional';
 import Contacts from './Contact';
 import Footer from './Footer';
 
-import OurAdvantages from './OurAdvantages';
+import OurAdvantages from './OurAdvantages/OurAdvantages';
 import OurRoute from './OurRoute/OurRoute';
 import Photo from './Photo';
 import PreEnd from './PreEnd';

@@ -1,4 +1,7 @@
 import React from "react";
+import PropTypes from 'prop-types';
+
+
 
 class OurTeam extends React.Component {
     render() {
@@ -10,11 +13,11 @@ class OurTeam extends React.Component {
                     </div>
                 </div>
                 {
-                    this.props.state.map((items, index) => (
+                    this.props.team.map((items, index) => (
                         <div key={index} className="col-lg-3 col-sm-6">
                             <div className="team">
                                 <div className="team__photo">
-                                    <img src={items.img} alt="Julia" />
+                                    <img src={items.img} alt="team_photo" />
                                 </div>
                                 <div className="team__text">
                                     <h5>{items.name}</h5>
@@ -29,4 +32,17 @@ class OurTeam extends React.Component {
         );
     }
 }
+
+
+OurTeam.propTypes = {
+    team: PropTypes.any.isRequired,
+}
+OurTeam.propTypes = {
+    team: PropTypes.arrayOf(PropTypes.shape({
+        name: PropTypes.string.isRequired,
+        profession: PropTypes.string.isRequired,
+    }))
+}
+
+
 export default OurTeam;

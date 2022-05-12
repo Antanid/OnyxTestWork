@@ -46,7 +46,7 @@ const Questions = () => {
                     <div className="col-lg-6">
                         <div className="accordion">
 
-                           <Question items={quest}/>
+                           <Question items={quest.questionsText}/>
                         </div>
 
 

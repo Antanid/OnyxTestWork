@@ -8,6 +8,47 @@ img {
   height: auto;
 }
 
+
+/*******TABEL*****/
+
+.array_active{
+  transform: rotate(180deg);
+  transition: 0.3s ease-in-out;
+  margin-left: 4px;
+}
+.array{
+  transform: rotate(0deg);
+  transition: 0.3s ease-in-out;
+  margin-left: 4px;
+}
+.arrayAlphabet{
+  transform: rotate(180deg);
+  transition: 0.3s ease-in-out;
+  margin-left: 4px;
+}
+
+.arrayAlphabet_active{
+  transform: rotate(0deg);
+  transition: 0.3s ease-in-out;
+  margin-left: 4px;
+}
+
+.table_input{
+  max-width: 400px;
+}
+.table_input_date{
+  max-width: 100px;
+  margin-left: 10px ;
+}
+.editTable{
+  opacity: 0.3;
+  cursor: pointer;
+  padding-left: 30px;
+}
+.editTable:hover{
+  opacity: 1;
+}
+
 /********************************************************/
 .ProjectDescription {
   color: #ffffff;

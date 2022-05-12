@@ -1,4 +1,5 @@
 import React, { useState } from 'react';
+import { Link } from "react-router-dom";
 
 import bgVideo from '../assets/video/video-1.mp4';
 import phone from "../assets/img/phone.png";
@@ -28,7 +29,7 @@ function Head() {
 
                     <div className="col-lg-2">
                         <div className="nav__logo">
-                            <img src={logo} alt="logo" />
+                           <Link to='/'><img src={logo} alt="logo" /></Link> 
                         </div>
 
                     </div>
@@ -40,7 +41,7 @@ function Head() {
                                 <ul
                                 onClick={() => setBurger(false)}
                                  className="nav__ul">
-                                    <li><a href="#our_routes_h2">Маршрути </a></li>
+                                    <li><Link to='/homeWork'>Таблица</Link></li>
                                     <li><a href="#photo__h2">Галерея</a></li>
                                     <li><a href="#questions__head">Питання-відповідь </a></li>
                                     <li><a href="#contacts__h3">Контакти</a></li>

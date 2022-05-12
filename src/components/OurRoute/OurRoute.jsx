@@ -18,7 +18,7 @@ import SecendQadroThird from "../../assets/img/Second.svg";
 import ThirdQadroFirst from "../../assets/img/ThirdRout.svg";
 import ThirdQadroSecend from "../../assets/img/baseFistOther.svg";
 import ThirdQadroThird from "../../assets/img/ThirdRout2.svg";
-import PopUpExc from "../PopUp/PopUpExc";
+import PopUpExc from "../PopUp/PopUpExc/PopUpExc";
 import Buttons from "./Buttons";
 
 
