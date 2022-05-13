@@ -11,7 +11,7 @@ function SecendPage() {
   const [valueMonth, setValueMonth] = useState('');
 
 
-  const [array, setArray] = useState(false);
+  const [arrays, setArray] = useState(false);
   const [arrayAlphabet, setArrayAlphabet] = useState(false);
   const [table, setTable] = useState([
     {
@@ -44,51 +44,55 @@ function SecendPage() {
   ]
   )
 
-  function bubbleSort(array) {
-    var done = false;
-    while (!done) {
-      done = true;
-      for (var i = 1; i < array.length; i += 1) {
-        if (array[i - 1] > array[i]) {
-          done = false;
-          var tmp = array[i - 1];
-          array[i - 1] = array[i];
-          array[i] = tmp;
-        }
-      }
-    }
-
-    return array;
-  }
-
-
-
-  console.log(bubbleSort(table.text));
-
   const removeItem = (id) => {
     setTable(prevState => prevState.filter((el) => el.id !== id))
   }
 
   function sortByYear() {
     const sortItem = [...table]
-    if (array === false) {
+    if (arrays === false) {
       setTable(
         sortItem.sort((a, b) => a.data.year - b.data.year)
       )
-    } if (array === true) {
+    } if (arrays === true) {
       setTable(
         sortItem.sort((a, b) => a.data.year - b.data.year).reverse()
       )
     }
   }
 
+  const bubbleSort = array => {
+    const arr = Array.from(array);
+
+    if (arrays === false) {
+      for (let i = 1; i < arr.length; i++) {
+        for (let j = 0; j < arr.length - i; j++) {
+          if (arr[j].data.year > arr[j + 1].data.year) {
+            [arr[j], arr[j + 1]] = [arr[j + 1], arr[j]];
+          }
+        }
+      }
+    } if (arrays === true) {
+      for (let i = 1; i < arr.length; i++) {
+        for (let j = 0; j < arr.length - i; j++) {
+          if (arr[j].data.year < arr[j + 1].data.year) {
+            [arr[j + 1], arr[j]] = [arr[j], arr[j + 1]];
+          }
+        }
+      }
+    }
+
+
+
+    return setTable(arr);
+  };
+
+
+
   function sortByText() {
     const sortItem = [...table];
     setTable(sortItem.sort((a, b) => a.text.toLocaleLowerCase > b.text.toLocaleLowerCase ? 1 : -1));
   }
-
-
-
 
   const handleChangeMonth = (e) => {
     if (e.currentTarget.value.length < 3) {
@@ -141,9 +145,9 @@ function SecendPage() {
         <thead>
           <tr>
 
-            <th onClick={() => setArray(!array)}>Год<img alt='sort' className={array ? 'array' : 'array_active'}
+            <th onClick={() => setArray(!arrays)}>Год<img alt='sort' className={arrays ? 'array' : 'array_active'}
               onClick={() => sortByYear()}
-              src={arrow} /></th>
+              src={arrow} /> <button onClick={() => bubbleSort(table)}>Bubble sort</button> </th>
             <th onClick={() => setArrayAlphabet(!arrayAlphabet)}>Событыие <img alt='sort' className={arrayAlphabet ? 'arrayAlphabet' : 'arrayAlphabet_active'} onClick={() => sortByText()} src={arrow} /></th>
           </tr>
         </thead>
