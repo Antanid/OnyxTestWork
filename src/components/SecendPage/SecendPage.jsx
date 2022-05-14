@@ -1,7 +1,7 @@
 import React, { useState } from 'react'
-import TableComponent from './TableComponent';
-import arrow from '../../assets/img/arrow-down-sign-to-navigate.png'
-import FormComponent from './FormComponent';
+import TableComponent from './TableComponent/TableComponent';
+import FormComponent from './FormComp/FormComponent';
+import SortBy from './SortBy/SortBy';
 
 function SecendPage() {
 
@@ -143,13 +143,16 @@ function SecendPage() {
     <div>
       <table>
         <thead>
-          <tr>
-
-            <th onClick={() => setArray(!arrays)}>Год<img alt='sort' className={arrays ? 'array' : 'array_active'}
-              onClick={() => sortByYear()}
-              src={arrow} /> <button onClick={() => bubbleSort(table)}>Bubble sort</button> </th>
-            <th onClick={() => setArrayAlphabet(!arrayAlphabet)}>Событыие <img alt='sort' className={arrayAlphabet ? 'arrayAlphabet' : 'arrayAlphabet_active'} onClick={() => sortByText()} src={arrow} /></th>
-          </tr>
+          <SortBy
+            setArray={setArray}
+            arrays={arrays}
+            sortByYear={sortByYear}
+            bubbleSort={bubbleSort}
+            table={table}
+            setArrayAlphabet={setArrayAlphabet}
+            arrayAlphabet={arrayAlphabet}
+            sortByText={sortByText}
+          />
         </thead>
         <TableComponent setTable={setTable} table={table} removeItem={removeItem} />
       </table>

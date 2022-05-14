@@ -1,4 +1,5 @@
 import React from 'react';
+import ButtonForm from './ButtonForm';
 
 function FormComponent({ deleteLastArray, addTask, handleChangeMonth, valueMonth, handleChangeDate, valueDate, handleChangeYear, valueYear, handleChange, value, handleSubmit }) {
     return (
@@ -9,8 +10,7 @@ function FormComponent({ deleteLastArray, addTask, handleChangeMonth, valueMonth
             <input value={valueDate} onChange={handleChangeDate} className='table_input_date' type="number" placeholder='День..' />
             <input value={valueMonth} onChange={handleChangeMonth} className='table_input_date' type="number" placeholder='Месяц..' />
 
-            <button onClick={() => addTask()}>Отправить</button>
-            <button onClick={() => deleteLastArray()}>Удалить последний элемент массива</button>
+            <ButtonForm addTask={addTask} deleteLastArray={deleteLastArray} />
         </form>
 
     )
