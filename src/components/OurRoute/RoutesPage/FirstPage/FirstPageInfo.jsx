@@ -1,5 +1,5 @@
 import React from 'react';
-import Buttons from "../../Buttons";
+import Buttons from "../../../Button/Buttons";
 
 function FirstPage({ price, time, distance, Route, Rubl, TimeImg, Location, InfoComplexity, Complexity, info, setActive }) {
     return (

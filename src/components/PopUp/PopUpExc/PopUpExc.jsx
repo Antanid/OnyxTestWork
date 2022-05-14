@@ -21,6 +21,11 @@ import BikeSix from "../../../assets/img/popup-bike-6.svg";
 
 import Ruble from '../../../assets/img/popup_ruble.svg'
 import PopUpComponent from "./PopUpComponent";
+import PopUpRoute from "./PopUpRoute";
+import PopUpImg from "./PopUpImg";
+import PopUpInterested from "./PopUpInterested";
+import PopUpSecendHead from "./PopUpSecendHead";
+import PopUpForm from "./PopUpForm";
 
 function PopUpExc({ setActive, active }) {
     const [bikes] = useState({
@@ -40,124 +45,55 @@ function PopUpExc({ setActive, active }) {
                 <div className="container">
                     <div className="row">
 
-                        <div className="col-lg-6">
-                            <img className="base__line_popup" src={Line} alt="line" />
-                            <div className="exc__text">
-                                <h1>Екскурсія “РИО”</h1>
-                                <div className="popup_exc_h3">
-                                    <h3> <img className="base__ico" src={Time} alt="time" /> ЧАС У ДОРОЗІ: <span> 4
-                                        години</span></h3>
-                                    <h3> <img className="base__ico" src={Location} alt="location" /> ВІДСТАНЬ: <span> 40
-                                        -
-                                        50 км</span></h3>
-                                    <h3><img className="base__ico" src={Complexit} alt="complexity" />СКЛАДНІСТЬ: <span>
-                                        5***</span></h3>
-                                </div>
-                            </div>
+                        <PopUpRoute
+                            LocationImg={Location}
+                            Line={Line}
+                            TimeImg={Time}
+                            RouteImg={Route}
+                            ComplexitImg={Complexit}
+                            RouteText='Смотрова - Джерело - Камінь Джигіта - Адербіївка - Гора Нексис -Грозові Ворота -
+                            Шашлики - Цигельський водоспад (чаша кохання) - Форсаж'
+                            TimeText='4
+                            години'
+                            DistanceText='40 - 50 км'
+                            complexityText='5***'
+                        />
 
-                            <div className="popup__routes__h4">
-                                <h4>МАРШРУТ <img className="base__icon__route" src={Route} alt="route" /></h4>
-                                <p>Смотрова - Джерело - Камінь Джигіта - Адербіївка - Гора Нексис -<br />-Грозові Ворота -
-                                    Шашлики - Цигельський водоспад (чаша кохання) - <br />-Форсаж</p>
-                            </div>
+                        <PopUpImg
+                            QuadroFirst={QuadroFirst}
+                            QuadroSecend={QuadroSecend}
+                        />
 
-                            <div className="popup_exc_button">
-                                <button className="popup_button">Схема маршруту</button>
-                            </div>
-                        </div>
+                        <PopUpInterested
+                        HeaderText='Що подивимося на маршруті:'
+                        FirstPartText='Lorem ipsum dolor sit amet, consectetur adipiscing elit. Augue lacus lacus facilisis
+                        orci nibh diam. Nisi, a et sit commodo. Pretium sed consectetur risus elementum,
+                        habitasse turpis massa.'
+                        SecendPartText='In sit mi aenean volutpat. Quis lectus nunc nam euismod ultrices aenean. Vitae
+                        venenatis
+                        ut praesent neque sed quam mauris elementum. Risus blandit leo ut nullam egestas et
+                        porta. Ut lacus arcu sagittis sit. Gravida et faucibus id tortor augue interdum quam
+                        sit
+                        diam. Laoreet nulla at et arcu pellentesque massa placerat elit. Adipiscing in
+                        nullam
+                        ipsum est. In sit mi aenean volutpat. Quis lectus nunc nam euismod ultrices aenean.
+                        Vitae venenatis ut praesent neque sed quam mauris elementum. Risus blandit leo ut
+                        nullam
+                        egestas et porta. Ut lacus arcu sagittis sit.'
+                        />
 
-                        <div className="col-lg-6">
-                            <div className="popup_exc__img">
-                                <img src={QuadroFirst} alt="qadro" />
-                                <img src={QuadroSecend} alt="qadro" />
-                            </div>
-                        </div>
-
-                        <div className="col-lg-12">
-                            <div className="popup__text__see">
-                                <h3>Що подивимося на маршруті:</h3>
-                            </div>
-                            <div className="popup_text__see_p">
-                                <div className="popup__text__firstPart">
-                                    <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Augue lacus lacus facilisis
-                                        orci nibh diam. Nisi, a et sit commodo. Pretium sed consectetur risus elementum,
-                                        habitasse turpis massa.</p>
-                                </div>
-                                <div className="popup__text__secendPart">
-                                    <p>In sit mi aenean volutpat. Quis lectus nunc nam euismod ultrices aenean. Vitae
-                                        venenatis
-                                        ut praesent neque sed quam mauris elementum. Risus blandit leo ut nullam egestas et
-                                        porta. Ut lacus arcu sagittis sit. Gravida et faucibus id tortor augue interdum quam
-                                        sit
-                                        diam. Laoreet nulla at et arcu pellentesque massa placerat elit. Adipiscing in
-                                        nullam
-                                        ipsum est. In sit mi aenean volutpat. Quis lectus nunc nam euismod ultrices aenean.
-                                        Vitae venenatis ut praesent neque sed quam mauris elementum. Risus blandit leo ut
-                                        nullam
-                                        egestas et porta. Ut lacus arcu sagittis sit.</p>
-                                </div>
-
-                            </div>
-                        </div>
-
-                        <div className="col-lg-12">
-                            <div className="popup__price">
-                                <h3>
-                                    Вартість екскурсії за 1 квадроцикл:</h3>
-                            </div>
-                        </div>
+                        <PopUpSecendHead> Вартість екскурсії за 1 квадроцикл:</PopUpSecendHead>
 
                         <PopUpComponent bikes={bikes.Allbikes} />
 
-                        <div className="popup__backgr">
-                            <div className="col-lg-12">
-                                <div className="popup_form_h3">
-                                    <h3>Бронювання онлайн</h3>
-                                </div>
-                            </div>
-
-                            <div className="col-lg-10">
-                                <form className="popup_form">
-                                    <label>
-                                        <div className="label_data">
-                                            <h5>Бажана дата</h5>
-                                        </div>
-                                        <input type="date" name="date" />
-                                    </label>
-
-                                    <label>
-                                        <div className="label_data">
-                                            <h5>Кількість осіб</h5>
-                                        </div>
-                                        <input type="number" name="number" />
-                                    </label>
-                                </form>
-                            </div>
-
-                            <div className="col-lg-10">
-                                <form className="popup_form">
-                                    <label>
-                                        <div className="label_data">
-                                            <h5>Телефон або WhatsApp</h5>
-                                        </div>
-                                        <input type="phone" name="phone" />
-                                    </label>
-
-                                    <label>
-                                        <div className="label_data">
-                                            <h5>Як до вас звертатись?</h5>
-                                        </div>
-                                        <input type="text" name="text" />
-                                    </label>
-                                </form>
-                            </div>
-
-                            <div className="col-lg-12">
-                                <div className="popup_form_button">
-                                    <button>Забронювати</button>
-                                </div>
-                            </div>
-                        </div>
+                        <PopUpForm
+                        online='Бронювання онлайн'
+                        dateText='Бажана дата'
+                        howMuch='Кількість осіб'
+                        phoneNumber='Телефон або WhatsApp'
+                        backToYou='Як до вас звертатись?'
+                        book='Забронювати'
+                        />
                     </div>
                 </div>
             </div>

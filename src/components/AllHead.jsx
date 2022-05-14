@@ -1,12 +1,13 @@
 import React from 'react';
 import Additional from './Additional/Additional';
-import Contacts from './Contact';
+import Contacts from './Contact/Contact';
+
 import Footer from './Footer';
 
 import OurAdvantages from './OurAdvantages/OurAdvantages';
 import OurRoute from './OurRoute/OurRoute';
-import Photo from './Photo';
-import PreEnd from './PreEnd';
+import Photo from '../components/Photo/Photo';
+import PreEnd from './PreEnd/PreEnd';
 import Questions from './Quest/Questions';
 import Gift from './SectionGift';
 import Service from './Service';
@@ -21,17 +22,17 @@ function AllHead() {
             <OurAdvantages />
             <OurRoute />
             <Test />
-            <Photo/>
-            <Video/>
-            <Team/>
-            <Service/>
-            <SpecialOffer/>
-            <Gift/>
-            <Questions/>
-            <Additional/>
-            <Contacts/>
-            <PreEnd/>
-            <Footer/>
+            <Photo />
+            <Video />
+            <Team />
+            <Service />
+            <SpecialOffer />
+            <Gift />
+            <Questions />
+            <Additional />
+            <Contacts />
+            <PreEnd />
+            <Footer />
         </div>
     )
 }

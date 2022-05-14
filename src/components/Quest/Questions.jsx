@@ -1,14 +1,17 @@
 import React, { useState } from "react";
 
 import Quest from "../../assets/img/QuestDialog.svg";
-import Question from "./Quest";
+import QuestAccordion from "./Accordion/QuestAccordion";
+import QuestAdditional from "./QuestAdditional";
+import QuestContact from "./QuestContact";
+import QuestHeader from "./QuestHeader";
 
 const Questions = () => {
-    
 
-    
+
+
     const [quest] = useState({
-        questionsText : [
+        questionsText: [
             {
                 actualTask: 'Актуальне питання? ',
                 answer: "Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s, when anunknown printer took a galley of type and scrambled it to make a type specimen book."
@@ -28,60 +31,19 @@ const Questions = () => {
         ]
     });
 
-
-
     return (
         <section className="section__questions">
             <div className="container">
                 <div className="row">
-
-                    <div className="col-lg-12">
-                        <div id="questions__head" className="questions__head">
-                            <h2>Питання-відповіді
-                            </h2>
-                        </div>
-                    </div>
-
-
-                    <div className="col-lg-6">
-                        <div className="accordion">
-
-                           <Question items={quest.questionsText}/>
-                        </div>
-
-
-                    </div>
-
-                    <div className="col-lg-6">
-                        <div className="section__dialog">
-                            <img src={Quest} alt="questions" />
-                        </div>
-
-                        <div className="dialog__text">
-                            <h4 className="dialog__text__h4">Є питання?
-                            </h4>
-                            <h5 className="dialog__text__h5">Не соромтеся звертатися до нас, <b />
-                                Якщо у вас є
-                                будь-які
-                                питання, пропозиції <br /> або ідеї для співпраці
-                            </h5>
-
-                            <div className="dialog__butt__block">
-                                <button className="dialog__button">Задати питання</button>
-                            </div>
-                        </div>
-
-
-
-                    </div>
-
-                    <div className="col-lg-12">
-                        <div className="Additional">
-                            <h4>Додаткові послуги</h4>
-                        </div>
-                    </div>
-
-
+                    <QuestHeader>Питання-відповіді</QuestHeader>
+                    <QuestAccordion items={quest.questionsText} />
+                    <QuestContact
+                        contactText='Не соромтеся звертатися до нас, Якщо у вас є будь-які питання, пропозиції або ідеї для співпраці'
+                        haveQuestions='Є питання?'
+                        QuestImg={Quest}
+                        buttonText='Задати питання'
+                    />
+                    <QuestAdditional>Додаткові послуги</QuestAdditional>
                 </div>
             </div>
         </section>

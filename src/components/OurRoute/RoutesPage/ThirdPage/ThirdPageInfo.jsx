@@ -1,5 +1,5 @@
 import React from 'react';
-import Buttons from "../../Buttons";
+import Buttons from "../../../Button/Buttons";
 
 function ThirdPageInfo({setActive, price, Rubl, TimeImg, time, Location, distance, Complexity, InfoComplexity, Route, info}) {
     return (
