@@ -14,12 +14,14 @@ import QadroThird from "../../assets/img/Second2.svg";
 import SecendQadroFirst from "../../assets/img/baseFistOther.svg";
 import SecendQadroSecend from "../../assets/img/Second2.svg";
 import SecendQadroThird from "../../assets/img/Second.svg";
-
 import ThirdQadroFirst from "../../assets/img/ThirdRout.svg";
 import ThirdQadroSecend from "../../assets/img/baseFistOther.svg";
 import ThirdQadroThird from "../../assets/img/ThirdRout2.svg";
 import PopUpExc from "../PopUp/PopUpExc/PopUpExc";
-import Buttons from "./Buttons";
+import FirstPage from "./RoutesPage/FirstPage/FirstPage";
+import SecendPage from "./RoutesPage/SecendPage/SecendPage";
+import ThirdPage from "./RoutesPage/ThirdPage/ThirdPage";
+import OurTextH2 from "./OurTextH2";
 
 
 
@@ -60,209 +62,66 @@ const OurRoute = () => {
             <div className="container-fluid">
                 <div className="row">
 
-                    <div className="col-lg-12">
-                        <div className="our_routes">
-                            <h2 id="our_routes_h2" className="our_routes_h2">Наші маршрути
-                            </h2>
-                        </div>
-                    </div>
+                    <OurTextH2>Наші маршрути</OurTextH2>
 
-                    <div className="col-lg-1">
-                        <img className="base__line" src={Line} alt="line" />
-                    </div>
-
-
-                    <div className="col-lg-5">
-
-                        <div className="route__base">
-                            <div className="base__h2">
-                                <h2> БАЗОВИЙ <br /> <span>{info.firstPage.price} </span>
-                                    <img className="base__money" src={Rubl} alt="money" />
-                                </h2>
-                            </div>
-
-                            <div className="base__h3">
-                                <h3> <img className="base__ico" src={Time} alt="time" /> ЧАС У ДОРОЗІ: <span>{info.firstPage.time}</span></h3>
-                                <h3> <img className="base__ico" src={Location} alt="location" /> ВІДСТАНЬ: <span>{info.firstPage.distance}</span></h3>
-                                <h3><img className="base__ico" src={Complexity} alt="complexity" />СКЛАДНІСТЬ: <span>
-                                    {info.firstPage.complexity}</span></h3>
-                            </div>
-
-                            <div className="base__routes__h4">
-                                <h4>МАРШРУТ <img className="base__icon__route" src={Route} alt="route" /></h4>
-                                <p>
-                                    {info.firstPage.route}</p>
-                            </div>
-
-                            <div className="base__routes__button">
-                                <Buttons Click={() => setActive(true)} text={'Докладніше'} />
-                                <Buttons Click={() => setActive(true)} text={'Забронювати'} />
-                            </div>
-
-                        </div>
-                    </div>
-
-                    <div className="col-lg-6 col-sm-12">
-
-                        <div className="our__route__img">
-                            <div className="carousel-slider">
-                                <section id="slider">
-                                    <input readOnly type="radio" name="slider-1" id="s1" checked />
-                                    <input readOnly type="radio" name="slider-1" id="s2" />
-                                    <input readOnly type="radio" name="slider-1" id="s3" />
-
-                                    <label htmlFor="s1" id="slide1">
-                                        <div className="slider-image">
-                                            <img src={Qadro} alt="qadro" />
-                                        </div>
-                                    </label>
-                                    <label htmlFor="s2" id="slide2">
-                                        <div className="slider-image">
-                                            <img src={QadroSecend} alt="qadro" />
-                                        </div>
-                                    </label>
-                                    <label htmlFor="s3" id="slide3">
-                                        <div className="slider-image">
-                                            <img src={QadroThird} alt="qadro" />
-                                        </div>
-                                    </label>
-                                </section>
-                            </div>
-                        </div>
+                    <FirstPage
+                        Line={Line}
+                        setActive={setActive}
+                        price={info.firstPage.price}
+                        Rubl={Rubl}
+                        TimeImg={Time}
+                        time={info.firstPage.time}
+                        Location={Location}
+                        distance={info.firstPage.distance}
+                        Complexity={Complexity}
+                        InfoComplexity={info.firstPage.complexity}
+                        Route={Route}
+                        info={info.firstPage.route}
+                        Qadro={Qadro}
+                        QadroSecend={QadroSecend}
+                        QadroThird={QadroThird}
+                    />
 
 
-
-                    </div>
+                    <SecendPage
+                        Line={Line}
+                        setActive={setActive}
+                        price={info.secendPage.price}
+                        Rubl={Rubl}
+                        TimeImg={Time}
+                        time={info.secendPage.time}
+                        Location={Location}
+                        distance={info.secendPage.distance}
+                        Complexity={Complexity}
+                        InfoComplexity={info.secendPage.complexity}
+                        Route={Route}
+                        info={info.secendPage.route}
+                        SecendQadroFirst={SecendQadroFirst}
+                        SecendQadroSecend={SecendQadroSecend}
+                        SecendQadroThird={SecendQadroThird}
+                    />
 
 
 
 
-                    <div className="col-lg-6 col-sm-12">
-                        <div className="SecondRout__img">
-                            <div className="carousel-slider-2">
-                                <section id="slider-2">
-                                    <input readOnly type="radio" name="slider-2" id="s1-2" checked />
-                                    <input readOnly type="radio" name="slider-2" id="s2-2" />
-                                    <input readOnly type="radio" name="slider-2" id="s3-2" />
 
-                                    <label htmlFor="s1-2" id="slide1-2">
-                                        <div className="slider-image">
-
-                                            <img src={SecendQadroFirst} alt="qadro" />
-                                        </div>
-                                    </label>
-                                    <label htmlFor="s2-2" id="slide2-2">
-                                        <div className="slider-image">
-                                            <img src={SecendQadroSecend} alt="qadro" />
-                                        </div>
-                                    </label>
-                                    <label htmlFor="s3-2" id="slide3-2">
-                                        <div className="slider-image">
-                                            <img src={SecendQadroThird} alt="qadro" />
-                                        </div>
-                                    </label>
-                                </section>
-                            </div>
-                        </div>
-                    </div>
-
-                    <div className="col-lg-1">
-                        <img className="SecondBase__line" src={Line} alt="line" />
-                    </div>
-
-                    <div className="col-lg-5">
-                        <div className="SecondRoute__base">
-
-                            <div className="base__h2">
-                                <h2> РОЗШИРЕНИЙ <br /> <span>{info.secendPage.price}</span>
-                                    <img className="base__money" src={Rubl} alt="money" />
-                                </h2>
-                            </div>
-
-                            <div className="base__h3">
-                                <h3> <img className="base__ico" src={Time} alt="time" /> ЧАС У ДОРОЗІ
-                                    : <span>{info.secendPage.time}</span></h3>
-                                <h3> <img className="base__ico" src={Location} alt="location" /> ВІДСТАНЬ: <span>{info.secendPage.distance}</span></h3>
-                                <h3><img className="base__ico" src={Complexity} alt="complexity" />СКЛАДНІСТЬ: <span>{info.secendPage.complexity}</span></h3>
-                            </div>
-
-                            <div className="base__routes__h4">
-                                <h4>МАРШРУТ <img className="base__icon__route" src={Route} alt="route" /></h4>
-                                <p>{info.secendPage.route}</p>
-                            </div>
-
-                            <div className="base__routes__button base__routes__buttonSecond">
-                                <Buttons Click={() => setActive(true)} text={'Докладніше'} />
-                                <Buttons Click={() => setActive(true)} text={'Забронювати'} />
-                            </div>
-
-                        </div>
-                    </div>
-
-
-                    <div className="col-lg-1">
-                        <img className="base__line base__line2" src={Line} alt="line" />
-                    </div>
-
-                    <div className="col-lg-5">
-                        <div className="route__base route__base2">
-
-                            <div className="base__h2">
-                                <h2> EXPERIENCE <br /> <span>{info.thirdPage.price}</span>
-                                    <img className="base__money" src={Rubl} alt="money" />
-                                </h2>
-                            </div>
-
-                            <div className="base__h3">
-                                <h3> <img className="base__ico" src={Time} alt="time" /> ЧАС У ДОРОЗІ
-                                    : <span>{info.thirdPage.time}</span></h3>
-                                <h3> <img className="base__ico" src={Location} alt="location" /> ВІДСТАНЬ: <span>{info.thirdPage.distance}</span></h3>
-                                <h3><img className="base__ico" src={Complexity} alt="complexity" />СКЛАДНІСТЬ: <span>{info.thirdPage.complexity}</span></h3>
-                            </div>
-
-                            <div className="base__routes__h4">
-                                <h4>МАРШРУТ <img className="base__icon__route" src={Route} alt="route" /></h4>
-                                <p>{info.thirdPage.route}</p>
-                            </div>
-
-                            <div className="base__routes__button">
-                                <Buttons Click={() => setActive(true)} text={'Докладніше'} />
-                                <Buttons Click={() => setActive(true)} text={'Забронювати'} />
-                            </div>
-
-                        </div>
-                    </div>
-
-                    <div className="col-lg-6 col-sm-12">
-                        <div className="our__route__img our__route__img2">
-
-                            <div className="carousel-slider-3">
-                                <section id="slider-3">
-                                    <input readOnly type="radio" name="slider-3" id="s1-3" checked />
-                                    <input readOnly type="radio" name="slider-3" id="s2-3" />
-                                    <input readOnly type="radio" name="slider-3" id="s3-3" />
-
-                                    <label htmlFor="s1-3" id="slide1-3">
-                                        <div className="slider-image">
-                                            <img src={ThirdQadroFirst} alt="qadro" />
-                                        </div>
-                                    </label>
-                                    <label htmlFor="s2-3" id="slide2-3">
-                                        <div className="slider-image">
-                                            <img src={ThirdQadroSecend} alt="qadro" />
-
-                                        </div>
-                                    </label>
-                                    <label htmlFor="s3-3" id="slide3-3">
-                                        <div className="slider-image">
-                                            <img src={ThirdQadroThird} alt="qadro" />
-                                        </div>
-                                    </label>
-                                </section>
-                            </div>
-                        </div>
-                    </div>
-
+                    <ThirdPage
+                        Line={Line}
+                        setActive={setActive}
+                        price={info.thirdPage.price}
+                        Rubl={Rubl}
+                        TimeImg={Time}
+                        time={info.thirdPage.time}
+                        Location={Location}
+                        distance={info.thirdPage.distance}
+                        Complexity={Complexity}
+                        InfoComplexity={info.thirdPage.complexity}
+                        Route={Route}
+                        info={info.thirdPage.route}
+                        ThirdQadroFirst={ThirdQadroFirst}
+                        ThirdQadroSecend={ThirdQadroSecend}
+                        ThirdQadroThird={ThirdQadroThird}
+                    />
 
                 </div>
             </div>

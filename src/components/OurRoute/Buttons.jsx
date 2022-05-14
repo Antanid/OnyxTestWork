@@ -1,15 +1,12 @@
 import React from 'react';
-import PropTypes from 'prop-types';
 
 
-function Buttons({text, Click}) {
+function Buttons(props) {
   return (
-    <button onClick={Click} className="base__button__moreInf open-popup-exc">{text}</button>
+    <button onClick={props.Click} className="base__button__moreInf open-popup-exc">{props.children}</button>
   )
 }
 
-Buttons.propTypes = {
-  text: PropTypes.string.isRequired,
-}
+
 
 export default Buttons

@@ -33,7 +33,6 @@ class Additional extends React.Component {
                 <div className="container-fluid">
                     <div className="row">
                         <AdditionalComp service={this.state.services} />
-
                     </div>
                 </div>
             </section>
