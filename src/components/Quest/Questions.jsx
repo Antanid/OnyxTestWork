@@ -41,7 +41,6 @@ const Questions = () => {
                         contactText='Не соромтеся звертатися до нас, Якщо у вас є будь-які питання, пропозиції або ідеї для співпраці'
                         haveQuestions='Є питання?'
                         QuestImg={Quest}
-                        buttonText='Задати питання'
                     />
                     <QuestAdditional>Додаткові послуги</QuestAdditional>
                 </div>

@@ -1,4 +1,5 @@
-import React from 'react'
+import React from 'react';
+import PropTypes from 'prop-types';
 
 function QuestHeader(props) {
     return (
@@ -11,4 +12,8 @@ function QuestHeader(props) {
     )
 }
 
-export default QuestHeader
+export default QuestHeader;
+
+QuestHeader.propTypes = {
+    children: PropTypes.string.isRequired,
+}

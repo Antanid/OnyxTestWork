@@ -1,5 +1,7 @@
 import React from 'react';
 import ButtonForm from './ButtonForm';
+import PropTypes from 'prop-types';
+
 
 function FormComponent({ deleteLastArray, addTask, handleChangeMonth, valueMonth, handleChangeDate, valueDate, handleChangeYear, valueYear, handleChange, value, handleSubmit }) {
     return (
@@ -16,4 +18,16 @@ function FormComponent({ deleteLastArray, addTask, handleChangeMonth, valueMonth
     )
 }
 
-export default FormComponent
+export default FormComponent;
+
+FormComponent.propTypes = {
+    handleChangeMonth: PropTypes.func.isRequired,
+    valueMonth: PropTypes.string.isRequired,
+    handleChangeDate: PropTypes.func.isRequired,
+    valueDate: PropTypes.string.isRequired,
+    handleChangeYear: PropTypes.func.isRequired,
+    valueYear: PropTypes.string.isRequired,
+    handleChange: PropTypes.func.isRequired,
+    value: PropTypes.string.isRequired,
+    handleSubmit: PropTypes.func.isRequired,
+}

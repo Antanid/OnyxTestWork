@@ -1,4 +1,5 @@
 import React from "react";
+import PropTypes from 'prop-types';
 
 class PreEndImg extends React.Component {
     render() {
@@ -14,3 +15,7 @@ class PreEndImg extends React.Component {
 }
 
 export default PreEndImg;
+
+PreEndImg.propTypes = {
+    Footer: PropTypes.string.isRequired,
+}

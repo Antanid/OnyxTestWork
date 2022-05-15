@@ -32,12 +32,14 @@ function OurAdvComponent({ routes }) {
 
 
 OurAdvComponent.propTypes = {
-    routes: PropTypes.any.isRequired,
+    routes: PropTypes.node.isRequired,
 }
 OurAdvComponent.propTypes = {
     routes: PropTypes.arrayOf(PropTypes.shape({
         fisrtText: PropTypes.string.isRequired,
         secendText: PropTypes.string.isRequired,
+        img: PropTypes.string.isRequired,
+        elipse: PropTypes.string.isRequired,
     }))
 }
 

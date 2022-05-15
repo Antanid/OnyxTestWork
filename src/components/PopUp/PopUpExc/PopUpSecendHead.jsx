@@ -1,4 +1,6 @@
-import React from 'react'
+import React from 'react';
+import PropTypes from 'prop-types';
+
 
 function PopUpSecendHead(props) {
     return (
@@ -10,4 +12,8 @@ function PopUpSecendHead(props) {
     )
 }
 
-export default PopUpSecendHead
+export default PopUpSecendHead;
+
+PopUpSecendHead.propTypes = {
+    children: PropTypes.string.isRequired,
+}

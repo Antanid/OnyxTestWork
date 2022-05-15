@@ -2,19 +2,19 @@ import React from 'react';
 import Additional from './Additional/Additional';
 import Contacts from './Contact/Contact';
 
-import Footer from './Footer';
+import Footer from './Footer/Footer';
 
 import OurAdvantages from './OurAdvantages/OurAdvantages';
 import OurRoute from './OurRoute/OurRoute';
 import Photo from '../components/Photo/Photo';
 import PreEnd from './PreEnd/PreEnd';
 import Questions from './Quest/Questions';
-import Gift from './SectionGift';
-import Service from './Service';
-import SpecialOffer from './SpecialOffer';
+import Gift from './Gift/SectionGift';
+import Service from './Service/Service';
+import SpecialOffer from './SpecialOffer/SpecialOffer';
 import Team from './Team/Team';
-import Test from './Test';
-import Video from './Video';
+import Test from './Test/Test';
+import Video from './Video/Video';
 
 function AllHead() {
     return (

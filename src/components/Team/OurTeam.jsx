@@ -35,7 +35,7 @@ class OurTeam extends React.Component {
 
 
 OurTeam.propTypes = {
-    team: PropTypes.any.isRequired,
+    team: PropTypes.node.isRequired,
 }
 OurTeam.propTypes = {
     team: PropTypes.arrayOf(PropTypes.shape({

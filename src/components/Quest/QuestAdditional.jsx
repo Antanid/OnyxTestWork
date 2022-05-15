@@ -1,4 +1,6 @@
-import React from 'react'
+import React from 'react';
+import PropTypes from 'prop-types';
+
 
 function QuestAdditional(props) {
     return (
@@ -10,4 +12,8 @@ function QuestAdditional(props) {
     )
 }
 
-export default QuestAdditional
+export default QuestAdditional;
+
+QuestAdditional.propTypes = {
+    children: PropTypes.string.isRequired,
+}

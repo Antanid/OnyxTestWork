@@ -1,9 +1,6 @@
 import React, { Fragment } from 'react';
 import PropTypes from 'prop-types';
 
-
-
-
 function AdditionalComp({ service }) {
     return (
         <Fragment>
@@ -28,7 +25,7 @@ function AdditionalComp({ service }) {
 }
 
 AdditionalComp.propTypes = {
-    service: PropTypes.any.isRequired,
+    service: PropTypes.node.isRequired,
 }
 
 AdditionalComp.propTypes = {

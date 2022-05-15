@@ -6,7 +6,7 @@ import 'bootstrap/dist/css/bootstrap.min.css';
 import './App.css';
 import SecendPage from './components/SecendPage/SecendPage';
 import { Route, Routes } from 'react-router-dom';
-import Head from './components/Head';
+import Head from './components/Head/Head';
 import AllHead from './components/AllHead';
 
 

@@ -1,5 +1,7 @@
 import React from 'react';
-import arrow from '../../../assets/img/arrow-down-sign-to-navigate.png'
+import arrow from '../../../assets/img/arrow-down-sign-to-navigate.png';
+import PropTypes from 'prop-types';
+
 
 
 function SortBy({ setArray, arrays, sortByYear, bubbleSort, table, setArrayAlphabet, arrayAlphabet, sortByText }) {
@@ -13,4 +15,21 @@ function SortBy({ setArray, arrays, sortByYear, bubbleSort, table, setArrayAlpha
     )
 }
 
-export default SortBy
+export default SortBy;
+
+SortBy.propTypes = {
+    setArray: PropTypes.func.isRequired,
+    arrays: PropTypes.bool.isRequired,
+    sortByYear: PropTypes.func.isRequired,
+    bubbleSort: PropTypes.func.isRequired,
+    setArrayAlphabet: PropTypes.func.isRequired,
+    arrayAlphabet: PropTypes.bool.isRequired,
+    sortByText: PropTypes.func.isRequired,
+}
+
+SortBy.propTypes = {
+    table: PropTypes.arrayOf(PropTypes.shape({
+        text: PropTypes.string.isRequired,
+        id: PropTypes.number.isRequired,
+    }))
+}

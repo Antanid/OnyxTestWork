@@ -1,7 +1,7 @@
 import React from 'react';
 import { Fragment } from 'react';
 import cansel from '../../../assets/img/cancel.png';
-
+import PropTypes from 'prop-types';
 
 function EditComp({ id, idItem, Edit, editingText, submitEdits, setIdItem, handleEditing, item }) {
     return (
@@ -28,4 +28,25 @@ function EditComp({ id, idItem, Edit, editingText, submitEdits, setIdItem, handl
     )
 }
 
-export default EditComp
+export default EditComp;
+
+EditComp.propTypes = {
+    item: PropTypes.shape({
+        id: PropTypes.number,
+        text: PropTypes.string,
+        data: PropTypes.shape({
+            year: PropTypes.string,
+            month: PropTypes.string,
+            day: PropTypes.string,
+        })
+    })
+}
+
+EditComp.propTypes = {
+    handleEditing: PropTypes.func.isRequired,
+    setIdItem: PropTypes.func.isRequired,
+    submitEdits: PropTypes.func.isRequired,
+    editingText: PropTypes.string.isRequired,
+    Edit: PropTypes.func.isRequired,
+    id: PropTypes.number.isRequired,
+}

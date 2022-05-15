@@ -1,4 +1,5 @@
-import React from 'react'
+import React from 'react';
+import PropTypes from 'prop-types';
 
 function SecendLine({Line}) {
     return (
@@ -8,4 +9,8 @@ function SecendLine({Line}) {
     )
 }
 
-export default SecendLine
+export default SecendLine;
+
+SecendLine.propTypes = {
+    Line: PropTypes.node.isRequired
+}

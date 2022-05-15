@@ -1,6 +1,8 @@
-import React from 'react'
+import React from 'react';
+import PropTypes from 'prop-types';
 
-function SecendPage({Qadro, QadroSecend, QadroThird}) {
+
+function SecendPage({ Qadro, QadroSecend, QadroThird }) {
     return (
         <div className="col-lg-6 col-sm-12">
 
@@ -36,4 +38,11 @@ function SecendPage({Qadro, QadroSecend, QadroThird}) {
     )
 }
 
-export default SecendPage
+export default SecendPage;
+
+SecendPage.propTypes = {
+    Qadro: PropTypes.string.isRequired,
+    QadroSecend: PropTypes.string.isRequired,
+    QadroThird: PropTypes.string.isRequired,
+}
+

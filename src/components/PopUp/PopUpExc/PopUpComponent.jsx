@@ -24,7 +24,7 @@ function PopUpComponent({ bikes }) {
 }
 
 PopUpComponent.propTypes = {
-    bikes: PropTypes.any.isRequired,
+    bikes: PropTypes.node.isRequired,
 }
 PopUpComponent.propTypes = {
     bikes: PropTypes.arrayOf(PropTypes.shape({

@@ -1,4 +1,5 @@
 import React from "react";
+import PropTypes from 'prop-types';
 
 class PreEndView extends React.Component {
     render() {
@@ -24,3 +25,14 @@ class PreEndView extends React.Component {
 }
 
 export default PreEndView;
+
+PreEndView.propTypes = {
+    footerLi: PropTypes.any.isRequired,
+}
+
+PreEndView.propTypes = {
+    footerLi: PropTypes.arrayOf(PropTypes.shape({
+        text: PropTypes.string.isRequired,
+        href: PropTypes.string.isRequired,
+    }))
+}

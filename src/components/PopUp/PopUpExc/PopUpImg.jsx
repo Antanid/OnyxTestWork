@@ -1,6 +1,8 @@
-import React from 'react'
+import React from 'react';
+import PropTypes from 'prop-types';
 
-function PopUpImg({QuadroFirst, QuadroSecend}) {
+
+function PopUpImg({ QuadroFirst, QuadroSecend }) {
     return (
         <div className="col-lg-6">
             <div className="popup_exc__img">
@@ -11,4 +13,9 @@ function PopUpImg({QuadroFirst, QuadroSecend}) {
     )
 }
 
-export default PopUpImg
+export default PopUpImg;
+
+PopUpImg.propTypes = {
+    QuadroFirst: PropTypes.string.isRequired,
+    QuadroSecend: PropTypes.string.isRequired,
+}

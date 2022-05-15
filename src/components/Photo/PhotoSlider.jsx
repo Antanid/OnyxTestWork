@@ -1,4 +1,5 @@
 import React from "react";
+import PropTypes from 'prop-types';
 
 
 class PhotoSlider extends React.Component {
@@ -52,3 +53,11 @@ class PhotoSlider extends React.Component {
 }
 
 export default PhotoSlider;
+
+PhotoSlider.propTypes = {
+    FirstPhoto: PropTypes.string.isRequired,
+    SecendPhoto: PropTypes.string.isRequired,
+    ThirdPhoto: PropTypes.string.isRequired,
+    FourPhoto: PropTypes.string.isRequired,
+    FivePhoto: PropTypes.string.isRequired,
+}

@@ -1,4 +1,5 @@
-import React from 'react'
+import React from 'react';
+import PropTypes from 'prop-types';
 
 function ThirdLine({Line}) {
   return (
@@ -8,4 +9,8 @@ function ThirdLine({Line}) {
   )
 }
 
-export default ThirdLine
+export default ThirdLine;
+
+ThirdLine.propTypes = {
+  Line: PropTypes.string.isRequired,
+}

@@ -83,6 +83,7 @@ function PopUpExc({ setActive, active }) {
                         />
 
                         <PopUpSecendHead> Вартість екскурсії за 1 квадроцикл:</PopUpSecendHead>
+                       
 
                         <PopUpComponent bikes={bikes.Allbikes} />
 

@@ -1,4 +1,5 @@
-import React, { Fragment } from 'react'
+import React, { Fragment } from 'react';
+import PropTypes from 'prop-types';
 
 function ButtonForm({ deleteLastArray, addTask }) {
     return (
@@ -10,3 +11,8 @@ function ButtonForm({ deleteLastArray, addTask }) {
 }
 
 export default ButtonForm;
+
+ButtonForm.propTypes = {
+    addTask: PropTypes.func.isRequired,
+    deleteLastArray: PropTypes.func.isRequired,
+}

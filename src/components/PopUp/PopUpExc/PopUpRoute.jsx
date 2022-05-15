@@ -1,4 +1,6 @@
-import React from 'react'
+import React from 'react';
+import PropTypes from 'prop-types';
+
 
 function PopUpRoute({ Line, TimeImg, RouteImg, ComplexitImg, LocationImg, RouteText, TimeText, DistanceText, complexityText}) {
     return (
@@ -25,4 +27,18 @@ function PopUpRoute({ Line, TimeImg, RouteImg, ComplexitImg, LocationImg, RouteT
     )
 }
 
-export default PopUpRoute
+export default PopUpRoute;
+
+PopUpRoute.propTypes = {
+    LocationImg: PropTypes.string.isRequired,
+    Line: PropTypes.string.isRequired, 
+    TimeImg: PropTypes.string.isRequired, 
+    RouteImg: PropTypes.string.isRequired, 
+    ComplexitImg: PropTypes.string.isRequired,
+    RouteText: PropTypes.string.isRequired,
+    TimeText: PropTypes.string.isRequired,
+    DistanceText: PropTypes.string.isRequired,
+    complexityText: PropTypes.string.isRequired
+}
+ 
+

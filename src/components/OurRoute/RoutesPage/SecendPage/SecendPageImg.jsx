@@ -1,6 +1,7 @@
-import React from 'react'
+import React from 'react';
+import PropTypes from 'prop-types';
 
-function SecendPageImg({SecendQadroFirst, SecendQadroSecend, SecendQadroThird}) {
+function SecendPageImg({ SecendQadroFirst, SecendQadroSecend, SecendQadroThird }) {
     return (
         <div className="col-lg-6 col-sm-12">
             <div className="SecondRout__img">
@@ -33,4 +34,10 @@ function SecendPageImg({SecendQadroFirst, SecendQadroSecend, SecendQadroThird}) 
     )
 }
 
-export default SecendPageImg
+export default SecendPageImg;
+
+SecendPageImg.propTypes = {
+    SecendQadroFirst: PropTypes.string.isRequired,
+    SecendQadroSecend: PropTypes.string.isRequired,
+    SecendQadroThird: PropTypes.string.isRequired,
+}

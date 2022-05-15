@@ -1,5 +1,7 @@
 import React from 'react';
 import Buttons from "../../../Button/Buttons";
+import PropTypes from 'prop-types';
+
 
 function FirstPage({ price, time, distance, Route, Rubl, TimeImg, Location, InfoComplexity, Complexity, info, setActive }) {
     return (
@@ -26,8 +28,8 @@ function FirstPage({ price, time, distance, Route, Rubl, TimeImg, Location, Info
                 </div>
 
                 <div className="base__routes__button">
-                    <Buttons Click={() => setActive(true)} >Докладніше</Buttons>
-                    <Buttons Click={() => setActive(true)} >Забронювати</Buttons>
+                    <Buttons className={"base__button__moreInf open-popup-exc"} Click={() => setActive(true)} >Докладніше</Buttons>
+                    <Buttons className={"base__button__moreInf open-popup-exc"} Click={() => setActive(true)} >Забронювати</Buttons>
                 </div>
 
             </div>
@@ -35,4 +37,19 @@ function FirstPage({ price, time, distance, Route, Rubl, TimeImg, Location, Info
     )
 }
 
-export default FirstPage
+export default FirstPage;
+
+
+FirstPage.propTypes = {
+    setActive: PropTypes.func,
+    price: PropTypes.string.isRequired,
+    Rubl: PropTypes.string.isRequired,
+    TimeImg: PropTypes.string.isRequired,
+    time: PropTypes.string.isRequired,
+    Location: PropTypes.string.isRequired,
+    distance: PropTypes.string.isRequired,
+    Complexity: PropTypes.string.isRequired,
+    InfoComplexity: PropTypes.string.isRequired,
+    Route: PropTypes.string.isRequired,
+    info: PropTypes.string.isRequired,
+}

@@ -1,6 +1,7 @@
-import React from 'react'
+import React from 'react';
+import PropTypes from 'prop-types';
 
-function ThirdPageImg({ThirdQadroFirst, ThirdQadroSecend, ThirdQadroThird}) {
+function ThirdPageImg({ ThirdQadroFirst, ThirdQadroSecend, ThirdQadroThird }) {
     return (
         <div className="col-lg-6 col-sm-12">
             <div className="our__route__img our__route__img2">
@@ -35,4 +36,10 @@ function ThirdPageImg({ThirdQadroFirst, ThirdQadroSecend, ThirdQadroThird}) {
     )
 }
 
-export default ThirdPageImg
+export default ThirdPageImg;
+
+ThirdPageImg.propType = {
+    ThirdQadroFirst: PropTypes.string.isRequired,
+    ThirdQadroSecend: PropTypes.string.isRequired,
+    ThirdQadroThird: PropTypes.string.isRequired,
+}

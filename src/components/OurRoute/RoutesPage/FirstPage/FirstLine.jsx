@@ -1,4 +1,6 @@
-import React from 'react'
+import React from 'react';
+import PropTypes from 'prop-types';
+
 
 function FirstLine({Line}) {
   return (
@@ -8,4 +10,8 @@ function FirstLine({Line}) {
   )
 }
 
-export default FirstLine
+export default FirstLine;
+
+FirstLine.propType = {
+  Line: PropTypes.string.isRequired,
+}

@@ -1,6 +1,8 @@
 import React from "react";
+import PropTypes from 'prop-types';
 
-import Close from "../../assets/img/icons8-close.svg";
+
+import Close from "../../../assets/img/icons8-close.svg";
 
 const PopUpHead = ({ active, setActive }) => {
     return (
@@ -31,11 +33,15 @@ const PopUpHead = ({ active, setActive }) => {
                         </button>
                     </div>
                 </div>
-
-
             </form>
         </div>
     )
 }
 
 export default PopUpHead;
+
+PopUpHead.propTypes = {
+    active: PropTypes.bool,
+    setActive: PropTypes.func,
+}
+

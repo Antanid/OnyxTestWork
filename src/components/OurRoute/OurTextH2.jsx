@@ -1,4 +1,6 @@
-import React from 'react'
+import React from 'react';
+import PropTypes from 'prop-types';
+
 
 function OurTextH2(props) {
   return (
@@ -11,4 +13,8 @@ function OurTextH2(props) {
   )
 }
 
-export default OurTextH2
+export default OurTextH2;
+
+OurTextH2.propTypes = {
+  children: PropTypes.string.isRequired,
+}

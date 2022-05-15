@@ -1,4 +1,6 @@
-import React from 'react'
+import React from 'react';
+import PropTypes from 'prop-types';
+
 
 class PhotoText extends React.Component {
     render() {
@@ -13,4 +15,8 @@ class PhotoText extends React.Component {
 
 }
 
-export default PhotoText
+export default PhotoText;
+
+PhotoText.propTypes = {
+    children: PropTypes.string.isRequired,
+}

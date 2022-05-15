@@ -1,4 +1,6 @@
-import React from 'react'
+import React from 'react';
+import PropTypes from 'prop-types';
+
 
 function PopUpInterested({ HeaderText, FirstPartText, SecendPartText }) {
     return (
@@ -19,4 +21,9 @@ function PopUpInterested({ HeaderText, FirstPartText, SecendPartText }) {
     )
 }
 
-export default PopUpInterested
+export default PopUpInterested;
+
+PopUpInterested.propTypes = {
+    HeaderText: PropTypes.string.isRequired,
+    SecendPartText: PropTypes.string.isRequired,
+}

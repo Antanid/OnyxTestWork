@@ -1,6 +1,8 @@
-import React from 'react'
+import React from 'react';
+import PropTypes from 'prop-types';
 
-function PopUpForm({dateText, howMuch, phoneNumber, backToYou, book, online}) {
+
+function PopUpForm({ dateText, howMuch, phoneNumber, backToYou, book, online }) {
     return (
         <div className="popup__backgr">
             <div className="col-lg-12">
@@ -54,4 +56,13 @@ function PopUpForm({dateText, howMuch, phoneNumber, backToYou, book, online}) {
     )
 }
 
-export default PopUpForm
+export default PopUpForm;
+
+PopUpForm.propTypes = {
+    online: PropTypes.string.isRequired,
+    dateText: PropTypes.string.isRequired,
+    howMuch: PropTypes.string.isRequired,
+    phoneNumber: PropTypes.string.isRequired,
+    backToYou: PropTypes.string.isRequired,
+    book: PropTypes.string.isRequired,
+}

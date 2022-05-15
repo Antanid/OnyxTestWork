@@ -1,6 +1,8 @@
 import React, { useState } from 'react';
 import EditComp from './EditComp';
 import RemoveItem from './RemoveItem';
+import PropTypes from 'prop-types';
+
 
 
 function TableComponent({ table, removeItem, setTable }) {
@@ -58,4 +60,9 @@ function TableComponent({ table, removeItem, setTable }) {
     )
 }
 
-export default TableComponent
+export default TableComponent;
+
+TableComponent.propTypes = {
+    setTable: PropTypes.func.isRequired,
+    removeItem: PropTypes.func.isRequired,
+}

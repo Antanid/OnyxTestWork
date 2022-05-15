@@ -1,7 +1,8 @@
 import React from 'react';
 import Buttons from "../../../Button/Buttons";
+import PropTypes from 'prop-types';
 
-function SecendPageInfo({setActive, price, Rubl, TimeImg, time, Location, distance, Complexity, InfoComplexity, Route, info}) {
+function SecendPageInfo({ setActive, price, Rubl, TimeImg, time, Location, distance, Complexity, InfoComplexity, Route, info }) {
     return (
         <div className="col-lg-5">
             <div className="SecondRoute__base">
@@ -25,8 +26,8 @@ function SecendPageInfo({setActive, price, Rubl, TimeImg, time, Location, distan
                 </div>
 
                 <div className="base__routes__button base__routes__buttonSecond">
-                    <Buttons Click={() => setActive(true)} >Докладніше</Buttons>
-                    <Buttons Click={() => setActive(true)} >Забронювати</Buttons>
+                    <Buttons className={"base__button__moreInf open-popup-exc"} Click={() => setActive(true)} >Докладніше</Buttons>
+                    <Buttons className={"base__button__moreInf open-popup-exc"} Click={() => setActive(true)} >Забронювати</Buttons>
                 </div>
 
             </div>
@@ -34,4 +35,19 @@ function SecendPageInfo({setActive, price, Rubl, TimeImg, time, Location, distan
     )
 }
 
-export default SecendPageInfo
+export default SecendPageInfo;
+
+SecendPageInfo.propTypes = {
+    setActive: PropTypes.func,
+    price: PropTypes.string.isRequired,
+    Rubl: PropTypes.string.isRequired,
+    TimeImg: PropTypes.string.isRequired,
+    time: PropTypes.string.isRequired,
+    Location: PropTypes.string.isRequired,
+    distance: PropTypes.string.isRequired,
+    Complexity: PropTypes.string.isRequired,
+    InfoComplexity: PropTypes.string.isRequired,
+    Route: PropTypes.string.isRequired,
+    info: PropTypes.string.isRequired,
+}
+

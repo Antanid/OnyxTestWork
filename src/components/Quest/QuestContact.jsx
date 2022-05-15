@@ -1,6 +1,9 @@
-import React from 'react'
+import React from 'react';
+import Buttons from '../Button/Buttons';
+import PropTypes from 'prop-types';
 
-function QuestContact({ buttonText, QuestImg, contactText, haveQuestions }) {
+
+function QuestContact({ QuestImg, contactText, haveQuestions }) {
     return (
         <div className="col-lg-6">
             <div className="section__dialog">
@@ -13,11 +16,18 @@ function QuestContact({ buttonText, QuestImg, contactText, haveQuestions }) {
                 <h5 className="dialog__text__h5">{contactText}</h5>
 
                 <div className="dialog__butt__block">
-                    <button className="dialog__button">{buttonText}</button>
+                    <Buttons className={'dialog__button'}>Задати питання</Buttons>
                 </div>
             </div>
         </div>
     )
 }
 
-export default QuestContact
+export default QuestContact;
+
+
+QuestContact.propTypes = {
+    contactText: PropTypes.string.isRequired,
+    haveQuestions: PropTypes.string.isRequired,
+    QuestImg: PropTypes.string.isRequired,
+}

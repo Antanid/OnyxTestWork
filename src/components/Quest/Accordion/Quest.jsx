@@ -34,7 +34,9 @@ export default Quest;
 
 
 Quest.propTypes = {
-    items: PropTypes.any.isRequired,
+    items: PropTypes.node.isRequired,
+    toggle: PropTypes.func.isRequired,
+    clicked: PropTypes.func.isRequired,
    }
    
    Quest.propTypes = {

@@ -1,4 +1,5 @@
-import React from 'react'
+import React from 'react';
+import PropTypes from 'prop-types';
 
 function ContactView({ City, Phone, Ellipse, Email, Conact, WhatsUp, Inst, workTime, number, email, cityName }) {
     return (
@@ -52,4 +53,12 @@ function ContactView({ City, Phone, Ellipse, Email, Conact, WhatsUp, Inst, workT
     )
 }
 
-export default ContactView
+export default ContactView;
+
+
+ContactView.propTypes = {
+    cityName: PropTypes.string.isRequired,
+    number: PropTypes.string.isRequired,
+    email: PropTypes.string.isRequired,
+    workTime: PropTypes.string.isRequired
+}
