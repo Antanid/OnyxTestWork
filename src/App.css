@@ -9,43 +9,87 @@ img {
 }
 
 
+
+/********TIMER******/
+
+.CountdownTimer {
+ display: flex;
+ align-items: center;
+ justify-content: center;
+ margin-bottom: 20px;
+} 
+.timer-text{
+  text-align: center;
+}
+.timer-text h2{
+  font-family: "Gotham Pro", "Montserrat Subrayada", sans-serif;
+  font-size: 26px;
+   font-weight: bold;
+}
+.timer-text h3{
+  font-family: "Gotham Pro", "Montserrat Subrayada", sans-serif;
+  font-size: 16px;
+  font-weight: bold;
+}
+
+.timer{
+  border: 2px solid black;
+  max-width: 600px;
+  height: 100px;
+  font-family: 'Oswald';
+  font-size: 30px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  box-shadow: 6px 6px 20px rgba(0, 0, 0, 0.493);
+}
+.timer span {
+  margin-left: 5px;
+  margin-right: 5px;
+}
+
 /*******TABEL*****/
 
-.array_active{
-  transform: rotate(180deg);
-  transition: 0.3s ease-in-out;
-  margin-left: 4px;
-}
-.array{
-  transform: rotate(0deg);
-  transition: 0.3s ease-in-out;
-  margin-left: 4px;
-}
-.arrayAlphabet{
+.array_active {
   transform: rotate(180deg);
   transition: 0.3s ease-in-out;
   margin-left: 4px;
 }
 
-.arrayAlphabet_active{
+.array {
   transform: rotate(0deg);
   transition: 0.3s ease-in-out;
   margin-left: 4px;
 }
 
-.table_input{
+.arrayAlphabet {
+  transform: rotate(180deg);
+  transition: 0.3s ease-in-out;
+  margin-left: 4px;
+}
+
+.arrayAlphabet_active {
+  transform: rotate(0deg);
+  transition: 0.3s ease-in-out;
+  margin-left: 4px;
+}
+
+.table_input {
   max-width: 400px;
 }
-.table_input_date{
+
+.table_input_date {
   max-width: 100px;
-  margin-left: 10px ;
+  margin-left: 10px;
 }
-.editTable{
+
+.editTable {
   opacity: 0.3;
   cursor: pointer;
   padding-left: 30px;
 }
-.editTable:hover{
+
+.editTable:hover {
   opacity: 1;
 }
 
@@ -162,9 +206,9 @@ img {
   transition: 0.4s;
 }
 
-.img__button{
- margin-left: 20px;
- background: transparent;
+.img__button {
+  margin-left: 20px;
+  background: transparent;
 }
 
 /***********our advantages**********/
@@ -1012,7 +1056,7 @@ img {
   color: #121214;
   font-weight: 400;
   line-height: 25px;
- 
+
 }
 
 .dialog__button {
@@ -1978,7 +2022,7 @@ img {
     position: relative;
     bottom: 37px;
     left: 35px;
- 
+
   }
 
 
@@ -2017,7 +2061,7 @@ img {
     margin-bottom: 10px;
   }
 
- 
+
 }
 
 @media (min-width: 470px) and (max-width: 575px) {
@@ -3445,12 +3489,14 @@ img {
     height: 100%;
   }
 }
+
 @media (min-width: 901px) and (max-width: 950px) {
   #slider-photo label {
     width: 33%;
     height: 117%;
   }
 }
+
 @media (min-width: 951px) and (max-width: 1000px) {
   #slider-photo label {
     width: 30%;

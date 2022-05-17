@@ -4,6 +4,7 @@ import Contacts from './Contact/Contact';
 
 import Footer from './Footer/Footer';
 
+import CountdownTimer from './CountdownTimer/CountdownTimer'
 import OurAdvantages from './OurAdvantages/OurAdvantages';
 import OurRoute from './OurRoute/OurRoute';
 import Photo from '../components/Photo/Photo';
@@ -17,6 +18,7 @@ import Test from './Test/Test';
 import Video from './Video/Video';
 
 function AllHead() {
+
     return (
         <div>
             <OurAdvantages />

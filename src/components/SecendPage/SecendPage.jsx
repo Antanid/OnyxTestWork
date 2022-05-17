@@ -87,8 +87,6 @@ function SecendPage() {
     return setTable(arr);
   };
 
-
-
   function sortByText() {
     const sortItem = [...table];
     setTable(sortItem.sort((a, b) => a.text.toLocaleLowerCase > b.text.toLocaleLowerCase ? 1 : -1));
@@ -139,8 +137,10 @@ function SecendPage() {
     setTable(arrayLast.slice(0, -1))
   }
 
+
   return (
     <div>
+   
       <table>
         <thead>
           <SortBy
