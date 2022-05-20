@@ -20,10 +20,5 @@ export default Timer;
 
 
 Timer.propTypes = {
-    remainingTime: PropTypes.shape({
-        seconds: PropTypes.string.isRequired,
-        minutes: PropTypes.string.isRequired,
-        hours: PropTypes.string.isRequired,
-        days: PropTypes.string.isRequired,
-    })
+    remainingTime: PropTypes.objectOf(PropTypes.string)
 }

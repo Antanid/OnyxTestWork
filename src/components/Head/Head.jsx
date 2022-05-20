@@ -17,38 +17,39 @@ function Head() {
     const handleClick = (e) => {
         e.preventDefault();
     }
-return (
-    <header id="header" className="header">
-        <video className='videoBG' autoPlay loop muted>
-            <source src={bgVideo} type='video/mp4' />
-        </video>
-        <div className="container-fluid">
-            <div className="row">
+    
+    return (
+        <header id="header" className="header">
+            <video className='videoBG' autoPlay loop muted>
+                <source src={bgVideo} type='video/mp4' />
+            </video>
+            <div className="container-fluid">
+                <div className="row">
 
-                <HeadLogo logo={logo} />
+                    <HeadLogo logo={logo} />
 
-                <HeadMenu
-                    number='+7 928 333 26 45'
-                    phone={phone}
-                    handleClick={handleClick}
-                    setActive={setActive}
-                    burger={burger}
-                    setBurger={setBurger}
-                />
+                    <HeadMenu
+                        number='+7 928 333 26 45'
+                        phone={phone}
+                        handleClick={handleClick}
+                        setActive={setActive}
+                        burger={burger}
+                        setBurger={setBurger}
+                    />
 
-                <HeadText
-                    arrow={arrow}
-                    textH1=' Екскурсії на квадроциклах у Карпатах'
-                    textH2='приїжджайте за новими відчуттями та емоціями!'
-                    buttonText='Підібрати маршрут'
-                />
+                    <HeadText
+                        arrow={arrow}
+                        textH1=' Екскурсії на квадроциклах у Карпатах'
+                        textH2='приїжджайте за новими відчуттями та емоціями!'
+                        buttonText='Підібрати маршрут'
+                    />
 
+                </div>
             </div>
-        </div>
 
-        <PopUpHead active={active} setActive={setActive} />
-    </header>
-);
+            <PopUpHead active={active} setActive={setActive} />
+        </header>
+    );
 
 }
 

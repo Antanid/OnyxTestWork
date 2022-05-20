@@ -2,11 +2,13 @@ import React, { useState } from 'react';
 import EditComp from './EditComp';
 import RemoveItem from './RemoveItem';
 import PropTypes from 'prop-types';
+import axios from 'axios';
 
 
 
-function TableComponent({ table, removeItem, setTable }) {
 
+
+function TableComponent({ table, removeItem}) {
 
     const [editingText, setEditingText] = useState("");
     const [idItem, setIdItem] = useState(null);
@@ -19,14 +21,8 @@ function TableComponent({ table, removeItem, setTable }) {
         setEditingText(e.currentTarget.value);
     }
 
-    function submitEdits(id) {
-        const updatedTodos = [...table].map((todo) => {
-            if (todo.id === id) {
-                todo.text = editingText;
-            }
-            return todo;
-        });
-        setTable(updatedTodos);
+    const submitEdits = (item) => {
+        axios.patch(`http://localhost:3004/item/${item.id}`, { text: editingText })
         setIdItem(null);
         setEditingText('')
     }
@@ -37,7 +33,6 @@ function TableComponent({ table, removeItem, setTable }) {
                 table.map((item, id) => {
                     return (
                         <tr key={item.id}>
-
                             <th>{`${item.data.year}.${item.data.day}.${item.data.month}`}</th>
                             <EditComp
                                 item={item}
@@ -50,7 +45,8 @@ function TableComponent({ table, removeItem, setTable }) {
                                 idItem={idItem} />
 
                             <RemoveItem
-                                item={item}
+                                id={id}
+                                items={item}
                                 removeItem={removeItem} />
                         </tr>
                     )

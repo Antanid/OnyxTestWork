@@ -15,7 +15,7 @@ function EditComp({ id, idItem, Edit, editingText, submitEdits, setIdItem, handl
                             value={editingText}
                             type="text" /></td>
                         <td> <button
-                            onClick={() => submitEdits(id)}
+                            onClick={() => submitEdits(item)}
                         >Edit</button></td>
                         <td> <img onClick={() => setIdItem(null)} src={cansel} alt="cancel" /></td>
 

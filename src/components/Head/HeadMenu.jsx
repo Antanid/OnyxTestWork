@@ -6,7 +6,7 @@ import PropTypes from 'prop-types';
 
 class HeadMenu extends React.Component {
     render() {
-        const { number, phone, handleClick, setActive, burger, setBurger } = this.props;
+        const { number, phone, setActive, handleClick, burger, setBurger } = this.props;
         return (
             <div className="col-lg-10 col-xs-12">
                 <div className="nav">
@@ -18,7 +18,7 @@ class HeadMenu extends React.Component {
                             <li><a href="#photo__h2">Галерея</a></li>
                             <li><a href="#questions__head">Питання-відповідь </a></li>
                             <li><a href="#contacts__h3">Контакти</a></li>
-                            <li onClick={() => setActive(true)} ><a onClick={handleClick} href="/" className="popup_open">Забронювати</a></li>
+                            <li onClick={() => setActive(true)}><a onClick={handleClick} href="/" className="popup_open">Забронювати</a></li>
                         </ul>
 
                         <div className="nav__number">

@@ -1,78 +1,41 @@
-import React, { useState } from 'react'
+import React, { useEffect, useState } from 'react'
 import TableComponent from './TableComponent/TableComponent';
 import FormComponent from './FormComp/FormComponent';
 import SortBy from './SortBy/SortBy';
+import axios from 'axios';
 
 function SecendPage() {
+
+  const [arrays, setArray] = useState(false);
+  const [arrayAlphabet, setArrayAlphabet] = useState(false);
 
   const [value, setValue] = useState('');
   const [valueYear, setValueYear] = useState('');
   const [valueDate, setValueDate] = useState('');
   const [valueMonth, setValueMonth] = useState('');
 
+  const [table, setTable] = useState([]);
 
-  const [arrays, setArray] = useState(false);
-  const [arrayAlphabet, setArrayAlphabet] = useState(false);
-  const [table, setTable] = useState([
-    {
-      text: 'Пошел в свой первый класс',
-      id: 0,
-      data: {
-        year: 2012,
-        day: 25,
-        month: 1,
-      },
-    },
-    {
-      text: 'Поехал на чемпионат по бейсболу',
-      id: 1,
-      data: {
-        year: 2018,
-        day: 14,
-        month: 3
-      }
-    },
-    {
-      text: 'Поступил в институт',
-      id: 2,
-      data: {
-        year: 2007,
-        day: 12,
-        month: 4
-      },
-    },
-  ]
-  )
+  useEffect(() => {
+    axios.get("http://localhost:3004/item").then(({ data }) => {
+      setTable(data);
+    })
+  }, [])
 
-  const removeItem = (id) => {
-    setTable(prevState => prevState.filter((el) => el.id !== id))
+  useEffect(() => {
+    setTable((table) => ([...table].sort((a, b) => !arrays ? a.data.year - b.data.year : b.data.year - a.data.year)))
+  }, [arrays])
+
+  const removeItem = (items) => {
+    axios.delete(`http://localhost:3004/item/${items.id}`).then(() => {
+      const del = table.filter(e => e.id !== items.id);
+      setTable(del)
+    })
   }
 
-  function sortByYear() {
-    const sortItem = [...table]
-    if (arrays === false) {
-      setTable(
-        sortItem.sort((a, b) => a.data.year - b.data.year)
-      )
-    } if (arrays === true) {
-      setTable(
-        sortItem.sort((a, b) => a.data.year - b.data.year).reverse()
-      )
-    }
-  }
-
-  const bubbleSort = array => {
-    const arr = Array.from(array);
-
-    if (arrays === false) {
-      for (let i = 1; i < arr.length; i++) {
-        for (let j = 0; j < arr.length - i; j++) {
-          if (arr[j].data.year > arr[j + 1].data.year) {
-            [arr[j], arr[j + 1]] = [arr[j + 1], arr[j]];
-          }
-        }
-      }
-    } if (arrays === true) {
+  const bubbleSort = () => {
+    const arr = [...table];
+    if (!arrays) {
       for (let i = 1; i < arr.length; i++) {
         for (let j = 0; j < arr.length - i; j++) {
           if (arr[j].data.year < arr[j + 1].data.year) {
@@ -80,16 +43,20 @@ function SecendPage() {
           }
         }
       }
+    } else {
+      for (let i = 1; i < arr.length; i++) {
+        for (let j = 0; j < arr.length - i; j++) {
+          if (arr[j].data.year > arr[j + 1].data.year) {
+            [arr[j], arr[j + 1]] = [arr[j + 1], arr[j]];
+          }
+        }
+      }
     }
-
-
-
     return setTable(arr);
   };
 
   function sortByText() {
-    const sortItem = [...table];
-    setTable(sortItem.sort((a, b) => a.text.toLocaleLowerCase > b.text.toLocaleLowerCase ? 1 : -1));
+    setTable((table) => ([...table].sort((a, b) => a.text.toLocaleLowerCase > b.text.toLocaleLowerCase ? 1 : -1)))
   }
 
   const handleChangeMonth = (e) => {
@@ -112,18 +79,26 @@ function SecendPage() {
     setValue(e.currentTarget.value);
   }
 
+
+
   const addTask = (value, valueYear, valueDate, valueMonth) => {
     if (value) {
       const newItem = {
         id: table.length,
         text: value,
         data: {
-          year: valueYear,
-          day: valueDate,
-          month: valueMonth,
+          year: Number(valueYear),
+          day: Number(valueDate),
+          month: Number(valueMonth),
         },
       }
-      setTable([...table, newItem]);
+      axios.post('http://localhost:3004/item', newItem).then(() => {
+        setTable([...table, newItem]);
+      });
+      setValueYear('');
+      setValueDate('');
+      setValueMonth('');
+      setValue('');
     }
   }
 
@@ -133,20 +108,17 @@ function SecendPage() {
   }
 
   const deleteLastArray = () => {
-    const arrayLast = [...table];
-    setTable(arrayLast.slice(0, -1))
+    setTable((table) => ([...table].slice(0, -1)))
   }
 
 
   return (
     <div>
-   
       <table>
         <thead>
           <SortBy
             setArray={setArray}
             arrays={arrays}
-            sortByYear={sortByYear}
             bubbleSort={bubbleSort}
             table={table}
             setArrayAlphabet={setArrayAlphabet}
@@ -154,7 +126,7 @@ function SecendPage() {
             sortByText={sortByText}
           />
         </thead>
-        <TableComponent setTable={setTable} table={table} removeItem={removeItem} />
+        <TableComponent table={table} removeItem={removeItem} />
       </table>
       <FormComponent
         deleteLastArray={deleteLastArray}

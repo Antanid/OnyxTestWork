@@ -4,10 +4,10 @@ import PropTypes from 'prop-types';
 
 
 
-function RemoveItem({ removeItem, item }) {
+function RemoveItem({ removeItem, items, id }) {
   return (
     <Fragment>
-      <th><img onClick={() => removeItem(item.id)} src={close} alt="close" /></th>
+      <th><img onClick={() => removeItem(items)} src={close} alt="close" /></th>
     </Fragment>
   )
 }

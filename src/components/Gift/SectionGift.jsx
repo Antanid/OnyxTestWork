@@ -27,7 +27,7 @@ class Gift extends React.Component {
                         <GiftTimerText
                             texth2='Встигни забрати акцію!'
                             textH3='Залишилось лише:' />
-                        <CountdownTimer countdownTimestampMs={1653339600000} />
+                        <CountdownTimer countdownTimestampMs={1703339600000} />
 
                     </div>
                 </div>

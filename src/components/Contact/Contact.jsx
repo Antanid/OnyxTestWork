@@ -14,8 +14,15 @@ class Contacts extends React.Component {
     constructor(props) {
         super(props);
         this.state = {
+            City: City,
+            Phone: Phone,
+            Email: Email,
+            Connact: Conact,
+            Ellipse: Ellipse,
+            WhatsUp: WhatsUp,
+            Inst: Inst,
             city: ' Місто Карпати',
-            number:  "+7 928 428-00-62",
+            number: "+7 928 428-00-62",
             email: ' experience@groupgrand.ru',
             workTime: 'Пн - Пт: 9:00 - 18:00 Сб: 9:00 - 17:00 Вс - вихідний',
 
@@ -27,17 +34,7 @@ class Contacts extends React.Component {
                 <div className="container-fluid">
                     <div className="row">
                         <ContactView
-                            cityName={this.state.city}
-                            City={City}
-                            Phone={Phone}
-                            Ellipse={Ellipse}
-                            Email={Email}
-                            Conact={Conact}
-                            WhatsUp={WhatsUp}
-                            Inst={Inst}
-                            workTime={this.state.workTime}
-                            number={this.state.number}
-                            email={this.state.email}
+                            contact={this.state}
                         />
                         <ContactMap />
                     </div>
