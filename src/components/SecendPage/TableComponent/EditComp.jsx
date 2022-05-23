@@ -3,14 +3,15 @@ import { Fragment } from 'react';
 import cansel from '../../../assets/img/cancel.png';
 import PropTypes from 'prop-types';
 
-function EditComp({ id, idItem, Edit, editingText, submitEdits, setIdItem, handleEditing, item }) {
+function EditComp({ id, idItem, Edit, editingText, submitEdits, setIdItem, handleEditing, item, style }) {
     return (
         <>
             {
                 id === idItem ?
 
                     <Fragment>
-                        <td> <input
+                        <td><input
+                            className={style}
                             onChange={Edit}
                             value={editingText}
                             type="text" /></td>
@@ -21,8 +22,7 @@ function EditComp({ id, idItem, Edit, editingText, submitEdits, setIdItem, handl
 
                     </Fragment>
 
-
-                    : <th onClick={() => handleEditing(id)}>{item.text}</th>
+                    : <th onDoubleClick={() => handleEditing(id)}>{item.text}</th>
             }
         </>
     )

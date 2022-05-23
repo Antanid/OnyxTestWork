@@ -7,8 +7,14 @@ img {
   max-width: 100%;
   height: auto;
 }
+.table_item{
+  user-select: none;
+}
 
-
+.table_data_active{
+  color: blueviolet;
+  font-size: 16px;
+}
 
 /********TIMER******/
 

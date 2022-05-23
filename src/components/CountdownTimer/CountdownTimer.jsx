@@ -1,33 +1,42 @@
-import React, { useState, useEffect } from "react";
+import React from "react";
 import Timer from "./Timer";
 import { getRemainingTimes } from "./Utils/CountDownTimerUtils";
 
-const CountdownTimer = ({ countdownTimestampMs }) => {
-    const [remainingTime, setRemainingTime] = useState({
-        seconds: '00',
-        minutes: '00',
-        hours: '00',
-        days: '00 ',
-    });
 
-    useEffect(() => {
-        const intervalId = setInterval(() => {
-            updateRemainingTime(countdownTimestampMs);
-        }, 1000);
-        return () => {
-            clearInterval(intervalId)
-        }
-    }, [countdownTimestampMs])
+class CountdownTimer extends React.Component {
+    constructor() {
+        super();
 
-    function updateRemainingTime(countdown) {
-        setRemainingTime(getRemainingTimes(countdown))
+        this.state = ({
+            seconds: '00',
+            minutes: '00',
+            hours: '00',
+            days: '00 ',
+        })
     }
 
-    return (
-        <div className="CountdownTimer">
-            <Timer remainingTime={remainingTime} />
-        </div>
-    );
+    componentDidMount() {
+        this.intervalId = setInterval(() => {
+            this.updateRemainingTime(this.props.countdownTimestampMs);
+        }, 1000);
+    }
+
+    componentWillUnmount() {
+        clearInterval(this.intervalId)
+    }
+
+
+    updateRemainingTime(countdown) {
+        this.setState(getRemainingTimes(countdown))
+    }
+
+    render() {
+        return (
+            <div className="CountdownTimer">
+                <Timer remainingTime={this.state} />
+            </div>
+        )
+    }
 }
 
 export default CountdownTimer;

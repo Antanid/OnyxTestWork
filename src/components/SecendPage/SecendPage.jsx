@@ -23,7 +23,7 @@ function SecendPage() {
   }, [])
 
   useEffect(() => {
-    setTable((table) => ([...table].sort((a, b) => !arrays ? a.data.year - b.data.year : b.data.year - a.data.year)))
+    setTable((table) => ([...table].sort((a, b) => !arrays ? a.data.year - b.data.year || a.month - b.month : b.data.year - a.data.year || b.month - a.month)))
   }, [arrays])
 
   const removeItem = (items) => {
@@ -55,7 +55,7 @@ function SecendPage() {
     return setTable(arr);
   };
 
-  function sortByText() {
+  const sortByText = () => {
     setTable((table) => ([...table].sort((a, b) => a.text.toLocaleLowerCase > b.text.toLocaleLowerCase ? 1 : -1)))
   }
 
@@ -85,6 +85,7 @@ function SecendPage() {
     if (value) {
       const newItem = {
         id: table.length,
+        order: table.length,
         text: value,
         data: {
           year: Number(valueYear),
@@ -111,7 +112,6 @@ function SecendPage() {
     setTable((table) => ([...table].slice(0, -1)))
   }
 
-
   return (
     <div>
       <table>
@@ -126,7 +126,7 @@ function SecendPage() {
             sortByText={sortByText}
           />
         </thead>
-        <TableComponent table={table} removeItem={removeItem} />
+        <TableComponent setTable={setTable} table={table} removeItem={removeItem} />
       </table>
       <FormComponent
         deleteLastArray={deleteLastArray}
