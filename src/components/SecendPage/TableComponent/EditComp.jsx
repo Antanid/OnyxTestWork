@@ -3,18 +3,19 @@ import { Fragment } from 'react';
 import cansel from '../../../assets/img/cancel.png';
 import PropTypes from 'prop-types';
 
-function EditComp({ id, idItem, Edit, editingText, submitEdits, setIdItem, handleEditing, item, style }) {
+function EditComp({ id, idItem, Edit, editingText, submitEdits, setIdItem, handleEditing, item }) {
     return (
         <>
             {
                 id === idItem ?
 
                     <Fragment>
-                        <td><input
-                            className={style}
-                            onChange={Edit}
-                            value={editingText}
-                            type="text" /></td>
+                        <td
+                        ><input
+                                className={id === idItem ? 'table_data_active' : null}
+                                onChange={Edit}
+                                value={editingText}
+                                type="text" /></td>
                         <td> <button
                             onClick={() => submitEdits(item)}
                         >Edit</button></td>

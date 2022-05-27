@@ -7,8 +7,11 @@ import Conact from "../../assets/img/ContactTime.png";
 import Ellipse from "../../assets/img/Ellipse 24.png";
 import WhatsUp from "../../assets/img/Whatsup.png";
 import Inst from "../../assets/img/Instagram.png";
-import ContactView from "./ContactView";
-import ContactMap from "./ContactMap";
+
+import ContactInfo from "./ContactInfo";
+
+import './Style.scss'
+
 
 class Contacts extends React.Component {
     constructor(props) {
@@ -30,16 +33,19 @@ class Contacts extends React.Component {
     }
     render() {
         return (
-            <section className="section__contacts">
-                <div className="container-fluid">
-                    <div className="row">
-                        <ContactView
-                            contact={this.state}
-                        />
-                        <ContactMap />
-                    </div>
-                </div>
-            </section>
+            <ContactInfo
+                CityImg={this.state.City}
+                PhoneImg={this.state.Phone}
+                EllipseImg={this.state.Ellipse}
+                EmailImg={this.state.Email}
+                ConactImg={this.state.Connact}
+                WhatsUp={this.state.WhatsUp}
+                Inst={this.state.Inst}
+                workTime={this.state.workTime}
+                number={this.state.number}
+                email={this.state.email}
+                cityName={this.state.city}
+            />
         );
     }
 }

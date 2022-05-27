@@ -3,6 +3,8 @@ import TableComponent from './TableComponent/TableComponent';
 import FormComponent from './FormComp/FormComponent';
 import SortBy from './SortBy/SortBy';
 import axios from 'axios';
+import ButtonTable from './ButtonImg/ButtonTable';
+import arrow from '../../assets/img/arrow-down-sign-to-navigate.png'
 
 function SecendPage() {
 
@@ -16,6 +18,9 @@ function SecendPage() {
 
   const [table, setTable] = useState([]);
 
+
+
+
   useEffect(() => {
     axios.get("http://localhost:3004/item").then(({ data }) => {
       setTable(data);
@@ -23,7 +28,9 @@ function SecendPage() {
   }, [])
 
   useEffect(() => {
-    setTable((table) => ([...table].sort((a, b) => !arrays ? a.data.year - b.data.year || a.month - b.month : b.data.year - a.data.year || b.month - a.month)))
+    setTable((table) =>
+    ([...table].sort((a, b) =>
+      !arrays ? a.data.year - b.data.year || a.month - b.month : b.data.year - a.data.year || b.month - a.month)))
   }, [arrays])
 
   const removeItem = (items) => {
@@ -56,7 +63,8 @@ function SecendPage() {
   };
 
   const sortByText = () => {
-    setTable((table) => ([...table].sort((a, b) => a.text.toLocaleLowerCase > b.text.toLocaleLowerCase ? 1 : -1)))
+    setTable((table) =>
+      ([...table].sort((a, b) => a.text.toLocaleLowerCase > b.text.toLocaleLowerCase ? 1 : -1)))
   }
 
   const handleChangeMonth = (e) => {
@@ -85,7 +93,7 @@ function SecendPage() {
     if (value) {
       const newItem = {
         id: table.length,
-        order: table.length,
+        order: table.length + 1,
         text: value,
         data: {
           year: Number(valueYear),
@@ -120,7 +128,7 @@ function SecendPage() {
             setArray={setArray}
             arrays={arrays}
             bubbleSort={bubbleSort}
-            table={table}
+           arrow={arrow}
             setArrayAlphabet={setArrayAlphabet}
             arrayAlphabet={arrayAlphabet}
             sortByText={sortByText}
@@ -140,6 +148,8 @@ function SecendPage() {
         handleChange={handleChange}
         value={value}
         handleSubmit={handleSubmit} />
+      <ButtonTable />
+
     </div>
 
   )

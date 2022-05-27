@@ -3,7 +3,18 @@ import ButtonForm from './ButtonForm';
 import PropTypes from 'prop-types';
 
 
-function FormComponent({ deleteLastArray, addTask, handleChangeMonth, valueMonth, handleChangeDate, valueDate, handleChangeYear, valueYear, handleChange, value, handleSubmit }) {
+function FormComponent({
+    deleteLastArray,
+    addTask,
+    handleChangeMonth,
+    valueMonth,
+    handleChangeDate,
+    valueDate,
+    handleChangeYear,
+    valueYear,
+    handleChange,
+    value,
+    handleSubmit }) {
 
 
     const handleKeyPress = (event) => {
@@ -14,13 +25,35 @@ function FormComponent({ deleteLastArray, addTask, handleChangeMonth, valueMonth
 
     return (
         <form onSubmit={handleSubmit}>
-            <input className='table_input' value={value} type='text' onChange={handleChange} placeholder='Введите значение' />
+            <input
+                className='table_input'
+                value={value} type='text'
+                onChange={handleChange}
+                placeholder='Введите значение' />
 
-            <input value={valueYear} onChange={handleChangeYear} className='table_input_date' type="number" placeholder='Год..' />
-            <input value={valueDate} onChange={handleChangeDate} className='table_input_date' type="number" placeholder='День..' />
-            <input onKeyPress={handleKeyPress} value={valueMonth} onChange={handleChangeMonth} className='table_input_date' type="number" placeholder='Месяц..' />
+            <input
+                value={valueYear}
+                onChange={handleChangeYear}
+                className='table_input_date'
+                type="number"
+                placeholder='Год..' />
+            <input
+                value={valueDate}
+                onChange={handleChangeDate}
+                className='table_input_date'
+                type="number"
+                placeholder='День..' />
+            <input
+                onKeyDown={handleKeyPress}
+                value={valueMonth}
+                onChange={handleChangeMonth}
+                className='table_input_date'
+                type="number"
+                placeholder='Месяц..' />
 
-            <ButtonForm addTask={addTask} deleteLastArray={deleteLastArray} />
+            <ButtonForm
+                addTask={addTask}
+                deleteLastArray={deleteLastArray} />
         </form>
 
     )

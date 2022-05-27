@@ -1,3 +1,4 @@
+import { click } from "@testing-library/user-event/dist/click";
 import React, { useState } from "react";
 import Quest from "./Quest";
 
@@ -7,12 +8,11 @@ import Quest from "./Quest";
 const QuestAccordion = ({ items }) => {
 
     const [clicked, setClicked] = useState(null);
+
     const toggle = (index) => {
-        if (clicked === index) {
-            return setClicked(null)
-        }
-        setClicked(index)
+         setClicked(clicked===index ?  null : index) 
     }
+
     return (
         <div className="col-lg-6">
             <div className="accordion">

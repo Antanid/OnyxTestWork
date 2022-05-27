@@ -1,7 +1,20 @@
 import React from 'react';
 import PropTypes from 'prop-types';
 
-function ContactView({ contact /* City, Phone, Ellipse, Email, Conact, WhatsUp, Inst, workTime, number, email, cityName  */ }) {
+import './Style.scss'
+
+function ContactView({
+    CityImg,
+    PhoneImg,
+    EllipseImg,
+    EmailImg,
+    ConactImg,
+    WhatsUp,
+    Inst,
+    workTime,
+    number,
+    email,
+    cityName }) {
     return (
         <div className="col-lg-6">
 
@@ -11,28 +24,28 @@ function ContactView({ contact /* City, Phone, Ellipse, Email, Conact, WhatsUp, 
 
             <div className="contacts__top">
                 <div className="contacts__city">
-                    <p className="contacts__text"> <img src={contact.City} alt="City" /> {contact.city}</p>
+                    <p className="contacts__text"> <img src={CityImg} alt="City" /> {cityName}</p>
                 </div>
                 <div className="contacts__number">
-                    <img className="number__phone" src={contact.Phone} alt="Phone" />
-                    <img className="number__elips" src={contact.Ellipse} alt="Ellipse" />
-                    <span className="contacts__text">{contact.number}</span>
+                    <img className="number__phone" src={PhoneImg} alt="Phone" />
+                    <img className="number__elips" src={EllipseImg} alt="Ellipse" />
+                    <span className="contacts__text">{number}</span>
                 </div>
             </div>
 
             <div className="contacts__bottom">
                 <div className="contacts__email">
-                    <img className="number__email" src={contact.Email} alt="Email" />
-                    <img className="number__elips" src={contact.Ellipse} alt="Ellipse" />
-                    <span className="contacts__text">{contact.email}</span>
+                    <img className="number__email" src={EmailImg} alt="Email" />
+                    <img className="number__elips" src={EllipseImg} alt="Ellipse" />
+                    <span className="contacts__text">{email}</span>
                 </div>
 
                 <div className="contacts__timeWork">
-                    <img className="number__time" src={contact.Connact} alt="Conact" />
-                    <img className="number__elips" src={contact.Ellipse} alt="Ellipse" />
+                    <img className="number__time" src={ConactImg} alt="Conact" />
+                    <img className="number__elips" src={EllipseImg} alt="Ellipse" />
                 </div>
                 <div className="timeWork">
-                    <p className="contacts__text_time">{contact.workTime}
+                    <p className="contacts__text_time">{workTime}
                     </p>
                 </div>
             </div>
@@ -43,8 +56,8 @@ function ContactView({ contact /* City, Phone, Ellipse, Email, Conact, WhatsUp, 
                     </h4>
                 </div>
                 <div className="contact__social_group">
-                    <button className="contacts__whatsup"> <img src={contact.WhatsUp} alt="WhatsUp" /></button>
-                    <button className="contacts__inst"><img src={contact.Inst} alt="Inst" /></button>
+                    <button className="contacts__whatsup"> <img src={WhatsUp} alt="WhatsUp" /></button>
+                    <button className="contacts__inst"><img src={Inst} alt="Inst" /></button>
 
                 </div>
             </div>
@@ -59,8 +72,8 @@ export default ContactView;
 ContactView.propTypes = {
     contact: PropTypes.node.isRequired,
 }
- 
+
 ContactView.propTypes = {
     contact: PropTypes.objectOf(PropTypes.string),
 }
- 
+

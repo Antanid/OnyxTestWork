@@ -1,10 +1,9 @@
 import React from 'react';
-import arrow from '../../../assets/img/arrow-down-sign-to-navigate.png';
 import PropTypes from 'prop-types';
 
 
 
-function SortBy({ setArray, arrays, bubbleSort, setArrayAlphabet, arrayAlphabet, sortByText }) {
+function SortBy({ arrow, setArray, arrays, bubbleSort, setArrayAlphabet, arrayAlphabet, sortByText }) {
     return (
         <tr>
             <th onClick={() => setArray(!arrays)}>Год<img alt='sort' className={arrays ? 'array' : 'array_active'}

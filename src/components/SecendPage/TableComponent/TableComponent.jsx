@@ -1,4 +1,4 @@
-import React, { useState } from 'react';
+import React, { useState, useEffect, useCallback } from 'react';
 import EditComp from './EditComp';
 import RemoveItem from './RemoveItem';
 import PropTypes from 'prop-types';
@@ -10,26 +10,26 @@ function TableComponent({ table, removeItem, setTable }) {
 
     const [editingText, setEditingText] = useState("");
     const [idItem, setIdItem] = useState(null);
-    const [style, setStyle] = useState('null');
-    const [bulStyle, setBulStyle] = useState(false);
+    const [style] = useState('null');
     const [currentItem, setCurrentItem] = useState(null);
 
 
-    const styleActive = () => {
-        setStyle('table_data_active');
-        setBulStyle(!bulStyle)
-    }
-    const classBull = (id) => {
-        if (bulStyle === true && id === idItem) {
-            return style;
-        } else {
-            return 'table_item'
+    useEffect(() => {
+        const SortItems = (a, b) => {
+            if (a.order > b.order) {
+                return 1
+            } else {
+                return -1
+            }
         }
-    }
+        setTable((table) => ([...table].sort(SortItems)));
+      
+    }, [currentItem, setTable])
 
-    const handleEditing = (id) => {
+    const handleEditing = useCallback((id) => {
         setIdItem(id);
-    }
+    }, [])
+
 
     const Edit = (e) => {
         setEditingText(e.currentTarget.value);
@@ -42,7 +42,6 @@ function TableComponent({ table, removeItem, setTable }) {
     }
 
     function dragStartHandler(e, item) {
-        console.log(item)
         setCurrentItem(item)
     }
 
@@ -56,7 +55,7 @@ function TableComponent({ table, removeItem, setTable }) {
 
     function dragHandler(e, item) {
         e.preventDefault()
-        setTable([...table].map(c => {
+        setTable(table.map(c => {
             if (c.id === item.id) {
                 return { ...c, order: currentItem.order }
             }
@@ -67,19 +66,10 @@ function TableComponent({ table, removeItem, setTable }) {
         }))
     }
 
-    const SortItems = (a, b) => {
-        if (a.order > b.order) {
-            return 1
-        } else {
-            return -1
-        }
-    }
-
-
     return (
         <thead>
             {
-                table.sort(SortItems).map((item, id) => {
+                table.map((item, id) => {
                     return (
                         <tr
                             onDragStart={(e) => dragStartHandler(e, item)}
@@ -90,14 +80,13 @@ function TableComponent({ table, removeItem, setTable }) {
                             draggable={true}
                             key={item.id}>
                             <DataItem
-                                style={style}
-                                styleActive={styleActive}
-                                classBull={classBull}
+                                setIdItem={setIdItem}
                                 idItem={idItem}
+                                table={table}
+                                style={style}
                                 handleEditing={handleEditing}
                                 item={item} id={id} />
                             <EditComp
-                                style={style}
                                 item={item}
                                 handleEditing={handleEditing}
                                 setIdItem={setIdItem}

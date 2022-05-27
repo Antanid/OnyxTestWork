@@ -12,8 +12,7 @@ img {
 }
 
 .table_data_active{
-  color: blueviolet;
-  font-size: 16px;
+color: green;
 }
 
 /********TIMER******/
@@ -1090,124 +1089,6 @@ img {
   margin-top: 30px;
 }
 
-.Additional h4 {
-  font-family: "Montserrat", sans-serif;
-  text-align: center;
-  font-size: 36px;
-  line-height: 50px;
-  color: #121214;
-  margin-top: 85px;
-  font-weight: 700;
-}
-
-/*******ADITIONAL*****/
-
-.additional__services {
-  margin: 0 auto;
-  width: 350px;
-  margin-top: 55px;
-}
-
-.additional__text {
-  background-color: rgba(114, 110, 110, 0.199);
-}
-
-.additional__text {
-  min-height: 100px;
-  padding-top: 15px;
-  padding-bottom: 24px;
-  font-family: "Montserrat", sans-serif;
-  padding-left: 24px;
-  font-weight: 600;
-  font-size: 17px;
-  line-height: 24px;
-  color: #037e8c;
-  border-bottom-left-radius: 9px;
-  border-bottom-right-radius: 9px;
-}
-
-.additional__img img {
-  width: 350px;
-  border-top-left-radius: 9px;
-  border-top-right-radius: 9px;
-}
-
-/*****contacts****/
-
-.section__contacts {
-  margin-top: 100px;
-  margin-left: 70px;
-}
-
-.contacts__top {
-  display: flex;
-  margin-top: 65px;
-}
-
-.contacts__bottom {
-  display: flex;
-  margin-top: 40px;
-}
-
-.contacts__text {
-  font-size: 18px;
-  line-height: 22px;
-  font-family: "Montserrat", sans-serif;
-  color: #121214;
-  font-weight: 400;
-}
-
-.contacts__h3 h3 {
-  font-size: 36px;
-  font-family: "Montserrat", sans-serif;
-  font-weight: 700;
-  line-height: 50px;
-  color: #121214;
-  border-top: 3px solid #037e8c;
-  max-width: 700px;
-  padding-top: 15px;
-}
-
-.number__phone {
-  position: absolute;
-  margin-left: 11px;
-  margin-top: 10px;
-}
-
-.number__email {
-  position: absolute;
-  margin-left: 10px;
-  margin-top: 12px;
-}
-
-.number__time {
-  position: absolute;
-  margin-left: 9px;
-  margin-top: 9px;
-}
-
-.contacts__number {
-  margin-left: 114px;
-}
-
-.contacts__timeWork {
-  margin-left: 25px;
-}
-
-.timeWork p {
-  margin-left: 16px;
-  width: 135px;
-}
-
-.contacts__inst {
-  border: none;
-  background-color: #ffffff;
-}
-
-.contacts__whatsup {
-  border: none;
-  background-color: #ffffff;
-}
 
 /****section__end****/
 
@@ -1785,8 +1666,6 @@ img {
 
   .our__route__img img {
     width: 49%;
-    /*   position: relative;
-      top: 180px; */
   }
 
   .SecondRout__img img {
@@ -1911,9 +1790,6 @@ img {
     font-size: 16px;
   }
 
-  .additional__services {
-    width: 250px;
-  }
 
   .SecondRout__img {
     margin-left: 0;
@@ -1973,31 +1849,17 @@ img {
     width: 320px;
   }
 
-  .contacts__top {
-    display: block;
-  }
+  
 
-  .contacts__bottom {
-    display: block;
-  }
+  
 
-  .contacts__number {
-    margin-left: 0;
-  }
-
-  .timeWork {
-    display: flex;
-  }
 
   .footer__menu ul {
     display: block;
     margin: 0;
   }
 
-  .section__contacts {
-    margin-left: 0;
-  }
-
+ 
   .footer__logo {
     margin-right: 0;
     padding-left: 0;
@@ -2019,17 +1881,9 @@ img {
     margin-top: 10px;
   }
 
-  .contacts__timeWork {
-    margin-left: 0px;
-    margin-top: 12px;
-  }
+  
 
-  .contacts__text_time {
-    position: relative;
-    bottom: 37px;
-    left: 35px;
-
-  }
+  
 
 
   .popup__exc {
@@ -2288,15 +2142,6 @@ img {
     margin-bottom: 155px;
   }
 
-  /*   .our__route__img {
-      display: flex;
-      margin-top: -77px;
-      margin-bottom: 136px;
-      width: 48%;
-  }
-  .our__route__img img {
-      padding-right: 6px;
-  } */
 
   .SecondRout__img img {
     padding-left: 10px;
@@ -2405,13 +2250,9 @@ img {
     width: 100%;
   }
 
-  .additional__services {
-    width: 100%;
-  }
 
-  .section__contacts {
-    margin-left: 0;
-  }
+
+  
 
   .footer__menu ul {
     display: block;
@@ -2422,10 +2263,7 @@ img {
     margin-top: 0;
   }
 
-  .contact__social {
-    display: inline-flex;
-    margin-bottom: 20px;
-  }
+  
 
   .section__end {
     margin-left: 10px;
@@ -2905,17 +2743,10 @@ img {
     margin-top: 0;
   }
 
-  .section__contacts {
-    margin-left: 0;
-  }
 
-  .contacts__top {
-    margin-left: 30px;
-  }
+  
 
-  .contacts__bottom {
-    margin-left: 30px;
-  }
+ 
 
   .contact__social {
     display: flex;
@@ -3065,30 +2896,17 @@ img {
     margin: 0;
   }
 
-  .additional__services {
-    width: 102%;
-  }
+  
 
   .additional__text {
     text-align: center;
     padding-left: 0;
   }
 
-  .contacts__number {
-    margin-left: 77px;
-  }
+  
 
-  .section__contacts {
-    margin-left: 0;
-  }
+  
 
-  .contacts__text {
-    font-size: 15px;
-  }
-
-  .contacts__timeWork {
-    margin-left: 5px;
-  }
 
   .footer__menu li a {
     margin-right: 7px;
