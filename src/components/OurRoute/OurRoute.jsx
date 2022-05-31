@@ -24,6 +24,7 @@ import ThirdPage from "./RoutesPage/ThirdPage/ThirdPage";
 import OurTextH2 from "./OurTextH2";
 
 
+import './Style.scss'
 
 
 
@@ -100,10 +101,6 @@ const OurRoute = () => {
                         SecendQadroSecend={SecendQadroSecend}
                         SecendQadroThird={SecendQadroThird}
                     />
-
-
-
-
 
                     <ThirdPage
                         Line={Line}

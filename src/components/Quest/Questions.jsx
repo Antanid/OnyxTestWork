@@ -6,6 +6,8 @@ import QuestAdditional from "./QuestAdditional";
 import QuestContact from "./QuestContact";
 import QuestHeader from "./QuestHeader";
 
+import './Style.scss'
+
 const Questions = () => {
 
 

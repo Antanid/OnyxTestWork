@@ -14,14 +14,11 @@ function FormComponent({
     valueYear,
     handleChange,
     value,
-    handleSubmit }) {
+    handleSubmit,
+    handleKeyPress }) {
 
 
-    const handleKeyPress = (event) => {
-        if (event.key === 'Enter') {
-            addTask()
-        }
-    }
+   
 
     return (
         <form onSubmit={handleSubmit}>

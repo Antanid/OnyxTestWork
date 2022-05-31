@@ -23,8 +23,7 @@ function TableComponent({ table, removeItem, setTable }) {
             }
         }
         setTable((table) => ([...table].sort(SortItems)));
-      
-    }, [currentItem, setTable])
+    }, [currentItem])
 
     const handleEditing = useCallback((id) => {
         setIdItem(id);
@@ -53,19 +52,19 @@ function TableComponent({ table, removeItem, setTable }) {
         e.preventDefault()
     }
 
-    function dragHandler(e, item) {
-        e.preventDefault()
-        setTable(table.map(c => {
-            if (c.id === item.id) {
-                return { ...c, order: currentItem.order }
-            }
-            if (c.id === currentItem.id) {
-                return { ...c, order: item.order }
-            }
-            return c;
-        }))
-    }
-
+   function dragHandler(e, item) {
+          e.preventDefault()
+          setTable(table.map(c => {
+              if (c.id === item.id) {
+                  return { ...c, order: currentItem.order }
+              }
+              if (c.id === currentItem.id) {
+                  return { ...c, order: item.order }
+              }
+              return c;
+          }))
+      }
+  
     return (
         <thead>
             {
@@ -97,7 +96,6 @@ function TableComponent({ table, removeItem, setTable }) {
                                 idItem={idItem} />
 
                             <RemoveItem
-                                id={id}
                                 items={item}
                                 removeItem={removeItem} />
                         </tr>

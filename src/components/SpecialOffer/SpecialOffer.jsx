@@ -6,6 +6,8 @@ import SpeacialText from "./SpeacialText";
 import SpecialCartFirst from "./SpecialCartFirst";
 import SpecialCartSecend from "./SpecialCartSecend";
 
+import './Style.scss';
+
 
 class SpecialOffer extends React.Component {
     render() {

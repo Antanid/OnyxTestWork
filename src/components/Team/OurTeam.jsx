@@ -22,7 +22,6 @@ class OurTeam extends React.Component {
                                 <div className="team__text">
                                     <h5>{items.name}</h5>
                                     <p>{items.profession}</p>
-
                                 </div>
                             </div>
                         </div>

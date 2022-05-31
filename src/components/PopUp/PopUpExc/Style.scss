@@ -1,0 +1,449 @@
+.popup__bg__exc {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background: rgba(18, 18, 20, 0.8);
+    opacity: 0;
+    pointer-events: none;
+    transition: all 0.5s;
+    overflow-y: auto;
+    &.active {
+        opacity: 1;
+        pointer-events: all;
+        transition: all 0.5s;
+        z-index: 9999;
+    }
+    .popup__exc {
+        z-index: 1200;
+        position: absolute;
+        top: 50%;
+        left: 50%;
+        transform: translate(-50%, -20%);
+        max-width: 1300px;
+        transition: all 0.5s;
+        background: white;
+        .close-popup_exc {
+            position: absolute;
+            top: 10px;
+            right: 10px;
+            cursor: pointer;
+        }
+        .exc__text {
+            h1 {
+                font-family: "Montserrat";
+                font-weight: 600;
+                font-size: 36px;
+                color: #121214;
+            }
+            .popup_exc_h3 {
+                margin-top: 31px;
+                h3 {
+                    font-family: "Montserrat";
+                    font-weight: 300;
+                    font-size: 16px;
+                    color: #121214;
+                    line-height: 18px;
+                    span {
+                        font-weight: 400;
+                    }
+                }
+            }
+        }
+        .popup__routes__h4 {
+            h4 {
+                font-family: "Montserrat";
+                font-weight: 600;
+                font-size: 18px;
+                color: #121214;
+                line-height: 24px;
+                margin-top: 32px;
+                img {
+                    .base__icon__route {
+                        margin-left: 17px;
+                    }
+                }
+            }
+        }
+        .popup_exc_button {
+            .popup_button {
+                border: 1.5px solid #037e8c;
+                border-radius: 9px;
+                font-family: "Montserrat";
+                font-weight: 600;
+                color: #037e8c;
+                font-size: 14px;
+                line-height: 18px;
+                background-color: #ffffff;
+                padding: 14px 25px;
+            }
+        }
+        .popup__text__see {
+            h3 {
+                margin-top: 84px;
+                font-family: "Montserrat";
+                font-weight: 600;
+                font-size: 24px;
+                line-height: 30px;
+                color: #121214;
+            }
+        }
+        .popup_text__see_p {
+            .popup__text__firstPart {
+                p {
+                    margin-top: 30px;
+                    font-family: "Montserrat";
+                    font-size: 16px;
+                    line-height: 25px;
+                    font-weight: 400;
+                    color: #121214;
+                    margin-bottom: 30px;
+                }
+            }
+        }
+        .popup__text__secendPart {
+            p {
+                font-family: "Montserrat";
+                font-size: 16px;
+                line-height: 25px;
+                font-weight: 400;
+                color: #121214;
+            }
+        }
+        .popup__price {
+            h3 {
+                margin-top: 30px;
+                margin-bottom: 30px;
+                font-family: "Montserrat";
+                font-weight: 600;
+                font-size: 24px;
+                line-height: 30px;
+                color: #121214;
+            }
+        }
+        .popup__backgr {
+            background-image: url(../../../assets//img/popup_back.svg);
+            height: 100%;
+            background-repeat: no-repeat;
+            .popup_form_h3 {
+                position: relative;
+                left: 110px;
+                margin-top: 65px;
+            }
+
+            .popup_form {
+                position: relative;
+                left: 110px;
+                margin-top: 30px;
+                label {
+                    .label_data {
+                        h5 {
+                            font-family: "Montserrat";
+                            font-size: 14px;
+                            line-height: 18px;
+                            color: #121214;
+                            font-weight: 500;
+                        }
+                    }
+                    input {
+                        width: 350px;
+                        height: 45px;
+                        background: #ffffff;
+                        border: 0.5px solid rgba(120, 120, 120, 1);
+                        border-radius: 8px;
+                    }
+                }
+            }
+            .popup_form_button {
+                button {
+                    margin-top: 30px;
+                    background: #037e8c;
+                    border-radius: 9px;
+                    font-family: "Montserrat";
+                    font-weight: 600;
+                    font-size: 14px;
+                    line-height: 18px;
+                    color: #ffffff;
+                    padding: 14px 30px;
+                    border: none;
+                    position: relative;
+                    left: 110px;
+                    &:hover {
+                        background: #ffffff;
+                        color: #037e8c;
+                        border: 1px solid #037e8c;
+                        transition: all 0.6s;
+                    }
+                }
+            }
+        }
+        .popup__bike {
+            max-width: 303px;
+            margin-top: 15px;
+            .popup__bike__img {
+                border-top-left-radius: 10px;
+                border-top-right-radius: 10px;
+                cursor: pointer;
+            }
+            .popup__bike_text {
+                background-color: #f4f4f4;
+                border-bottom-left-radius: 10px;
+                border-bottom-right-radius: 10px;
+                cursor: pointer;
+                text-align: center;
+                p {
+                    padding-top: 10px;
+                    font-size: 14px;
+                    font-family: "Montserrat";
+                    line-height: 18px;
+                    font-weight: 400;
+                    color: #121214;
+                    margin-bottom: 0;
+                }
+                h4 {
+                    padding-bottom: 10px;
+                    font-family: "Montserrat";
+                    font-size: 20px;
+                    font-weight: 700;
+                    line-height: 26px;
+                    color: #037e8c;
+                }
+            }
+        }
+    }
+}
+
+@media (max-width: 575.98px) {
+    .popup__bg__exc {
+        .popup__exc {
+            transform: translate(-50%, -5%);
+            width: 90%;
+            .popup_exc_button {
+                .popup_button {
+                    margin-bottom: 10px;
+                }
+            }
+            .popup__backgr {
+                .popup_form_h3 {
+                    left: 10px;
+                }
+                .popup_form {
+                    left: 10px;
+                    label {
+                        input {
+                            width: 250px;
+                        }
+                    }
+                }
+                .popup_form_button {
+                    button {
+                        left: 10px;
+                        margin-top: 16px;
+                        margin-bottom: 10px;
+                    }
+                }
+            }
+            .popup__bike {
+                margin: 0 auto;
+            }
+        }
+    }
+}
+
+@media (min-width: 576px) and (max-width: 767.98px) {
+    .popup__bg__exc {
+        .popup__exc {
+            transform: translate(-50%, -9%);
+            width: 71%;
+            .popup_exc_button {
+                .popup_button {
+                    margin-bottom: 10px;
+                }
+            }
+            .popup__backgr {
+                .popup_form_h3 {
+                    left: 0;
+                }
+                .popup_form {
+                    left: 0;
+                    label {
+                        input {
+                            width: 315px;
+                        }
+                    }
+                }
+                .popup_form_button {
+                    button {
+                        margin-top: 12px;
+                        left: 0;
+                    }
+                }
+            }
+        }
+    }
+}
+
+@media (min-width: 768px) and (max-width: 827px) {
+    .popup__bg__exc {
+        .popup__exc {
+            transform: translate(-50%, -8%);
+            width: 71%;
+            .popup_exc_button {
+                .popup_button {
+                    margin-bottom: 10px;
+                }
+            }
+            .popup__backgr {
+                .popup_form_h3 {
+                    left: 80px;
+                }
+                .popup_form {
+                    left: 80px;
+                    label {
+                        input {
+                            width: 360px;
+                        }
+                    }
+                }
+                .popup_form_button {
+                    button {
+                        left: 80px;
+                        margin-top: 12px;
+                        margin-bottom: 20px;
+                    }
+                }
+            }
+        }
+    }
+}
+@media (min-width: 828px) and (max-width: 870px) {
+    .popup__bg__exc {
+        .popup__exc {
+            transform: translate(-50%, -8%);
+            width: 71%;
+            .popup__backgr {
+                .popup_form_h3 {
+                    left: 80px;
+                }
+                .popup_form {
+                    left: 80px;
+                }
+                .popup_form_button {
+                    button {
+                        left: 80px;
+                        margin-top: 12px;
+                        margin-bottom: 20px;
+                    }
+                }
+            }
+        }
+    }
+}
+@media (min-width: 871px) and (max-width: 920px) {
+    .popup__bg__exc {
+        .popup__exc {
+            transform: translate(-50%, -9%);
+            width: 71%;
+            .popup_exc_button {
+                .popup_button {
+                    margin-bottom: 10px;
+                }
+            }
+            .popup__backgr {
+                .popup_form_h3 {
+                    left: 80px;
+                    label {
+                        input {
+                            width: 360px;
+                        }
+                    }
+                }
+                .popup_form_button {
+                    button {
+                        left: 80px;
+                        margin-top: 12px;
+                        margin-bottom: 20px;
+                    }
+                }
+            }
+        }
+    }
+}
+
+@media (min-width: 921px) and (max-width: 991px) {
+    .popup__bg__exc {
+        .popup__exc {
+            transform: translate(-50%, -8%);
+            width: 71%;
+            .popup_exc_button {
+                .popup_button {
+                    .popup_form_h3 {
+                        left: 80px;
+                    }
+                    .popup_form {
+                        left: 80px;
+                        label {
+                            input {
+                                width: 360px;
+                            }
+                        }
+                    }
+                    .popup_form_button {
+                        button {
+                            left: 80px;
+                            margin-top: 12px;
+                            margin-bottom: 20px;
+                        }
+                    }
+                }
+            }
+        }
+    }
+}
+
+@media (min-width: 992px) and (max-width: 1199px) {
+    .popup__bg__exc {
+        .popup__exc {
+            transform: translate(-50%, -8%);
+            width: 71%;
+            .popup_exc_button {
+                .popup_button {
+                    left: 80px;
+                }
+                .popup_form {
+                    left: 80px;
+                    label {
+                        input {
+                            width: 280px;
+                        }
+                    }
+                }
+                .popup_form_button {
+                    button {
+                        left: 80px;
+                        margin-top: 12px;
+                        margin-bottom: 20px;
+                    }
+                }
+            }
+        }
+    }
+}
+
+@media (min-width: 1200px) and (max-width: 1600px) {
+    .popup__bg__exc {
+        .popup__exc {
+            transform: translate(-50%, -8%);
+            width: 71%;
+        }
+    }
+}
+@media (min-width: 1600px){
+    .popup__bg__exc {
+        .popup__exc {
+            transform: translate(-50%, -10%);
+            width: 71%;
+        }
+    }
+}

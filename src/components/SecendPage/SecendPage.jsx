@@ -4,7 +4,9 @@ import FormComponent from './FormComp/FormComponent';
 import SortBy from './SortBy/SortBy';
 import axios from 'axios';
 import ButtonTable from './ButtonImg/ButtonTable';
-import arrow from '../../assets/img/arrow-down-sign-to-navigate.png'
+import arrow from '../../assets/img/arrow-down-sign-to-navigate.png';
+
+import './Style.scss'
 
 function SecendPage() {
 
@@ -17,8 +19,6 @@ function SecendPage() {
   const [valueMonth, setValueMonth] = useState('');
 
   const [table, setTable] = useState([]);
-
-
 
 
   useEffect(() => {
@@ -111,6 +111,12 @@ function SecendPage() {
     }
   }
 
+  const handleKeyPress = (event) => {
+    if (event.key === 'Enter') {
+      addTask()
+    }
+  }
+
   const handleSubmit = (e) => {
     e.preventDefault()
     addTask(value, valueYear, valueDate, valueMonth)
@@ -121,14 +127,14 @@ function SecendPage() {
   }
 
   return (
-    <div>
+    <div className='TableOur'>
       <table>
         <thead>
           <SortBy
             setArray={setArray}
             arrays={arrays}
             bubbleSort={bubbleSort}
-           arrow={arrow}
+            arrow={arrow}
             setArrayAlphabet={setArrayAlphabet}
             arrayAlphabet={arrayAlphabet}
             sortByText={sortByText}
@@ -137,6 +143,7 @@ function SecendPage() {
         <TableComponent setTable={setTable} table={table} removeItem={removeItem} />
       </table>
       <FormComponent
+        handleKeyPress={handleKeyPress}
         deleteLastArray={deleteLastArray}
         addTask={addTask}
         handleChangeMonth={handleChangeMonth}

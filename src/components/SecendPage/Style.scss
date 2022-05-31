@@ -1,0 +1,34 @@
+.TableOur {
+    .array {
+        transform: rotate(0deg);
+        transition: 0.3s ease-in-out;
+        margin-left: 4px;
+        &_active {
+            transform: rotate(180deg);
+            transition: 0.3s ease-in-out;
+            margin-left: 4px;
+        }
+    }
+    .arrayAlphabet {
+        transform: rotate(180deg);
+        transition: 0.3s ease-in-out;
+        margin-left: 4px;
+        &_active {
+            transform: rotate(0deg);
+            transition: 0.3s ease-in-out;
+            margin-left: 4px;
+        }
+    }
+    .table_data_active {
+        color: green;
+    }
+    form {
+        .table_input {
+            max-width: 400px;
+        }
+        .table_input_date {
+            max-width: 100px;
+            margin-left: 10px;
+        }
+    }
+}

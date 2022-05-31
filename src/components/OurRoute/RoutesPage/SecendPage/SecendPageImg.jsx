@@ -13,7 +13,6 @@ function SecendPageImg({ SecendQadroFirst, SecendQadroSecend, SecendQadroThird }
 
                         <label htmlFor="s1-2" id="slide1-2">
                             <div className="slider-image">
-
                                 <img src={SecendQadroFirst} alt="qadro" />
                             </div>
                         </label>

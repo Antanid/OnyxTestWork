@@ -2,6 +2,8 @@ import React from "react";
 import Buttons from "../Button/Buttons";
 import TestText from "./TestText";
 
+import './Style.scss'
+
 class Test extends React.Component {
     render() {
         return (

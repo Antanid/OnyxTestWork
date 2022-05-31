@@ -27,6 +27,8 @@ import PopUpInterested from "./PopUpInterested";
 import PopUpSecendHead from "./PopUpSecendHead";
 import PopUpForm from "./PopUpForm";
 
+import './Style.scss'
+
 function PopUpExc({ setActive, active }) {
     const [bikes] = useState({
         Allbikes: [

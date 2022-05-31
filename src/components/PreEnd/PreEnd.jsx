@@ -4,6 +4,8 @@ import Footer from "../../assets/img/LogoFooter.png";
 import PreEndImg from "./PreEndImg";
 import PreEndView from "./PreEndView";
 
+import './Style.scss'
+
 class PreEnd extends React.Component {
     constructor() {
         super();

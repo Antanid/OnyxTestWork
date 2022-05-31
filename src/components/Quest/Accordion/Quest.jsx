@@ -3,7 +3,7 @@ import PropTypes from 'prop-types';
 
 function Quest({ toggle, clicked, items }) {
     return (
-        <div className="accordion">
+        <div className="accordions">
             {
                 items.map((item, index) => (
                     <div

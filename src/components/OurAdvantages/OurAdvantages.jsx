@@ -6,7 +6,7 @@ import Bike from "../../assets/img/quad_bike.png";
 import Helmet from "../../assets/img/helmet.png";
 import OurAdvComponent from "./OurAdvComponent";
 
-
+import './Style.scss'
 
 class OurAdvantages extends React.Component {
     constructor(props) {

@@ -1,0 +1,226 @@
+.special__offer {
+    .special__offer__h2 {
+        h2 {
+            font-family: "Montserrat", sans-serif;
+            font-size: 36px;
+            font-weight: 700;
+            text-align: center;
+            margin-top: 65px;
+            margin-bottom: 45px;
+        }
+    }
+    .special__offer__all {
+        display: flex;
+        background-color: #f4f4f4;
+        background-image: url(../../assets/img/kaplya.png);
+        background-repeat: no-repeat;
+        background-position: bottom -20px right -60px;
+        .special__text {
+            h3 {
+                margin-top: 26px;
+                font-family: "Montserrat", sans-serif;
+                font-weight: 800;
+                font-size: 36px;
+                line-height: 50px;
+                color: #037e8c;
+                margin-left: 20px;
+                span {
+                    font-family: "Montserrat", sans-serif;
+                    font-weight: 700;
+                    font-size: 24px;
+                    line-height: 34px;
+                }
+            }
+            p {
+                margin-top: 20px;
+                margin-left: 20px;
+                font-family: "Montserrat", sans-serif;
+                font-weight: 400;
+                line-height: 24px;
+                color: #373737;
+            }
+        }
+    }
+    .special__offer__secend {
+        display: flex;
+        background-color: #f4f4f4;
+        background-image: url(../../assets/img/kaplya.png);
+        background-repeat: no-repeat;
+        background-position: bottom -19px right -38px;
+        margin-bottom: 30px;
+        .special__text {
+            h3 {
+                margin-top: 26px;
+                font-family: "Montserrat", sans-serif;
+                font-weight: 800;
+                font-size: 36px;
+                line-height: 50px;
+                color: #037e8c;
+                margin-left: 20px;
+                span {
+                    font-family: "Montserrat", sans-serif;
+                    font-weight: 700;
+                    font-size: 24px;
+                    line-height: 34px;
+                }
+            }
+            p {
+                margin-top: 20px;
+                margin-left: 20px;
+                font-family: "Montserrat", sans-serif;
+                font-weight: 400;
+                line-height: 24px;
+                color: #373737;
+            }
+        }
+        .spec__but {
+            .spec__offer__but {
+                border: 1.5px solid #037e8c;
+                box-sizing: border-box;
+                border-radius: 9px;
+                width: 175px;
+                height: 45px;
+                margin-left: 20px;
+                margin-top: 14px;
+                &:hover {
+                    background-color: #037e8c;
+                    color: #ffffff;
+                    border: 1.5px solid #ffffff;
+                    transition: 0.4s;
+                }
+            }
+        }
+    }
+}
+
+@media (max-width: 575.98px) {
+    .special__offer {
+        .special__offer__h2 {
+            h2 {
+                font-size: 24px;
+                line-height: 32px;
+            }
+        }
+        .special__offer__all {
+            display: block;
+            background-position: bottom -22px right -43px;
+            .img__offer {
+                width: 100%;
+                border-radius: 20px;
+            }
+            .special__text {
+                h3 {
+                    font-size: 24px;
+                    line-height: 28px;
+                    span {
+                        font-size: 18px;
+                        margin-top: 0px;
+                    }
+                }
+                p {
+                    width: 210px;
+                    padding-bottom: 20px;
+                }
+            }
+        }
+        .special__offer__secend {
+            display: block;
+            margin-top: 20px;
+            background-position: bottom -19px right -31px;
+            .spec__but {
+                margin-right: 6px;
+                margin-top: -35px;
+                padding-bottom: 20px;
+            }
+        }
+    }
+}
+
+@media (min-width: 576px) and (max-width: 767.98px) {
+    .special__offer {
+        .special__offer__all {
+            margin-bottom: 35px;
+            background-position: bottom -33px right -50px;
+            .img__offer {
+                height: 100%;
+            }
+            .special__text {
+                h3 {
+                    font-size: 24px;
+                    span {
+                        font-size: 18px;
+                    }
+                }
+            }
+        }
+        .special__offer__secend {
+            background-position: bottom -23px right -62px;
+            .spec__but {
+                margin-bottom: 20px;
+            }
+        }
+    }
+}
+
+@media (min-width: 768px) and (max-width: 991.98px) {
+    .special__offer {
+        .special__offer__all {
+            background-position: bottom -10px right -33px;
+            .img__offer {
+                border-top-left-radius: 20px;
+                border-bottom-left-radius: 20px;
+            }
+        }
+        .special__offer__secend {
+            margin-top: 40px;
+            border-radius: 20px;
+            background-position: bottom -3px right -40px;
+        }
+    }
+}
+@media (min-width: 992px) and (max-width: 1199px) {
+    .special__offer {
+        .special__offer__all {
+            background-position: bottom -20px right -67px;
+            .img__offer {
+                height: 100%;
+                width: 100%;
+            }
+            .special__text {
+                width: 110%;
+                h3 {
+                    font-size: 28px;
+                    span {
+                        font-size: 21px;
+                    }
+                }
+            }
+        }
+        .special__offer__secend {
+            .spec__but {
+                margin-bottom: 40px;
+            }
+        }
+    }
+}
+@media (min-width: 1200px) and (max-width: 1300px) {
+    .special__offer {
+        .special__offer__all {
+            height: 90%;
+            .img__offer__first {
+                height: 100%;
+            }
+        }
+    }
+}
+
+@media (min-width: 1636px) and (max-width: 2561px) {
+    .special__offer {
+        .special__offer__all {
+            height: 90%;
+            .img__offer__first {
+                height: 100%;
+            }
+        }
+    }
+}

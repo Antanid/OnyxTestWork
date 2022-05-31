@@ -1,7 +1,7 @@
 import React from "react";
 import Timer from "./Timer";
 import { getRemainingTimes } from "./Utils/CountDownTimerUtils";
-
+import './Style.scss'
 
 class CountdownTimer extends React.Component {
     constructor() {

@@ -8,7 +8,7 @@ function SecendPage({ Qadro, QadroSecend, QadroThird }) {
 
             <div className="our__route__img">
                 <div className="carousel-slider">
-                    <section id="slider">
+                    <section className='slider'  id="slider">
                         <input readOnly type="radio" name="slider-1" id="s1" checked />
                         <input readOnly type="radio" name="slider-1" id="s2" />
                         <input readOnly type="radio" name="slider-1" id="s3" />

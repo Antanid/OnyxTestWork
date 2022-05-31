@@ -1,0 +1,663 @@
+.header {
+    min-height: 920px;
+    background-repeat: no-repeat;
+    background-size: cover;
+    .videoBG {
+        position: absolute;
+        z-index: -20;
+        top: 0;
+        left: 0;
+        width: 100%;
+        height: 100vh;
+        object-fit: cover;
+    }
+    .nav__logo {
+        margin-left: 70px;
+        margin-top: 12px;
+    }
+    .nav {
+        .nav__ul {
+            display: flex;
+            margin-top: 39px;
+            margin-left: 220px;
+            list-style-type: none;
+            a {
+                padding-left: 80px;
+                margin-top: 40px;
+                font-family: "Gotham Pro", "Montserrat Subrayada", sans-serif;
+                font-weight: 400px;
+                font-size: 14px;
+                text-decoration: none;
+                line-height: 15px;
+                color: #ffffff;
+                &:hover {
+                    color: #037e8c;
+                    transition: 0.4s;
+                }
+            }
+        }
+        .nav__number {
+            .number__call {
+                margin-left: 58px;
+                .number__p {
+                    margin-top: 36px;
+                    font-size: 20px;
+                    font-family: "Montserrat", sans-serif;
+                    font-weight: 600;
+                    line-height: 21px;
+                    color: #ffffff;
+                }
+                .number__button {
+                    margin-top: 10px;
+                    width: 177px;
+                    height: 40px;
+                    background: rgba(255, 255, 255, 0.4);
+                    border-radius: 9px;
+                    font-family: "Montserrat", sans-serif;
+                    font-weight: 600;
+                    font-size: 14px;
+                    line-height: 15px;
+                    color: #ffffff;
+                    border: none;
+                    &:hover {
+                        background-color: #037e8c;
+                        transition: 0.4s;
+                    }
+                }
+            }
+        }
+    }
+    .excursions {
+        .excursions_text {
+            .excursions__h1 {
+                margin: 100px 0px 37px 70px;
+                font-family: "Montserrat", sans-serif;
+                font-weight: 800;
+                font-size: 70px;
+                line-height: 90px;
+                color: #ffffff;
+                width: 600px;
+                letter-spacing: 0.045em;
+            }
+            .excursions__h2 {
+                font-family: "Montserrat", sans-serif;
+                font-weight: 500;
+                font-size: 24px;
+                margin-left: 70px;
+                line-height: 26px;
+                color: #ffffff;
+            }
+        }
+        .excursions__route {
+            .excursions__button {
+                margin-top: 80px;
+                margin-left: 70px;
+                width: 274px;
+                height: 55px;
+                background: #037e8c;
+                border-radius: 9px;
+                border: none;
+                color: #ffffff;
+                &:hover {
+                    background: #10919ca4;
+                    transition: 0.4s;
+                }
+                .img__button {
+                    margin-left: 20px;
+                    background: transparent;
+                }
+            }
+        }
+    }
+}
+
+@media (min-width: 470px) and (max-width: 575px) {
+    .header {
+        .excursions {
+            .excursions_text {
+                margin: 45px;
+            }
+            .excursions__route {
+                .excursions__button {
+                    margin-left: 30px;
+                    margin-top: 0;
+                }
+            }
+        }
+    }
+}
+
+@media (max-width: 575.98px) {
+    .header {
+        .videoBG {
+            min-height: 900px;
+        }
+        .nav__logo {
+            width: 50px;
+            margin-left: 20px;
+            margin-top: 15px;
+        }
+        .nav {
+            .nav__ul {
+                display: block;
+                margin-left: 0;
+                margin-top: 0px;
+            }
+        }
+        .excursions {
+            .excursions_text {
+                .excursions__h1 {
+                    font-size: 35px;
+                    margin: 0 auto;
+                    width: auto;
+                }
+                .excursions__h2 {
+                    font-size: 16px;
+                    margin: 0 auto;
+                }
+            }
+            .excursions__route {
+                .excursions__button {
+                    margin: 0 auto;
+                    margin-top: 42px;
+                }
+            }
+        }
+    }
+}
+
+@media (min-width: 576px) and (max-width: 767.98px) {
+    .header {
+        .videoBG {
+            min-height: 900px;
+        }
+        .nav__logo {
+            margin-left: 1px;
+            margin-top: 12px;
+        }
+        .nav {
+            bottom: 141px;
+            position: relative;
+            .nav__ul {
+                display: inline-block;
+                margin-top: 12px;
+                margin-left: 40px;
+            }
+        }
+        .excursions {
+            .excursions_text {
+                .excursions__h1 {
+                    margin-top: 0;
+                    font-size: 44px;
+                    margin-bottom: 16px;
+                }
+                .excursions__h2 {
+                    font-size: 18px;
+                    width: 270px;
+                }
+            }
+            .excursions__route {
+                .excursions__button {
+                    margin-top: 42px;
+                }
+            }
+        }
+    }
+}
+
+@media (max-width: 767px) {
+    .header {
+        .nav {
+            .menu__body {
+                position: fixed;
+                top: 0;
+                left: -110%;
+                width: 100%;
+                height: 100%;
+                background-color: rgba(18, 18, 20, 0.938);
+                padding: 80px 30px 30px 0px;
+                transition: all 0.3s ease 0s;
+                overflow: auto;
+                &._active {
+                    left: 0;
+                    z-index: 10;
+                }
+                .nav__ul {
+                    a {
+                        border-bottom: 0.5px solid rgba(255, 255, 255, 0.3);
+                        padding-left: 0;
+                        display: block;
+                        margin-top: 20px;
+                        font-size: 16px;
+                        padding: 10px;
+                    }
+                }
+            }
+            .menu__icon {
+                z-index: 99999;
+                display: block;
+                position: fixed;
+                width: 30px;
+                height: 18px;
+                cursor: pointer;
+                margin: 30px;
+                &::before,
+                &::after,
+                span {
+                    left: 0;
+                    position: absolute;
+                    height: 10%;
+                    width: 100%;
+                    transition: all 0.3s ease 0s;
+                    background-color: rgb(175, 172, 172);
+                }
+                &::before,
+                &::after {
+                    content: "";
+                }
+                &::before {
+                    top: 0;
+                }
+                &::after {
+                    bottom: 0;
+                }
+                span {
+                    top: 50%;
+                    transform: scale(1) translate(0px, -50%);
+                }
+                &._active {
+                    span {
+                        transform: scale(0) translate(0px, -50%);
+                    }
+                    &::before {
+                        top: 50%;
+                        transform: rotate(-45deg) translate(0px, -50%);
+                    }
+                    &::after {
+                        bottom: 50%;
+                        transform: rotate(45deg) translate(0px, 50%);
+                    }
+                }
+            }
+        }
+        .excursions {
+            .excursions__route {
+                margin-bottom: 30px;
+            }
+        }
+    }
+}
+
+@media (min-width: 320px) and (max-width: 350px) {
+    .header {
+        .nav {
+            .menu__icon {
+                top: 10px;
+                left: 240px;
+            }
+        }
+    }
+}
+
+@media (min-width: 351px) and (max-width: 400px) {
+    .header {
+        .nav {
+            .menu__icon {
+                top: 10px;
+                left: 270px;
+            }
+        }
+    }
+}
+@media (min-width: 401px) and (max-width: 450px) {
+    .header {
+        .nav {
+            .menu__icon {
+                top: 10px;
+                left: 325px;
+            }
+        }
+    }
+}
+
+@media (min-width: 451px) and (max-width: 540px) {
+    .header {
+        .nav {
+            .menu__icon {
+                top: 10px;
+                left: 365px;
+            }
+        }
+    }
+}
+@media (min-width: 541px) and (max-width: 575px) {
+    .header {
+        .nav {
+            .menu__icon {
+                top: 10px;
+                left: 450px;
+            }
+        }
+    }
+}
+
+@media (min-width: 576px) and (max-width: 650px) {
+    .header {
+        .nav {
+            .menu__icon {
+                left: 500px;
+            }
+        }
+    }
+}
+
+@media (min-width: 651px) and (max-width: 700px) {
+    .header {
+        .nav {
+            .menu__icon {
+                left: 570px;
+            }
+        }
+    }
+}
+@media (min-width: 701px) and (max-width: 767px) {
+    .header {
+        .nav {
+            .menu__icon {
+                left: 620px;
+            }
+        }
+    }
+}
+
+@media (min-width: 768px) and (max-width: 827px) {
+    .header {
+        .videoBG {
+            min-height: 900px;
+        }
+        .nav {
+            .nav__ul {
+                a {
+                    padding-left: 26px;
+                }
+            }
+            .nav__number {
+                .number__call {
+                    position: relative;
+                    left: 625px;
+                    bottom: 82px;
+                    left: 575px;
+                    bottom: 60px;
+                    .number__p {
+                        font-size: 12px;
+                    }
+                    .number__button {
+                        width: 120px;
+                        font-size: 12px;
+                    }
+                }
+            }
+        }
+    }
+}
+@media (min-width: 768px) and (max-width: 991.98px) {
+    .header {
+        .nav__logo {
+            margin-left: 1px;
+            margin-top: 12px;
+        }
+        .nav {
+            .nav__ul {
+                margin-left: 55px;
+                a {
+                    padding-left: 30px;
+                    margin-top: 40px;
+                    font-size: 13px;
+                }
+            }
+        }
+        .excursions {
+            margin-bottom: 20px;
+            .excursions_text {
+                .excursions__h1 {
+                    margin-top: 0px;
+                }
+            }
+        }
+    }
+}
+
+@media (min-width: 828px) and (max-width: 870px) {
+    .header {
+        .videoBG {
+            min-height: 900px;
+        }
+        .nav {
+            .nav__number {
+                .number__call {
+                    position: relative;
+                    margin-left: 0px;
+                    left: 665px;
+                    bottom: 58px;
+                    .number__p {
+                        font-size: 13px;
+                    }
+                    .number__button {
+                        width: 135px;
+                        font-size: 12px;
+                    }
+                }
+            }
+        }
+    }
+}
+
+@media (min-width: 871px) and (max-width: 920px) {
+    .header {
+        .videoBG {
+            min-height: 900px;
+        }
+        .nav {
+            .nav__number {
+                .number__call {
+                    position: relative;
+                    margin-left: 0px;
+                    left: 700px;
+                    bottom: 58px;
+                    .number__p {
+                        font-size: 13px;
+                    }
+                    .number__button {
+                        width: 135px;
+                        font-size: 12px;
+                    }
+                }
+            }
+        }
+    }
+}
+@media (min-width: 921px) and (max-width: 991px) {
+    header {
+        .videoBG {
+            min-height: 900px;
+        }
+        .nav {
+            .nav__ul {
+                a {
+                    padding-left: 50px;
+                }
+            }
+
+            .nav__number {
+                .number__call {
+                    position: relative;
+                    margin-left: 0px;
+                    left: 725px;
+                    bottom: 58px;
+                    .number__p {
+                        font-size: 13px;
+                    }
+                    .number__button {
+                        width: 135px;
+                        font-size: 12px;
+                    }
+                }
+            }
+        }
+    }
+}
+
+@media (min-width: 992px) and (max-width: 1199px) {
+    header {
+        .videoBG {
+            min-height: 900px;
+        }
+        .nav {
+            .nav__ul {
+                margin-left: 0;
+                a {
+                    padding-left: 36px;
+                }
+            }
+
+            .nav__number {
+                .number__call {
+                    position: relative;
+                    margin-left: 0px;
+                    left: 665px;
+                    bottom: 58px;
+                    .number__p {
+                        font-size: 15px;
+                    }
+                    .number__button {
+                        width: 135px;
+                        font-size: 12px;
+                    }
+                }
+            }
+        }
+    }
+}
+
+@media (min-width: 1200px) and (max-width: 1300px) {
+    header {
+        .videoBG {
+            min-height: 900px;
+        }
+        .nav {
+            .nav__ul {
+                margin-left: 10px;
+                a {
+                    padding-left: 65px;
+                }
+            }
+            .nav__number {
+                .number__call {
+                    position: relative;
+                    left: 625px;
+                    bottom: 82px;
+                    left: 740px;
+                    bottom: 60px;
+                }
+            }
+        }
+    }
+}
+
+@media (min-width: 1301px) and (max-width: 1635px) {
+    header {
+        .videoBG {
+            min-height: 900px;
+        }
+        .nav {
+            .nav__ul {
+                margin-left: 10px;
+            }
+            .nav__number {
+                .number__call {
+                    position: relative;
+                    left: 625px;
+                    bottom: 82px;
+                    left: 820px;
+                    bottom: 60px;
+                }
+            }
+        }
+    }
+}
+
+@media (min-width: 1636px) and (max-width: 1800px) {
+    .header {
+        .videoBG {
+            min-height: 900px;
+        }
+    }
+}
+
+@media (min-width: 1801px) and (max-width: 2000px) {
+    .header {
+        .videoBG {
+            min-height: 900px;
+        }
+    }
+}
+
+@media (min-width: 2001px) and (max-width: 2200px) {
+    .header {
+        .videoBG {
+            min-height: 900px;
+        }
+    }
+}
+
+@media (min-width: 2201px) and (max-width: 2500px) {
+    .header {
+        .videoBG {
+            min-height: 900px;
+        }
+    }
+}
+
+@media (min-width: 1636px) and (max-width: 2561px) {
+    .header {
+        .videoBG {
+            max-height: 900px;
+            min-height: 900px;
+        }
+        .nav {
+            .nav__number {
+                .number__call {
+                    position: relative;
+                    left: 625px;
+                    bottom: 82px;
+                    left: 1100px;
+                    bottom: 60px;
+                }
+            }
+        }
+    }
+}
+
+@media (min-width: 1100px) and (max-width: 1200px) {
+    .header {
+        .nav {
+            .nav__ul {
+                margin-left: 30;
+            }
+        }
+    }
+}
+
+@media (min-width: 768px) {
+    .menu__icon {
+        display: none;
+    }
+}
+@media (min-width: 768px) and (max-width: 991.98px){
+    .header {
+        .nav{
+            bottom: 141px;
+            position: relative;
+        }
+    }
+}

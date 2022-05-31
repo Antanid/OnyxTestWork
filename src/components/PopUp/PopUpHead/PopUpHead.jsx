@@ -1,5 +1,6 @@
 import React from "react";
 import PropTypes from 'prop-types';
+import './Style.scss'
 
 
 import Close from "../../../assets/img/icons8-close.svg";

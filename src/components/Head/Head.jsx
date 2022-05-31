@@ -10,6 +10,8 @@ import HeadLogo from './HeadLogo';
 import HeadMenu from './HeadMenu';
 import HeadText from './HeadText';
 
+import './Style.scss'
+
 function Head() {
     const [active, setActive] = useState(false);
     const [burger, setBurger] = useState(false);

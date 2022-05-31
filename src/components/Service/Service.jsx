@@ -5,6 +5,8 @@ import ServiceText from "./ServiceText";
 import ServiceHead from "./ServiceHead";
 import ServiceSpanText from "./ServiceSpanText";
 
+import './Style.scss';
+
 
 class Service extends React.Component {
     constructor() {
@@ -31,7 +33,6 @@ class Service extends React.Component {
                 <div className="container">
                     <div className="row">
                         <ServiceHead>Умови надання послуг</ServiceHead>
-
                         <ServiceSpanText textSpan={this.state.serviceTextWithSpan} />
                         <ServiceText text={this.state.serviceTextWithoutSpan} />
                     </div>

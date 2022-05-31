@@ -79,6 +79,19 @@
             }
         }
     }
+    .map-responsive {
+        overflow: hidden;
+        padding-bottom: 56.25%;
+        position: relative;
+        height: 0;
+        iframe {
+            left: 0;
+            top: 0;
+            height: 100%;
+            width: 100%;
+            position: absolute;
+        }
+    }
 }
 
 @media (max-width: 575.98px) {
@@ -127,6 +140,10 @@
         }
         .contacts__bottom {
             margin-left: 30px;
+        }
+        .contact__social {
+            display: flex;
+            margin-bottom: 10px;
         }
     }
 }

@@ -34,11 +34,21 @@
 @media (min-width: 576px) and (max-width: 767.98px) {
     .additional__services {
         width: 100%;
+        .additional__img{
+            img{
+                width: 100%;
+            }
+        }
     }
 }
 
 @media (min-width: 992px) and (max-width: 1199px) {
     .additional__services {
         width: 102%;
+        .additional__text {
+            text-align: center;
+            padding-left: 0;
+          }
+        
     }
 }
