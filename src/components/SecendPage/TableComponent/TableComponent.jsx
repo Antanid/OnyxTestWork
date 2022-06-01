@@ -12,6 +12,7 @@ function TableComponent({ table, removeItem, setTable }) {
     const [idItem, setIdItem] = useState(null);
     const [style] = useState('null');
     const [currentItem, setCurrentItem] = useState(null);
+    const [currentEnd, setCurrentEnd] = useState(null);
 
 
     useEffect(() => {
@@ -23,12 +24,11 @@ function TableComponent({ table, removeItem, setTable }) {
             }
         }
         setTable((table) => ([...table].sort(SortItems)));
-    }, [currentItem])
+    }, [currentEnd])
 
     const handleEditing = useCallback((id) => {
         setIdItem(id);
     }, [])
-
 
     const Edit = (e) => {
         setEditingText(e.currentTarget.value);
@@ -44,27 +44,28 @@ function TableComponent({ table, removeItem, setTable }) {
         setCurrentItem(item)
     }
 
-    function dragEndHandler(e) {
-
+    function dragEndHandler(e, item) {
+        setCurrentEnd(item);
     }
 
     function dragOVerHandler(e) {
         e.preventDefault()
     }
 
-   function dragHandler(e, item) {
-          e.preventDefault()
-          setTable(table.map(c => {
-              if (c.id === item.id) {
-                  return { ...c, order: currentItem.order }
-              }
-              if (c.id === currentItem.id) {
-                  return { ...c, order: item.order }
-              }
-              return c;
-          }))
-      }
-  
+    function dragHandler(e, item) {
+        e.preventDefault()
+        setTable(table.map(c => {
+            if (c.id === item.id) {
+                return { ...c, order: currentItem.order }
+            }
+            if (c.id === currentItem.id) {
+                return { ...c, order: item.order }
+            }
+            return c;
+        }))
+    }
+
+
     return (
         <thead>
             {
@@ -73,7 +74,7 @@ function TableComponent({ table, removeItem, setTable }) {
                         <tr
                             onDragStart={(e) => dragStartHandler(e, item)}
                             onDragLeave={(e) => dragEndHandler(e)}
-                            onDragEnd={(e) => dragEndHandler(e)}
+                            onDragEnd={(e) => dragEndHandler(e, item)}
                             onDragOver={(e) => dragOVerHandler(e)}
                             onDrop={(e) => dragHandler(e, item)}
                             draggable={true}

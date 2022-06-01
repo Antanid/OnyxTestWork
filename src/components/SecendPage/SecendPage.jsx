@@ -1,4 +1,4 @@
-import React, { useEffect, useState } from 'react'
+import React, { useCallback, useEffect, useState } from 'react'
 import TableComponent from './TableComponent/TableComponent';
 import FormComponent from './FormComp/FormComponent';
 import SortBy from './SortBy/SortBy';
@@ -65,7 +65,7 @@ function SecendPage() {
   const sortByText = () => {
     setTable((table) =>
       ([...table].sort((a, b) => a.text.toLocaleLowerCase > b.text.toLocaleLowerCase ? 1 : -1)))
-  }
+  } 
 
   const handleChangeMonth = (e) => {
     if (e.currentTarget.value.length < 3) {
