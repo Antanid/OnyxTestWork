@@ -1,7 +1,8 @@
 import React from "react";
-import WorldStar from './World'
+import WorldStar from './WorldStar/World'
 import PeopleName from "./PeopleName";
-
+import PropTypes from 'prop-types';
+import ButtonNextPrev from "./ButtonNextPrev";
 
 
 class StarTeam extends React.Component {
@@ -24,21 +25,28 @@ class StarTeam extends React.Component {
                                     <PeopleName items={items} />
                                     <WorldStar
                                         nextTeam={nextTeam}
-                                        world={items.homeworld} /> 
+                                        world={items.homeworld} />
                                 </div>
                             </div>
                         </div>
                     ))
                 }
-                <p className="lenght_page">{nextTeam}</p>
-
-                <div>
-                    <button className={nextTeam > 1 ? 'PrevButton_page' : 'PrevButton_page_active'} onClick={() => prevPage()}>-</button>
-                    <button className={nextTeam < 9 ? 'button_page' : 'button_page_active'} onClick={() => secenPage()}>+</button>
-                </div>
+                <ButtonNextPrev
+                    prevPage={prevPage}
+                    secenPage={secenPage}
+                    nextTeam={nextTeam} />
             </div>
         );
     }
 }
 
 export default StarTeam;
+
+
+
+StarTeam.propTypes = {
+    nextTeam: PropTypes.number.isRequired,
+    team: PropTypes.array.isRequired,
+    secenPage: PropTypes.func.isRequired,
+    prevPage: PropTypes.func.isRequired
+}

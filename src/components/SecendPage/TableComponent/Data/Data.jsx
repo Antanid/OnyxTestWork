@@ -1,4 +1,5 @@
-import React from 'react'
+import React from 'react';
+import PropTypes from 'prop-types';
 
 function Data({styleArray, item, styleNone, id, handleEditing}) {
     return (
@@ -12,4 +13,14 @@ function Data({styleArray, item, styleNone, id, handleEditing}) {
     )
 }
 
-export default Data
+export default Data;
+
+
+Data.propTypes = {  
+    item: PropTypes.object.isRequired,
+    styleNone: PropTypes.func.isRequired,
+    id: PropTypes.number.isRequired,
+    handleEditing: PropTypes.func.isRequired,
+}
+
+

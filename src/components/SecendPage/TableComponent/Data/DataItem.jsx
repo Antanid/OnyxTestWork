@@ -20,7 +20,7 @@ function DataItem({ id, item, handleEditing, table, idItem, setIdItem }) {
         return () => {
             setStyleArray(null);
         }
-  
+
     }, [idItem, handleEditing, id])
 
 
@@ -33,7 +33,7 @@ function DataItem({ id, item, handleEditing, table, idItem, setIdItem }) {
         return () => {
             setStyleArray(null)
         }
- 
+
     }, [runArray, handleEditing, id])
 
     const keyPress = useCallback((event) => {
@@ -59,7 +59,12 @@ function DataItem({ id, item, handleEditing, table, idItem, setIdItem }) {
 
 
     return (
-        <Data id={id} handleEditing={handleEditing} styleNone={styleNone} styleArray={styleArray} item={item} />
+        <Data
+            id={id}
+            handleEditing={handleEditing}
+            styleNone={styleNone}
+            styleArray={styleArray}
+            item={item} />
     )
 }
 

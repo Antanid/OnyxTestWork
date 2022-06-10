@@ -28,6 +28,7 @@ PopUpComponent.propTypes = {
     bikes: PropTypes.arrayOf(PropTypes.shape({
         bike: PropTypes.string.isRequired,
         price: PropTypes.number.isRequired,
+        bikeImg: PropTypes.string.isRequired
     }))
 }
 

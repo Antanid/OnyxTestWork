@@ -1,4 +1,5 @@
 import React from 'react'
+import PropTypes from 'prop-types';
 
 function PeopleName({ items }) {
     return (
@@ -10,4 +11,9 @@ function PeopleName({ items }) {
     )
 }
 
-export default PeopleName
+export default PeopleName;
+
+PeopleName.propTypes = {
+items: PropTypes.object.isRequired,
+
+}

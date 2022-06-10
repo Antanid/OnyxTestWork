@@ -14,4 +14,5 @@ export default Buttons;
 
 Buttons.propTypes = {
   children: PropTypes.string.isRequired,
+  Click: PropTypes.func
 }

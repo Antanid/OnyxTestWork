@@ -1,5 +1,6 @@
 import React from 'react';
 import Buttons from "../../../Button/Buttons";
+import PropTypes from 'prop-types';
 
 
 const ButtonsOur = ({ setActive }) => {
@@ -12,3 +13,7 @@ const ButtonsOur = ({ setActive }) => {
 }
 
 export default ButtonsOur;
+
+ButtonsOur.propTypes = {
+  setActive: PropTypes.func.isRequired
+}
