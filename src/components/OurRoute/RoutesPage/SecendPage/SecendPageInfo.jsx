@@ -1,5 +1,5 @@
 import React from 'react';
-import Buttons from "../../../Button/Buttons";
+import ButtonsOur from '../Button/ButtonsOur';
 import PropTypes from 'prop-types';
 
 function SecendPageInfo({ setActive, price, Rubl, TimeImg, time, Location, distance, Complexity, InfoComplexity, Route, info }) {
@@ -25,11 +25,7 @@ function SecendPageInfo({ setActive, price, Rubl, TimeImg, time, Location, dista
                     <p>{info}</p>
                 </div>
 
-                <div className="base__routes__button base__routes__buttonSecond">
-                    <Buttons className={"base__button__moreInf open-popup-exc"} Click={() => setActive(true)} >Докладніше</Buttons>
-                    <Buttons className={"base__button__moreInf open-popup-exc"} Click={() => setActive(true)} >Забронювати</Buttons>
-                </div>
-
+                <ButtonsOur setActive={setActive} />
             </div>
         </div>
     )

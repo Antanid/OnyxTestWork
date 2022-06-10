@@ -4,25 +4,24 @@ import PropTypes from 'prop-types';
 
 class ServiceSpanText extends React.Component {
     render() {
+        const {textSpan} = this.props
         return (
             <Fragment>
                 {
-                    this.props.textSpan.map((item, index) => {
-                        return (
-                            <div key={index} className="col-lg-4">
-                                <div className="services__block">
-                                    <div className="services__icon">
-                                        <img src={item.img} alt="" />
-                                    </div>
-                                    <div className="services__text">
-                                        <p>{item.textAfter}
-                                            <span>{item.span}</span> {item.textBefore}
-                                        </p>
-                                    </div>
+                  textSpan.map((item, index) => (
+                        <div key={index} className="col-lg-4">
+                            <div className="services__block">
+                                <div className="services__icon">
+                                    <img src={item.img} alt="" />
+                                </div>
+                                <div className="services__text">
+                                    <p>{item.textAfter}
+                                        <span>{item.span}</span> {item.textBefore}
+                                    </p>
                                 </div>
                             </div>
-                        )
-                    })
+                        </div>
+                    ))
                 }
             </Fragment>
         )

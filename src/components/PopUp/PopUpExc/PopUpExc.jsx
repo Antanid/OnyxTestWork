@@ -29,7 +29,7 @@ import PopUpForm from "./PopUpForm";
 
 import './Style.scss'
 
-function PopUpExc({ setActive, active }) {
+function PopUpExc({active, setActive}) {
     const [bikes] = useState({
         Allbikes: [
             { bike: 'UFORCE 1000 EPS (U10 EPS)', price: 4000, imgMoney: Ruble, bikeImg: BikeFirst },

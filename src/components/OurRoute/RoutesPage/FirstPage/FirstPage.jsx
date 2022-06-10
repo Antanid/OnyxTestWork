@@ -3,10 +3,11 @@ import FirstPageInfo from "./FirstPageInfo";
 import FirstPageImg from "./FirstPageImg";
 import FirstLine from "./FirstLine";
 
+
 function FirstPage({ Line, setActive, price, Rubl, TimeImg, time, Location, distance, Complexity, InfoComplexity, Route, info, Qadro, QadroSecend, QadroThird }) {
     return (
         <>
-            <FirstLine
+        <FirstLine
                 Line={Line}
             />
             <FirstPageInfo
@@ -30,5 +31,7 @@ function FirstPage({ Line, setActive, price, Rubl, TimeImg, time, Location, dist
         </>
     )
 }
+
+
 
 export default FirstPage

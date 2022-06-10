@@ -3,24 +3,23 @@ import PropTypes from 'prop-types';
 
 class ServiceText extends React.Component {
     render() {
+        const {text} = this.props
         return (
             <Fragment>
                 {
-                    this.props.text.map((item, index) => {
-                        return (
-                            <div key={index} className="col-lg-4">
-                                <div className="services__block">
-                                    <div className="services__icon">
-                                        <img src={item.img} alt="" />
-                                    </div>
-                                    <div className="services__text">
-                                        <p>{item.text}
-                                        </p>
-                                    </div>
+                  text.map((item, index) => (
+                        <div key={index} className="col-lg-4">
+                            <div className="services__block">
+                                <div className="services__icon">
+                                    <img src={item.img} alt="" />
+                                </div>
+                                <div className="services__text">
+                                    <p>{item.text}
+                                    </p>
                                 </div>
                             </div>
-                        )
-                    })
+                        </div>
+                    ))
                 }
             </Fragment>
         )

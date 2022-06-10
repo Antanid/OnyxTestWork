@@ -6,8 +6,7 @@ function OurAdvComponent({ routes }) {
     return (
         <Fragment>
             {
-                routes.map((item, index) => {
-                    return (
+                routes.map((item, index) => (
                         <div key={index} className="col-lg-3 col-sm-6">
                             <div className="route">
                                 <div className="route__img">
@@ -21,8 +20,7 @@ function OurAdvComponent({ routes }) {
                                 </p>
                             </div>
                         </div>
-                    );
-                })
+                ))
             }
         </Fragment>
 

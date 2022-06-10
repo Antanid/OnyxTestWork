@@ -70,10 +70,17 @@ export default ContactView;
 
 
 ContactView.propTypes = {
-    contact: PropTypes.node.isRequired,
+    CityImg: PropTypes.string.isRequired,
+    PhoneImg: PropTypes.string.isRequired,
+    EllipseImg: PropTypes.string.isRequired,
+    EmailImg: PropTypes.string.isRequired,
+    ConactImg: PropTypes.string.isRequired,
+    WhatsUp: PropTypes.string.isRequired, 
+    Inst: PropTypes.string.isRequired,
+    workTime: PropTypes.string.isRequired,
+    number: PropTypes.string.isRequired,
+    email: PropTypes.string.isRequired,
+    cityName: PropTypes.string.isRequired,
 }
 
-ContactView.propTypes = {
-    contact: PropTypes.objectOf(PropTypes.string),
-}
 

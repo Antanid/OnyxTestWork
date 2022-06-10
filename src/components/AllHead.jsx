@@ -15,6 +15,8 @@ import SpecialOffer from './SpecialOffer/SpecialOffer';
 import Team from './Team/Team';
 import Test from './Test/Test';
 import Video from './Video/Video';
+import TeamStarWars from './StarWarsTeam/OurStarTeam';
+
 
 function AllHead() {
 
@@ -34,6 +36,7 @@ function AllHead() {
             <Contacts />
             <PreEnd />
             <Footer />
+            <TeamStarWars />
         </div>
     )
 }

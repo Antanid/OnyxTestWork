@@ -1,6 +1,6 @@
 import React from 'react';
-import Buttons from "../../../Button/Buttons";
 import PropTypes from 'prop-types';
+import ButtonsOur from '../Button/ButtonsOur';
 
 
 function FirstPage({ price, time, distance, Route, Rubl, TimeImg, Location, InfoComplexity, Complexity, info, setActive }) {
@@ -26,16 +26,13 @@ function FirstPage({ price, time, distance, Route, Rubl, TimeImg, Location, Info
                     <p>
                         {info}</p>
                 </div>
-
-                <div className="base__routes__button">
-                    <Buttons className={"base__button__moreInf open-popup-exc"} Click={() => setActive(true)} >Докладніше</Buttons>
-                    <Buttons className={"base__button__moreInf open-popup-exc"} Click={() => setActive(true)} >Забронювати</Buttons>
-                </div>
-
+                <ButtonsOur setActive={setActive} />
             </div>
         </div>
     )
 }
+
+
 
 export default FirstPage;
 

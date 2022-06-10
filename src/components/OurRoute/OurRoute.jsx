@@ -1,5 +1,6 @@
 import React, { useState } from "react";
 
+
 import Rubl from "../../assets/img/rubl.png";
 import Line from "../../assets/img/Line 1.png";
 import Time from "../../assets/img/Time.png";
@@ -23,12 +24,13 @@ import SecendPage from "./RoutesPage/SecendPage/SecendPage";
 import ThirdPage from "./RoutesPage/ThirdPage/ThirdPage";
 import OurTextH2 from "./OurTextH2";
 
-
 import './Style.scss'
 
 
+const MyContext = React.createContext()
 
-const OurRoute = () => {
+
+function OurRoute() {
 
     const [active, setActive] = useState(false);
     const [info] = useState({
@@ -59,72 +61,74 @@ const OurRoute = () => {
     })
 
     return (
+        <MyContext.Provider value={'123'}>
         <article className="our__route">
-            <div className="container-fluid">
-                <div className="row">
+                <div className="container-fluid">
+                    <div className="row">
 
-                    <OurTextH2>Наші маршрути</OurTextH2>
+                        <OurTextH2>Наші маршрути</OurTextH2>
 
-                    <FirstPage
-                        Line={Line}
-                        setActive={setActive}
-                        price={info.firstPage.price}
-                        Rubl={Rubl}
-                        TimeImg={Time}
-                        time={info.firstPage.time}
-                        Location={Location}
-                        distance={info.firstPage.distance}
-                        Complexity={Complexity}
-                        InfoComplexity={info.firstPage.complexity}
-                        Route={Route}
-                        info={info.firstPage.route}
-                        Qadro={Qadro}
-                        QadroSecend={QadroSecend}
-                        QadroThird={QadroThird}
-                    />
+                        <FirstPage
+                            Line={Line}
+                            setActive={setActive}
+                            price={info.firstPage.price}
+                            Rubl={Rubl}
+                            TimeImg={Time}
+                            time={info.firstPage.time}
+                            Location={Location}
+                            distance={info.firstPage.distance}
+                            Complexity={Complexity}
+                            InfoComplexity={info.firstPage.complexity}
+                            Route={Route}
+                            info={info.firstPage.route}
+                            Qadro={Qadro}
+                            QadroSecend={QadroSecend}
+                            QadroThird={QadroThird}
+                        />
 
 
-                    <SecendPage
-                        Line={Line}
-                        setActive={setActive}
-                        price={info.secendPage.price}
-                        Rubl={Rubl}
-                        TimeImg={Time}
-                        time={info.secendPage.time}
-                        Location={Location}
-                        distance={info.secendPage.distance}
-                        Complexity={Complexity}
-                        InfoComplexity={info.secendPage.complexity}
-                        Route={Route}
-                        info={info.secendPage.route}
-                        SecendQadroFirst={SecendQadroFirst}
-                        SecendQadroSecend={SecendQadroSecend}
-                        SecendQadroThird={SecendQadroThird}
-                    />
+                        <SecendPage
+                            Line={Line}
+                            setActive={setActive}
+                            price={info.secendPage.price}
+                            Rubl={Rubl}
+                            TimeImg={Time}
+                            time={info.secendPage.time}
+                            Location={Location}
+                            distance={info.secendPage.distance}
+                            Complexity={Complexity}
+                            InfoComplexity={info.secendPage.complexity}
+                            Route={Route}
+                            info={info.secendPage.route}
+                            SecendQadroFirst={SecendQadroFirst}
+                            SecendQadroSecend={SecendQadroSecend}
+                            SecendQadroThird={SecendQadroThird}
+                        />
 
-                    <ThirdPage
-                        Line={Line}
-                        setActive={setActive}
-                        price={info.thirdPage.price}
-                        Rubl={Rubl}
-                        TimeImg={Time}
-                        time={info.thirdPage.time}
-                        Location={Location}
-                        distance={info.thirdPage.distance}
-                        Complexity={Complexity}
-                        InfoComplexity={info.thirdPage.complexity}
-                        Route={Route}
-                        info={info.thirdPage.route}
-                        ThirdQadroFirst={ThirdQadroFirst}
-                        ThirdQadroSecend={ThirdQadroSecend}
-                        ThirdQadroThird={ThirdQadroThird}
-                    />
+                        <ThirdPage
+                            Line={Line}
+                            setActive={setActive}
+                            price={info.thirdPage.price}
+                            Rubl={Rubl}
+                            TimeImg={Time}
+                            time={info.thirdPage.time}
+                            Location={Location}
+                            distance={info.thirdPage.distance}
+                            Complexity={Complexity}
+                            InfoComplexity={info.thirdPage.complexity}
+                            Route={Route}
+                            info={info.thirdPage.route}
+                            ThirdQadroFirst={ThirdQadroFirst}
+                            ThirdQadroSecend={ThirdQadroSecend}
+                            ThirdQadroThird={ThirdQadroThird}
+                        />
 
+                    </div>
                 </div>
-            </div>
 
-            <PopUpExc active={active} setActive={setActive} />
+                <PopUpExc active={active} setActive={setActive} />
         </article>
+        </MyContext.Provider>
     );
 }
 

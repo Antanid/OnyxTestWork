@@ -24,7 +24,7 @@ function TableComponent({ table, removeItem, setTable }) {
             }
         }
         setTable((table) => ([...table].sort(SortItems)));
-    }, [currentEnd])
+    }, [currentEnd, setTable])
 
     const handleEditing = useCallback((id) => {
         setIdItem(id);
@@ -36,6 +36,9 @@ function TableComponent({ table, removeItem, setTable }) {
 
     const submitEdits = (item) => {
         axios.patch(`http://localhost:3004/item/${item.id}`, { text: editingText })
+            .catch((error) => {
+                console.log(error)
+            })
         setIdItem(null);
         setEditingText('')
     }
@@ -69,40 +72,37 @@ function TableComponent({ table, removeItem, setTable }) {
     return (
         <thead>
             {
-                table.map((item, id) => {
-                    return (
-                        <tr
-                            onDragStart={(e) => dragStartHandler(e, item)}
-                            onDragLeave={(e) => dragEndHandler(e)}
-                            onDragEnd={(e) => dragEndHandler(e, item)}
-                            onDragOver={(e) => dragOVerHandler(e)}
-                            onDrop={(e) => dragHandler(e, item)}
-                            draggable={true}
-                            key={item.id}>
-                            <DataItem
-                                setIdItem={setIdItem}
-                                idItem={idItem}
-                                table={table}
-                                style={style}
-                                handleEditing={handleEditing}
-                                item={item} id={id} />
-                            <EditComp
-                                item={item}
-                                handleEditing={handleEditing}
-                                setIdItem={setIdItem}
-                                submitEdits={submitEdits}
-                                editingText={editingText}
-                                Edit={Edit}
-                                id={id}
-                                idItem={idItem} />
+                table.map((item, id) => (
+                    <tr
+                        onDragStart={(e) => dragStartHandler(e, item)}
+                        onDragLeave={(e) => dragEndHandler(e)}
+                        onDragEnd={(e) => dragEndHandler(e, item)}
+                        onDragOver={(e) => dragOVerHandler(e)}
+                        onDrop={(e) => dragHandler(e, item)}
+                        draggable={true}
+                        key={item.id}>
+                        <DataItem
+                            setIdItem={setIdItem}
+                            idItem={idItem}
+                            table={table}
+                            style={style}
+                            handleEditing={handleEditing}
+                            item={item} id={id} />
+                        <EditComp
+                            item={item}
+                            handleEditing={handleEditing}
+                            setIdItem={setIdItem}
+                            submitEdits={submitEdits}
+                            editingText={editingText}
+                            Edit={Edit}
+                            id={id}
+                            idItem={idItem} />
 
-                            <RemoveItem
-                                items={item}
-                                removeItem={removeItem} />
-                        </tr>
-
-                    )
-                })
+                        <RemoveItem
+                            items={item}
+                            removeItem={removeItem} />
+                    </tr>
+                ))
             }
         </thead>
     )

@@ -33,7 +33,11 @@ class CountdownTimer extends React.Component {
     render() {
         return (
             <div className="CountdownTimer">
-                <Timer remainingTime={this.state} />
+                <Timer 
+                days={this.state.days}
+                minutes={this.state.minutes}
+                hours={this.state.hours}
+                seconds={this.state.seconds}/>
             </div>
         )
     }

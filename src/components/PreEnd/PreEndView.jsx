@@ -3,17 +3,16 @@ import PropTypes from 'prop-types';
 
 class PreEndView extends React.Component {
     render() {
+        const {footerLi} = this.props
         return (
             <div className="col-lg-10 col-sm-6">
                 <div className="footer__all">
                     <div className="footer__menu">
                         <ul>
                             {
-                                this.props.footerLi.map((item, index) => {
-                                    return (
-                                        <li key={index}><a href={item.href}>{item.text}</a></li>
-                                    )
-                                })
+                               footerLi.map((item, index) => (
+                                    <li key={index}><a href={item.href}>{item.text}</a></li>
+                                ))
                             }
                         </ul>
                     </div>
@@ -26,9 +25,6 @@ class PreEndView extends React.Component {
 
 export default PreEndView;
 
-PreEndView.propTypes = {
-    footerLi: PropTypes.any.isRequired,
-}
 
 PreEndView.propTypes = {
     footerLi: PropTypes.arrayOf(PropTypes.shape({

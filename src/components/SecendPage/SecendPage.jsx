@@ -1,4 +1,4 @@
-import React, { useCallback, useEffect, useState } from 'react'
+import React, { useEffect, useState } from 'react'
 import TableComponent from './TableComponent/TableComponent';
 import FormComponent from './FormComp/FormComponent';
 import SortBy from './SortBy/SortBy';
@@ -22,9 +22,13 @@ function SecendPage() {
 
 
   useEffect(() => {
-    axios.get("http://localhost:3004/item").then(({ data }) => {
-      setTable(data);
-    })
+    axios.get("http://localhost:3004/item")
+      .then(({ data }) => {
+        setTable(data)
+          .catch((error) => {
+            console.log(error)
+          });
+      })
   }, [])
 
   useEffect(() => {
@@ -34,10 +38,13 @@ function SecendPage() {
   }, [arrays])
 
   const removeItem = (items) => {
-    axios.delete(`http://localhost:3004/item/${items.id}`).then(() => {
-      const del = table.filter(e => e.id !== items.id);
-      setTable(del)
-    })
+    axios.delete(`http://localhost:3004/item/${items.id}`)
+      .then(() => {
+        const del = table.filter(e => e.id !== items.id);
+        setTable(del)
+      }).catch((error) => {
+        console.log(error)
+      })
   }
 
   const bubbleSort = () => {
@@ -65,7 +72,7 @@ function SecendPage() {
   const sortByText = () => {
     setTable((table) =>
       ([...table].sort((a, b) => a.text.toLocaleLowerCase > b.text.toLocaleLowerCase ? 1 : -1)))
-  } 
+  }
 
   const handleChangeMonth = (e) => {
     if (e.currentTarget.value.length < 3) {
@@ -101,9 +108,12 @@ function SecendPage() {
           month: Number(valueMonth),
         },
       }
-      axios.post('http://localhost:3004/item', newItem).then(() => {
-        setTable([...table, newItem]);
-      });
+      axios.post('http://localhost:3004/item', newItem)
+        .then(() => {
+          setTable([...table, newItem]);
+        }).catch((error) => {
+          console.log(error)
+        });
       setValueYear('');
       setValueDate('');
       setValueMonth('');

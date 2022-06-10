@@ -5,6 +5,7 @@ import PropTypes from 'prop-types';
 
 class OurTeam extends React.Component {
     render() {
+        const {team} = this.props
         return (
             <div className="row">
                 <div className="col-lg-12">
@@ -13,7 +14,7 @@ class OurTeam extends React.Component {
                     </div>
                 </div>
                 {
-                    this.props.team.map((items, index) => (
+                  team.map((items, index) => (
                         <div key={index} className="col-lg-3 col-sm-6">
                             <div className="team">
                                 <div className="team__photo">

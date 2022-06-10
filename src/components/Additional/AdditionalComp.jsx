@@ -7,8 +7,7 @@ function AdditionalComp({ service }) {
     return (
         <Fragment>
             {
-                service.map((item, index) => {
-                    return (
+                service.map((item, index) => ( 
                         <div key={index} className="col-lg-3 col-sm-6">
                             <div className='additional__services'>
                                 <div className='additional__img'>
@@ -19,8 +18,7 @@ function AdditionalComp({ service }) {
                                 </div>
                             </div>
                         </div>
-                    )
-                })
+                ))
             }
         </Fragment>
     )

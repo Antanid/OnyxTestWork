@@ -1,5 +1,5 @@
 import React from 'react';
-import Buttons from "../../../Button/Buttons";
+import ButtonsOur from '../Button/ButtonsOur';
 import PropTypes from 'prop-types';
 
 function ThirdPageInfo({ setActive, price, Rubl, TimeImg, time, Location, distance, Complexity, InfoComplexity, Route, info }) {
@@ -24,12 +24,8 @@ function ThirdPageInfo({ setActive, price, Rubl, TimeImg, time, Location, distan
                     <h4>МАРШРУТ <img className="base__icon__route" src={Route} alt="route" /></h4>
                     <p>{info}</p>
                 </div>
-
-                <div className="base__routes__button">
-                    <Buttons className={"base__button__moreInf open-popup-exc"} Click={() => setActive(true)} >Докладніше</Buttons>
-                    <Buttons className={"base__button__moreInf open-popup-exc"} Click={() => setActive(true)} >Забронювати</Buttons>
-                </div>
-
+                
+                <ButtonsOur setActive={setActive} />
             </div>
         </div>
     )
