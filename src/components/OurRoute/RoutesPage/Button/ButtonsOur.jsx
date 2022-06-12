@@ -1,19 +1,22 @@
 import React from 'react';
 import Buttons from "../../../Button/Buttons";
 import PropTypes from 'prop-types';
+import {HOC} from '../../../hoc/HocPopUp';
 
 
-const ButtonsOur = ({ setActive }) => {
+
+const ButtonsOur = ({ open }) => {
   return (
     <div className="base__routes__button">
-      <Buttons className={"base__button__moreInf open-popup-exc"} Click={() => setActive(true)} >Докладніше</Buttons>
-      <Buttons className={"base__button__moreInf open-popup-exc"} Click={() => setActive(true)} >Забронювати</Buttons>
+      <Buttons className={"base__button__moreInf open-popup-exc"} Click={open} >Докладніше</Buttons>
+      <Buttons className={"base__button__moreInf open-popup-exc"} Click={open} >Забронювати</Buttons>
     </div>
   )
 }
 
-export default ButtonsOur;
+export const ToggleButton = HOC(ButtonsOur);
+
 
 ButtonsOur.propTypes = {
-  setActive: PropTypes.func.isRequired
+  open: PropTypes.func.isRequired
 }

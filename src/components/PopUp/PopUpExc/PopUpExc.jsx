@@ -29,7 +29,9 @@ import PopUpForm from "./PopUpForm";
 
 import './Style.scss'
 
-function PopUpExc({active, setActive}) {
+import { HOC } from "../../hoc/HocPopUp";
+
+function PopUpExc({ close, actives }) {
     const [bikes] = useState({
         Allbikes: [
             { bike: 'UFORCE 1000 EPS (U10 EPS)', price: 4000, imgMoney: Ruble, bikeImg: BikeFirst },
@@ -41,12 +43,11 @@ function PopUpExc({active, setActive}) {
         ]
     })
     return (
-        <div className={active ? "popup__bg__exc active" : "popup__bg__exc"}>
+        <div className={actives ? "popup__bg__exc active" : "popup__bg__exc"}>
             <div className="popup__exc" onClick={e => e.stopPropagation()}>
-                <img onClick={() => setActive(false)} src={Close} alt="close-popup" className="close-popup_exc" />
+                <img onClick={close} src={Close} alt="close-popup" className="close-popup_exc" />
                 <div className="container">
                     <div className="row">
-
                         <PopUpRoute
                             LocationImg={Location}
                             Line={Line}
@@ -67,11 +68,11 @@ function PopUpExc({active, setActive}) {
                         />
 
                         <PopUpInterested
-                        HeaderText='Що подивимося на маршруті:'
-                        FirstPartText='Lorem ipsum dolor sit amet, consectetur adipiscing elit. Augue lacus lacus facilisis
+                            HeaderText='Що подивимося на маршруті:'
+                            FirstPartText='Lorem ipsum dolor sit amet, consectetur adipiscing elit. Augue lacus lacus facilisis
                         orci nibh diam. Nisi, a et sit commodo. Pretium sed consectetur risus elementum,
                         habitasse turpis massa.'
-                        SecendPartText='In sit mi aenean volutpat. Quis lectus nunc nam euismod ultrices aenean. Vitae
+                            SecendPartText='In sit mi aenean volutpat. Quis lectus nunc nam euismod ultrices aenean. Vitae
                         venenatis
                         ut praesent neque sed quam mauris elementum. Risus blandit leo ut nullam egestas et
                         porta. Ut lacus arcu sagittis sit. Gravida et faucibus id tortor augue interdum quam
@@ -85,17 +86,17 @@ function PopUpExc({active, setActive}) {
                         />
 
                         <PopUpSecendHead> Вартість екскурсії за 1 квадроцикл:</PopUpSecendHead>
-                       
+
 
                         <PopUpComponent bikes={bikes.Allbikes} />
 
                         <PopUpForm
-                        online='Бронювання онлайн'
-                        dateText='Бажана дата'
-                        howMuch='Кількість осіб'
-                        phoneNumber='Телефон або WhatsApp'
-                        backToYou='Як до вас звертатись?'
-                        book='Забронювати'
+                            online='Бронювання онлайн'
+                            dateText='Бажана дата'
+                            howMuch='Кількість осіб'
+                            phoneNumber='Телефон або WhatsApp'
+                            backToYou='Як до вас звертатись?'
+                            book='Забронювати'
                         />
                     </div>
                 </div>
@@ -104,4 +105,4 @@ function PopUpExc({active, setActive}) {
     )
 }
 
-export default PopUpExc;
+export const HandlePopUp = HOC(PopUpExc);

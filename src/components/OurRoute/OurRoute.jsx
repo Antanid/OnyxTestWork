@@ -18,7 +18,7 @@ import SecendQadroThird from "../../assets/img/Second.svg";
 import ThirdQadroFirst from "../../assets/img/ThirdRout.svg";
 import ThirdQadroSecend from "../../assets/img/baseFistOther.svg";
 import ThirdQadroThird from "../../assets/img/ThirdRout2.svg";
-import PopUpExc from "../PopUp/PopUpExc/PopUpExc";
+import {HandlePopUp} from "../PopUp/PopUpExc/PopUpExc";
 import FirstPage from "./RoutesPage/FirstPage/FirstPage";
 import SecendPage from "./RoutesPage/SecendPage/SecendPage";
 import ThirdPage from "./RoutesPage/ThirdPage/ThirdPage";
@@ -126,7 +126,7 @@ function OurRoute() {
                     </div>
                 </div>
 
-                <PopUpExc active={active} setActive={setActive} />
+                <HandlePopUp active={active} setActive={setActive} />
         </article>
         </MyContext.Provider>
     );

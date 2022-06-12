@@ -1,6 +1,6 @@
 import React from 'react';
 import PropTypes from 'prop-types';
-import ButtonsOur from '../Button/ButtonsOur';
+import {ToggleButton} from '../Button/ButtonsOur';
 
 
 function FirstPage({ price, time, distance, Route, Rubl, TimeImg, Location, InfoComplexity, Complexity, info, setActive }) {
@@ -26,7 +26,7 @@ function FirstPage({ price, time, distance, Route, Rubl, TimeImg, Location, Info
                     <p>
                         {info}</p>
                 </div>
-                <ButtonsOur setActive={setActive} />
+                <ToggleButton setActive={setActive} />
             </div>
         </div>
     )

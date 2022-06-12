@@ -1,5 +1,5 @@
 import React from 'react';
-import ButtonsOur from '../Button/ButtonsOur';
+import {ToggleButton} from '../Button/ButtonsOur';
 import PropTypes from 'prop-types';
 
 function ThirdPageInfo({ setActive, price, Rubl, TimeImg, time, Location, distance, Complexity, InfoComplexity, Route, info }) {
@@ -25,7 +25,7 @@ function ThirdPageInfo({ setActive, price, Rubl, TimeImg, time, Location, distan
                     <p>{info}</p>
                 </div>
                 
-                <ButtonsOur setActive={setActive} />
+                <ToggleButton setActive={setActive} />
             </div>
         </div>
     )

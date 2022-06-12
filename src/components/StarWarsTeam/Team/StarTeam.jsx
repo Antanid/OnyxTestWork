@@ -18,8 +18,8 @@ class StarTeam extends React.Component {
                 </div>
 
                 {
-                    team.map((items, index) => (
-                        <div key={index} className="col-lg-3 col-sm-6">
+                    team.map((items) => (
+                        <div key={items.name} className="col-lg-3 col-sm-6">
                             <div className="team">
                                 <div className="team__text">
                                     <PeopleName items={items} />

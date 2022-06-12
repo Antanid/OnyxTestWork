@@ -1,8 +1,5 @@
 import React from 'react';
 import 'bootstrap/dist/css/bootstrap.min.css';
-
-
-
 import './App.css';
 import SecendPage from './components/SecendPage/SecendPage';
 import { Route, Routes } from 'react-router-dom';
@@ -21,9 +18,6 @@ function App() {
         <Route path='/' element={<AllHead />} />
         <Route path='homeWork' element={<SecendPage />} />
       </Routes>
-
-
-
     </div>
   );
 }

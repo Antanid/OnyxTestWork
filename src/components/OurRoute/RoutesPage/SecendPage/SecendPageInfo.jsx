@@ -1,5 +1,5 @@
 import React from 'react';
-import ButtonsOur from '../Button/ButtonsOur';
+import {ToggleButton} from '../Button/ButtonsOur';
 import PropTypes from 'prop-types';
 
 function SecendPageInfo({ setActive, price, Rubl, TimeImg, time, Location, distance, Complexity, InfoComplexity, Route, info }) {
@@ -25,7 +25,7 @@ function SecendPageInfo({ setActive, price, Rubl, TimeImg, time, Location, dista
                     <p>{info}</p>
                 </div>
 
-                <ButtonsOur setActive={setActive} />
+                <ToggleButton setActive={setActive} />
             </div>
         </div>
     )
