@@ -1,29 +1,24 @@
-import React, { useState } from "react";
+import React from 'react';
 
-export const HOC = (Component, ComponentTwo) => {
-    const HandleChange = (props) => {
-        const [active, setActive] = useState(false);
+const HOC = (Component) => {
+  function HandleChange(props) {
+    const open = (setActive) => {
+      setActive(true);
+    };
 
-        function open() {
-            setActive(true)
-            console.log(active)
-        }
+    const close = (setActive) => {
+      setActive(false);
+    };
+    return (
+      <Component
+        close={close}
+        open={open}
+        // eslint-disable-next-line react/jsx-props-no-spreading
+        {...props}
+      />
+    );
+  }
+  return HandleChange;
+};
 
-        function close() {
-            setActive(false)
-        }
-        return (
-            <div>
-                <Component
-                    open={open}
-                    {...props} />
-                <ComponentTwo
-                    close={close}
-                    actives={active} />
-            </div>
-        )
-    }
-    return HandleChange;
-}
-
-
+export default HOC; 

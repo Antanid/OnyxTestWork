@@ -6,9 +6,15 @@
         "jest/globals": true
     },
     "parser": "@babel/eslint-parser",
-    "extends": ["airbnb", "plugin:import/typescript"],
-    "plugins": ["jest"],
+    "extends": [
+        "airbnb",
+        "plugin:import/typescript"
+    ],
+    "plugins": [
+        "jest"
+    ],
     "rules": {
+        "no-console": "off",
         "react/react-in-jsx-scope": 0,
         "react/jsx-filename-extension": 0,
         "arrow-body-style": 0,

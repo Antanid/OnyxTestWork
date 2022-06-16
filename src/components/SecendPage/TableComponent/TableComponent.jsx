@@ -1,116 +1,126 @@
 import React, { useState, useEffect, useCallback } from 'react';
-import EditComp from './EditComp';
-import RemoveItem from './RemoveItem';
 import PropTypes from 'prop-types';
 import axios from 'axios';
+import EditComp from './EditComp';
+import RemoveItem from './RemoveItem';
 import DataItem from './Data/DataItem';
 
-
 function TableComponent({ table, removeItem, setTable }) {
+  const [editingText, setEditingText] = useState('');
+  const [idItem, setIdItem] = useState(null);
+  const [style] = useState('null');
+  const [currentItem, setCurrentItem] = useState(null);
+  const [currentEnd, setCurrentEnd] = useState(null);
 
-    const [editingText, setEditingText] = useState("");
-    const [idItem, setIdItem] = useState(null);
-    const [style] = useState('null');
-    const [currentItem, setCurrentItem] = useState(null);
-    const [currentEnd, setCurrentEnd] = useState(null);
+  useEffect(() => {
+    const SortItems = (a, b) => {
+      if (a.order > b.order) {
+        return 1;
+      }
+      return -1;
+    };
+    setTable((prevTable) => ([...prevTable].sort(SortItems)));
+  }, [currentEnd, setTable]);
 
+  const handleEditing = useCallback((id) => {
+    setIdItem(id);
+  }, []);
 
-    useEffect(() => {
-        const SortItems = (a, b) => {
-            if (a.order > b.order) {
-                return 1
-            } else {
-                return -1
-            }
-        }
-        setTable((table) => ([...table].sort(SortItems)));
-    }, [currentEnd, setTable])
+  const Edit = (e) => {
+    setEditingText(e.currentTarget.value);
+  };
 
-    const handleEditing = useCallback((id) => {
-        setIdItem(id);
-    }, [])
+  const submitEdits = (item) => {
+    axios.patch(`http://localhost:3004/item/${item.id}`, { text: editingText })
+      .catch((error) => {
+        console.log(error);
+      });
+    setIdItem(null);
+    setEditingText('');
+  };
 
-    const Edit = (e) => {
-        setEditingText(e.currentTarget.value);
-    }
+  function dragStartHandler(e, item) {
+    setCurrentItem(item);
+  }
 
-    const submitEdits = (item) => {
-        axios.patch(`http://localhost:3004/item/${item.id}`, { text: editingText })
-            .catch((error) => {
-                console.log(error)
-            })
-        setIdItem(null);
-        setEditingText('')
-    }
+  function dragEndHandler(e, item) {
+    setCurrentEnd(item);
+  }
 
-    function dragStartHandler(e, item) {
-        setCurrentItem(item)
-    }
+  function dragOVerHandler(e) {
+    e.preventDefault();
+  }
 
-    function dragEndHandler(e, item) {
-        setCurrentEnd(item);
-    }
+  function dragHandler(e, item) {
+    e.preventDefault();
+    setTable(table.map((c) => {
+      if (c.id === item.id) {
+        return { ...c, order: currentItem.order };
+      }
+      if (c.id === currentItem.id) {
+        return { ...c, order: item.order };
+      }
+      return c;
+    }));
+  }
 
-    function dragOVerHandler(e) {
-        e.preventDefault()
-    }
+  return (
+    <thead>
+      {
+        table.map((item, id) => (
+          <tr
+            onDragStart={(e) => dragStartHandler(e, item)}
+            onDragLeave={(e) => dragEndHandler(e)}
+            onDragEnd={(e) => dragEndHandler(e, item)}
+            onDragOver={(e) => dragOVerHandler(e)}
+            onDrop={(e) => dragHandler(e, item)}
+            draggable
+            key={item.id}
+          >
+            <DataItem
+              setIdItem={setIdItem}
+              idItem={idItem}
+              table={table}
+              style={style}
+              handleEditing={handleEditing}
+              item={item}
+              id={id}
+            />
+            <EditComp
+              item={item}
+              handleEditing={handleEditing}
+              setIdItem={setIdItem}
+              submitEdits={submitEdits}
+              editingText={editingText}
+              Edit={Edit}
+              id={id}
+              idItem={idItem}
+            />
 
-    function dragHandler(e, item) {
-        e.preventDefault()
-        setTable(table.map(c => {
-            if (c.id === item.id) {
-                return { ...c, order: currentItem.order }
-            }
-            if (c.id === currentItem.id) {
-                return { ...c, order: item.order }
-            }
-            return c;
-        }))
-    }
-
-
-    return (
-        <thead>
-            {
-                table.map((item, id) => (
-                    <tr
-                        onDragStart={(e) => dragStartHandler(e, item)}
-                        onDragLeave={(e) => dragEndHandler(e)}
-                        onDragEnd={(e) => dragEndHandler(e, item)}
-                        onDragOver={(e) => dragOVerHandler(e)}
-                        onDrop={(e) => dragHandler(e, item)}
-                        draggable={true}
-                        key={item.id}>
-                        <DataItem
-                            setIdItem={setIdItem}
-                            idItem={idItem}
-                            table={table}
-                            style={style}
-                            handleEditing={handleEditing}
-                            item={item} id={id} />
-                        <EditComp
-                            item={item}
-                            handleEditing={handleEditing}
-                            setIdItem={setIdItem}
-                            submitEdits={submitEdits}
-                            editingText={editingText}
-                            Edit={Edit}
-                            id={id}
-                            idItem={idItem} />
-
-                        <RemoveItem
-                            items={item}
-                            removeItem={removeItem} />
-                    </tr>
-                ))
-            }
-        </thead>
-    )
+            <RemoveItem
+              items={item}
+              removeItem={removeItem}
+            />
+          </tr>
+        ))
+      }
+    </thead>
+  );
 }
 
 export default TableComponent;
 
 TableComponent.propTypes = {
-    table: PropTypes.array.isRequired,
-    removeItem: PropTypes.func.isRequired,
-}
+  setTable: PropTypes.func.isRequired,
+  table: PropTypes.arrayOf(PropTypes.shape({
+    text: PropTypes.string,
+    order: PropTypes.number,
+    id: PropTypes.number,
+    data: PropTypes.shape({
+      year: PropTypes.number,
+      day: PropTypes.number,
+      month: PropTypes.number,
+    })
+  })).isRequired,
+  removeItem: PropTypes.func.isRequired,
+};

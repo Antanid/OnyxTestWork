@@ -1,15 +1,14 @@
-import React, { useEffect, useState } from 'react'
+import React, { useEffect, useState } from 'react';
+import axios from 'axios';
 import TableComponent from './TableComponent/TableComponent';
 import FormComponent from './FormComp/FormComponent';
 import SortBy from './SortBy/SortBy';
-import axios from 'axios';
 import ButtonTable from './ButtonImg/ButtonTable';
 import arrow from '../../assets/img/arrow-down-sign-to-navigate.png';
 
-import './Style.scss'
+import './Style.scss';
 
 function SecendPage() {
-
   const [arrays, setArray] = useState(false);
   const [arrayAlphabet, setArrayAlphabet] = useState(false);
 
@@ -20,46 +19,44 @@ function SecendPage() {
 
   const [table, setTable] = useState([]);
 
-
   useEffect(() => {
-    axios.get("http://localhost:3004/item")
+    axios.get('http://localhost:3004/item')
       .then(({ data }) => {
         setTable(data)
           .catch((error) => {
-            console.log(error)
+            console.log(error);
           });
-      })
-  }, [])
+      });
+  }, []);
 
   useEffect(() => {
-    setTable((table) =>
-    ([...table].sort((a, b) =>
-      !arrays ? a.data.year - b.data.year || a.month - b.month : b.data.year - a.data.year || b.month - a.month)))
-  }, [arrays])
+    setTable((prevTable) => ([...prevTable].sort((a, b) => (!arrays ? a.data.year - b.data.year
+      || a.month - b.month : b.data.year - a.data.year || b.month - a.month))));
+  }, [arrays]);
 
   const removeItem = (items) => {
     axios.delete(`http://localhost:3004/item/${items.id}`)
       .then(() => {
-        const del = table.filter(e => e.id !== items.id);
-        setTable(del)
+        const del = table.filter((e) => e.id !== items.id);
+        setTable(del);
       }).catch((error) => {
-        console.log(error)
-      })
-  }
+        console.log(error);
+      });
+  };
 
   const bubbleSort = () => {
     const arr = [...table];
     if (!arrays) {
-      for (let i = 1; i < arr.length; i++) {
-        for (let j = 0; j < arr.length - i; j++) {
+      for (let i = 1; i < arr.length; i += 1) {
+        for (let j = 0; j < arr.length - i; j += 1) {
           if (arr[j].data.year < arr[j + 1].data.year) {
             [arr[j + 1], arr[j]] = [arr[j], arr[j + 1]];
           }
         }
       }
     } else {
-      for (let i = 1; i < arr.length; i++) {
-        for (let j = 0; j < arr.length - i; j++) {
+      for (let i = 1; i < arr.length; i += 1) {
+        for (let j = 0; j < arr.length - i; j += 1) {
           if (arr[j].data.year > arr[j + 1].data.year) {
             [arr[j], arr[j + 1]] = [arr[j + 1], arr[j]];
           }
@@ -70,33 +67,30 @@ function SecendPage() {
   };
 
   const sortByText = () => {
-    setTable((table) =>
-      ([...table].sort((a, b) => a.text.toLocaleLowerCase > b.text.toLocaleLowerCase ? 1 : -1)))
-  }
+    setTable((prevTable) => ([...prevTable]
+      .sort((a, b) => (a.text.toLocaleLowerCase > b.text.toLocaleLowerCase ? 1 : -1))));
+  };
 
   const handleChangeMonth = (e) => {
     if (e.currentTarget.value.length < 3) {
-      setValueMonth(e.currentTarget.value)
-    };
-  }
+      setValueMonth(e.currentTarget.value);
+    }
+  };
   const handleChangeDate = (e) => {
     if (e.currentTarget.value.length < 3) {
       setValueDate(e.currentTarget.value);
     }
-  }
+  };
   const handleChangeYear = (e) => {
     if (e.currentTarget.value.length < 5) {
       setValueYear(e.currentTarget.value);
     }
-
-  }
+  };
   const handleChange = (e) => {
     setValue(e.currentTarget.value);
-  }
+  };
 
-
-
-  const addTask = (value, valueYear, valueDate, valueMonth) => {
+  const addTask = () => {
     if (value) {
       const newItem = {
         id: table.length,
@@ -107,37 +101,37 @@ function SecendPage() {
           day: Number(valueDate),
           month: Number(valueMonth),
         },
-      }
+      };
       axios.post('http://localhost:3004/item', newItem)
         .then(() => {
           setTable([...table, newItem]);
         }).catch((error) => {
-          console.log(error)
+          console.log(error);
         });
       setValueYear('');
       setValueDate('');
       setValueMonth('');
       setValue('');
     }
-  }
+  };
 
   const handleKeyPress = (event) => {
     if (event.key === 'Enter') {
-      addTask()
+      addTask();
     }
-  }
+  };
 
   const handleSubmit = (e) => {
-    e.preventDefault()
-    addTask(value, valueYear, valueDate, valueMonth)
-  }
+    e.preventDefault();
+    addTask(value, valueYear, valueDate, valueMonth);
+  };
 
   const deleteLastArray = () => {
-    setTable((table) => ([...table].slice(0, -1)))
-  }
+    setTable((prevTable) => ([...prevTable].slice(0, -1)));
+  };
 
   return (
-    <div className='TableOur'>
+    <div className="TableOur">
       <table>
         <thead>
           <SortBy
@@ -164,12 +158,13 @@ function SecendPage() {
         valueYear={valueYear}
         handleChange={handleChange}
         value={value}
-        handleSubmit={handleSubmit} />
+        handleSubmit={handleSubmit}
+      />
       <ButtonTable />
 
     </div>
 
-  )
+  );
 }
 
-export default SecendPage
+export default SecendPage;

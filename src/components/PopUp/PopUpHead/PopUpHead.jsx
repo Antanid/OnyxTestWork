@@ -1,48 +1,73 @@
-import React from "react";
+import React from 'react';
 import PropTypes from 'prop-types';
-import './Style.scss'
+import './Style.scss';
 
+import Close from '../../../assets/img/icons8-close.svg';
 
-import Close from "../../../assets/img/icons8-close.svg";
+function PopUpHead({ active, setActive }) {
+  return (
+    <div
+      tabIndex={0}
+      role="button"
+      className={active ? 'popup__bg active' : 'popup__bg'}
+      onKeyDown={() => setActive(false)}
+      onClick={() => setActive(false)}
+    >
+      <div
+        tabIndex={0}
+        role="button"
+        onKeyDown={(e) => e.stopPropagation()}
+        onClick={(e) => e.stopPropagation()}
+      >
+        <form
+          className={active ? 'popup active' : 'popup'}
+        >
+          <div
+            tabIndex={0}
+            role="button"
+            onKeyDown={() => setActive(false)}
+            onClick={() => setActive(false)}
+          >
+            <img
+              src={Close}
+              alt="close-popup"
+              className="close-popup"
+            />
+          </div>
 
-const PopUpHead = ({ active, setActive }) => {
-    return (
-        <div className={active ? 'popup__bg active' : 'popup__bg'} onClick={() => setActive(false)}>
-            <form className={active ? "popup active" : 'popup'} onClick={e => e.stopPropagation()}>
-                <img onClick={() => setActive(false)} src={Close} alt="close-popup" className="close-popup" />
-                <div className="popup_text">
-                    Залишити заявку
-                </div>
-                <div className="form__all">
-                    <label>
-                        <input type="text" name="name" />
-                        <div className="label_text">
-                            Як до вас звертатись?
-                        </div>
-                    </label>
+          <div className="popup_text">
+            Залишити заявку
+          </div>
+          <div className="form__all">
+            <label htmlFor="first">
+              <input id="secend" type="text" name="name" />
+              <div className="label_text">
+                Як до вас звертатись?
+              </div>
+            </label>
 
-                    <label>
-                        <input type="tel" name="tel" />
-                        <div className="label_text">
-                            Телефон або WhatsApp
-                        </div>
-                    </label>
+            <label htmlFor="secend">
+              <input id="secend" type="tel" name="tel" />
+              <div className="label_text">
+                Телефон або WhatsApp
+              </div>
+            </label>
 
-                    <div className="form_button">
-                        <button type="submit">
-                            Надіслати
-                        </button>
-                    </div>
-                </div>
-            </form>
-        </div>
-    )
+            <div className="form_button">
+              <button type="submit">
+                Надіслати
+              </button>
+            </div>
+          </div>
+        </form>
+      </div>
+    </div>
+  );
 }
 
 export default PopUpHead;
 
 PopUpHead.propTypes = {
-    active: PropTypes.bool,
-    setActive: PropTypes.func,
-}
-
+  active: PropTypes.bool.isRequired,
+  setActive: PropTypes.func.isRequired,
+};

@@ -1,40 +1,44 @@
-import React, { Fragment } from "react";
+import React, { Fragment } from 'react';
 import PropTypes from 'prop-types';
 
 class ServiceText extends React.Component {
-    render() {
-        const {text} = this.props
-        return (
-            <Fragment>
-                {
-                  text.map((item, index) => (
-                        <div key={index} className="col-lg-4">
-                            <div className="services__block">
-                                <div className="services__icon">
-                                    <img src={item.img} alt="" />
-                                </div>
-                                <div className="services__text">
-                                    <p>{item.text}
-                                    </p>
-                                </div>
-                            </div>
+  render() {
+    const { text } = this.props;
+    return (
+      <>
+        {
+                  text.map((item) => (
+                    <div key={item.id} className="col-lg-4">
+                      <div className="services__block">
+                        <div className="services__icon">
+                          <img src={item.img} alt="" />
                         </div>
-                    ))
+                        <div className="services__text">
+                          <p>
+                            {item.text}
+                          </p>
+                        </div>
+                      </div>
+                    </div>
+                  ))
                 }
-            </Fragment>
-        )
-    }
+      </>
+    );
+  }
 }
 
 export default ServiceText;
 
-ServiceText.propTypes = {
-    text: PropTypes.node.isRequired,
-}
+ServiceText.defaultProps = {
+  text: PropTypes.arrayOf(PropTypes.shape({
+    text: 'Text',
+    img: PropTypes.string.isRequired,
+  })),
+};
 
 ServiceText.propTypes = {
-    text: PropTypes.arrayOf(PropTypes.shape({
-        text: PropTypes.string.isRequired,
-        img: PropTypes.string.isRequired,
-    })),
-}
+  text: PropTypes.arrayOf(PropTypes.shape({
+    text: PropTypes.string.isRequired,
+    img: PropTypes.string.isRequired,
+  })),
+};
