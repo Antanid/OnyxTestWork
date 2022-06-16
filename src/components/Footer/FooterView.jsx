@@ -26,6 +26,6 @@ class FooterView extends React.Component {
 
 export default FooterView;
 
-/* FooterView.propTypes = {
+FooterView.propTypes = {
   children: PropTypes.string.isRequired,
-}; */
+};
