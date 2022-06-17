@@ -28,7 +28,7 @@ import PopUpForm from './PopUpForm';
 import './Style.scss';
 import HOC from '../../hoc/HocPopUp';
 
-function PopUpExc({ setActive, close, active }) {
+function PopUpExc({ close, context/* setActive, active */ }) {
   const [bikes] = useState({
     Allbikes: [
       {
@@ -52,7 +52,7 @@ function PopUpExc({ setActive, close, active }) {
     ]
   });
   return (
-    <div className={active ? 'popup__bg__exc active' : 'popup__bg__exc'}>
+    <div className={context ? 'popup__bg__exc active' : 'popup__bg__exc'}>
       <div
         tabIndex={0}
         role="button"
@@ -63,8 +63,8 @@ function PopUpExc({ setActive, close, active }) {
         <div
           tabIndex={0}
           role="button"
-          onKeyDown={() => close(setActive)}
-          onClick={() => close(setActive)}
+          onKeyDown={() => close()}
+          onClick={() => close()}
         >
           <img
             src={Close}
@@ -134,7 +134,6 @@ function PopUpExc({ setActive, close, active }) {
 export default HOC(PopUpExc);
 
 PopUpExc.propTypes = {
-  setActive: PropTypes.func.isRequired,
   close: PropTypes.func.isRequired,
-  active: PropTypes.bool.isRequired,
+  context: PropTypes.bool.isRequired,
 };

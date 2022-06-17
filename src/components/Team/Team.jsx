@@ -29,7 +29,6 @@ class Team extends React.Component {
         <div className="container">
           <OurTeam team={team} />
         </div>
-
       </section>
     );
   }

@@ -1,16 +1,21 @@
-import React from 'react';
+import React, { useContext } from 'react';
+import MyContext from '../Context/MyContext';
 
 const HOC = (Component) => {
   function HandleChange(props) {
-    const open = (setActive) => {
-      setActive(true);
+    const [context, setContext] = useContext(MyContext);
+
+    const open = () => {
+      setContext(true);
+      console.log(context);
     };
 
-    const close = (setActive) => {
-      setActive(false);
+    const close = () => {
+      setContext(false);
     };
     return (
       <Component
+        context={context}
         close={close}
         open={open}
         // eslint-disable-next-line react/jsx-props-no-spreading
