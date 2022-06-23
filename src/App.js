@@ -6,8 +6,8 @@ import { Route, Routes } from 'react-router-dom';
 import SecendPage from './pages/SecendPage/SecendPage';
 import AllHead from './components/AllHead';
 import Layout from './Layout/Layout';
-import ModalProvider from './Сontext/PopUpContext/ModalProvider';
-import ThemeProvider from './Сontext/ThemeProvider/ThemeProvider';
+import ModalProvider from './Сontext/ModalProvider';
+import ThemeProvider from './Сontext/ThemeProvider';
 import ButtonTheme from './components/ThemeButton/buttonTheme';
 import HocThemeState from './hocs/hocThemeState';
 

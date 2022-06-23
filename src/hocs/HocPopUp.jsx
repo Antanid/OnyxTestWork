@@ -1,5 +1,5 @@
 import React, { useContext } from 'react';
-import MyContext from '../Сontext/PopUpContext/MyContext';
+import { MyContext } from '../Сontext/ModalProvider';
 
 const HOC = (Component) => {
   function HandleChange(props) {

@@ -1,5 +1,5 @@
 import React, { useContext } from 'react';
-import { ThemeContext } from '../../Сontext/ThemeProvider/ThemeProvider';
+import { ThemeContext } from '../../Сontext/ThemeProvider';
 import FooterView from './FooterView';
 
 function Footer() {

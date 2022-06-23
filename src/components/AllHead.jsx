@@ -15,7 +15,7 @@ import Test from './Test/Test';
 import Video from './Video/Video';
 import TeamStarWars from './StarWarsTeam/OurStarTeam';
 import Additional from './Additional/Additional';
-import { ThemeContext } from '../Сontext/ThemeProvider/ThemeProvider';
+import { ThemeContext } from '../Сontext/ThemeProvider';
 
 function AllHead() {
   const themes = useContext(ThemeContext);

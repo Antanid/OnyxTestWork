@@ -1,11 +1,12 @@
+/* eslint-disable react/jsx-no-constructed-context-values */
 import React, { useState } from 'react';
 import PropTypes from 'prop-types';
-import MyContext from './MyContext';
+
+export const MyContext = React.createContext();
 
 function ModalProvider({ children }) {
   const [context, setContext] = useState(false);
   return (
-    // eslint-disable-next-line react/jsx-no-constructed-context-values
     <MyContext.Provider value={[context, setContext]}>
       {children}
     </MyContext.Provider>
