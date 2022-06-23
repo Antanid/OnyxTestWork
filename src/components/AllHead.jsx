@@ -1,5 +1,5 @@
-import React from 'react';
-import Additional from './Additional/Additional';
+import React, { useContext } from 'react';
+
 import Contacts from './Contact/Contact';
 
 import OurAdvantages from './OurAdvantages/OurAdvantages';
@@ -14,10 +14,13 @@ import Team from './Team/Team';
 import Test from './Test/Test';
 import Video from './Video/Video';
 import TeamStarWars from './StarWarsTeam/OurStarTeam';
+import Additional from './Additional/Additional';
+import { ThemeContext } from '../Сontext/ThemeProvider/ThemeProvider';
 
 function AllHead() {
+  const themes = useContext(ThemeContext);
   return (
-    <div>
+    <div style={themes}>
       <OurAdvantages />
       <OurRoute />
       <Test />

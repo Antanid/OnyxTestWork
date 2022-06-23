@@ -10,7 +10,7 @@ import Inst from '../../assets/img/Instagram.png';
 
 import ContactInfo from './ContactInfo';
 
-import './Style.scss';
+import './sass/Style.scss';
 
 class Contacts extends React.Component {
   constructor(props) {

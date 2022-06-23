@@ -5,7 +5,7 @@ import ServiceText from './ServiceText';
 import ServiceHead from './ServiceHead';
 import ServiceSpanText from './ServiceSpanText';
 
-import './Style.scss';
+import './sass/Style.scss';
 
 class Service extends React.Component {
   constructor() {

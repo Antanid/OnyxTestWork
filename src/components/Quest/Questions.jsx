@@ -1,12 +1,12 @@
 import React, { useState } from 'react';
 
-import Quest from '../../assets/img/QuestDialog.svg';
-import QuestAccordion from './Accordion/QuestAccordion';
+import Quest from '../../assets/img/QuestDialog.png';
+import QuestAccordion from './QuestAccordion';
 import QuestAdditional from './QuestAdditional';
 import QuestContact from './QuestContact';
 import QuestHeader from './QuestHeader';
 
-import './Style.scss';
+import './sass/Style.scss';
 
 function Questions() {
   const [quest] = useState({

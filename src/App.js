@@ -1,25 +1,37 @@
 import React from 'react';
+import PropTypes from 'prop-types';
 import 'bootstrap/dist/css/bootstrap.min.css';
 import './App.css';
 import { Route, Routes } from 'react-router-dom';
-import SecendPage from './components/SecendPage/SecendPage';
+import SecendPage from './pages/SecendPage/SecendPage';
 import AllHead from './components/AllHead';
 import Layout from './Layout/Layout';
-import ModalProvider from './components/Context/ModalProvider';
+import ModalProvider from './Сontext/PopUpContext/ModalProvider';
+import ThemeProvider from './Сontext/ThemeProvider/ThemeProvider';
+import ButtonTheme from './components/ThemeButton/buttonTheme';
+import HocThemeState from './hocs/hocThemeState';
 
-function App() {
+function App({ theme, toggleTheme }) {
   return (
-    <ModalProvider>
-      <div className="wrapper">
-        <Layout>
-          <Routes>
-            <Route path="/" element={<AllHead />} />
-            <Route path="homeWork" element={<SecendPage />} />
-          </Routes>
-        </Layout>
-      </div>
-    </ModalProvider>
+    <ThemeProvider theme={theme}>
+      <ModalProvider>
+        <div className="wrapper">
+          <ButtonTheme toggleTheme={toggleTheme} />
+          <Layout>
+            <Routes>
+              <Route path="/" element={<AllHead />} />
+              <Route path="homeWork" element={<SecendPage />} />
+            </Routes>
+          </Layout>
+        </div>
+      </ModalProvider>
+    </ThemeProvider>
   );
 }
 
-export default App;
+export default HocThemeState(App);
+
+App.propTypes = {
+  theme: PropTypes.objectOf(PropTypes.string).isRequired,
+  toggleTheme: PropTypes.func.isRequired,
+};

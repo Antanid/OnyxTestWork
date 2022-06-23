@@ -1,0 +1,103 @@
+.services {
+    min-height: 523px;
+    background-image: url(../../../assets/img/ServicesBack.png);
+    background-repeat: no-repeat;
+    background-size: cover;
+    .services__h2 {
+        h2 {
+            font-family: "Montserrat", sans-serif;
+            font-weight: 700;
+            font-size: 36px;
+            line-height: 46px;
+            text-align: center;
+            margin-top: 50px;
+        }
+    }
+    .services__block {
+        border: 1px solid #037E8C;
+        border-radius: 20px;
+        width: 413px;
+        height: 112px;
+        margin-top: 43px;
+        .services__icon {
+            position: absolute;
+            padding-left: 5px;
+            padding-top: 9px;
+        }
+        .services__text {
+            width: 350px;
+            height: 90px;
+            padding-left: 60px;
+            p {
+                font-weight: 400;
+                padding-top: 9px;
+                font-size: 14px;
+                line-height: 21px;
+                font-family: "Montserrat", sans-serif;
+                span {
+                    font-weight: 700;
+                }
+            }
+        }
+    }
+}
+
+@media (max-width: 575.98px) {
+    .services {
+        height: 1200px;
+        .services__h2 {
+            h2 {
+                font-size: 24px;
+            }
+        }
+        .services__block {
+            width: 100%;
+            margin-bottom: 15px;
+            .services__icon {
+                img {
+                    width: 80%;
+                }
+            }
+            .services__text {
+                width: 98%;
+            }
+        }
+    }
+}
+
+@media (min-width: 576px) and (max-width: 767.98px) {
+    .services {
+        .services__block {
+            width: 530px;
+            height: 95px;
+            padding-top: 15px;
+            .services__text {
+                width: 100%;
+            }
+        }
+    }
+}
+
+@media (min-width: 768px) and (max-width: 991.98px) {
+    .services {
+        .services__block {
+            width: auto;
+            height: 90px;
+            padding-top: 15px;
+            .services__text {
+                width: auto;
+            }
+        }
+    }
+}
+
+@media (min-width: 992px) and (max-width: 1199px) {
+    .services {
+        .services__block {
+            width: 104%;
+            .services__text {
+                width: auto;
+            }
+        }
+    }
+}

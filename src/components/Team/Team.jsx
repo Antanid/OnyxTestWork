@@ -7,7 +7,7 @@ import Juriy from '../../assets/img/team/Juriy.svg';
 
 import OurTeam from './OurTeam';
 
-import './Style.scss';
+import './sass/Style.scss';
 
 class Team extends React.Component {
   constructor(props) {

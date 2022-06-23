@@ -1,7 +1,7 @@
 import React from 'react';
 import PropTypes from 'prop-types';
 
-import './Style.scss';
+import './sass/Style.scss';
 
 function ContactView({
   CityImg,

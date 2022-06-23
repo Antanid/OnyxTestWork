@@ -1,0 +1,76 @@
+.our-advantages {
+    .route {
+        width: 305px;
+        height: 105px;
+        margin-top: 47px;
+        margin-bottom: 27px;
+        margin-left: 72px;
+        margin-right: 68px;
+        height: 170px;
+        .route__img {
+            .route__tree {
+                position: relative;
+                left: 34px;
+            }
+        }
+        .route__h3 {
+            margin-top: 15px;
+            font-family: "Montserrat", sans-serif;
+            font-weight: 600;
+            font-size: 18px;
+            line-height: 20px;
+        }
+        .route__p {
+            font-family: "Montserrat", sans-serif;
+            font-size: 16px;
+            line-height: 20px;
+            font-weight: 400;
+            margin-top: 16px;
+        }
+    }
+}
+
+@media (max-width: 575.98px) {
+    .our-advantages {
+        .route {
+            padding-top: 20px;
+            width: 160px;
+            height: 144px;
+            margin: 0 auto;
+            margin-bottom: 60px;
+            .route__h3 {
+                font-size: 16px;
+            }
+
+            .route__p {
+                font-size: 14px;
+            }
+        }
+    }
+}
+
+@media (min-width: 576px) and (max-width: 767.98px) {
+    .our-advantages {
+        .route {
+            width: auto;
+            margin-bottom: 60px;
+        }
+    }
+}
+
+@media (min-width: 992px) and (max-width: 1199px) {
+    .our-advantages {
+        .route {
+            width: 100%;
+            margin-left: 20px;
+        }
+    }
+}
+
+@media (min-width: 1200px) and (max-width: 1300px) {
+    .our-advantages {
+        .route {
+            width: auto;
+        }
+    }
+}

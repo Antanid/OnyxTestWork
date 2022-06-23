@@ -1,8 +1,8 @@
 import axios from 'axios';
 import React, { useEffect, useState } from 'react';
 
-import './Style.scss';
-import StarTeam from './Team/StarTeam';
+import './sass/Style.scss';
+import StarTeam from './StarTeam';
 
 function TeamStarWars() {
   const [starTeam, setStarTeam] = useState([]);

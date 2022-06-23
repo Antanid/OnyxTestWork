@@ -1,6 +1,6 @@
 import React from 'react';
 import PropTypes from 'prop-types';
-import './Style.scss';
+import './sass/Style.scss';
 
 class PhotoText extends React.Component {
   render() {

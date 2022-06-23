@@ -1,0 +1,173 @@
+.section__contacts {
+    margin-top: 100px;
+    margin-left: 70px;
+    .contacts__h3 {
+        h3 {
+            font-size: 36px;
+            font-family: "Montserrat", sans-serif;
+            font-weight: 700;
+            line-height: 50px;
+            border-top: 3px solid #037e8c;
+            max-width: 700px;
+            padding-top: 15px;
+        }
+    }
+    .contacts__top {
+        display: flex;
+        margin-top: 65px;
+        .contacts__text {
+            font-size: 18px;
+            line-height: 22px;
+            font-family: "Montserrat", sans-serif;
+            font-weight: 400;
+        }
+        .contacts__number {
+            margin-left: 114px;
+            .number__phone {
+                position: absolute;
+                margin-left: 11px;
+                margin-top: 10px;
+            }
+        }
+    }
+
+    .contacts__bottom {
+        display: flex;
+        margin-top: 40px;
+        .contacts__email {
+            .number__email {
+                position: absolute;
+                margin-left: 10px;
+                margin-top: 12px;
+            }
+            .contacts__text {
+                font-size: 18px;
+                line-height: 22px;
+                font-family: "Montserrat", sans-serif;
+                font-weight: 400;
+            }
+        }
+    }
+
+    .contacts__timeWork {
+        margin-left: 25px;
+        .number__time {
+            position: absolute;
+            margin-left: 9px;
+            margin-top: 9px;
+        }
+    }
+
+    .timeWork {
+        p {
+            margin-left: 16px;
+            width: 135px;
+        }
+    }
+    .contact__social {
+        .contact__social_group {
+            .contacts__whatsup {
+                border: none;
+                background: none;
+               
+            }
+            .contacts__inst {
+                border: none;
+                background: none;
+            }
+        }
+    }
+    .map-responsive {
+        overflow: hidden;
+        padding-bottom: 56.25%;
+        position: relative;
+        height: 0;
+        iframe {
+            left: 0;
+            top: 0;
+            height: 100%;
+            width: 100%;
+            position: absolute;
+        }
+    }
+}
+
+@media (max-width: 575.98px) {
+    .section__contacts {
+        margin-left: 0;
+        .contacts__top {
+            display: block;
+            .contacts__number {
+                margin-left: 0;
+            }
+        }
+
+        .contacts__bottom {
+            display: block;
+            .contacts__timeWork {
+                margin-left: 0px;
+                margin-top: 12px;
+            }
+            .timeWork {
+                display: flex;
+                .contacts__text_time {
+                    position: relative;
+                    bottom: 37px;
+                    left: 35px;
+                }
+            }
+        }
+    }
+}
+
+@media (min-width: 576px) and (max-width: 767.98px) {
+    .section__contacts {
+        margin-left: 0;
+        .contact__social {
+            display: inline-flex;
+            margin-bottom: 20px;
+        }
+    }
+}
+
+@media (min-width: 768px) and (max-width: 991.98px) {
+    .section__contacts {
+        margin-left: 0;
+        .contacts__top {
+            margin-left: 30px;
+        }
+        .contacts__bottom {
+            margin-left: 30px;
+        }
+        .contact__social {
+            display: flex;
+            margin-bottom: 10px;
+        }
+    }
+}
+@media (min-width: 992px) and (max-width: 1199px) {
+    .section__contacts {
+        margin-left: 0;
+        .contacts__top {
+            .contacts__text {
+                font-size: 15px;
+            }
+            .contacts__number {
+                margin-left: 77px;
+                .contacts__text {
+                    font-size: 15px;
+                }
+            }
+        }
+        .contacts__bottom {
+            .contacts__email {
+                .contacts__text {
+                    font-size: 15px;
+                }
+            }
+            .contacts__timeWork {
+                margin-left: 5px;
+            }
+        }
+    }
+}

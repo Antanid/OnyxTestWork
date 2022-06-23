@@ -16,13 +16,13 @@ import SecendQadroThird from '../../assets/img/Second.svg';
 import ThirdQadroFirst from '../../assets/img/ThirdRout.svg';
 
 import ThirdQadroThird from '../../assets/img/ThirdRout2.svg';
-import PopUpExc from '../PopUp/PopUpExc/PopUpExc';
-import FirstPage from './RoutesPage/FirstPage/FirstPage';
-import SecendPage from './RoutesPage/SecendPage/SecendPage';
-import ThirdPage from './RoutesPage/ThirdPage/ThirdPage';
+import PopUpExc from '../PopUpExc/PopUpExc';
+import FirstPage from '../FirstPage/FirstPage';
+import SecendPage from '../SecendPage/SecendPage';
+import ThirdPage from '../ThirdPage/ThirdPage';
 import OurTextH2 from './OurTextH2';
 
-import './Style.scss';
+import './sass/Style.scss';
 
 function OurRoute() {
   const [active, setActive] = useState(false);

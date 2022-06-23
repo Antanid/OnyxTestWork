@@ -1,170 +1,69 @@
-import React, { useEffect, useState } from 'react';
-import axios from 'axios';
-import TableComponent from './TableComponent/TableComponent';
-import FormComponent from './FormComp/FormComponent';
-import SortBy from './SortBy/SortBy';
-import ButtonTable from './ButtonImg/ButtonTable';
-import arrow from '../../assets/img/arrow-down-sign-to-navigate.png';
+import React from 'react';
+import PropTypes from 'prop-types';
+import SecendPageInfo from './SecendPageInfo';
+import SecendPageImg from './SecendPageImg';
+import SecendLine from './SecendLine';
 
-import './Style.scss';
-
-function SecendPage() {
-  const [arrays, setArray] = useState(false);
-  const [arrayAlphabet, setArrayAlphabet] = useState(false);
-
-  const [value, setValue] = useState('');
-  const [valueYear, setValueYear] = useState('');
-  const [valueDate, setValueDate] = useState('');
-  const [valueMonth, setValueMonth] = useState('');
-
-  const [table, setTable] = useState([]);
-
-  useEffect(() => {
-    axios.get('http://localhost:3004/item')
-      .then(({ data }) => {
-        setTable(data)
-          .catch((error) => {
-            console.log(error);
-          });
-      });
-  }, []);
-
-  useEffect(() => {
-    setTable((prevTable) => ([...prevTable].sort((a, b) => (!arrays ? a.data.year - b.data.year
-      || a.month - b.month : b.data.year - a.data.year || b.month - a.month))));
-  }, [arrays]);
-
-  const removeItem = (items) => {
-    axios.delete(`http://localhost:3004/item/${items.id}`)
-      .then(() => {
-        const del = table.filter((e) => e.id !== items.id);
-        setTable(del);
-      }).catch((error) => {
-        console.log(error);
-      });
-  };
-
-  const bubbleSort = () => {
-    const arr = [...table];
-    if (!arrays) {
-      for (let i = 1; i < arr.length; i += 1) {
-        for (let j = 0; j < arr.length - i; j += 1) {
-          if (arr[j].data.year < arr[j + 1].data.year) {
-            [arr[j + 1], arr[j]] = [arr[j], arr[j + 1]];
-          }
-        }
-      }
-    } else {
-      for (let i = 1; i < arr.length; i += 1) {
-        for (let j = 0; j < arr.length - i; j += 1) {
-          if (arr[j].data.year > arr[j + 1].data.year) {
-            [arr[j], arr[j + 1]] = [arr[j + 1], arr[j]];
-          }
-        }
-      }
-    }
-    return setTable(arr);
-  };
-
-  const sortByText = () => {
-    setTable((prevTable) => ([...prevTable]
-      .sort((a, b) => (a.text.toLocaleLowerCase > b.text.toLocaleLowerCase ? 1 : -1))));
-  };
-
-  const handleChangeMonth = (e) => {
-    if (e.currentTarget.value.length < 3) {
-      setValueMonth(e.currentTarget.value);
-    }
-  };
-  const handleChangeDate = (e) => {
-    if (e.currentTarget.value.length < 3) {
-      setValueDate(e.currentTarget.value);
-    }
-  };
-  const handleChangeYear = (e) => {
-    if (e.currentTarget.value.length < 5) {
-      setValueYear(e.currentTarget.value);
-    }
-  };
-  const handleChange = (e) => {
-    setValue(e.currentTarget.value);
-  };
-
-  const addTask = () => {
-    if (value) {
-      const newItem = {
-        id: table.length,
-        order: table.length + 1,
-        text: value,
-        data: {
-          year: Number(valueYear),
-          day: Number(valueDate),
-          month: Number(valueMonth),
-        },
-      };
-      axios.post('http://localhost:3004/item', newItem)
-        .then(() => {
-          setTable([...table, newItem]);
-        }).catch((error) => {
-          console.log(error);
-        });
-      setValueYear('');
-      setValueDate('');
-      setValueMonth('');
-      setValue('');
-    }
-  };
-
-  const handleKeyPress = (event) => {
-    if (event.key === 'Enter') {
-      addTask();
-    }
-  };
-
-  const handleSubmit = (e) => {
-    e.preventDefault();
-    addTask(value, valueYear, valueDate, valueMonth);
-  };
-
-  const deleteLastArray = () => {
-    setTable((prevTable) => ([...prevTable].slice(0, -1)));
-  };
-
+function SecendPage({
+  Line,
+  setActive,
+  price,
+  Rubl,
+  TimeImg,
+  time,
+  Location,
+  distance,
+  Complexity,
+  InfoComplexity,
+  Route,
+  info,
+  SecendQadroFirst,
+  SecendQadroSecend,
+  SecendQadroThird
+}) {
   return (
-    <div className="TableOur">
-      <table>
-        <thead>
-          <SortBy
-            setArray={setArray}
-            arrays={arrays}
-            bubbleSort={bubbleSort}
-            arrow={arrow}
-            setArrayAlphabet={setArrayAlphabet}
-            arrayAlphabet={arrayAlphabet}
-            sortByText={sortByText}
-          />
-        </thead>
-        <TableComponent setTable={setTable} table={table} removeItem={removeItem} />
-      </table>
-      <FormComponent
-        handleKeyPress={handleKeyPress}
-        deleteLastArray={deleteLastArray}
-        addTask={addTask}
-        handleChangeMonth={handleChangeMonth}
-        valueMonth={valueMonth}
-        handleChangeDate={handleChangeDate}
-        valueDate={valueDate}
-        handleChangeYear={handleChangeYear}
-        valueYear={valueYear}
-        handleChange={handleChange}
-        value={value}
-        handleSubmit={handleSubmit}
+    <>
+      <SecendPageImg
+        SecendQadroFirst={SecendQadroFirst}
+        SecendQadroSecend={SecendQadroSecend}
+        SecendQadroThird={SecendQadroThird}
       />
-      <ButtonTable />
-
-    </div>
-
+      <SecendLine
+        Line={Line}
+      />
+      <SecendPageInfo
+        setActive={setActive}
+        price={price}
+        Rubl={Rubl}
+        TimeImg={TimeImg}
+        time={time}
+        Location={Location}
+        distance={distance}
+        Complexity={Complexity}
+        InfoComplexity={InfoComplexity}
+        Route={Route}
+        info={info}
+      />
+    </>
   );
 }
 
 export default SecendPage;
+
+SecendPage.propTypes = {
+  Line: PropTypes.string.isRequired,
+  setActive: PropTypes.func.isRequired,
+  price: PropTypes.string.isRequired,
+  Rubl: PropTypes.string.isRequired,
+  TimeImg: PropTypes.string.isRequired,
+  time: PropTypes.string.isRequired,
+  Location: PropTypes.string.isRequired,
+  distance: PropTypes.string.isRequired,
+  Complexity: PropTypes.string.isRequired,
+  InfoComplexity: PropTypes.string.isRequired,
+  Route: PropTypes.string.isRequired,
+  info: PropTypes.string.isRequired,
+  SecendQadroFirst: PropTypes.string.isRequired,
+  SecendQadroSecend: PropTypes.string.isRequired,
+  SecendQadroThird: PropTypes.string.isRequired
+};

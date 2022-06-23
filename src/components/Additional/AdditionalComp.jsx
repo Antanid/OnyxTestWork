@@ -1,6 +1,6 @@
 import React, { Fragment } from 'react';
 import PropTypes from 'prop-types';
-import './Style.scss';
+import './sass/Style.scss';
 
 function AdditionalComp({ service }) {
   return (

@@ -7,7 +7,7 @@ import GiftImg from './GiftImg';
 import GiftText from './GiftText';
 import GiftTimerText from './GiftTimerText';
 
-import './Style.scss';
+import './sass/Style.scss';
 
 class Gift extends React.Component {
   render() {
