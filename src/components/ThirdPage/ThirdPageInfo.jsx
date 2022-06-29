@@ -3,7 +3,17 @@ import PropTypes from 'prop-types';
 import ButtonsOur from '../OurRoute/ButtonsOur';
 
 function ThirdPageInfo({
-  setActive, price, Rubl, TimeImg, time, Location, distance, Complexity, InfoComplexity, Route, info
+  OpenPopUp,
+  price,
+  Rubl,
+  TimeImg,
+  time,
+  Location,
+  distance,
+  Complexity,
+  InfoComplexity,
+  Route,
+  info
 }) {
   return (
     <div className="col-lg-5">
@@ -54,7 +64,7 @@ function ThirdPageInfo({
           <p>{info}</p>
         </div>
 
-        <ButtonsOur setActive={setActive} />
+        <ButtonsOur OpenPopUp={OpenPopUp} />
       </div>
     </div>
   );
@@ -63,7 +73,7 @@ function ThirdPageInfo({
 export default ThirdPageInfo;
 
 ThirdPageInfo.propTypes = {
-  setActive: PropTypes.func.isRequired,
+  OpenPopUp: PropTypes.func.isRequired,
   price: PropTypes.string.isRequired,
   Rubl: PropTypes.string.isRequired,
   TimeImg: PropTypes.string.isRequired,

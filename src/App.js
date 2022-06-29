@@ -6,7 +6,6 @@ import { Route, Routes } from 'react-router-dom';
 import SecendPage from './pages/SecendPage/SecendPage';
 import AllHead from './components/AllHead';
 import Layout from './Layout/Layout';
-import ModalProvider from './Сontext/ModalProvider';
 import ThemeProvider from './Сontext/ThemeProvider';
 import ButtonTheme from './components/ThemeButton/buttonTheme';
 import HocThemeState from './hocs/hocThemeState';
@@ -14,17 +13,15 @@ import HocThemeState from './hocs/hocThemeState';
 function App({ theme, toggleTheme }) {
   return (
     <ThemeProvider theme={theme}>
-      <ModalProvider>
-        <div className="wrapper">
-          <ButtonTheme toggleTheme={toggleTheme} />
-          <Layout>
-            <Routes>
-              <Route path="/" element={<AllHead />} />
-              <Route path="homeWork" element={<SecendPage />} />
-            </Routes>
-          </Layout>
-        </div>
-      </ModalProvider>
+      <div className="wrapper">
+        <ButtonTheme toggleTheme={toggleTheme} />
+        <Layout>
+          <Routes>
+            <Route path="/" element={<AllHead />} />
+            <Route path="homeWork" element={<SecendPage />} />
+          </Routes>
+        </Layout>
+      </div>
     </ThemeProvider>
   );
 }

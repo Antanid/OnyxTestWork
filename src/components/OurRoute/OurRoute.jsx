@@ -23,9 +23,9 @@ import ThirdPage from '../ThirdPage/ThirdPage';
 import OurTextH2 from './OurTextH2';
 
 import './sass/Style.scss';
+import usePopUp from '../../hooks/usePopUp';
 
 function OurRoute() {
-  const [active, setActive] = useState(false);
   const [info] = useState({
     firstPage:
     {
@@ -54,6 +54,7 @@ function OurRoute() {
       route: 'Форсаж - Синя бухта – Занедбана Тур База – Суховантаж Ріо  - Форсаж'
     },
   });
+  const { open, close, openPopUp } = usePopUp();
 
   return (
     <article className="our__route">
@@ -63,8 +64,8 @@ function OurRoute() {
           <OurTextH2>Наші маршрути</OurTextH2>
 
           <FirstPage
+            OpenPopUp={open}
             Line={Line}
-            setActive={setActive}
             price={info.firstPage.price}
             Rubl={Rubl}
             TimeImg={Time}
@@ -81,8 +82,8 @@ function OurRoute() {
           />
 
           <SecendPage
+            OpenPopUp={open}
             Line={Line}
-            setActive={setActive}
             price={info.secendPage.price}
             Rubl={Rubl}
             TimeImg={Time}
@@ -99,8 +100,8 @@ function OurRoute() {
           />
 
           <ThirdPage
+            OpenPopUp={open}
             Line={Line}
-            setActive={setActive}
             price={info.thirdPage.price}
             Rubl={Rubl}
             TimeImg={Time}
@@ -119,7 +120,8 @@ function OurRoute() {
         </div>
       </div>
 
-      <PopUpExc active={active} setActive={setActive} />
+      {openPopUp
+        && <PopUpExc ClosePopUp={close} />}
     </article>
   );
 }

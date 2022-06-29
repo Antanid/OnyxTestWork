@@ -5,8 +5,8 @@ import FirstPageImg from './FirstPageImg';
 import FirstLine from './FirstLine';
 
 function FirstPage({
+  OpenPopUp,
   Line,
-  setActive,
   price,
   Rubl,
   TimeImg,
@@ -27,7 +27,7 @@ function FirstPage({
         Line={Line}
       />
       <FirstPageInfo
-        setActive={setActive}
+        OpenPopUp={OpenPopUp}
         price={price}
         Rubl={Rubl}
         TimeImg={TimeImg}
@@ -51,8 +51,8 @@ function FirstPage({
 export default FirstPage;
 
 FirstPage.propTypes = {
+  OpenPopUp: PropTypes.func.isRequired,
   Line: PropTypes.string.isRequired,
-  setActive: PropTypes.func.isRequired,
   price: PropTypes.string.isRequired,
   Rubl: PropTypes.string.isRequired,
   TimeImg: PropTypes.string.isRequired,

@@ -3,7 +3,17 @@ import PropTypes from 'prop-types';
 import ButtonsOur from '../OurRoute/ButtonsOur';
 
 function SecendPageInfo({
-  setActive, price, Rubl, TimeImg, time, Location, distance, Complexity, InfoComplexity, Route, info 
+  OpenPopUp,
+  price,
+  Rubl,
+  TimeImg,
+  time,
+  Location,
+  distance,
+  Complexity,
+  InfoComplexity,
+  Route,
+  info
 }) {
   return (
     <div className="col-lg-5">
@@ -13,7 +23,7 @@ function SecendPageInfo({
           <h2>
             {' '}
             РОЗШИРЕНИЙ
-            <br /> 
+            <br />
             {' '}
             <span>{price}</span>
             <img className="base__money" src={Rubl} alt="money" />
@@ -21,26 +31,26 @@ function SecendPageInfo({
         </div>
 
         <div className="base__h3">
-          <h3> 
+          <h3>
             {' '}
             <img className="base__ico" src={TimeImg} alt="time" />
             {' '}
             ЧАС У ДОРОЗІ
-            : 
+            :
             {' '}
             <span>{time}</span>
           </h3>
-          <h3> 
+          <h3>
             {' '}
             <img className="base__ico" src={Location} alt="location" />
             {' '}
-            ВІДСТАНЬ: 
+            ВІДСТАНЬ:
             {' '}
             <span>{distance}</span>
           </h3>
           <h3>
             <img className="base__ico" src={Complexity} alt="complexity" />
-            СКЛАДНІСТЬ: 
+            СКЛАДНІСТЬ:
             {' '}
             <span>{InfoComplexity}</span>
           </h3>
@@ -54,7 +64,7 @@ function SecendPageInfo({
           <p>{info}</p>
         </div>
 
-        <ButtonsOur setActive={setActive} />
+        <ButtonsOur OpenPopUp={OpenPopUp} />
       </div>
     </div>
   );
@@ -63,7 +73,7 @@ function SecendPageInfo({
 export default SecendPageInfo;
 
 SecendPageInfo.propTypes = {
-  setActive: PropTypes.func.isRequired,
+  OpenPopUp: PropTypes.func.isRequired,
   price: PropTypes.string.isRequired,
   Rubl: PropTypes.string.isRequired,
   TimeImg: PropTypes.string.isRequired,

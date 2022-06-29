@@ -3,6 +3,7 @@ import PropTypes from 'prop-types';
 import ButtonsOur from '../OurRoute/ButtonsOur';
 
 function FirstPage({
+  OpenPopUp,
   price,
   time,
   distance,
@@ -13,7 +14,6 @@ function FirstPage({
   InfoComplexity,
   Complexity,
   info,
-  setActive
 }) {
   return (
     <div className="col-lg-5">
@@ -69,7 +69,7 @@ function FirstPage({
             {info}
           </p>
         </div>
-        <ButtonsOur setActive={setActive} />
+        <ButtonsOur OpenPopUp={OpenPopUp} />
       </div>
     </div>
   );
@@ -78,7 +78,7 @@ function FirstPage({
 export default FirstPage;
 
 FirstPage.propTypes = {
-  setActive: PropTypes.func.isRequired,
+  OpenPopUp: PropTypes.func.isRequired,
   price: PropTypes.string.isRequired,
   Rubl: PropTypes.string.isRequired,
   TimeImg: PropTypes.string.isRequired,

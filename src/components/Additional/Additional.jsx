@@ -1,4 +1,4 @@
-import React from 'react';
+import React, { useState } from 'react';
 
 import evacuation from '../../assets/img/additional1.svg';
 import Photo from '../../assets/img/additional2.svg';
@@ -10,35 +10,22 @@ import Route from '../../assets/img/additional7.svg';
 import Services from '../../assets/img/additional8.svg';
 import AdditionalComp from './AdditionalComp';
 
-class Additional extends React.Component {
-  constructor(props) {
-    super(props);
-    this.state = {
-      services: [
-        { text: 'Евакуація, ремонт квадроциклів', img: evacuation },
-        { text: 'Фото, відеозйомка', img: Photo },
-        { text: 'Транспортування техніки', img: Transp },
-        { text: 'Заправка, чекап, мийка', img: CheckUp },
-        { text: 'Корпоративи, тимбілдінги', img: Corpotartion },
-        { text: 'Виїзний кейтеринг', img: Keitering },
-        { text: 'Індивідуальні маршрути', img: Route },
-        { text: 'Послуги, гідні маршрути', img: Services },
-      ]
-    };
-  }
-
-  render() {
-    const { services } = this.state;
-    return (
-      <section className="section__additional">
-        <div className="container-fluid">
-          <div className="row">
-            <AdditionalComp service={services} />
-          </div>
-        </div>
-      </section>
-    );
-  }
+function Additional() {
+  const [serviceText] = useState({
+    services: [
+      { text: 'Евакуація, ремонт квадроциклів', img: evacuation },
+      { text: 'Фото, відеозйомка', img: Photo },
+      { text: 'Транспортування техніки', img: Transp },
+      { text: 'Заправка, чекап, мийка', img: CheckUp },
+      { text: 'Корпоративи, тимбілдінги', img: Corpotartion },
+      { text: 'Виїзний кейтеринг', img: Keitering },
+      { text: 'Індивідуальні маршрути', img: Route },
+      { text: 'Послуги, гідні маршрути', img: Services },
+    ]
+  });
+  return (
+    <AdditionalComp service={serviceText.services} />
+  );
 }
 
 export default Additional;

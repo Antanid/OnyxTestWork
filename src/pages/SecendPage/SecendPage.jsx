@@ -7,15 +7,15 @@ import ButtonTable from './components/ButtonTable';
 import arrow from '../../assets/img/arrow-down-sign-to-navigate.png';
 
 import './sass/Style.scss';
+import useInput from '../../hooks/useInput';
 
 function SecendPage() {
   const [arrays, setArray] = useState(false);
   const [arrayAlphabet, setArrayAlphabet] = useState(false);
-
-  const [value, setValue] = useState('');
-  const [valueYear, setValueYear] = useState('');
-  const [valueDate, setValueDate] = useState('');
-  const [valueMonth, setValueMonth] = useState('');
+  const handleChangeMonth = useInput('', 3);
+  const handleChangeDate = useInput('', 3);
+  const handleChangeYear = useInput('', 5);
+  const handleChange = useInput('', 250);
 
   const [table, setTable] = useState([]);
 
@@ -71,35 +71,16 @@ function SecendPage() {
       .sort((a, b) => (a.text.toLocaleLowerCase > b.text.toLocaleLowerCase ? 1 : -1))));
   };
 
-  const handleChangeMonth = (e) => {
-    if (e.currentTarget.value.length < 3) {
-      setValueMonth(e.currentTarget.value);
-    }
-  };
-  const handleChangeDate = (e) => {
-    if (e.currentTarget.value.length < 3) {
-      setValueDate(e.currentTarget.value);
-    }
-  };
-  const handleChangeYear = (e) => {
-    if (e.currentTarget.value.length < 5) {
-      setValueYear(e.currentTarget.value);
-    }
-  };
-  const handleChange = (e) => {
-    setValue(e.currentTarget.value);
-  };
-
   const addTask = () => {
-    if (value) {
+    if (handleChange.value) {
       const newItem = {
         id: table.length,
         order: table.length + 1,
-        text: value,
+        text: handleChange.value,
         data: {
-          year: Number(valueYear),
-          day: Number(valueDate),
-          month: Number(valueMonth),
+          year: Number(handleChangeYear.value),
+          day: Number(handleChangeDate.value),
+          month: Number(handleChangeMonth.value),
         },
       };
       axios.post('http://localhost:3004/item', newItem)
@@ -108,10 +89,10 @@ function SecendPage() {
         }).catch((error) => {
           console.log(error);
         });
-      setValueYear('');
-      setValueDate('');
-      setValueMonth('');
-      setValue('');
+      handleChangeYear.setValue('');
+      handleChangeDate.setValue('');
+      handleChangeMonth.setValue('');
+      handleChange.setValue('');
     }
   };
 
@@ -123,7 +104,7 @@ function SecendPage() {
 
   const handleSubmit = (e) => {
     e.preventDefault();
-    addTask(value, valueYear, valueDate, valueMonth);
+    addTask(handleChangeYear, handleChangeDate, handleChangeMonth, handleChange);
   };
 
   const deleteLastArray = () => {
@@ -150,13 +131,9 @@ function SecendPage() {
         deleteLastArray={deleteLastArray}
         addTask={addTask}
         handleChangeMonth={handleChangeMonth}
-        valueMonth={valueMonth}
         handleChangeDate={handleChangeDate}
-        valueDate={valueDate}
         handleChangeYear={handleChangeYear}
-        valueYear={valueYear}
         handleChange={handleChange}
-        value={value}
         handleSubmit={handleSubmit}
       />
       <ButtonTable />

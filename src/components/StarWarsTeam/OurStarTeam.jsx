@@ -1,19 +1,26 @@
 import axios from 'axios';
 import React, { useEffect, useState } from 'react';
-
 import './sass/Style.scss';
 import StarTeam from './StarTeam';
 
 function TeamStarWars() {
   const [starTeam, setStarTeam] = useState([]);
   const [nextTeam, setNextTeam] = useState(1);
+  const [loading, setLoading] = useState(false);
 
   useEffect(() => {
     axios.get('https://swapi.dev/api/people').then((res) => {
       setStarTeam(res.data.results);
     }).catch((error) => {
       console.log(error);
-    });
+    })
+      .finally(() => {
+        setLoading(true);
+      });
+
+    return () => {
+      setLoading(false);
+    };
   }, []);
 
   useEffect(() => {
@@ -21,7 +28,13 @@ function TeamStarWars() {
       setStarTeam(res.data.results);
     }).catch((error) => {
       console.log(error);
-    });
+    })
+      .finally(() => {
+        setLoading(true);
+      });
+    return () => {
+      setLoading(false);
+    };
   }, [nextTeam]);
 
   const secenPage = () => {
@@ -38,14 +51,19 @@ function TeamStarWars() {
   return (
     <section className="section__team">
       <div className="container">
-        <StarTeam
-          nextTeam={nextTeam}
-          team={starTeam}
-          secenPage={secenPage}
-          prevPage={prevPage}
-        />
+        {loading ? (
+          <StarTeam
+            nextTeam={nextTeam}
+            team={starTeam}
+            secenPage={secenPage}
+            prevPage={prevPage}
+          />
+        ) : (
+          <div className="spinner-border" role="status">
+            <span className="sr-only" />
+          </div>
+        )}
       </div>
-
     </section>
   );
 }

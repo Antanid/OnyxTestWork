@@ -1,4 +1,4 @@
-import React from 'react';
+import React, { useState } from 'react';
 
 import Julia from '../../assets/img/team/Julia.svg';
 import Maksim from '../../assets/img/team/Maksim.svg';
@@ -9,29 +9,22 @@ import OurTeam from './OurTeam';
 
 import './sass/Style.scss';
 
-class Team extends React.Component {
-  constructor(props) {
-    super(props);
-    this.state = {
-      team: [
-        { name: 'Юліана', profession: 'керівник', img: Julia },
-        { name: 'Максим', profession: 'старший інструктор', img: Maksim },
-        { name: 'Христина', profession: 'адміністратор', img: Kristina },
-        { name: 'Юрій', profession: 'Старший механік', img: Juriy },
-      ]
-    };
-  }
-
-  render() {
-    const { team } = this.state;
-    return (
-      <section className="section__team">
-        <div className="container">
-          <OurTeam team={team} />
-        </div>
-      </section>
-    );
-  }
+function Team() {
+  const [InfoTeam] = useState({
+    team: [
+      { name: 'Юліана', profession: 'керівник', img: Julia },
+      { name: 'Максим', profession: 'старший інструктор', img: Maksim },
+      { name: 'Христина', profession: 'адміністратор', img: Kristina },
+      { name: 'Юрій', profession: 'Старший механік', img: Juriy },
+    ]
+  });
+  return (
+    <section className="section__team">
+      <div className="container">
+        <OurTeam team={InfoTeam.team} />
+      </div>
+    </section>
+  );
 }
 
 export default Team;

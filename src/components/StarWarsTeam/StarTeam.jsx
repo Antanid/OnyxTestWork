@@ -4,42 +4,39 @@ import WorldStar from './World';
 import PeopleName from './PeopleName';
 import ButtonNextPrev from './ButtonNextPrev';
 
-class StarTeam extends React.Component {
-  render() {
-    const {
-      secenPage, prevPage, nextTeam, team
-    } = this.props;
-    return (
-      <div className="row">
-        <div className="col-lg-12">
-          <div className="our__team">
-            <h2>Наша команда</h2>
-          </div>
+function StarTeam({
+  secenPage, prevPage, nextTeam, team 
+}) {
+  return (
+    <div className="row">
+      <div className="col-lg-12">
+        <div className="our__team">
+          <h2>Наша команда</h2>
         </div>
-
-        {
-                    team.map((items) => (
-                      <div key={items.name} className="col-lg-3 col-sm-6">
-                        <div className="team">
-                          <div className="team__text">
-                            <PeopleName items={items} />
-                            <WorldStar
-                              nextTeam={nextTeam}
-                              world={items.homeworld}
-                            />
-                          </div>
-                        </div>
-                      </div>
-                    ))
-                }
-        <ButtonNextPrev
-          prevPage={prevPage}
-          secenPage={secenPage}
-          nextTeam={nextTeam}
-        />
       </div>
-    );
-  }
+
+      {
+        team.map((items) => (
+          <div key={items.name} className="col-lg-3 col-sm-6">
+            <div className="team">
+              <div className="team__text">
+                <PeopleName items={items} />
+                <WorldStar
+                  nextTeam={nextTeam}
+                  world={items.homeworld}
+                />
+              </div>
+            </div>
+          </div>
+        ))
+      }
+      <ButtonNextPrev
+        prevPage={prevPage}
+        secenPage={secenPage}
+        nextTeam={nextTeam}
+      />
+    </div>
+  );
 }
 
 export default StarTeam;

@@ -6,7 +6,7 @@ import ThirdLine from './ThirdLine';
 
 function ThirdPage({
   Line,
-  setActive,
+  OpenPopUp,
   price,
   Rubl,
   TimeImg,
@@ -27,7 +27,7 @@ function ThirdPage({
         Line={Line}
       />
       <ThirdPageInfo
-        setActive={setActive}
+        OpenPopUp={OpenPopUp}
         price={price}
         Rubl={Rubl}
         TimeImg={TimeImg}
@@ -53,7 +53,7 @@ export default ThirdPage;
 
 ThirdPage.propTypes = {
   Line: PropTypes.string.isRequired,
-  setActive: PropTypes.func.isRequired,
+  OpenPopUp: PropTypes.func.isRequired,
   price: PropTypes.string.isRequired,
   Rubl: PropTypes.string.isRequired,
   TimeImg: PropTypes.string.isRequired,

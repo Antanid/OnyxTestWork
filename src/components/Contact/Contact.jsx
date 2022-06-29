@@ -1,4 +1,4 @@
-import React from 'react';
+import React, { useState } from 'react';
 
 import City from '../../assets/img/ContactCity.svg';
 import Phone from '../../assets/img/ContactPhone.svg';
@@ -12,39 +12,29 @@ import ContactInfo from './ContactInfo';
 
 import './sass/Style.scss';
 
-class Contacts extends React.Component {
-  constructor(props) {
-    super(props);
-    this.state = {
-      Connact: Conact,
-      city: ' Місто Карпати',
-      number: '+7 928 428-00-62',
-      email: ' experience@groupgrand.ru',
-      workTime: 'Пн - Пт: 9:00 - 18:00 Сб: 9:00 - 17:00 Вс - вихідний',
-
-    };
-  }
-
-  render() {
-    const {
-      Connact, city, number, email, workTime
-    } = this.state;
-    return (
-      <ContactInfo
-        CityImg={City}
-        PhoneImg={Phone}
-        EllipseImg={Ellipse}
-        EmailImg={Email}
-        ConactImg={Connact}
-        WhatsUp={WhatsUp}
-        Inst={Inst}
-        workTime={workTime}
-        number={number}
-        email={email}
-        cityName={city}
-      />
-    );
-  }
+function Contacts() {
+  const [Info] = useState({
+    Connact: Conact,
+    city: ' Місто Карпати',
+    number: '+7 928 428-00-62',
+    email: ' experience@groupgrand.ru',
+    workTime: 'Пн - Пт: 9:00 - 18:00 Сб: 9:00 - 17:00 Вс - вихідний',
+  });
+  return (
+    <ContactInfo
+      CityImg={City}
+      PhoneImg={Phone}
+      EllipseImg={Ellipse}
+      EmailImg={Email}
+      ConactImg={Info.Connact}
+      WhatsUp={WhatsUp}
+      Inst={Inst}
+      workTime={Info.workTime}
+      number={Info.number}
+      email={Info.email}
+      cityName={Info.city}
+    />
+  );
 }
 
 export default Contacts;

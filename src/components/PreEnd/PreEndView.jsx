@@ -1,26 +1,23 @@
 import React from 'react';
 import PropTypes from 'prop-types';
 
-class PreEndView extends React.Component {
-  render() {
-    const { footerLi } = this.props;
-    return (
-      <div className="col-lg-10 col-sm-6">
-        <div className="footer__all">
-          <div className="footer__menu">
-            <ul>
-              {
-                footerLi.map((item) => (
-                  <li key={item.text}><a href={item.href}>{item.text}</a></li>
-                ))
-              }
-            </ul>
-          </div>
+function PreEndView({ footerLi }) {
+  return (
+    <div className="col-lg-10 col-sm-6">
+      <div className="footer__all">
+        <div className="footer__menu">
+          <ul>
+            {
+              footerLi.map((item) => (
+                <li key={item.text}><a href={item.href}>{item.text}</a></li>
+              ))
+            }
+          </ul>
         </div>
-
       </div>
-    );
-  }
+
+    </div>
+  );
 }
 
 export default PreEndView;

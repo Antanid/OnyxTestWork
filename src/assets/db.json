@@ -23,31 +23,11 @@
     {
       "id": 2,
       "order": 3,
-      "text": "123qweqwe",
+      "text": "qweqwe",
       "data": {
-        "year": 2022,
-        "day": 25,
-        "month": 6
-      }
-    },
-    {
-      "id": 5,
-      "order": 6,
-      "text": "фывфывфыв",
-      "data": {
-        "year": 2131,
-        "day": 12,
-        "month": 12
-      }
-    },
-    {
-      "id": 6,
-      "order": 7,
-      "text": "цйу123123",
-      "data": {
-        "year": 123,
-        "day": 12,
-        "month": 11
+        "year": 2313,
+        "day": 1313,
+        "month": 213123
       }
     }
   ]

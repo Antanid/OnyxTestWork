@@ -10,15 +10,11 @@ import HeadMenu from './HeadMenu';
 import HeadText from './HeadText';
 
 import './sass/Style.scss';
+import usePopUp from '../../hooks/usePopUp';
 
 function Head() {
-  const [active, setActive] = useState(false);
   const [burger, setBurger] = useState(false);
-
-  const handleClick = (e) => {
-    e.preventDefault();
-    setActive(true);
-  };
+  const { open, close, openPopUp } = usePopUp();
 
   return (
     <header id="header" className="header">
@@ -33,8 +29,7 @@ function Head() {
           <HeadMenu
             number="+7 928 333 26 45"
             phone={phone}
-            handleClick={handleClick}
-            setActive={setActive}
+            OpenPopUp={open}
             burger={burger}
             setBurger={setBurger}
           />
@@ -48,8 +43,8 @@ function Head() {
 
         </div>
       </div>
-
-      <PopUpHead active={active} setActive={setActive} />
+      {openPopUp
+        && <PopUpHead ClosePopUp={close} />}
     </header>
   );
 }

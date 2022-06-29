@@ -1,30 +1,27 @@
 import React, { Fragment } from 'react';
 import PropTypes from 'prop-types';
 
-class ServiceText extends React.Component {
-  render() {
-    const { text } = this.props;
-    return (
-      <>
-        {
-                  text.map((item) => (
-                    <div key={item.id} className="col-lg-4">
-                      <div className="services__block">
-                        <div className="services__icon">
-                          <img src={item.img} alt="" />
-                        </div>
-                        <div className="services__text">
-                          <p>
-                            {item.text}
-                          </p>
-                        </div>
-                      </div>
-                    </div>
-                  ))
-                }
-      </>
-    );
-  }
+function ServiceText({ text }) {
+  return (
+    <>
+      {
+        text.map((item) => (
+          <div key={item.id} className="col-lg-4">
+            <div className="services__block">
+              <div className="services__icon">
+                <img src={item.img} alt="" />
+              </div>
+              <div className="services__text">
+                <p>
+                  {item.text}
+                </p>
+              </div>
+            </div>
+          </div>
+        ))
+      }
+    </>
+  );
 }
 
 export default ServiceText;

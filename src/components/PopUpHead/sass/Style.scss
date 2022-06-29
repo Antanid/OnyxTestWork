@@ -8,14 +8,9 @@
     background: rgba(18, 18, 20, 0.856);
     pointer-events: none;
     transition: all 0.6s;
-    opacity: 0;
-    &.active {
-        opacity: 1;
-        pointer-events: all;
-        transition: all 0.6s;
-        z-index: 30;
-    }
-
+    pointer-events: all;
+    transition: all 0.6s;
+    z-index: 30;
     .popup {
         position: absolute;
         top: 50%;
@@ -27,10 +22,8 @@
         padding: 25px;
         border-radius: 10px;
         transition: all 0.6s;
-        &.active {
-            transform: translate(-50%, -50%) scale(1);
-            transition: all 0.6s;
-        }
+        transform: translate(-50%, -50%) scale(1);
+        transition: all 0.6s;
         .close-popup {
             position: absolute;
             top: 10px;
@@ -108,7 +101,7 @@
         }
     }
 }
-@media (min-width: 576px) and (max-width: 767.98px){
+@media (min-width: 576px) and (max-width: 767.98px) {
     .popup__bg {
         .popup {
             width: 100%;
@@ -157,19 +150,19 @@
         }
     }
 }
-@media (min-width: 768px) and (max-width: 827px){
+@media (min-width: 768px) and (max-width: 827px) {
     .popup__bg {
         .popup {
             width: 100%;
         }
-    } 
+    }
 }
-@media (min-width: 828px) and (max-width: 870px){
+@media (min-width: 828px) and (max-width: 870px) {
     .popup__bg {
         .popup {
             width: 100%;
         }
-    }   
+    }
 }
 @media (min-width: 871px) and (max-width: 920px) {
     .popup__bg {

@@ -1,3 +1,4 @@
+/* eslint-disable react/jsx-props-no-spreading */
 import React from 'react';
 import PropTypes from 'prop-types';
 import ButtonForm from './ButtonForm';
@@ -6,44 +7,40 @@ function FormComponent({
   deleteLastArray,
   addTask,
   handleChangeMonth,
-  valueMonth,
   handleChangeDate,
-  valueDate,
   handleChangeYear,
-  valueYear,
   handleChange,
-  value,
   handleSubmit,
   handleKeyPress
 }) {
   return (
     <form onSubmit={handleSubmit}>
       <input
+        value={handleChange.value}
+        onChange={handleChange.onChange}
         className="table_input"
-        value={value}
         type="text"
-        onChange={handleChange}
         placeholder="Введите значение"
       />
 
       <input
-        value={valueYear}
-        onChange={handleChangeYear}
+        value={handleChangeYear.value}
+        onChange={handleChangeYear.onChange}
         className="table_input_date"
         type="number"
         placeholder="Год.."
       />
       <input
-        value={valueDate}
-        onChange={handleChangeDate}
+        value={handleChangeDate.value}
+        onChange={handleChangeDate.onChange}
         className="table_input_date"
         type="number"
         placeholder="День.."
       />
       <input
+        value={handleChangeMonth.value}
+        onChange={handleChangeMonth.onChange}
         onKeyDown={handleKeyPress}
-        value={valueMonth}
-        onChange={handleChangeMonth}
         className="table_input_date"
         type="number"
         placeholder="Месяц.."
@@ -61,14 +58,22 @@ function FormComponent({
 export default FormComponent;
 
 FormComponent.propTypes = {
-  handleChangeMonth: PropTypes.func.isRequired,
-  valueMonth: PropTypes.string.isRequired,
-  handleChangeDate: PropTypes.func.isRequired,
-  valueDate: PropTypes.string.isRequired,
-  handleChangeYear: PropTypes.func.isRequired,
-  valueYear: PropTypes.string.isRequired,
-  handleChange: PropTypes.func.isRequired,
-  value: PropTypes.string.isRequired,
+  handleChangeMonth: PropTypes.shape({
+    value: PropTypes.string,
+    onChange: PropTypes.func,
+  }).isRequired,
+  handleChangeDate: PropTypes.shape({
+    value: PropTypes.string,
+    onChange: PropTypes.func,
+  }).isRequired,
+  handleChangeYear: PropTypes.shape({
+    value: PropTypes.string,
+    onChange: PropTypes.func,
+  }).isRequired,
+  handleChange: PropTypes.shape({
+    value: PropTypes.string,
+    onChange: PropTypes.func,
+  }).isRequired,
   handleSubmit: PropTypes.func.isRequired,
   deleteLastArray: PropTypes.func.isRequired,
   addTask: PropTypes.func.isRequired,

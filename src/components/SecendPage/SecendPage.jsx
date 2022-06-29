@@ -5,8 +5,8 @@ import SecendPageImg from './SecendPageImg';
 import SecendLine from './SecendLine';
 
 function SecendPage({
+  OpenPopUp,
   Line,
-  setActive,
   price,
   Rubl,
   TimeImg,
@@ -32,7 +32,7 @@ function SecendPage({
         Line={Line}
       />
       <SecendPageInfo
-        setActive={setActive}
+        OpenPopUp={OpenPopUp}
         price={price}
         Rubl={Rubl}
         TimeImg={TimeImg}
@@ -51,8 +51,8 @@ function SecendPage({
 export default SecendPage;
 
 SecendPage.propTypes = {
+  OpenPopUp: PropTypes.func.isRequired,
   Line: PropTypes.string.isRequired,
-  setActive: PropTypes.func.isRequired,
   price: PropTypes.string.isRequired,
   Rubl: PropTypes.string.isRequired,
   TimeImg: PropTypes.string.isRequired,
