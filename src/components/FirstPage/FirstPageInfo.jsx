@@ -1,20 +1,17 @@
 import React from 'react';
+import { useTranslation } from 'react-i18next';
 import PropTypes from 'prop-types';
 import ButtonsOur from '../OurRoute/ButtonsOur';
 
 function FirstPage({
   OpenPopUp,
-  price,
-  time,
-  distance,
   Route,
   Rubl,
   TimeImg,
   Location,
-  InfoComplexity,
   Complexity,
-  info,
 }) {
+  const { t } = useTranslation();
   return (
     <div className="col-lg-5">
 
@@ -22,11 +19,11 @@ function FirstPage({
         <div className="base__h2">
           <h2>
             {' '}
-            БАЗОВИЙ
+            {t('ourRoute.FirstPageTextBase')}
             <br />
             {' '}
             <span>
-              {price}
+              {t('ourRoute.FirstPagePrice')}
               {' '}
             </span>
             <img className="base__money" src={Rubl} alt="money" />
@@ -38,38 +35,42 @@ function FirstPage({
             {' '}
             <img className="base__ico" src={TimeImg} alt="time" />
             {' '}
-            ЧАС У ДОРОЗІ:
+            {t('ourRoute.PageTextTime')}
             {' '}
-            <span>{time}</span>
+            <span>{t('ourRoute.FirstPageTime')}</span>
           </h3>
           <h3>
             {' '}
             <img className="base__ico" src={Location} alt="location" />
             {' '}
-            ВІДСТАНЬ:
+            {t('ourRoute.PageTextDistance')}
             {' '}
-            <span>{distance}</span>
+            <span>{t('ourRoute.FirstPageDistance')}</span>
           </h3>
           <h3>
             <img className="base__ico" src={Complexity} alt="complexity" />
-            СКЛАДНІСТЬ:
+            {t('ourRoute.PageTextComplexity')}
             {' '}
             <span>
-              {InfoComplexity}
+              5***
             </span>
           </h3>
         </div>
 
         <div className="base__routes__h4">
           <h4>
-            МАРШРУТ
+            {t('ourRoute.PageTextRoute')}
             <img className="base__icon__route" src={Route} alt="route" />
           </h4>
           <p>
-            {info}
+            {t('ourRoute.FirstPageRoute')}
           </p>
         </div>
-        <ButtonsOur OpenPopUp={OpenPopUp} />
+        <ButtonsOur
+          firstButton={t('ourRoute.FirstButton')}
+          secendButton={t('ourRoute.SecendButton')}
+          OpenPopUp={OpenPopUp}
+        />
       </div>
     </div>
   );
@@ -79,14 +80,9 @@ export default FirstPage;
 
 FirstPage.propTypes = {
   OpenPopUp: PropTypes.func.isRequired,
-  price: PropTypes.string.isRequired,
   Rubl: PropTypes.string.isRequired,
   TimeImg: PropTypes.string.isRequired,
-  time: PropTypes.string.isRequired,
   Location: PropTypes.string.isRequired,
-  distance: PropTypes.string.isRequired,
   Complexity: PropTypes.string.isRequired,
-  InfoComplexity: PropTypes.string.isRequired,
   Route: PropTypes.string.isRequired,
-  info: PropTypes.string.isRequired,
 };

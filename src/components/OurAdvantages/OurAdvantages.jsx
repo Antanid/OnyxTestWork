@@ -13,32 +13,33 @@ function OurAdvantages() {
     adventures: [
       {
         id: 1,
-        fisrtText: 'Цікаві екскурсії',
-        secendText: 'Маршрути від лісових доріжок до бездоріжжя!',
-        img: Tree,
-        elipse: Elipse
+        img: Bike,
+        elipse: Elipse,
+        title: 'adventures.excursionBikeTitle',
+        description: 'adventures.excursionBikeDescroption',
       },
       {
         id: 2,
-        fisrtText: 'Цікаві екскурсії',
-        secendText: 'Маршрути від лісових доріжок до бездоріжжя!',
-        img: Bike,
-        elipse: Elipse
+        img: Tree,
+        elipse: Elipse,
+        title: 'adventures.excursionTreeTitle',
+        description: 'adventures.excursionTreeDescroption',
       },
       {
         id: 3,
-        fisrtText: 'Цікаві екскурсії',
-        secendText: 'Маршрути від лісових доріжок до бездоріжжя!',
         img: Helmet,
-        elipse: Elipse
+        elipse: Elipse,
+        title: 'adventures.excursionHelmetTitle',
+        description: 'adventures.excursionHelmetDescroption',
       },
       {
         id: 4,
-        fisrtText: 'Цікаві екскурсії',
-        secendText: 'Маршрути від лісових доріжок до бездоріжжя!',
-        img: Helmet,
-        elipse: Elipse
-      }
+        img: Bike,
+        elipse: Elipse,
+        title: 'adventures.excursionBikeTitleLast',
+        description: 'adventures.excursionBikeDescroptionLast',
+      },
+
     ]
   });
 

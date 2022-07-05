@@ -1,7 +1,9 @@
-import React, { Fragment } from 'react';
+import React from 'react';
 import PropTypes from 'prop-types';
+import { useTranslation } from 'react-i18next';
 
 function ServiceText({ text }) {
+  const { t } = useTranslation();
   return (
     <>
       {
@@ -13,7 +15,7 @@ function ServiceText({ text }) {
               </div>
               <div className="services__text">
                 <p>
-                  {item.text}
+                  {t(item.text)}
                 </p>
               </div>
             </div>

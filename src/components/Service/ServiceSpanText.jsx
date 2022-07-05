@@ -1,22 +1,24 @@
 import React, { Fragment } from 'react';
 import PropTypes from 'prop-types';
+import { useTranslation } from 'react-i18next';
 
 function ServiceSpanText({ textSpan }) {
+  const { t } = useTranslation();
   return (
     <>
       {
         textSpan.map((item) => (
-          <div key={item.textAfter} className="col-lg-4">
+          <div key={t(item.textAfter)} className="col-lg-4">
             <div className="services__block">
               <div className="services__icon">
                 <img src={item.img} alt="" />
               </div>
               <div className="services__text">
                 <p>
-                  {item.textAfter}
-                  <span>{item.span}</span>
+                  {t(item.textAfter)}
+                  <span>{t(item.span)}</span>
                   {' '}
-                  {item.textBefore}
+                  {t(item.textBefore)}
                 </p>
               </div>
             </div>

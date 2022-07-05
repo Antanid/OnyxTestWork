@@ -1,6 +1,6 @@
 import React from 'react';
 import PropTypes from 'prop-types';
-import Buttons from '../Button/Buttons';
+import ButtonGift from './ButtonGift';
 
 function GiftText({ text }) {
   return (
@@ -9,7 +9,7 @@ function GiftText({ text }) {
         <div className="gift__text">
           <h5>{text}</h5>
         </div>
-        <Buttons className="gift__button">Підберемо сертифікат для вас</Buttons>
+        <ButtonGift />
       </div>
     </div>
   );

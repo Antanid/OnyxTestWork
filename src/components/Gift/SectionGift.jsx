@@ -1,4 +1,5 @@
 import React from 'react';
+import { useTranslation } from 'react-i18next';
 
 import gift from '../../assets/img/GiftImg.svg';
 import CountdownTimer from '../CountdownTimer/CountdownTimer';
@@ -10,26 +11,25 @@ import GiftTimerText from './GiftTimerText';
 import './sass/Style.scss';
 
 function Gift() {
+  const { t } = useTranslation();
   return (
     <section className="section__gift">
       <div className="container">
         <div className="row">
           <GiftHead
-            giftH2="Подарунковий сертифікат"
-            texth5="Бажаєте зробити оригінальний подарунок?"
-            texth5Part2="Подаруйте незабутні емоції – найкращий подарунок!"
+            giftH2={t('gift.GiftCertificate')}
+            texth5={t('gift.OriginalGift')}
+            texth5Part2={t('gift.TextEmotion')}
           />
 
           <GiftText
-            text="Бажаєте здивувати своїх близьких оригінальним подарунком? Подарунковий сертифікат на екскурсію
-                            на квадроциклах стане не просто цікавим подарунком, а реальною можливістю
-                            наблизити Ваших друзів та близьких до нового захоплення."
+            text={t('gift.GiftText')}
           />
 
           <GiftImg gift={gift} />
           <GiftTimerText
-            texth2="Встигни забрати акцію!"
-            textH3="Залишилось лише:"
+            texth2={t('gift.GiftDiscount')}
+            textH3={t('gift.GiftTime')}
           />
           <CountdownTimer countdownTimestampMs={1703339600000} />
 

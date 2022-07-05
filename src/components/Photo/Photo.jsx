@@ -1,4 +1,5 @@
 import React from 'react';
+import { useTranslation } from 'react-i18next';
 
 import FirstPhoto from '../../assets/img/Photo.svg';
 import SecendPhoto from '../../assets/img/Photo2.svg';
@@ -9,11 +10,14 @@ import PhotoText from './PhotoText';
 import PhotoSlider from './PhotoSlider';
 
 function Photo() {
+  const { t } = useTranslation();
   return (
     <section className="section__photo">
       <div className="container-fluid">
         <div className="row">
-          <PhotoText>Фото</PhotoText>
+          <PhotoText>
+            {t('photo.PhotoText')}
+          </PhotoText>
           <PhotoSlider
             FirstPhoto={FirstPhoto}
             SecendPhoto={SecendPhoto}

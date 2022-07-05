@@ -1,4 +1,5 @@
 import React from 'react';
+
 import PropTypes from 'prop-types';
 import 'bootstrap/dist/css/bootstrap.min.css';
 import './App.css';
@@ -7,14 +8,17 @@ import SecendPage from './pages/SecendPage/SecendPage';
 import AllHead from './components/AllHead';
 import Layout from './Layout/Layout';
 import ThemeProvider from './Сontext/ThemeProvider';
-import ButtonTheme from './components/ThemeButton/buttonTheme';
 import HocThemeState from './hocs/hocThemeState';
+import ControlPanel from './Layout/Head/ControlPanel';
 
-function App({ theme, toggleTheme }) {
+function App({ theme, toggleTheme, test }) {
   return (
     <ThemeProvider theme={theme}>
       <div className="wrapper">
-        <ButtonTheme toggleTheme={toggleTheme} />
+        <ControlPanel
+          test={test}
+          toggleTheme={toggleTheme}
+        />
         <Layout>
           <Routes>
             <Route path="/" element={<AllHead />} />
@@ -29,6 +33,7 @@ function App({ theme, toggleTheme }) {
 export default HocThemeState(App);
 
 App.propTypes = {
+  test: PropTypes.bool.isRequired,
   theme: PropTypes.objectOf(PropTypes.string).isRequired,
   toggleTheme: PropTypes.func.isRequired,
 };

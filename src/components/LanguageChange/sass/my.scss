@@ -1,0 +1,21 @@
+.lang_main {
+    position: relative;
+    display: inline-block;
+    left: 20px;
+    top: 20px;
+    border: 1px solid white;
+    padding: 1px 1px;
+    border-radius: 20px;
+    text-align: center;
+    width: 100px;
+    ul {
+        li {
+            margin-top: 10px;
+            a {
+                cursor: pointer;
+                color: white;
+                text-decoration: none;
+            }
+        }
+    }
+}

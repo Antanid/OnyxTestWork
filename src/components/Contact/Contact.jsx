@@ -1,4 +1,5 @@
-import React, { useState } from 'react';
+import React from 'react';
+import { useTranslation } from 'react-i18next';
 
 import City from '../../assets/img/ContactCity.svg';
 import Phone from '../../assets/img/ContactPhone.svg';
@@ -13,26 +14,22 @@ import ContactInfo from './ContactInfo';
 import './sass/Style.scss';
 
 function Contacts() {
-  const [Info] = useState({
-    Connact: Conact,
-    city: ' Місто Карпати',
-    number: '+7 928 428-00-62',
-    email: ' experience@groupgrand.ru',
-    workTime: 'Пн - Пт: 9:00 - 18:00 Сб: 9:00 - 17:00 Вс - вихідний',
-  });
+  const { t } = useTranslation();
   return (
     <ContactInfo
       CityImg={City}
       PhoneImg={Phone}
       EllipseImg={Ellipse}
       EmailImg={Email}
-      ConactImg={Info.Connact}
+      ConactImg={Conact}
       WhatsUp={WhatsUp}
       Inst={Inst}
-      workTime={Info.workTime}
-      number={Info.number}
-      email={Info.email}
-      cityName={Info.city}
+      workTime={t('contacts.WorkTime')}
+      number="+380 662 98-00-62"
+      email="experience@groupgrand.ua"
+      cityName={t('contacts.CityName')}
+      ContactText={t('contacts.ContactText')}
+      SocialContact={t('contacts.SocialContact')}
     />
   );
 }

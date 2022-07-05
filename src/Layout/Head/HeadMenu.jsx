@@ -1,4 +1,5 @@
 import React from 'react';
+import { useTranslation } from 'react-i18next';
 import { Link } from 'react-router-dom';
 import PropTypes from 'prop-types';
 import Buttons from '../../components/Button/Buttons';
@@ -10,6 +11,7 @@ function HeadMenu({
   burger,
   setBurger
 }) {
+  const { t } = useTranslation();
   return (
     <div className="col-lg-10 col-xs-12">
       <div className="nav">
@@ -23,10 +25,10 @@ function HeadMenu({
             <ul
               className="nav__ul"
             >
-              <li><Link to="/homeWork">Таблица</Link></li>
-              <li><a href="#photo__h2">Галерея</a></li>
-              <li><a href="#questions__head">Питання-відповідь </a></li>
-              <li><a href="#contacts__h3">Контакти</a></li>
+              <li><Link to="/homeWork">{t('head.menu.Table')}</Link></li>
+              <li><a href="#photo__h2">{t('head.menu.Gallery')}</a></li>
+              <li><a href="#questions__head">{t('head.menu.Question')}</a></li>
+              <li><a href="#contacts__h3">{t('head.menu.Contacts')}</a></li>
               <li>
                 <a
                   onKeyDown={OpenPopUp}
@@ -34,7 +36,7 @@ function HeadMenu({
                   href="/"
                   className="popup_open"
                 >
-                  Забронювати
+                  {t('head.menu.Reserve')}
                 </a>
               </li>
             </ul>
@@ -45,7 +47,7 @@ function HeadMenu({
                 <img src={phone} alt="phone" />
                 {number}
               </p>
-              <Buttons className="number__button">Передзвоніть мені</Buttons>
+              <Buttons className="number__button">{t('head.menu.Call')}</Buttons>
             </div>
           </div>
         </div>

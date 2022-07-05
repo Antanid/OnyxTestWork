@@ -2,22 +2,37 @@
 import React from 'react';
 import PropTypes from 'prop-types';
 import './sass/Style.scss';
+import DayTheme from '../../assets/img/DayTheme.png';
+import NightTheme from '../../assets/img/NightTheme.png';
 
-function ButtonTheme({ toggleTheme }) {
+function ButtonTheme({ toggleTheme, test }) {
   return (
-    <div className="button_theme_div">
-      <div>
-        <input type="checkbox" id="toggle" className="toggle--checkbox" />
-        <label
-          role="presentation"
-          onKeyDown={toggleTheme}
-          onClick={toggleTheme}
-          htmlFor="toggle"
-          className="toggle--label"
-        >
-          <span className="toggle--label-background" />
-        </label>
-        <div className="background" />
+    <div className="col-lg-6">
+      <div className="button_theme_div">
+
+        {
+          test ? (
+            <div
+              tabIndex={0}
+              role="button"
+              onKeyDown={toggleTheme}
+              onClick={toggleTheme}
+            >
+              <img src={NightTheme} alt="nightMod" />
+
+            </div>
+          )
+            : (
+              <div
+                tabIndex={0}
+                role="button"
+                onKeyDown={toggleTheme}
+                onClick={toggleTheme}
+              >
+                <img src={DayTheme} alt="nightMod" />
+              </div>
+            )
+        }
       </div>
     </div>
   );
@@ -26,5 +41,6 @@ function ButtonTheme({ toggleTheme }) {
 export default ButtonTheme;
 
 ButtonTheme.propTypes = {
+  test: PropTypes.bool.isRequired,
   toggleTheme: PropTypes.func.isRequired,
 };

@@ -73,6 +73,11 @@
                 line-height: 18px;
                 background-color: #ffffff;
                 padding: 14px 25px;
+                &:hover {
+                    color: #ffffff;
+                    background-color: #037e8c;
+                    transition: 0.4s all;
+                }
             }
         }
         .popup__text__see {
@@ -435,7 +440,7 @@
         }
     }
 }
-@media (min-width: 1600px){
+@media (min-width: 1600px) {
     .popup__bg__exc {
         .popup__exc {
             transform: translate(-50%, -10%);

@@ -1,5 +1,6 @@
 import React, { useState } from 'react';
 import PropTypes from 'prop-types';
+import { useTranslation } from 'react-i18next';
 
 import Close from '../../assets/img/icons8-close.svg';
 import Line from '../../assets/img/Line 1.png';
@@ -50,6 +51,7 @@ function PopUpExc({ ClosePopUp }) {
       },
     ]
   });
+  const { t } = useTranslation();
   return (
     <div className="popup__bg__exc">
       <div
@@ -80,48 +82,35 @@ function PopUpExc({ ClosePopUp }) {
               TimeImg={Time}
               RouteImg={Route}
               ComplexitImg={Complexit}
-              RouteText="Смотрова - Джерело - Камінь Джигіта - Адербіївка - Гора Нексис -Грозові Ворота -
-                            Шашлики - Цигельський водоспад (чаша кохання) - Форсаж"
-              TimeText="4
-                            години"
-              DistanceText="40 - 50 км"
+              RouteText={t('popUpExc.RouteText')}
+              TimeText={t('popUpExc.TimeText')}
+              DistanceText={t('popUpExc.DistanceText')}
               complexityText="5***"
+              ExcursionHead={t('popUpExc.ExcursionHead')}
+              TimeToRout={t('popUpExc.TimeToRout')}
+              RoutDistance={t('popUpExc.RoutDistance')}
+              Complexity={t('popUpExc.Complexity')}
+              RoutText={t('popUpExc.RoutText')}
+              RouteScheme={t('popUpExc.RouteScheme')}
             />
-
             <PopUpImg
               QuadroFirst={QuadroFirst}
               QuadroSecend={QuadroSecend}
             />
-
             <PopUpInterested
-              HeaderText="Що подивимося на маршруті:"
-              FirstPartText="Lorem ipsum dolor sit amet, consectetur adipiscing elit. Augue lacus lacus facilisis
-                        orci nibh diam. Nisi, a et sit commodo. Pretium sed consectetur risus elementum,
-                        habitasse turpis massa."
-              SecendPartText="In sit mi aenean volutpat. Quis lectus nunc nam euismod ultrices aenean. Vitae
-                        venenatis
-                        ut praesent neque sed quam mauris elementum. Risus blandit leo ut nullam egestas et
-                        porta. Ut lacus arcu sagittis sit. Gravida et faucibus id tortor augue interdum quam
-                        sit
-                        diam. Laoreet nulla at et arcu pellentesque massa placerat elit. Adipiscing in
-                        nullam
-                        ipsum est. In sit mi aenean volutpat. Quis lectus nunc nam euismod ultrices aenean.
-                        Vitae venenatis ut praesent neque sed quam mauris elementum. Risus blandit leo ut
-                        nullam
-                        egestas et porta. Ut lacus arcu sagittis sit."
+              HeaderText={t('popUpExc.HeaderTextExc')}
+              FirstPartText={t('popUpExc.FirstPartText')}
+              SecendPartText={t('popUpExc.SecendPartText')}
             />
-
-            <PopUpSecendHead> Вартість екскурсії за 1 квадроцикл:</PopUpSecendHead>
-
+            <PopUpSecendHead>{t('popUpExc.PopUpSecendHead')}</PopUpSecendHead>
             <PopUpComponent bikes={bikes.Allbikes} />
-
             <PopUpForm
-              online="Бронювання онлайн"
-              dateText="Бажана дата"
-              howMuch="Кількість осіб"
-              phoneNumber="Телефон або WhatsApp"
-              backToYou="Як до вас звертатись?"
-              book="Забронювати"
+              online={t('popUpExc.OnlineForm')}
+              dateText={t('popUpExc.DateTextForm')}
+              howMuch={t('popUpExc.HowMuchForm')}
+              phoneNumber={t('popUpExc.PhoneNumberForm')}
+              backToYou={t('popUpExc.BackToYouForm')}
+              book={t('popUpExc.ButtonFormExc')}
             />
           </div>
         </div>

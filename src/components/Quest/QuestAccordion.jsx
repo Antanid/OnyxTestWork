@@ -2,7 +2,7 @@ import React, { useState } from 'react';
 import PropTypes from 'prop-types';
 import Quest from './Quest';
 
-function QuestAccordion({ items }) {
+function QuestAccordion({ QuestionText }) {
   const [clicked, setClicked] = useState(null);
 
   const toggle = (index) => {
@@ -15,7 +15,7 @@ function QuestAccordion({ items }) {
         <Quest
           toggle={toggle}
           clicked={clicked}
-          items={items}
+          QuestionText={QuestionText}
         />
       </div>
     </div>
@@ -26,8 +26,9 @@ function QuestAccordion({ items }) {
 export default QuestAccordion;
 
 QuestAccordion.propTypes = {
-  items: PropTypes.arrayOf(PropTypes.shape({
+  QuestionText: PropTypes.arrayOf(PropTypes.shape({
     actualTask: PropTypes.string.isRequired,
     answer: PropTypes.string.isRequired,
+    id: PropTypes.number.isRequired,
   })).isRequired,
 };

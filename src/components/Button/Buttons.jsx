@@ -11,10 +11,11 @@ export default Buttons;
 
 Buttons.defaultProps = {
   Click: null,
+  className: 'default',
 };
 
 Buttons.propTypes = {
-  className: PropTypes.string.isRequired,
+  className: PropTypes.string,
   children: PropTypes.string.isRequired,
   Click: PropTypes.func,
 };

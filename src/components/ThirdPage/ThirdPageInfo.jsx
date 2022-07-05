@@ -1,20 +1,17 @@
 import React from 'react';
+import { useTranslation } from 'react-i18next';
 import PropTypes from 'prop-types';
 import ButtonsOur from '../OurRoute/ButtonsOur';
 
 function ThirdPageInfo({
   OpenPopUp,
-  price,
   Rubl,
   TimeImg,
-  time,
   Location,
-  distance,
   Complexity,
-  InfoComplexity,
   Route,
-  info
 }) {
+  const { t } = useTranslation();
   return (
     <div className="col-lg-5">
       <div className="route__base route__base2">
@@ -22,10 +19,10 @@ function ThirdPageInfo({
         <div className="base__h2">
           <h2>
             {' '}
-            EXPERIENCE
+            {t('ourRoute.ThirdFirstPageTextBase')}
             <br />
             {' '}
-            <span>{price}</span>
+            <span>{t('ourRoute.thirdPagePrice')}</span>
             <img className="base__money" src={Rubl} alt="money" />
           </h2>
         </div>
@@ -35,36 +32,39 @@ function ThirdPageInfo({
             {' '}
             <img className="base__ico" src={TimeImg} alt="time" />
             {' '}
-            ЧАС У ДОРОЗІ
-            :
+            {t('ourRoute.PageTextTime')}
             {' '}
-            <span>{time}</span>
+            <span>{t('ourRoute.thirdPageTime')}</span>
           </h3>
           <h3>
             {' '}
             <img className="base__ico" src={Location} alt="location" />
             {' '}
-            ВІДСТАНЬ:
+            {t('ourRoute.PageTextDistance')}
             {' '}
-            <span>{distance}</span>
+            <span>{t('ourRoute.thirdPageDistance')}</span>
           </h3>
           <h3>
             <img className="base__ico" src={Complexity} alt="complexity" />
-            СКЛАДНІСТЬ:
+            {t('ourRoute.PageTextComplexity')}
             {' '}
-            <span>{InfoComplexity}</span>
+            <span>5***</span>
           </h3>
         </div>
 
         <div className="base__routes__h4">
           <h4>
-            МАРШРУТ
+            {t('ourRoute.PageTextRoute')}
             <img className="base__icon__route" src={Route} alt="route" />
           </h4>
-          <p>{info}</p>
+          <p>{t('ourRoute.thirdPageRoute')}</p>
         </div>
 
-        <ButtonsOur OpenPopUp={OpenPopUp} />
+        <ButtonsOur
+          firstButton={t('ourRoute.FirstButton')}
+          secendButton={t('ourRoute.SecendButton')}
+          OpenPopUp={OpenPopUp}
+        />
       </div>
     </div>
   );
@@ -74,14 +74,9 @@ export default ThirdPageInfo;
 
 ThirdPageInfo.propTypes = {
   OpenPopUp: PropTypes.func.isRequired,
-  price: PropTypes.string.isRequired,
   Rubl: PropTypes.string.isRequired,
   TimeImg: PropTypes.string.isRequired,
-  time: PropTypes.string.isRequired,
   Location: PropTypes.string.isRequired,
-  distance: PropTypes.string.isRequired,
   Complexity: PropTypes.string.isRequired,
-  InfoComplexity: PropTypes.string.isRequired,
   Route: PropTypes.string.isRequired,
-  info: PropTypes.string.isRequired,
 };

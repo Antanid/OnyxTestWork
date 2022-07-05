@@ -1,5 +1,6 @@
 import React from 'react';
 import PropTypes from 'prop-types';
+import Buttons from '../Button/Buttons';
 
 function PopUpForm({
   dateText, howMuch, phoneNumber, backToYou, book, online
@@ -50,7 +51,7 @@ function PopUpForm({
 
       <div className="col-lg-12">
         <div className="popup_form_button">
-          <button type="button">{book}</button>
+          <Buttons>{book}</Buttons>
         </div>
       </div>
     </div>

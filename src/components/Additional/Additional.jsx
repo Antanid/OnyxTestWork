@@ -13,14 +13,14 @@ import AdditionalComp from './AdditionalComp';
 function Additional() {
   const [serviceText] = useState({
     services: [
-      { text: 'Евакуація, ремонт квадроциклів', img: evacuation },
-      { text: 'Фото, відеозйомка', img: Photo },
-      { text: 'Транспортування техніки', img: Transp },
-      { text: 'Заправка, чекап, мийка', img: CheckUp },
-      { text: 'Корпоративи, тимбілдінги', img: Corpotartion },
-      { text: 'Виїзний кейтеринг', img: Keitering },
-      { text: 'Індивідуальні маршрути', img: Route },
-      { text: 'Послуги, гідні маршрути', img: Services },
+      { text: 'additional.EvacuationText', img: evacuation },
+      { text: 'additional.PhotoText', img: Photo },
+      { text: 'additional.TransportationText', img: Transp },
+      { text: 'additional.GasTest', img: CheckUp },
+      { text: 'additional.CorporateText', img: Corpotartion },
+      { text: 'additional.CateringText', img: Keitering },
+      { text: 'additional.RouteText', img: Route },
+      { text: 'additional.ServicesText', img: Services },
     ]
   });
   return (

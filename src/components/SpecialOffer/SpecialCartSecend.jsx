@@ -1,6 +1,6 @@
 import React from 'react';
 import PropTypes from 'prop-types';
-import Buttons from '../Button/Buttons';
+import SpecialButton from './SpecialButton';
 
 function SpecialCartSecend({ img, textH3, textP }) {
   return (
@@ -16,11 +16,8 @@ function SpecialCartSecend({ img, textH3, textP }) {
             {textH3}
           </h3>
           <p>{textP}</p>
-          <div className="spec__but">
-            <Buttons className="spec__offer__but">Докладніше</Buttons>
-          </div>
+          <SpecialButton />
         </div>
-
       </div>
     </div>
   );

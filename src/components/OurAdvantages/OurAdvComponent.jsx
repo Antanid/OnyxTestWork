@@ -1,7 +1,9 @@
 import React from 'react';
 import PropTypes from 'prop-types';
+import { useTranslation } from 'react-i18next';
 
 function OurAdvComponent({ routes }) {
+  const { t } = useTranslation();
   return (
     <article className="our-advantages">
       <div className="container-fluid">
@@ -15,10 +17,10 @@ function OurAdvComponent({ routes }) {
                     <img className="route__elipse" src={item.elipse} alt="Elipse" />
                   </div>
                   <h3 className="route__h3">
-                    {item.fisrtText}
+                    {t(item.title)}
                   </h3>
                   <p className="route__p">
-                    {item.secendText}
+                    {t(item.description)}
                   </p>
                 </div>
               </div>
@@ -30,20 +32,11 @@ function OurAdvComponent({ routes }) {
   );
 }
 
-OurAdvComponent.defaultProps = {
-  routes: PropTypes.arrayOf(PropTypes.shape({
-    fisrtText: 'FirstText',
-    secendText: 'secendText',
-  }))
-};
-
 OurAdvComponent.propTypes = {
   routes: PropTypes.arrayOf(PropTypes.shape({
-    fisrtText: PropTypes.string.isRequired,
-    secendText: PropTypes.string.isRequired,
     img: PropTypes.string.isRequired,
     elipse: PropTypes.string.isRequired,
-  }))
+  })).isRequired,
 };
 
 export default OurAdvComponent;

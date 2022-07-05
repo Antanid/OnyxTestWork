@@ -1,6 +1,6 @@
 import React from 'react';
 import PropTypes from 'prop-types';
-import Buttons from '../Button/Buttons';
+import QuestButton from './QuestButton';
 
 function QuestContact({ QuestImg, contactText, haveQuestions }) {
   return (
@@ -14,10 +14,7 @@ function QuestContact({ QuestImg, contactText, haveQuestions }) {
           {haveQuestions}
         </h4>
         <h5 className="dialog__text__h5">{contactText}</h5>
-
-        <div className="dialog__butt__block">
-          <Buttons className="dialog__button">Задати питання</Buttons>
-        </div>
+        <QuestButton />
       </div>
     </div>
   );

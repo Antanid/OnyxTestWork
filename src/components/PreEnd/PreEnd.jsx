@@ -9,12 +9,36 @@ import './sass/Style.scss';
 function PreEnd() {
   const [InfoText] = useState({
     Li: [
-      { text: 'МАРШРУТЫ', href: '#our_routes_h2' },
-      { text: 'ГАЛЕРЕЯ', href: '#photo__h2' },
-      { text: 'ВОПРОС-ОТВЕТ', href: '#questions__head' },
-      { text: 'КОНТАКТЫ', href: '#contacts__h3' },
-      { text: 'УСЛОВИЯ', href: '#services__h2' },
-      { text: 'СПЕЦПРЕДЛОЖЕНИЯ', href: '#special__offer__h2' }
+      {
+        text: 'preEnd.RoutePreEnd',
+        href: '#our_routes_h2',
+        id: 1,
+      },
+      {
+        text: 'preEnd.Gallery',
+        href: '#photo__h2',
+        id: 2,
+      },
+      {
+        text: 'preEnd.QuestionPreEnd',
+        href: '#questions__head',
+        id: 3,
+      },
+      {
+        text: 'preEnd.ContactsPreEnd',
+        href: '#contacts__h3',
+        id: 4,
+      },
+      {
+        text: 'preEnd.ConditionsPreEnd',
+        href: '#services__h2',
+        id: 5,
+      },
+      {
+        text: 'preEnd.SpecOfferPreEnd',
+        href: '#special__offer__h2',
+        id: 6,
+      }
     ]
   });
   return (

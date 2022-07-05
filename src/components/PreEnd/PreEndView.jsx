@@ -1,7 +1,9 @@
 import React from 'react';
 import PropTypes from 'prop-types';
+import { useTranslation } from 'react-i18next';
 
 function PreEndView({ footerLi }) {
+  const { t } = useTranslation();
   return (
     <div className="col-lg-10 col-sm-6">
       <div className="footer__all">
@@ -9,7 +11,7 @@ function PreEndView({ footerLi }) {
           <ul>
             {
               footerLi.map((item) => (
-                <li key={item.text}><a href={item.href}>{item.text}</a></li>
+                <li key={item.id}><a href={item.href}>{t(item.text)}</a></li>
               ))
             }
           </ul>

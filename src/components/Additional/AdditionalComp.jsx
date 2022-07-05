@@ -1,8 +1,10 @@
 import React from 'react';
 import PropTypes from 'prop-types';
 import './sass/Style.scss';
+import { useTranslation } from 'react-i18next';
 
 function AdditionalComp({ service }) {
+  const { t } = useTranslation();
   return (
     <section className="section__additional">
       <div className="container-fluid">
@@ -15,7 +17,7 @@ function AdditionalComp({ service }) {
                     <img src={item.img} alt="evacuation" />
                   </div>
                   <div className="additional__text">
-                    <h4>{item.text}</h4>
+                    <h4>{t(item.text)}</h4>
                   </div>
                 </div>
               </div>

@@ -1,0 +1,166 @@
+{
+    "head": {
+        "menu": {
+            "Table": "Таблица",
+            "Gallery": "Галерея",
+            "Question": "Питання-відповідь",
+            "Contacts": "Контакти",
+            "Reserve": "Забронювати",
+            "Call": "Передзвоніть мені"
+        },
+        "MainText": {
+            "TextH1": "Екскурсії на квадроциклах у Карпатах",
+            "TextH2": "приїжджайте за новими відчуттями та емоціями!",
+            "ButtonText": "Підібрати маршрут"
+        }
+    },
+    "adventures": {
+        "excursionBikeTitle": "Цікаві екскурсії",
+        "excursionBikeDescroption": "Маршрути від лісових доріжок до бездоріжжя!",
+        "excursionTreeTitle": "Цікаві екскурсії",
+        "excursionTreeDescroption": "Маршрути від лісових доріжок до бездоріжжя!",
+        "excursionHelmetTitle": "Цікаві екскурсії",
+        "excursionHelmetDescroption": "Маршрути від лісових доріжок до бездоріжжя!",
+        "excursionBikeTitleLast": "Цікаві екскурсії",
+        "excursionBikeDescroptionLast": "Маршрути від лісових доріжок до бездоріжжя!"
+    },
+    "ourRoute": {
+        "FirstButton": "Докладніше",
+        "SecendButton": "Забронювати",
+        "RouteTextBase": "Наші маршрути",
+        "FirstPageTextBase": "БАЗОВИЙ",
+        "SecendPageTextBase": "РОЗШИРЕНИЙ",
+        "ThirdFirstPageTextBase": "ДОСВІДЧЕНИЙ",
+        "PageTextTime": "ЧАС У ДОРОЗІ:",
+        "PageTextDistance": "ВІДСТАНЬ:",
+        "PageTextComplexity": "СКЛАДНІСТЬ:",
+        "PageTextRoute": "МАРШРУТ",
+        "FirstPagePrice": "від 4000 ",
+        "FirstPageTime": "1,5 - 2 години",
+        "FirstPageDistance": "20 - 25 км",
+        "FirstPageRoute": "Смотрова - Джерело - Камінь Джигіта - Адербіївка - Гора Нексис - -Грозові Ворота - Шашлики - Цигельський водоспад (чаша кохання) - Форсаж ",
+        "secendPagePrice": "від 7000",
+        "secendPageTime": "6 - 8 години",
+        "secendPageDistance": "60 - 70 км",
+        "secendPageRoute": "Оглядова - Джерело - Камінь Джигіта - Адербіївка - Гора Нексис - -Грозові Ворота - Шашлики - Цигельський водоспад (чаша кохання) - Форсаж",
+        "thirdPagePrice": "від 16000 ",
+        "thirdPageTime": "4 години",
+        "thirdPageDistance": "40 - 50 км",
+        "thirdPageRoute": "Форсаж - Синя бухта – Занедбана Тур База – Суховантаж Ріо  - Форсаж "
+    },
+    "test": {
+        "ChangeRoute": "Важко вибрати маршрут?",
+        "GoTest": "Пройдіть тест і ми допоможемо вам підібрати оптимальну під вас екскурсію",
+        "TestButton": "Почати тест"
+    },
+    "photo": {
+        "PhotoText": "Фото"
+    },
+    "team": {
+        "OurTeam": "Наша команда",
+        "Julia": "Юліана",
+        "JuliaProffesion": "керівник",
+        "Maxim": "Максим",
+        "MaxProffesion": "головний інструктор",
+        "Christina": "Христина",
+        "ChristinaProffesion": "адміністратор",
+        "Yuriy": "Юрій",
+        "YuriyProffesion": "Старший механік"
+    },
+    "service": {
+        "ConditionsText": "Умови надання послуг",
+        "FirstText": "При прокаті або оренді суворо дотримуватися правил техніки безпеки та все вимоги інструктора!",
+        "SecendText": "Управління здійснюйте у міру своїх сил та можливостей. Не переоцінюйте себе! Це небезпечно!",
+        "ThirdText": "Перед кожним катанням досвідчений інструктор навчить Вас основ управління та буде супроводжувати протягом усього маршруту.",
+        "FourthText": "При прокаті або оренді суворо дотримуватися правил техніки безпеки та все вимоги інструктора!",
+        "FirstTextAfter": "До управління ",
+        "FirstTextSpan": " НЕ ДОПУСКАЮТЬСЯ",
+        "FirstTextBefore": "особи молодше 16 років та особи в алкогольному сп'яніння!",
+        "SecondTextAfter": "Розпивати спиртні напої під час прокату, оренди",
+        "SecondTextSpan": " ЗАБОРОНЕНО",
+        "SecendTextBefore": "(Після?) На ваш розсуд"
+    },
+    "specialOffer": {
+        "FirstCartMainText": "Спецпропозиції",
+        "CartDiscount": "Знижка 10%",
+        "FirstCartBirthday": "на честь Дня Народження - даруємо імениннику знижку 10%",
+        "FirstCartSpan": "на День Народження",
+        "SecondCartText": "клієнтам Ex-Karpati на послуги Заміського клубу Ягода Малина",
+        "ButtonSpecial": "Докладніше"
+    },
+    "gift": {
+        "GiftCertificate": "Подарунковий сертифікат",
+        "OriginalGift": "Бажаєте зробити оригінальний подарунок?",
+        "TextEmotion": "Подаруйте незабутні емоції – найкращий подарунок!",
+        "GiftText": "Бажаєте здивувати своїх близьких оригінальним подарунком? Подарунковий сертифікат на екскурсію на квадроциклах стане не просто цікавим подарунком,а реальною можливістю наблизити Ваших друзів та близьких до нового захоплення.",
+        "GiftDiscount": "Встигни забрати акцію!",
+        "GiftTime": "Залишилось лише:",
+        "ButtonGift": "Підберемо сертифікат для вас"
+    },
+    "questions": {
+        "FirstTask": "Актуальне питання?",
+        "FirstAnswer": "Lorem Ipsum — це просто фіктивний текст поліграфічної та набірної промисловості. Lorem Ipsum був стандартним фіктивним текстом у галузі з 1500-х років, коли невідомий друкар взяв гарбуз із шрифтом і переплутав його, щоб зробити книгу зразків шрифтів.",
+        "SecondTask": "Актуальне питання?",
+        "SecondAnswer": "Lorem Ipsum — це просто фіктивний текст поліграфічної та набірної промисловості. Lorem Ipsum був стандартним фіктивним текстом у галузі з 1500-х років, коли невідомий друкар взяв гарбуз із шрифтом і переплутав його, щоб зробити книгу зразків шрифтів.",
+        "ThirdTask": "Актуальне питання?",
+        "ThirdAnswer": "Lorem Ipsum — це просто фіктивний текст поліграфічної та набірної промисловості.Lorem Ipsum був стандартним фіктивним текстом у галузі з 1500-х років, коли невідомий друкар взяв гарбуз із шрифтом і переплутав його, щоб зробити книгу зразків шрифтів.",
+        "FourthTask": "Актуальне питання?",
+        "FourthAnswer": "Lorem Ipsum — це просто фіктивний текст поліграфічної та набірної промисловості. Lorem Ipsum був стандартним фіктивним текстом у галузі з 1500-х років, коли невідомий друкар взяв гарбуз із шрифтом і переплутав його, щоб зробити книгу зразків шрифтів.",
+        "QuestionsHeader": "Питання-відповіді",
+        "QuestionsContactText": "Не соромтеся звертатися до нас, Якщо у вас є будь-які питання, пропозиції або ідеї для співпраці",
+        "HaveQuestions": "Є питання?",
+        "AdditionalQuest": "Додаткові послуги",
+        "ButtonQuest": "Задати питання"
+    },
+    "additional": {
+        "EvacuationText": "Евакуація, ремонт квадроциклів",
+        "PhotoText": "Фото, відеозйомка",
+        "TransportationText": "Транспортування техніки",
+        "GasTest": "Заправка, чекап, мийка",
+        "CorporateText": "Корпоративи, тимбілдінги",
+        "CateringText": "Виїзний кейтеринг",
+        "RouteText": "Індивідуальні маршрути",
+        "ServicesText": "Послуги, гідні маршрути"
+    },
+    "contacts": {
+        "WorkTime": "Пн - Пт: 9:00 - 18:00 Сб: 9:00 - 17:00 Вс - вихідний",
+        "CityName": "Місто Карпати",
+        "ContactText": "Контакти",
+        "SocialContact": "Написати нам:"
+    },
+    "preEnd": {
+        "RoutePreEnd": "МАРШРУТЫ",
+        "Gallery": "ГАЛЕРЕЯ",
+        "QuestionPreEnd": "ВОПРОС-ОТВЕТ",
+        "ContactsPreEnd": "КОНТАКТЫ",
+        "ConditionsPreEnd": "УСЛОВИЯ",
+        "SpecOfferPreEnd": "СПЕЦПРЕДЛОЖЕНИЯ"
+    },
+    "popUpHead": {
+        "HeaderText": "Залишити заявку",
+        "LabelText": "Як до вас звертатись?",
+        "PhoneNumber": "Телефон або WhatsApp",
+        "SentText": "Надіслати"
+    },
+    "popUpExc": {
+        "ExcursionHead": "Екскурсія “РИО”",
+        "TimeToRout": "ЧАС У ДОРОЗІ:",
+        "RoutDistance": "ВІДСТАНЬ:",
+        "Complexity": "СКЛАДНІСТЬ:",
+        "RoutText": "МАРШРУТ:",
+        "RouteScheme": "Схема маршруту",
+        "RouteText": "Смотрова - Джерело - Камінь Джигіта - Адербіївка - Гора Нексис -Грозові Ворота - Шашлики - Цигельський водоспад(чаша кохання) - Форсаж",
+        "TimeText": "4 години",
+        "DistanceText": "40 - 50 км",
+        "HeaderTextExc": "Що подивимося на маршруті:",
+        "FirstPartText": "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Augue lacus lacus facilisis orci nibh diam.Nisi, a et sit commodo.Pretium sed consectetur risus elementum, habitasse turpis massa.",
+        "SecendPartText": "In sit mi aenean volutpat. Quis lectus nunc nam euismod ultrices aenean. Vitae venenatis ut praesent neque sed quam mauris elementum. Risus blandit leo ut nullam egestas et porta. Ut lacus arcu sagittis sit. Gravida et faucibus id tortor augue interdum quam sit diam. Laoreet nulla at et arcu pellentesque massa placerat elit. Adipiscing in nullam ipsum est. In sit mi aenean volutpat. Quis lectus nunc nam euismod ultrices aenean. Vitae venenatis ut praesent neque sed quam mauris elementum. Risus blandit leo ut nullam egestas et porta. Ut lacus arcu sagittis sit.",
+        "PopUpSecendHead": "Вартість екскурсії за 1 квадроцикл:",
+        "OnlineForm": "Бронювання онлайн",
+        "DateTextForm": "Бажана дата",
+        "HowMuchForm": "Кількість осіб",
+        "PhoneNumberForm": "Телефон або WhatsApp",
+        "BackToYouForm": "Як до вас звертатись?",
+        "ButtonFormExc": "Забронювати"
+    }
+}

@@ -1,4 +1,5 @@
-import React, { useState } from 'react';
+import React from 'react';
+import { useTranslation } from 'react-i18next';
 
 import Rubl from '../../assets/img/rubl.png';
 import Line from '../../assets/img/Line 1.png';
@@ -26,56 +27,23 @@ import './sass/Style.scss';
 import usePopUp from '../../hooks/usePopUp';
 
 function OurRoute() {
-  const [info] = useState({
-    firstPage:
-    {
-      price: 'від 4000',
-      time: '1,5 - 2 години',
-      distance: '20 - 25 км',
-      complexity: '5***',
-      route: `Смотрова - Джерело - Камінь Джигіта - Адербіївка - Гора Нексис -
-       -Грозові Ворота - Шашлики - Цигельський водоспад (чаша кохання) - Форсаж`
-    },
-    secendPage:
-    {
-      price: 'від 7000 ',
-      time: '6 - 8 години',
-      distance: '60 - 70 км',
-      complexity: '5***',
-      route: `Оглядова - Джерело - Камінь Джигіта - Адербіївка - Гора Нексис - 
-      -Грозові Ворота - Шашлики - Цигельський водоспад (чаша кохання) - Форсаж`
-    },
-    thirdPage:
-    {
-      price: 'від 16000 ',
-      time: '4 години',
-      distance: '40 - 50 км',
-      complexity: '5***',
-      route: 'Форсаж - Синя бухта – Занедбана Тур База – Суховантаж Ріо  - Форсаж'
-    },
-  });
   const { open, close, openPopUp } = usePopUp();
-
+  const { t } = useTranslation();
   return (
     <article className="our__route">
       <div className="container-fluid">
         <div className="row">
 
-          <OurTextH2>Наші маршрути</OurTextH2>
+          <OurTextH2>{t('ourRoute.RouteTextBase')}</OurTextH2>
 
           <FirstPage
             OpenPopUp={open}
             Line={Line}
-            price={info.firstPage.price}
             Rubl={Rubl}
             TimeImg={Time}
-            time={info.firstPage.time}
             Location={Location}
-            distance={info.firstPage.distance}
             Complexity={Complexity}
-            InfoComplexity={info.firstPage.complexity}
             Route={Route}
-            info={info.firstPage.route}
             Qadro={Qadro}
             QadroSecend={QadroSecend}
             QadroThird={QadroSecend}
@@ -84,16 +52,11 @@ function OurRoute() {
           <SecendPage
             OpenPopUp={open}
             Line={Line}
-            price={info.secendPage.price}
             Rubl={Rubl}
             TimeImg={Time}
-            time={info.secendPage.time}
             Location={Location}
-            distance={info.secendPage.distance}
             Complexity={Complexity}
-            InfoComplexity={info.secendPage.complexity}
             Route={Route}
-            info={info.secendPage.route}
             SecendQadroFirst={QadroSecend}
             SecendQadroSecend={SecendQadroSecend}
             SecendQadroThird={SecendQadroThird}
@@ -102,16 +65,11 @@ function OurRoute() {
           <ThirdPage
             OpenPopUp={open}
             Line={Line}
-            price={info.thirdPage.price}
             Rubl={Rubl}
             TimeImg={Time}
-            time={info.thirdPage.time}
             Location={Location}
-            distance={info.thirdPage.distance}
             Complexity={Complexity}
-            InfoComplexity={info.thirdPage.complexity}
             Route={Route}
-            info={info.thirdPage.route}
             ThirdQadroFirst={ThirdQadroFirst}
             ThirdQadroSecend={QadroSecend}
             ThirdQadroThird={ThirdQadroThird}

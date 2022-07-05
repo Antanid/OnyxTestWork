@@ -1,13 +1,16 @@
 import React from 'react';
 import PropTypes from 'prop-types';
+import { useTranslation } from 'react-i18next';
 import './sass/Style.scss';
 
 import Close from '../../assets/img/icons8-close.svg';
 import useInput from '../../hooks/useInput';
+import Buttons from '../Button/Buttons';
 
 function PopUpHead({ ClosePopUp }) {
   const inputNumber = useInput('', 14);
   const inputName = useInput('', 40);
+  const { t } = useTranslation();
   return (
     <div
       tabIndex={0}
@@ -39,7 +42,7 @@ function PopUpHead({ ClosePopUp }) {
           </div>
 
           <div className="popup_text">
-            Залишити заявку
+            {t('popUpHead.HeaderText')}
           </div>
           <div className="form__all">
             <label htmlFor="first">
@@ -51,7 +54,7 @@ function PopUpHead({ ClosePopUp }) {
                 name="name"
               />
               <div className="label_text">
-                Як до вас звертатись?
+                {t('popUpHead.LabelText')}
               </div>
             </label>
 
@@ -64,14 +67,14 @@ function PopUpHead({ ClosePopUp }) {
                 name="tel"
               />
               <div className="label_text">
-                Телефон або WhatsApp
+                {t('popUpHead.PhoneNumber')}
               </div>
             </label>
 
             <div className="form_button">
-              <button type="submit">
-                Надіслати
-              </button>
+              <Buttons>
+                {t('popUpHead.SentText')}
+              </Buttons>
             </div>
           </div>
         </form>

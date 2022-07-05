@@ -1,0 +1,166 @@
+{
+    "head": {
+        "menu": {
+            "Table": "Table",
+            "Gallery": "Gallery",
+            "Question": "Question and answer",
+            "Contacts": "Contacts",
+            "Reserve": "Reserve",
+            "Call": "Call me back"
+        },
+        "MainText": {
+            "TextH1": "Excursions on ATVs in the Carpathians",
+            "TextH2": "come for new sensations and emotions!",
+            "ButtonText": "Choose a route"
+        }
+    },
+    "adventures": {
+        "excursionBikeTitle": "Interesting excursions",
+        "excursionBikeDescroption": "Routes from forest paths to off-road!",
+        "excursionTreeTitle": "Interesting excursions",
+        "excursionTreeDescroption": "Routes from forest paths to off-road!",
+        "excursionHelmetTitle": "Interesting excursions",
+        "excursionHelmetDescroption": "Routes from forest paths to off-road!",
+        "excursionBikeTitleLast": "Interesting excursions",
+        "excursionBikeDescroptionLast": "Routes from forest paths to off-road!"
+    },
+    "ourRoute": {
+        "FirstButton": "Read more",
+        "SecendButton": "Reservation",
+        "RouteTextBase": "Our routes",
+        "FirstPageTextBase": "BASE",
+        "SecendPageTextBase": "EXPANDED",
+        "ThirdFirstPageTextBase": "EXPERIENCED",
+        "PageTextTime": "TIME ON THE ROAD:",
+        "PageTextDistance": "DISTANCE:",
+        "PageTextComplexity": "COMPLEXITY:",
+        "PageTextRoute": "ROUTE",
+        "FirstPagePrice": "from 4000",
+        "FirstPageTime": "1,5 - 2 hours",
+        "FirstPageDistance": "20 - 25 km",
+        "FirstPageRoute": "Smotrova - Source - Dzhigit Stone - Aderbiivka - Mount Nexis - -Stormy Gate - Kebabs - Tsigelsky Waterfall (bowl of love) - Fast and Furious",
+        "secendPagePrice": "from 7000",
+        "secendPageTime": "6 - 8 hours",
+        "secendPageDistance": "60 - 70 km",
+        "secendPageRoute": "Olyadova - Source - Dzhigit Stone - Aderbiivka - Mount Nexis - -Stormy Gate - Kebabs - Tsigelsky Waterfall (bowl of love) - Fast and Furious",
+        "thirdPagePrice": "from 16000 ",
+        "thirdPageTime": "4 hours",
+        "thirdPageDistance": "40 - 50 km",
+        "thirdPageRoute": "Fast and Furious - Blue Bay - Abandoned Tour Base - Dry Cargo Rio - Fast and Furious"
+    },
+    "test": {
+        "ChangeRoute": "Is it difficult to choose a route?",
+        "GoTest": "Take the test and we will help you choose the best one for you excursion",
+        "TestButton": "Start the test"
+    },
+    "photo": {
+        "PhotoText": "Photo"
+    },
+    "team": {
+        "OurTeam": "Our team",
+        "Julia": "Julia",
+        "JuliaProffesion": "head",
+        "Maxim": "Maxim",
+        "MaxProffesion": "chief instructor",
+        "Christina": "Christina",
+        "ChristinaProffesion": "administrator",
+        "Yuriy": "Yuriy",
+        "YuriyProffesion": "Chief mechanic"
+    },
+    "service": {
+        "ConditionsText": "Terms of service",
+        "FirstText": "When renting or renting strictly follow the safety rules and all the instructor's requirements!",
+        "SecendText": "Manage to the best of your ability and opportunities. Do not overestimate yourself! It is dangerous!",
+        "ThirdText": "Before each ride, an experienced instructor will teach You will be guided by the basics of management and will accompany you throughout the entire route.",
+        "FourthText": "When renting or renting, strictly follow safety rules and all the requirements of the instructor!",
+        "FirstTextAfter": "To management",
+        "FirstTextSpan": " NOT ALLOWED",
+        "FirstTextBefore": "persons younger than 16 years and persons under the influence of alcohol!",
+        "SecondTextAfter": "Drink alcoholic beverages during rental",
+        "SecondTextSpan": " IT IS FORBIDDEN",
+        "SecendTextBefore": "(After?) At your discretion"
+    },
+    "specialOffer": {
+        "FirstCartMainText": "Special offers",
+        "CartDiscount": "10% discount",
+        "FirstCartBirthday": "in honor of the birthday - we give the birthday boy a 10% discount",
+        "FirstCartSpan": "for a Birthday",
+        "SecondCartText": "to Ex-Karpati clients for the services of the Yagoda Malina Country Club",
+        "ButtonSpecial": "Read more"
+    },
+    "gift": {
+        "GiftCertificate": "Gift certificate",
+        "OriginalGift": "Do you want to make an original gift?",
+        "TextEmotion": "Give unforgettable emotions - the best gift!",
+        "GiftText": "Do you want to surprise your loved ones with an original gift Gift certificate for an excursion on quad bikes will be not just an interesting gift, and a real opportunity to bring your friends and loved ones closer to a new hobby.",
+        "GiftDiscount": "Hurry up to pick up the promotion!",
+        "GiftTime": "All that remains is:",
+        "ButtonGift": "We will select a certificate for you"
+    },
+    "questions": {
+        "FirstTask": "An actual question?",
+        "FirstAnswer": "Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s, when anunknown printer took a galley of type and scrambled it to make a type specimen book.",
+        "SecondTask": "An actual question?",
+        "SecondAnswer": "Lorem Ipsum is simply dummy text of the printing and typesetting industry.Lorem Ipsum has been the industry's standard dummy text ever since the 1500s, when anunknown printer took a galley of type and scrambled it to make a type specimen book.",
+        "ThirdTask": "An actual question?",
+        "ThirdAnswer": "Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s, when anunknown printer took a galley of type and scrambled it to make a type specimen book.",
+        "FourthTask": "An actual question?",
+        "FourthAnswer": "Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s, when anunknown printer took a galley of type and scrambled it to make a type specimen book.",
+        "QuestionsHeader": "Questions and answers",
+        "QuestionsContactText": "Do not hesitate to contact us, If you have any questions, suggestions or ideas for cooperation",
+        "HaveQuestions": "Have a question?",
+        "AdditionalQuest": "Additional Services",
+        "ButtonQuest": "Ask a question"
+    },
+    "additional": {
+        "EvacuationText": "Evacuation, repair of ATVs",
+        "PhotoText": "Photo, video recording",
+        "TransportationText": "Transportation of equipment",
+        "GasTest": "Gas station, waiting room, car wash",
+        "CorporateText": "Corporates, team building",
+        "CateringText": "Away catering",
+        "RouteText": "Individual routes",
+        "ServicesText": "Services worthy of routes"
+    },
+    "contacts": {
+        "WorkTime": "Mon - Fri: 9: 00 - 18: 00 Sat: 9: 00 - 17: 00 Sun - closed",
+        "CityName": "The city of Carpathians",
+        "ContactText": "Contacts",
+        "SocialContact": "Write to us:"
+    },
+    "preEnd": {
+        "RoutePreEnd": "ROUTES",
+        "Gallery": "GALLERY",
+        "QuestionPreEnd": "QUESTION-ANSWER",
+        "ContactsPreEnd": "CONTACTS",
+        "ConditionsPreEnd": "CONDITIONS",
+        "SpecOfferPreEnd": "SPECIAL OFFERS"
+    },
+    "popUpHead": {
+        "HeaderText": "Leave a request",
+        "LabelText": "How to contact you?",
+        "PhoneNumber": "Phone or WhatsApp",
+        "SentText": "Send"
+    },
+    "popUpExc": {
+        "ExcursionHead": "Excursion 'RIO'",
+        "TimeToRout": "TIME ON THE ROAD:",
+        "RoutDistance": "DISTANCE:",
+        "Complexity": "COMPLEXITY:",
+        "RoutText": "ROUTE:",
+        "RouteScheme": "Route scheme",
+        "RouteText": "Lookout - Source - Dzhigit's stone - Aderbiivka - Mount Nexis - Thunder Gate - Shashlyki - Tsigelsky waterfall (bowl of love) - Fast and Furious",
+        "TimeText": "4 hours",
+        "DistanceText": "40 - 50 km",
+        "HeaderTextExc": "What will we see on the route:",
+        "FirstPartText": "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Augue lacus lacus facilisis orci nibh diam.Nisi, a et sit commodo.Pretium sed consectetur risus elementum, habitasse turpis massa.",
+        "SecendPartText": "In sit mi aenean volutpat. Quis lectus nunc nam euismod ultrices aenean. Vitae venenatis ut praesent neque sed quam mauris elementum.Risus blandit leo ut nullam egestas et porta. Ut lacus arcu sagittis sit. Gravida et faucibus id tortor augue interdum quam sit diam. Laoreet nulla at et arcu pellentesque massa placerat elit. Adipiscing in nullam ipsum est. In sit mi aenean volutpat. Quis lectus nunc nam euismod ultrices aenean. Vitae venenatis ut praesent neque sed quam mauris elementum. Risus blandit leo ut nullam egestas et porta. Ut lacus arcu sagittis sit.",
+        "PopUpSecendHead": "Excursion price for 1 ATV:",
+        "OnlineForm": "Online booking",
+        "DateTextForm": "Preferred date",
+        "HowMuchForm": "Number of people",
+        "PhoneNumberForm": "Phone or WhatsApp",
+        "BackToYouForm": "How to contact you?",
+        "ButtonFormExc": "Reserve"
+    }
+}

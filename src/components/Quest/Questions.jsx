@@ -1,4 +1,5 @@
 import React, { useState } from 'react';
+import { useTranslation } from 'react-i18next';
 
 import Quest from '../../assets/img/QuestDialog.png';
 import QuestAccordion from './QuestAccordion';
@@ -9,56 +10,43 @@ import QuestHeader from './QuestHeader';
 import './sass/Style.scss';
 
 function Questions() {
-  const [quest] = useState({
-    questionsText: [
+  const [questions] = useState({
+    questText: [
       {
         id: 1,
-        actualTask: 'Актуальне питання? ',
-        answer:
-          `Lorem Ipsum is simply dummy text of the printing and typesetting industry. 
-           Lorem Ipsum has been the industry's standard dummy text ever since the 1500s,
-           when anunknown printer took a galley of type and scrambled it to make a type specimen book.`
+        actualTask: 'questions.FirstTask',
+        answer: 'questions.FirstAnswer'
       },
       {
         id: 2,
-        actualTask: 'Актуальне питання?',
-        answer:
-          `Lorem Ipsum is simply dummy text of the printing and typesetting industry. 
-         Lorem Ipsum has been the industry's standard dummy text ever since the 1500s, 
-         when anunknown printer took a galley of type and scrambled it to make a type specimen book.`
+        actualTask: 'questions.SecondTask',
+        answer: 'questions.SecondAnswer',
       },
       {
         id: 3,
-        actualTask: 'Актуальне питання?',
-        answer:
-          `Lorem Ipsum is simply dummy text of the printing and typesetting industry.
-          Lorem Ipsum has been the industry's standard dummy text ever since the 1500s, 
-          when anunknown printer took a galley of type and scrambled it to make a type specimen book.`
+        actualTask: 'questions.ThirdTask',
+        answer: 'questions.ThirdAnswer',
       },
       {
         id: 4,
-        actualTask: 'Актуальне питання?',
-        answer:
-          `Lorem Ipsum is simply dummy text of the printing and typesetting industry. 
-        Lorem Ipsum has been the industry's standard dummy text ever since the 1500s, 
-        when anunknown printer took a galley of type and scrambled it to make a type specimen book.`
+        actualTask: 'questions.FourthTask',
+        answer: 'questions.FourthAnswer',
       },
     ]
   });
-
+  const { t } = useTranslation();
   return (
     <section className="section__questions">
       <div className="container">
         <div className="row">
-          <QuestHeader>Питання-відповіді</QuestHeader>
-          <QuestAccordion items={quest.questionsText} />
+          <QuestHeader>{t('questions.QuestionsHeader')}</QuestHeader>
+          <QuestAccordion QuestionText={questions.questText} />
           <QuestContact
-            contactText="Не соромтеся звертатися до нас, 
-            Якщо у вас є будь-які питання, пропозиції або ідеї для співпраці"
-            haveQuestions="Є питання?"
+            contactText={t('questions.QuestionsContactText')}
+            haveQuestions={t('questions.HaveQuestions')}
             QuestImg={Quest}
           />
-          <QuestAdditional>Додаткові послуги</QuestAdditional>
+          <QuestAdditional>{t('questions.AdditionalQuest')}</QuestAdditional>
         </div>
       </div>
     </section>

@@ -14,20 +14,22 @@ function ContactView({
   workTime,
   number,
   email,
-  cityName 
+  cityName,
+  ContactText,
+  SocialContact
 }) {
   return (
     <div className="col-lg-6">
 
       <div id="contacts__h3" className="contacts__h3">
-        <h3>Контакти</h3>
+        <h3>{ContactText}</h3>
       </div>
 
       <div className="contacts__top">
         <div className="contacts__city">
-          <p className="contacts__text"> 
+          <p className="contacts__text">
             {' '}
-            <img src={CityImg} alt="City" /> 
+            <img src={CityImg} alt="City" />
             {' '}
             {cityName}
           </p>
@@ -60,18 +62,18 @@ function ContactView({
       <div className="contact__social">
         <div className="contact__social__h4">
           <h4>
-            Написати нам:
+            {SocialContact}
           </h4>
         </div>
         <div className="contact__social_group">
-          <button 
+          <button
             type="button"
             className="contacts__whatsup"
-          > 
+          >
             {' '}
             <img src={WhatsUp} alt="WhatsUp" />
           </button>
-          <button 
+          <button
             type="button"
             className="contacts__inst"
           >
@@ -92,10 +94,12 @@ ContactView.propTypes = {
   EllipseImg: PropTypes.string.isRequired,
   EmailImg: PropTypes.string.isRequired,
   ConactImg: PropTypes.string.isRequired,
-  WhatsUp: PropTypes.string.isRequired, 
+  WhatsUp: PropTypes.string.isRequired,
   Inst: PropTypes.string.isRequired,
   workTime: PropTypes.string.isRequired,
   number: PropTypes.string.isRequired,
   email: PropTypes.string.isRequired,
   cityName: PropTypes.string.isRequired,
+  ContactText: PropTypes.string.isRequired,
+  SocialContact: PropTypes.string.isRequired,
 };

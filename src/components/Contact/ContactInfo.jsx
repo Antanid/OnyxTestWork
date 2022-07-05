@@ -14,13 +14,17 @@ function ContactInfo({
   workTime,
   number,
   email,
-  cityName 
+  cityName,
+  ContactText,
+  SocialContact
 }) {
   return (
     <section className="section__contacts">
       <div className="container-fluid">
         <div className="row">
           <ContactView
+            ContactText={ContactText}
+            SocialContact={SocialContact}
             CityImg={CityImg}
             PhoneImg={PhoneImg}
             EllipseImg={EllipseImg}
@@ -54,4 +58,6 @@ ContactInfo.propTypes = {
   number: PropTypes.string.isRequired,
   email: PropTypes.string.isRequired,
   cityName: PropTypes.string.isRequired,
+  ContactText: PropTypes.string.isRequired,
+  SocialContact: PropTypes.string.isRequired,
 };

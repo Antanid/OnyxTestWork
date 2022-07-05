@@ -1,10 +1,12 @@
 import React from 'react';
+import { useTranslation } from 'react-i18next';
 import Buttons from '../Button/Buttons';
 import TestText from './TestText';
 
 import './sass/Style.scss';
 
 function Test() {
+  const { t } = useTranslation();
   return (
     <section className="section_test">
       <div className="container-fluid">
@@ -12,12 +14,13 @@ function Test() {
           <div className="col-lg-12">
             <div className="test">
               <TestText
-                textH3="Важко вибрати маршрут?"
-                textH5="Пройдіть тест і ми допоможемо вам підібрати оптимальну під вас
-                                екскурсію"
+                textH3={t('test.ChangeRoute')}
+                textH5={t('test.GoTest')}
               />
               <div className="test__button">
-                <Buttons className="test__butt">Почати тест</Buttons>
+                <Buttons className="test__butt">
+                  {t('test.TestButton')}
+                </Buttons>
               </div>
             </div>
           </div>
