@@ -1,5 +1,6 @@
 import React, { useState } from 'react';
-
+import { useDispatch, useSelector } from 'react-redux/es/exports';
+import { openPopUp, closePopUp } from '../../redux/popUpHeader/action';
 import bgVideo from '../../assets/video/video-1.mp4';
 import phone from '../../assets/img/phone.png';
 import logo from '../../assets/img/logo.png';
@@ -10,12 +11,26 @@ import HeadMenu from './HeadMenu';
 import HeadText from './HeadText';
 
 import './sass/Style.scss';
-import usePopUp from '../../hooks/usePopUp';
 
 function Head() {
   const [burger, setBurger] = useState(false);
-  const { open, close, openPopUp } = usePopUp();
 
+  const dispatch = useDispatch();
+
+  const open = (e) => {
+    e.preventDefault();
+    dispatch(openPopUp());
+  };
+
+  const close = (e) => {
+    e.preventDefault();
+    dispatch(closePopUp());
+  };
+
+  const popUp = useSelector((state) => {
+    const { popUpRuducer } = state;
+    return popUpRuducer.bull;
+  });
   return (
     <header id="header" className="header">
       <video className="videoBG" autoPlay loop muted>
@@ -40,7 +55,7 @@ function Head() {
 
         </div>
       </div>
-      {openPopUp
+      {popUp
         && <PopUpHead ClosePopUp={close} />}
     </header>
   );

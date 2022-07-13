@@ -9,28 +9,28 @@ import SpecialCartSecend from './SpecialCartSecend';
 
 import './sass/Style.scss';
 
-function SpecialOffer() {
-  const { t } = useTranslation();
+function specialOffer() {
+  const { t } = useTranslation('', { keyPrefix: 'specialOffer' });
   return (
     <section className="special__offer">
       <div className="container">
         <div className="row">
 
           <SpeacialText>
-            {t('specialOffer.FirstCartMainText')}
+            {t('FirstCartMainText')}
           </SpeacialText>
 
           <SpecialCartFirst
             img={Present}
-            textH3={t('specialOffer.CartDiscount')}
-            textSpan={t('specialOffer.FirstCartSpan')}
-            textP={t('specialOffer.FirstCartBirthday')}
+            textH3={t('CartDiscount')}
+            textSpan={t('FirstCartSpan')}
+            textP={t('FirstCartBirthday')}
           />
 
           <SpecialCartSecend
             img={House}
-            textH3={t('specialOffer.CartDiscount')}
-            textP={t('specialOffer.SecondCartText')}
+            textH3={t('CartDiscount')}
+            textP={t('SecondCartText')}
           />
 
         </div>
@@ -39,4 +39,4 @@ function SpecialOffer() {
   );
 }
 
-export default SpecialOffer;
+export default specialOffer;

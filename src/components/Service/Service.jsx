@@ -38,7 +38,7 @@ function Service() {
     ],
     serviceTextWithSpan: [
       {
-        textAfter: 'service.FirstTextAfter',
+        textAfter: 'service.service.FirstTextAfter',
         span: 'service.FirstTextSpan',
         textBefore: 'service.FirstTextBefore',
         img: servicePhoto
@@ -51,12 +51,12 @@ function Service() {
       },
     ]
   });
-  const { t } = useTranslation();
+  const { t } = useTranslation('', { keyPrefix: 'service' });
   return (
     <section className="services">
       <div className="container">
         <div className="row">
-          <ServiceHead>{t('service.ConditionsText')}</ServiceHead>
+          <ServiceHead>{t('ConditionsText')}</ServiceHead>
           <ServiceSpanText textSpan={InfoService.serviceTextWithSpan} />
           <ServiceText text={InfoService.serviceTextWithoutSpan} />
         </div>

@@ -14,22 +14,22 @@ import ContactInfo from './ContactInfo';
 import './sass/Style.scss';
 
 function Contacts() {
-  const { t } = useTranslation();
+  const { t } = useTranslation('', { keyPrefix: 'contacts' });
   return (
     <ContactInfo
-      CityImg={City}
-      PhoneImg={Phone}
-      EllipseImg={Ellipse}
-      EmailImg={Email}
-      ConactImg={Conact}
-      WhatsUp={WhatsUp}
-      Inst={Inst}
-      workTime={t('contacts.WorkTime')}
+      cityImg={City}
+      phoneImg={Phone}
+      ellipseImg={Ellipse}
+      emailImg={Email}
+      conactImg={Conact}
+      whatsUp={WhatsUp}
+      inst={Inst}
+      workTime={t('WorkTime')}
       number="+380 662 98-00-62"
       email="experience@groupgrand.ua"
-      cityName={t('contacts.CityName')}
-      ContactText={t('contacts.ContactText')}
-      SocialContact={t('contacts.SocialContact')}
+      cityName={t('CityName')}
+      contactText={t('ContactText')}
+      socialContact={t('SocialContact')}
     />
   );
 }

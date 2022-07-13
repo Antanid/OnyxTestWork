@@ -1,5 +1,7 @@
 import React from 'react';
+import { useDispatch, useSelector } from 'react-redux';
 import { useTranslation } from 'react-i18next';
+import { openPopUpExc, closePopUpExc } from '../../redux/popUpExc/action';
 
 import Rubl from '../../assets/img/rubl.png';
 import Line from '../../assets/img/Line 1.png';
@@ -24,17 +26,32 @@ import ThirdPage from '../ThirdPage/ThirdPage';
 import OurTextH2 from './OurTextH2';
 
 import './sass/Style.scss';
-import usePopUp from '../../hooks/usePopUp';
 
 function OurRoute() {
-  const { open, close, openPopUp } = usePopUp();
-  const { t } = useTranslation();
+  const { t } = useTranslation('', { keyPrefix: 'ourRoute' });
+  const dispatch = useDispatch();
+
+  const popUp = useSelector((state) => {
+    const { popUpExcReducer } = state;
+    return popUpExcReducer.bullExc;
+  });
+
+  const open = (e) => {
+    e.preventDefault();
+    dispatch(openPopUpExc());
+  };
+
+  const close = (e) => {
+    e.preventDefault();
+    dispatch(closePopUpExc());
+  };
+
   return (
     <article className="our__route">
       <div className="container-fluid">
         <div className="row">
 
-          <OurTextH2>{t('ourRoute.RouteTextBase')}</OurTextH2>
+          <OurTextH2>{t('RouteTextBase')}</OurTextH2>
 
           <FirstPage
             OpenPopUp={open}
@@ -78,7 +95,7 @@ function OurRoute() {
         </div>
       </div>
 
-      {openPopUp
+      {popUp
         && <PopUpExc ClosePopUp={close} />}
     </article>
   );

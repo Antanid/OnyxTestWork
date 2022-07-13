@@ -29,8 +29,8 @@ import PopUpForm from './PopUpForm';
 import './sass/Style.scss';
 
 function PopUpExc({ ClosePopUp }) {
-  const [bikes] = useState({
-    Allbikes: [
+  const [bikes] = useState(
+    [
       {
         bike: 'UFORCE 1000 EPS (U10 EPS)', price: 4000, imgMoney: Ruble, bikeImg: BikeFirst
       },
@@ -50,8 +50,8 @@ function PopUpExc({ ClosePopUp }) {
         bike: 'UFORCE 1000 EPS', price: 4000, imgMoney: Ruble, bikeImg: BikeSix
       },
     ]
-  });
-  const { t } = useTranslation();
+  );
+  const { t } = useTranslation('', { keyPrefix: 'popUpExc' });
   return (
     <div className="popup__bg__exc">
       <div
@@ -82,35 +82,35 @@ function PopUpExc({ ClosePopUp }) {
               TimeImg={Time}
               RouteImg={Route}
               ComplexitImg={Complexit}
-              RouteText={t('popUpExc.RouteText')}
-              TimeText={t('popUpExc.TimeText')}
-              DistanceText={t('popUpExc.DistanceText')}
+              RouteText={t('RouteText')}
+              TimeText={t('TimeText')}
+              DistanceText={t('DistanceText')}
               complexityText="5***"
-              ExcursionHead={t('popUpExc.ExcursionHead')}
-              TimeToRout={t('popUpExc.TimeToRout')}
-              RoutDistance={t('popUpExc.RoutDistance')}
-              Complexity={t('popUpExc.Complexity')}
-              RoutText={t('popUpExc.RoutText')}
-              RouteScheme={t('popUpExc.RouteScheme')}
+              ExcursionHead={t('ExcursionHead')}
+              TimeToRout={t('TimeToRout')}
+              RoutDistance={t('RoutDistance')}
+              Complexity={t('Complexity')}
+              RoutText={t('RoutText')}
+              RouteScheme={t('RouteScheme')}
             />
             <PopUpImg
               QuadroFirst={QuadroFirst}
               QuadroSecend={QuadroSecend}
             />
             <PopUpInterested
-              HeaderText={t('popUpExc.HeaderTextExc')}
-              FirstPartText={t('popUpExc.FirstPartText')}
-              SecendPartText={t('popUpExc.SecendPartText')}
+              HeaderText={t('HeaderTextExc')}
+              FirstPartText={t('FirstPartText')}
+              SecendPartText={t('SecendPartText')}
             />
-            <PopUpSecendHead>{t('popUpExc.PopUpSecendHead')}</PopUpSecendHead>
-            <PopUpComponent bikes={bikes.Allbikes} />
+            <PopUpSecendHead>{t('PopUpSecendHead')}</PopUpSecendHead>
+            <PopUpComponent bikes={bikes} />
             <PopUpForm
-              online={t('popUpExc.OnlineForm')}
-              dateText={t('popUpExc.DateTextForm')}
-              howMuch={t('popUpExc.HowMuchForm')}
-              phoneNumber={t('popUpExc.PhoneNumberForm')}
-              backToYou={t('popUpExc.BackToYouForm')}
-              book={t('popUpExc.ButtonFormExc')}
+              online={t('OnlineForm')}
+              dateText={t('DateTextForm')}
+              howMuch={t('HowMuchForm')}
+              phoneNumber={t('PhoneNumberForm')}
+              backToYou={t('BackToYouForm')}
+              book={t('ButtonFormExc')}
             />
           </div>
         </div>

@@ -10,18 +10,18 @@ import OurTeam from './OurTeam';
 import './sass/Style.scss';
 
 function Team() {
-  const [InfoTeam] = useState({
-    team: [
+  const [InfoTeam] = useState(
+    [
       { name: 'team.Julia', profession: 'team.JuliaProffesion', img: Julia },
       { name: 'team.Maxim', profession: 'team.MaxProffesion', img: Maksim },
       { name: 'team.Christina', profession: 'team.ChristinaProffesion', img: Kristina },
       { name: 'team.Yuriy', profession: 'team.YuriyProffesion', img: Juriy },
     ]
-  });
+  );
   return (
     <section className="section__team">
       <div className="container">
-        <OurTeam team={InfoTeam.team} />
+        <OurTeam team={InfoTeam} />
       </div>
     </section>
   );

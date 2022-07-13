@@ -10,8 +10,8 @@ import QuestHeader from './QuestHeader';
 import './sass/Style.scss';
 
 function Questions() {
-  const [questions] = useState({
-    questText: [
+  const [questions] = useState(
+    [
       {
         id: 1,
         actualTask: 'questions.FirstTask',
@@ -33,20 +33,20 @@ function Questions() {
         answer: 'questions.FourthAnswer',
       },
     ]
-  });
-  const { t } = useTranslation();
+  );
+  const { t } = useTranslation('', { keyPrefix: 'questions' });
   return (
     <section className="section__questions">
       <div className="container">
         <div className="row">
-          <QuestHeader>{t('questions.QuestionsHeader')}</QuestHeader>
-          <QuestAccordion QuestionText={questions.questText} />
+          <QuestHeader>{t('QuestionsHeader')}</QuestHeader>
+          <QuestAccordion QuestionText={questions} />
           <QuestContact
-            contactText={t('questions.QuestionsContactText')}
-            haveQuestions={t('questions.HaveQuestions')}
+            contactText={t('QuestionsContactText')}
+            haveQuestions={t('HaveQuestions')}
             QuestImg={Quest}
           />
-          <QuestAdditional>{t('questions.AdditionalQuest')}</QuestAdditional>
+          <QuestAdditional>{t('AdditionalQuest')}</QuestAdditional>
         </div>
       </div>
     </section>

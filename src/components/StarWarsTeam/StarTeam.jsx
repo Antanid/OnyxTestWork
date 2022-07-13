@@ -1,11 +1,11 @@
+/* eslint-disable react/button-has-type */
 import React from 'react';
 import PropTypes from 'prop-types';
 import WorldStar from './World';
 import PeopleName from './PeopleName';
-import ButtonNextPrev from './ButtonNextPrev';
 
 function StarTeam({
-  secenPage, prevPage, nextTeam, team 
+  nextTeam, team
 }) {
   return (
     <div className="row">
@@ -30,11 +30,6 @@ function StarTeam({
           </div>
         ))
       }
-      <ButtonNextPrev
-        prevPage={prevPage}
-        secenPage={secenPage}
-        nextTeam={nextTeam}
-      />
     </div>
   );
 }
@@ -47,7 +42,5 @@ StarTeam.propTypes = {
     homeworld: PropTypes.string.isRequired,
     gender: PropTypes.string.isRequired,
   })).isRequired,
-  secenPage: PropTypes.func.isRequired,
-  prevPage: PropTypes.func.isRequired,
   nextTeam: PropTypes.number.isRequired,
 };

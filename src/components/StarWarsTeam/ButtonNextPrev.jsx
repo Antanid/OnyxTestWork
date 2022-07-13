@@ -1,9 +1,11 @@
 import React from 'react';
 import PropTypes from 'prop-types';
 
-function ButtonNextPrev({ nextTeam, secenPage, prevPage }) {
+function ButtonNextPrev({
+  nextTeam, secenPage, prevPage
+}) {
   return (
-    <div>
+    <div className="button_next">
       <p className="lenght_page">{nextTeam}</p>
       <button
         type="button"

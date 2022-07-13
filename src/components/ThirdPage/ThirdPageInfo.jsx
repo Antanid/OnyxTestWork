@@ -11,7 +11,7 @@ function ThirdPageInfo({
   Complexity,
   Route,
 }) {
-  const { t } = useTranslation();
+  const { t } = useTranslation('', { keyPrefix: 'ourRoute' });
   return (
     <div className="col-lg-5">
       <div className="route__base route__base2">
@@ -19,10 +19,10 @@ function ThirdPageInfo({
         <div className="base__h2">
           <h2>
             {' '}
-            {t('ourRoute.ThirdFirstPageTextBase')}
+            {t('ThirdFirstPageTextBase')}
             <br />
             {' '}
-            <span>{t('ourRoute.thirdPagePrice')}</span>
+            <span>{t('thirdPagePrice')}</span>
             <img className="base__money" src={Rubl} alt="money" />
           </h2>
         </div>
@@ -32,21 +32,21 @@ function ThirdPageInfo({
             {' '}
             <img className="base__ico" src={TimeImg} alt="time" />
             {' '}
-            {t('ourRoute.PageTextTime')}
+            {t('PageTextTime')}
             {' '}
-            <span>{t('ourRoute.thirdPageTime')}</span>
+            <span>{t('thirdPageTime')}</span>
           </h3>
           <h3>
             {' '}
             <img className="base__ico" src={Location} alt="location" />
             {' '}
-            {t('ourRoute.PageTextDistance')}
+            {t('PageTextDistance')}
             {' '}
-            <span>{t('ourRoute.thirdPageDistance')}</span>
+            <span>{t('thirdPageDistance')}</span>
           </h3>
           <h3>
             <img className="base__ico" src={Complexity} alt="complexity" />
-            {t('ourRoute.PageTextComplexity')}
+            {t('PageTextComplexity')}
             {' '}
             <span>5***</span>
           </h3>
@@ -54,15 +54,15 @@ function ThirdPageInfo({
 
         <div className="base__routes__h4">
           <h4>
-            {t('ourRoute.PageTextRoute')}
+            {t('PageTextRoute')}
             <img className="base__icon__route" src={Route} alt="route" />
           </h4>
-          <p>{t('ourRoute.thirdPageRoute')}</p>
+          <p>{t('thirdPageRoute')}</p>
         </div>
 
         <ButtonsOur
-          firstButton={t('ourRoute.FirstButton')}
-          secendButton={t('ourRoute.SecendButton')}
+          firstButton={t('FirstButton')}
+          secendButton={t('SecendButton')}
           OpenPopUp={OpenPopUp}
         />
       </div>

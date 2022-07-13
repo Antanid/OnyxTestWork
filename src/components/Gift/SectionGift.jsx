@@ -11,25 +11,25 @@ import GiftTimerText from './GiftTimerText';
 import './sass/Style.scss';
 
 function Gift() {
-  const { t } = useTranslation();
+  const { t } = useTranslation('', { keyPrefix: 'gift' });
   return (
     <section className="section__gift">
       <div className="container">
         <div className="row">
           <GiftHead
-            giftH2={t('gift.GiftCertificate')}
-            texth5={t('gift.OriginalGift')}
-            texth5Part2={t('gift.TextEmotion')}
+            giftH2={t('GiftCertificate')}
+            texth5={t('OriginalGift')}
+            texth5Part2={t('TextEmotion')}
           />
 
           <GiftText
-            text={t('gift.GiftText')}
+            text={t(' GiftText')}
           />
 
           <GiftImg gift={gift} />
           <GiftTimerText
-            texth2={t('gift.GiftDiscount')}
-            textH3={t('gift.GiftTime')}
+            texth2={t('GiftDiscount')}
+            textH3={t('GiftTime')}
           />
           <CountdownTimer countdownTimestampMs={1703339600000} />
 

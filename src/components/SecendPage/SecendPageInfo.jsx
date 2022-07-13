@@ -11,7 +11,7 @@ function SecendPageInfo({
   Complexity,
   Route,
 }) {
-  const { t } = useTranslation();
+  const { t } = useTranslation('', { keyPrefix: 'ourRoute' });
   return (
     <div className="col-lg-5">
       <div className="SecondRoute__base">
@@ -19,10 +19,10 @@ function SecendPageInfo({
         <div className="base__h2">
           <h2>
             {' '}
-            {t('ourRoute.SecendPageTextBase')}
+            {t('SecendPageTextBase')}
             <br />
             {' '}
-            <span>{t('ourRoute.secendPagePrice')}</span>
+            <span>{t('secendPagePrice')}</span>
             <img className="base__money" src={Rubl} alt="money" />
           </h2>
         </div>
@@ -32,22 +32,22 @@ function SecendPageInfo({
             {' '}
             <img className="base__ico" src={TimeImg} alt="time" />
             {' '}
-            {t('ourRoute.PageTextTime')}
+            {t('PageTextTime')}
             :
             {' '}
-            <span>{t('ourRoute.secendPageTime')}</span>
+            <span>{t('secendPageTime')}</span>
           </h3>
           <h3>
             {' '}
             <img className="base__ico" src={Location} alt="location" />
             {' '}
-            {t('ourRoute.PageTextDistance')}
+            {t('PageTextDistance')}
             {' '}
-            <span>{t('ourRoute.secendPageDistance')}</span>
+            <span>{t('secendPageDistance')}</span>
           </h3>
           <h3>
             <img className="base__ico" src={Complexity} alt="complexity" />
-            {t('ourRoute.PageTextComplexity')}
+            {t('PageTextComplexity')}
             {' '}
             <span>5***</span>
           </h3>
@@ -55,17 +55,17 @@ function SecendPageInfo({
 
         <div className="base__routes__h4">
           <h4>
-            {t('ourRoute.PageTextRoute')}
+            {t('PageTextRoute')}
             <img className="base__icon__route" src={Route} alt="route" />
           </h4>
           <p>
-            {t('ourRoute.secendPageRoute')}
+            {t('secendPageRoute')}
           </p>
         </div>
 
         <ButtonsOur
-          firstButton={t('ourRoute.FirstButton')}
-          secendButton={t('ourRoute.SecendButton')}
+          firstButton={t('FirstButton')}
+          secendButton={t('SecendButton')}
           OpenPopUp={OpenPopUp}
         />
       </div>

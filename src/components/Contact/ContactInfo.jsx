@@ -4,34 +4,34 @@ import ContactView from './ContactView';
 import ContactMap from './ContactMap';
 
 function ContactInfo({
-  CityImg,
-  PhoneImg,
-  EllipseImg,
-  EmailImg,
-  ConactImg,
-  WhatsUp,
-  Inst,
+  cityImg,
+  phoneImg,
+  ellipseImg,
+  emailImg,
+  conactImg,
+  whatsUp,
+  inst,
   workTime,
   number,
   email,
   cityName,
-  ContactText,
-  SocialContact
+  contactText,
+  socialContact
 }) {
   return (
     <section className="section__contacts">
       <div className="container-fluid">
         <div className="row">
           <ContactView
-            ContactText={ContactText}
-            SocialContact={SocialContact}
-            CityImg={CityImg}
-            PhoneImg={PhoneImg}
-            EllipseImg={EllipseImg}
-            EmailImg={EmailImg}
-            ConactImg={ConactImg}
-            WhatsUp={WhatsUp}
-            Inst={Inst}
+            contactText={contactText}
+            socialContact={socialContact}
+            cityImg={cityImg}
+            phoneImg={phoneImg}
+            ellipseImg={ellipseImg}
+            emailImg={emailImg}
+            conactImg={conactImg}
+            whatsUp={whatsUp}
+            inst={inst}
             workTime={workTime}
             number={number}
             email={email}
@@ -47,17 +47,17 @@ function ContactInfo({
 export default ContactInfo;
 
 ContactInfo.propTypes = {
-  CityImg: PropTypes.string.isRequired,
-  PhoneImg: PropTypes.string.isRequired,
-  EllipseImg: PropTypes.string.isRequired,
-  EmailImg: PropTypes.string.isRequired,
-  ConactImg: PropTypes.string.isRequired,
-  WhatsUp: PropTypes.string.isRequired,
-  Inst: PropTypes.string.isRequired,
+  cityImg: PropTypes.string.isRequired,
+  phoneImg: PropTypes.string.isRequired,
+  ellipseImg: PropTypes.string.isRequired,
+  emailImg: PropTypes.string.isRequired,
+  conactImg: PropTypes.string.isRequired,
+  whatsUp: PropTypes.string.isRequired,
+  inst: PropTypes.string.isRequired,
   workTime: PropTypes.string.isRequired,
   number: PropTypes.string.isRequired,
   email: PropTypes.string.isRequired,
   cityName: PropTypes.string.isRequired,
-  ContactText: PropTypes.string.isRequired,
-  SocialContact: PropTypes.string.isRequired,
+  contactText: PropTypes.string.isRequired,
+  socialContact: PropTypes.string.isRequired,
 };

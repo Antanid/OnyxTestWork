@@ -11,20 +11,18 @@ import Services from '../../assets/img/additional8.svg';
 import AdditionalComp from './AdditionalComp';
 
 function Additional() {
-  const [serviceText] = useState({
-    services: [
-      { text: 'additional.EvacuationText', img: evacuation },
-      { text: 'additional.PhotoText', img: Photo },
-      { text: 'additional.TransportationText', img: Transp },
-      { text: 'additional.GasTest', img: CheckUp },
-      { text: 'additional.CorporateText', img: Corpotartion },
-      { text: 'additional.CateringText', img: Keitering },
-      { text: 'additional.RouteText', img: Route },
-      { text: 'additional.ServicesText', img: Services },
-    ]
-  });
+  const [serviceText] = useState([
+    { text: 'additional.EvacuationText', img: evacuation },
+    { text: 'additional.PhotoText', img: Photo },
+    { text: 'additional.TransportationText', img: Transp },
+    { text: 'additional.GasTest', img: CheckUp },
+    { text: 'additional.CorporateText', img: Corpotartion },
+    { text: 'additional.CateringText', img: Keitering },
+    { text: 'additional.RouteText', img: Route },
+    { text: 'additional.ServicesText', img: Services },
+  ]);
   return (
-    <AdditionalComp service={serviceText.services} />
+    <AdditionalComp service={serviceText} />
   );
 }
 

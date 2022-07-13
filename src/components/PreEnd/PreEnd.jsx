@@ -7,8 +7,8 @@ import PreEndView from './PreEndView';
 import './sass/Style.scss';
 
 function PreEnd() {
-  const [InfoText] = useState({
-    Li: [
+  const [InfoText] = useState(
+    [
       {
         text: 'preEnd.RoutePreEnd',
         href: '#our_routes_h2',
@@ -40,13 +40,13 @@ function PreEnd() {
         id: 6,
       }
     ]
-  });
+  );
   return (
     <section className="section__end">
       <div className="container-fluid">
         <div className="row">
           <PreEndImg Footer={Footer} />
-          <PreEndView footerLi={InfoText.Li} />
+          <PreEndView footerLi={InfoText} />
         </div>
       </div>
     </section>

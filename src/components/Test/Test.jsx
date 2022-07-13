@@ -6,7 +6,7 @@ import TestText from './TestText';
 import './sass/Style.scss';
 
 function Test() {
-  const { t } = useTranslation();
+  const { t } = useTranslation('', { keyPrefix: 'test' });
   return (
     <section className="section_test">
       <div className="container-fluid">
@@ -14,12 +14,12 @@ function Test() {
           <div className="col-lg-12">
             <div className="test">
               <TestText
-                textH3={t('test.ChangeRoute')}
-                textH5={t('test.GoTest')}
+                textH3={t('.ChangeRoute')}
+                textH5={t('GoTest')}
               />
               <div className="test__button">
                 <Buttons className="test__butt">
-                  {t('test.TestButton')}
+                  {t('TestButton')}
                 </Buttons>
               </div>
             </div>

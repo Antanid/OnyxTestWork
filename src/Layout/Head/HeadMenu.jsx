@@ -11,7 +11,7 @@ function HeadMenu({
   burger,
   setBurger
 }) {
-  const { t } = useTranslation();
+  const { t } = useTranslation('', { keyPrefix: 'head.menu' });
   return (
     <div className="col-lg-10 col-xs-12">
       <div className="nav">
@@ -25,10 +25,10 @@ function HeadMenu({
             <ul
               className="nav__ul"
             >
-              <li><Link to="/homeWork">{t('head.menu.Table')}</Link></li>
-              <li><a href="#photo__h2">{t('head.menu.Gallery')}</a></li>
-              <li><a href="#questions__head">{t('head.menu.Question')}</a></li>
-              <li><a href="#contacts__h3">{t('head.menu.Contacts')}</a></li>
+              <li><Link to="/homeWork">{t('Table')}</Link></li>
+              <li><a href="#photo__h2">{t('Gallery')}</a></li>
+              <li><a href="#questions__head">{t('Question')}</a></li>
+              <li><a href="#contacts__h3">{t('Contacts')}</a></li>
               <li>
                 <a
                   onKeyDown={OpenPopUp}
@@ -36,7 +36,7 @@ function HeadMenu({
                   href="/"
                   className="popup_open"
                 >
-                  {t('head.menu.Reserve')}
+                  {t('Reserve')}
                 </a>
               </li>
             </ul>
@@ -47,7 +47,7 @@ function HeadMenu({
                 <img src={phone} alt="phone" />
                 {number}
               </p>
-              <Buttons className="number__button">{t('head.menu.Call')}</Buttons>
+              <Buttons className="number__button">{t('Call')}</Buttons>
             </div>
           </div>
         </div>

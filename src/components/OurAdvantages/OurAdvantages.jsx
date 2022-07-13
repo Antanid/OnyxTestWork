@@ -9,42 +9,40 @@ import OurAdvComponent from './OurAdvComponent';
 import './sass/Style.scss';
 
 function OurAdvantages() {
-  const [InfoText] = useState({
-    adventures: [
-      {
-        id: 1,
-        img: Bike,
-        elipse: Elipse,
-        title: 'adventures.excursionBikeTitle',
-        description: 'adventures.excursionBikeDescroption',
-      },
-      {
-        id: 2,
-        img: Tree,
-        elipse: Elipse,
-        title: 'adventures.excursionTreeTitle',
-        description: 'adventures.excursionTreeDescroption',
-      },
-      {
-        id: 3,
-        img: Helmet,
-        elipse: Elipse,
-        title: 'adventures.excursionHelmetTitle',
-        description: 'adventures.excursionHelmetDescroption',
-      },
-      {
-        id: 4,
-        img: Bike,
-        elipse: Elipse,
-        title: 'adventures.excursionBikeTitleLast',
-        description: 'adventures.excursionBikeDescroptionLast',
-      },
+  const [InfoText] = useState([
+    {
+      id: 1,
+      img: Bike,
+      elipse: Elipse,
+      title: 'adventures.excursionBikeTitle',
+      description: 'adventures.excursionBikeDescroption',
+    },
+    {
+      id: 2,
+      img: Tree,
+      elipse: Elipse,
+      title: 'adventures.excursionTreeTitle',
+      description: 'adventures.excursionTreeDescroption',
+    },
+    {
+      id: 3,
+      img: Helmet,
+      elipse: Elipse,
+      title: 'adventures.excursionHelmetTitle',
+      description: 'adventures.excursionHelmetDescroption',
+    },
+    {
+      id: 4,
+      img: Bike,
+      elipse: Elipse,
+      title: 'adventures.excursionBikeTitleLast',
+      description: 'adventures.excursionBikeDescroptionLast',
+    },
 
-    ]
-  });
+  ]);
 
   return (
-    <OurAdvComponent routes={InfoText.adventures} />
+    <OurAdvComponent routes={InfoText} />
   );
 }
 

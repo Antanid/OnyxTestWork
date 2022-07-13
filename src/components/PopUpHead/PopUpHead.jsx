@@ -10,7 +10,7 @@ import Buttons from '../Button/Buttons';
 function PopUpHead({ ClosePopUp }) {
   const inputNumber = useInput('', 14);
   const inputName = useInput('', 40);
-  const { t } = useTranslation();
+  const { t } = useTranslation('', { keyPrefix: 'popUpHead' });
   return (
     <div
       tabIndex={0}
@@ -42,7 +42,7 @@ function PopUpHead({ ClosePopUp }) {
           </div>
 
           <div className="popup_text">
-            {t('popUpHead.HeaderText')}
+            {t('HeaderText')}
           </div>
           <div className="form__all">
             <label htmlFor="first">
@@ -54,7 +54,7 @@ function PopUpHead({ ClosePopUp }) {
                 name="name"
               />
               <div className="label_text">
-                {t('popUpHead.LabelText')}
+                {t('LabelText')}
               </div>
             </label>
 
@@ -67,13 +67,13 @@ function PopUpHead({ ClosePopUp }) {
                 name="tel"
               />
               <div className="label_text">
-                {t('popUpHead.PhoneNumber')}
+                {t('PhoneNumber')}
               </div>
             </label>
 
             <div className="form_button">
               <Buttons>
-                {t('popUpHead.SentText')}
+                {t('SentText')}
               </Buttons>
             </div>
           </div>

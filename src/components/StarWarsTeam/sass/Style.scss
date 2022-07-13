@@ -1,9 +1,12 @@
 .section__team {
     margin-bottom: -20px;
-    .spinner-border{
-  margin-left: 50%;
-  margin-top: 10%;
-  margin-bottom: 10%;
+    .spinner-border {
+        position: relative;
+        top: 50%;
+        left: 50%;
+    }
+    .button_next {
+        margin-bottom: 30px;
     }
     .team {
         width: 300px;

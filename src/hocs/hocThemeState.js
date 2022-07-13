@@ -7,27 +7,18 @@ const HocThemeState = (Component) => {
       return JSON.parse(localStorage.getItem('theme')) || false;
     };
     const [theme, setTheme] = useState(themes.light);
-    const [test, setTest] = useState(getTheme());
+    const [themeBul, setThemeBul] = useState(getTheme());
 
     useEffect(() => {
-      localStorage.setItem('theme', JSON.stringify(test));
-      if (test === false) {
-        setTheme(themes.light);
-      } if (test === true) {
-        setTheme(themes.dark);
-      }
-      console.log(test);
-    }, [test]);
+      localStorage.setItem('theme', JSON.stringify(themeBul));
+      setTheme(themeBul ? themes.dark : themes.light);
+    }, [themeBul]);
     const toggleTheme = () => {
-      if (test === false) {
-        setTest(true);
-      } if (test === true) {
-        setTest(false);
-      }
+      setThemeBul(!themeBul);
     };
     return (
       <Component
-        test={test}
+        test={themeBul}
         theme={theme}
         toggleTheme={toggleTheme}
         // eslint-disable-next-line react/jsx-props-no-spreading

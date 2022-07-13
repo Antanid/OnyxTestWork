@@ -11,7 +11,7 @@ function FirstPage({
   Location,
   Complexity,
 }) {
-  const { t } = useTranslation();
+  const { t } = useTranslation('', { keyPrefix: 'ourRoute' });
   return (
     <div className="col-lg-5">
 
@@ -19,11 +19,11 @@ function FirstPage({
         <div className="base__h2">
           <h2>
             {' '}
-            {t('ourRoute.FirstPageTextBase')}
+            {t('FirstPageTextBase')}
             <br />
             {' '}
             <span>
-              {t('ourRoute.FirstPagePrice')}
+              {t('FirstPagePrice')}
               {' '}
             </span>
             <img className="base__money" src={Rubl} alt="money" />
@@ -35,21 +35,21 @@ function FirstPage({
             {' '}
             <img className="base__ico" src={TimeImg} alt="time" />
             {' '}
-            {t('ourRoute.PageTextTime')}
+            {t('PageTextTime')}
             {' '}
-            <span>{t('ourRoute.FirstPageTime')}</span>
+            <span>{t('FirstPageTime')}</span>
           </h3>
           <h3>
             {' '}
             <img className="base__ico" src={Location} alt="location" />
             {' '}
-            {t('ourRoute.PageTextDistance')}
+            {t('PageTextDistance')}
             {' '}
-            <span>{t('ourRoute.FirstPageDistance')}</span>
+            <span>{t('FirstPageDistance')}</span>
           </h3>
           <h3>
             <img className="base__ico" src={Complexity} alt="complexity" />
-            {t('ourRoute.PageTextComplexity')}
+            {t('PageTextComplexity')}
             {' '}
             <span>
               5***
@@ -59,16 +59,16 @@ function FirstPage({
 
         <div className="base__routes__h4">
           <h4>
-            {t('ourRoute.PageTextRoute')}
+            {t('PageTextRoute')}
             <img className="base__icon__route" src={Route} alt="route" />
           </h4>
           <p>
-            {t('ourRoute.FirstPageRoute')}
+            {t('FirstPageRoute')}
           </p>
         </div>
         <ButtonsOur
-          firstButton={t('ourRoute.FirstButton')}
-          secendButton={t('ourRoute.SecendButton')}
+          firstButton={t('FirstButton')}
+          secendButton={t('SecendButton')}
           OpenPopUp={OpenPopUp}
         />
       </div>

@@ -1,0 +1,2 @@
+export const OPEN_POPUP_EXC = 'OPEN_POPUP_EXC';
+export const CLOSE_POPUP_EXC = 'CLOSE_POPUP_EXC';

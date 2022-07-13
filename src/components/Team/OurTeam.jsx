@@ -8,7 +8,7 @@ function OurTeam({ team }) {
     <div className="row">
       <div className="col-lg-12">
         <div className="our__team">
-          <h2>{t('team.OurTeam')}</h2>
+          <h2>{t('OurTeam')}</h2>
         </div>
       </div>
       {

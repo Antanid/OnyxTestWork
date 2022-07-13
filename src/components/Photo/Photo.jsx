@@ -10,13 +10,13 @@ import PhotoText from './PhotoText';
 import PhotoSlider from './PhotoSlider';
 
 function Photo() {
-  const { t } = useTranslation();
+  const { t } = useTranslation('', { keyPrefix: 'photo' });
   return (
     <section className="section__photo">
       <div className="container-fluid">
         <div className="row">
           <PhotoText>
-            {t('photo.PhotoText')}
+            {t('PhotoText')}
           </PhotoText>
           <PhotoSlider
             FirstPhoto={FirstPhoto}
