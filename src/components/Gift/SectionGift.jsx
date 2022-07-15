@@ -23,7 +23,7 @@ function Gift() {
           />
 
           <GiftText
-            text={t(' GiftText')}
+            text={t('GiftText')}
           />
 
           <GiftImg gift={gift} />

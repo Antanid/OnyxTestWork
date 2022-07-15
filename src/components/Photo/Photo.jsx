@@ -8,6 +8,7 @@ import FourPhoto from '../../assets/img/ThirdRout.svg';
 import FivePhoto from '../../assets/img/ThirdRout2.svg';
 import PhotoText from './PhotoText';
 import PhotoSlider from './PhotoSlider';
+import './sass/Style.scss';
 
 function Photo() {
   const { t } = useTranslation('', { keyPrefix: 'photo' });

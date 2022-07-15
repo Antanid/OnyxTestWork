@@ -29,8 +29,8 @@ function TeamStarWars() {
   }, []);
 
   const starTeamWars = useSelector((state) => {
-    const { starWarsTeam } = state;
-    return starWarsTeam.starTeam;
+    const { PeopleReducer } = state;
+    return PeopleReducer.starTeam;
   });
 
   useEffect(() => {

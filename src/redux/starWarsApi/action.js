@@ -19,11 +19,10 @@ export function loadNextApiStarWars(data) {
   };
 }
 
-export function loadPlanetName(text) {
+export function loadPlanetName(data, homeworld) {
   return {
     type: LOAD_PLANET_NAME,
-    data: {
-      text
-    }
+    data,
+    homeworld
   };
 }
