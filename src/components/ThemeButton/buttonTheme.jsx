@@ -5,13 +5,13 @@ import './sass/Style.scss';
 import DayTheme from '../../assets/img/DayTheme.png';
 import NightTheme from '../../assets/img/NightTheme.png';
 
-function ButtonTheme({ toggleTheme, test }) {
+function ButtonTheme({ toggleTheme, themeButton }) {
   return (
     <div className="col-lg-6">
       <div className="button_theme_div">
 
         {
-          test ? (
+          themeButton ? (
             <div
               tabIndex={0}
               role="button"
@@ -41,6 +41,6 @@ function ButtonTheme({ toggleTheme, test }) {
 export default ButtonTheme;
 
 ButtonTheme.propTypes = {
-  test: PropTypes.bool.isRequired,
+  themeButton: PropTypes.bool.isRequired,
   toggleTheme: PropTypes.func.isRequired,
 };

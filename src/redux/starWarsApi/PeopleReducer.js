@@ -2,7 +2,6 @@
 /* eslint-disable import/prefer-default-export */
 import {
   LOAD_STAR_WARS_API,
-  LOAD_NEXT_STAR_WARS_API
 } from './types';
 
 const initianalState = {
@@ -15,12 +14,6 @@ export const PeopleReducer = (state = initianalState, action) => {
       return {
         ...state,
         starTeam: action.data
-      };
-    }
-    case LOAD_NEXT_STAR_WARS_API: {
-      return {
-        ...state,
-        starTeam: action.data,
       };
     }
     default: return state;

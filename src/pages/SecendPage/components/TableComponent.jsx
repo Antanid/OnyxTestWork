@@ -1,26 +1,23 @@
 import React, { useState, useEffect, useCallback } from 'react';
 import PropTypes from 'prop-types';
-import axios from 'axios';
+import { useDispatch } from 'react-redux';
 import EditComp from './EditComp';
 import RemoveItem from './RemoveItem';
 import DataItem from './DataItem';
+import { dragAndDropTable, editTextTable } from '../../../redux/tableRedux/action';
 
-function TableComponent({ table, removeItem, setTable }) {
+function TableComponent({ table, removeItem }) {
   const [editingText, setEditingText] = useState('');
   const [idItem, setIdItem] = useState(null);
   const [style] = useState('null');
   const [currentItem, setCurrentItem] = useState(null);
   const [currentEnd, setCurrentEnd] = useState(null);
 
+  const dispatch = useDispatch();
+
   useEffect(() => {
-    const SortItems = (a, b) => {
-      if (a.order > b.order) {
-        return 1;
-      }
-      return -1;
-    };
-    setTable((prevTable) => ([...prevTable].sort(SortItems)));
-  }, [currentEnd, setTable]);
+    dispatch(dragAndDropTable(table));
+  }, [currentEnd]);
 
   const handleEditing = useCallback((id) => {
     setIdItem(id);
@@ -31,10 +28,7 @@ function TableComponent({ table, removeItem, setTable }) {
   };
 
   const submitEdits = (item) => {
-    axios.patch(`http://localhost:3004/item/${item.id}`, { text: editingText })
-      .catch((error) => {
-        console.log(error);
-      });
+    dispatch(editTextTable(item, editingText));
     setIdItem(null);
     setEditingText('');
   };
@@ -53,7 +47,7 @@ function TableComponent({ table, removeItem, setTable }) {
 
   function dragHandler(e, item) {
     e.preventDefault();
-    setTable(table.map((c) => {
+    table.map((c) => {
       if (c.id === item.id) {
         return { ...c, order: currentItem.order };
       }
@@ -61,7 +55,7 @@ function TableComponent({ table, removeItem, setTable }) {
         return { ...c, order: item.order };
       }
       return c;
-    }));
+    });
   }
 
   return (
@@ -111,7 +105,6 @@ function TableComponent({ table, removeItem, setTable }) {
 export default TableComponent;
 
 TableComponent.propTypes = {
-  setTable: PropTypes.func.isRequired,
   table: PropTypes.arrayOf(PropTypes.shape({
     text: PropTypes.string,
     order: PropTypes.number,

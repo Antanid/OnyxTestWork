@@ -1,53 +1,27 @@
-import axios from 'axios';
 import React, { useEffect, useState } from 'react';
 import { useDispatch, useSelector } from 'react-redux';
-import { loadApiStarWars, loadNextApiStarWars } from '../../redux/starWarsApi/action';
+import { loadApiStarWars } from '../../redux/starWarsApi/action';
 import ButtonNextPrev from './ButtonNextPrev';
 import './sass/Style.scss';
 import StarTeam from './StarTeam';
 
 function TeamStarWars() {
   const [nextTeam, setNextTeam] = useState(1);
-  const [loading, setLoading] = useState(false);
 
   const dispatch = useDispatch();
 
   useEffect(() => {
-    axios.get('https://swapi.dev/api/people').then((res) => {
-      const data = res.data.results;
-      dispatch(loadApiStarWars(data));
-    }).catch((error) => {
-      console.log(error);
-    })
-      .finally(() => {
-        setLoading(true);
-      });
-
-    return () => {
-      setLoading(false);
-    };
-  }, []);
+    dispatch(loadApiStarWars(nextTeam));
+  }, [nextTeam]);
 
   const starTeamWars = useSelector((state) => {
     const { PeopleReducer } = state;
     return PeopleReducer.starTeam;
   });
-
-  useEffect(() => {
-    axios.get('https://swapi.dev/api/people', { params: { page: nextTeam } }).then((res) => {
-      const data = res.data.results;
-      dispatch(loadNextApiStarWars(data));
-    }).catch((error) => {
-      console.log(error);
-    })
-      .finally(() => {
-        setLoading(true);
-      });
-    return () => {
-      setLoading(false);
-    };
-  }, [nextTeam]);
-
+  const loadingStar = useSelector((state) => {
+    const { LoaderRuducer } = state;
+    return LoaderRuducer.loading;
+  });
   const secenPage = () => {
     if (nextTeam < 9) {
       setNextTeam(nextTeam + 1);
@@ -70,18 +44,17 @@ function TeamStarWars() {
         />
         <div>
           {
-            loading ? (
-              <ButtonNextPrev
-                loading={loading}
-                prevPage={prevPage}
-                secenPage={secenPage}
-                nextTeam={nextTeam}
-              />
+            loadingStar ? (
+              <div className="spinner-border" role="status">
+                <span className="sr-only" />
+              </div>
             )
               : (
-                <div className="spinner-border" role="status">
-                  <span className="sr-only" />
-                </div>
+                <ButtonNextPrev
+                  prevPage={prevPage}
+                  secenPage={secenPage}
+                  nextTeam={nextTeam}
+                />
               )
           }
         </div>

@@ -1,12 +1,9 @@
-import React, { Fragment } from 'react';
+import React from 'react';
 import PropTypes from 'prop-types';
 
-function ButtonForm({ deleteLastArray, addTask }) {
+function ButtonForm({ addTask }) {
   return (
-    <>
-      <button type="button" onClick={() => addTask()}>Отправить</button>
-      <button type="button" onClick={() => deleteLastArray()}>Удалить последний элемент массива</button>
-    </>
+    <button type="button" onClick={() => addTask()}>Отправить</button>
   );
 }
 
@@ -14,5 +11,4 @@ export default ButtonForm;
 
 ButtonForm.propTypes = {
   addTask: PropTypes.func.isRequired,
-  deleteLastArray: PropTypes.func.isRequired,
 };

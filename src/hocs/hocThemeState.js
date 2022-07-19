@@ -18,7 +18,7 @@ const HocThemeState = (Component) => {
     };
     return (
       <Component
-        test={themeBul}
+        themeButton={themeBul}
         theme={theme}
         toggleTheme={toggleTheme}
         // eslint-disable-next-line react/jsx-props-no-spreading

@@ -4,7 +4,6 @@ import PropTypes from 'prop-types';
 import ButtonForm from './ButtonForm';
 
 function FormComponent({
-  deleteLastArray,
   addTask,
   handleChangeMonth,
   handleChangeDate,
@@ -48,7 +47,6 @@ function FormComponent({
 
       <ButtonForm
         addTask={addTask}
-        deleteLastArray={deleteLastArray}
       />
     </form>
 
@@ -75,7 +73,6 @@ FormComponent.propTypes = {
     onChange: PropTypes.func,
   }).isRequired,
   handleSubmit: PropTypes.func.isRequired,
-  deleteLastArray: PropTypes.func.isRequired,
   addTask: PropTypes.func.isRequired,
   handleKeyPress: PropTypes.func.isRequired,
 };

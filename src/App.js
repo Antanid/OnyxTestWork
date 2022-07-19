@@ -1,5 +1,4 @@
 import React from 'react';
-
 import PropTypes from 'prop-types';
 import 'bootstrap/dist/css/bootstrap.min.css';
 import './App.css';
@@ -11,12 +10,12 @@ import ThemeProvider from './Сontext/ThemeProvider';
 import HocThemeState from './hocs/hocThemeState';
 import ControlPanel from './Layout/Head/ControlPanel';
 
-function App({ theme, toggleTheme, test }) {
+function App({ theme, toggleTheme, themeButton }) {
   return (
     <ThemeProvider theme={theme}>
       <div className="wrapper">
         <ControlPanel
-          test={test}
+          themeButton={themeButton}
           toggleTheme={toggleTheme}
         />
         <Layout>
@@ -33,7 +32,7 @@ function App({ theme, toggleTheme, test }) {
 export default HocThemeState(App);
 
 App.propTypes = {
-  test: PropTypes.bool.isRequired,
+  themeButton: PropTypes.bool.isRequired,
   theme: PropTypes.objectOf(PropTypes.string).isRequired,
   toggleTheme: PropTypes.func.isRequired,
 };

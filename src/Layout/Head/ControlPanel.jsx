@@ -3,13 +3,13 @@ import PropTypes from 'prop-types';
 import ButtonTest from '../../components/LanguageChange/ButtonTest';
 import ButtonTheme from '../../components/ThemeButton/buttonTheme';
 
-function ControlPanel({ toggleTheme, test }) {
+function ControlPanel({ toggleTheme, themeButton }) {
   return (
     <div className="container-fluid">
       <div className="row">
         <ButtonTest />
         <ButtonTheme
-          test={test}
+          themeButton={themeButton}
           toggleTheme={toggleTheme}
         />
       </div>
@@ -20,6 +20,6 @@ function ControlPanel({ toggleTheme, test }) {
 export default ControlPanel;
 
 ControlPanel.propTypes = {
-  test: PropTypes.bool.isRequired,
+  themeButton: PropTypes.bool.isRequired,
   toggleTheme: PropTypes.func.isRequired,
 };
